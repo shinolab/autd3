@@ -1,0 +1,5 @@
+<map id="autd3::driver::clear" name="autd3::driver::clear">
+<area shape="rect" id="node1" title=" " alt="" coords="175,46,301,73"/>
+<area shape="rect" id="node2" href="$classautd3_1_1Controller.html#acc35d6cf14d129417f29115f960092e1" title="Clear all data in hardware." alt="" coords="5,5,127,47"/>
+<area shape="rect" id="node3" href="$classautd3_1_1Controller.html#a73d0ad386b02353dcfcbc3ff178daf1d" title="Close the controller." alt="" coords="5,71,127,112"/>
+</map>

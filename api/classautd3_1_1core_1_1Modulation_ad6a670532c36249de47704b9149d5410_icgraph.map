@@ -1,0 +1,6 @@
+<map id="autd3::core::Modulation::calc" name="autd3::core::Modulation::calc">
+<area shape="rect" id="node1" title="Calculate modulation data." alt="" coords="411,39,565,80"/>
+<area shape="rect" id="node2" href="$classautd3_1_1core_1_1Modulation.html#ac06c8e835a1206a34af141413b63a02a" title="Build modulation data." alt="" coords="208,39,363,80"/>
+<area shape="rect" id="node3" href="$classautd3_1_1core_1_1Modulation.html#a1cceb6c8c93424dd2d0d3854ecaddd2c" title=" " alt="" coords="5,5,160,47"/>
+<area shape="rect" id="node4" href="$classautd3_1_1core_1_1Modulation.html#a189b0d285e15e854060b48425cef31b7" title="Re&#45;build modulation data." alt="" coords="5,71,160,112"/>
+</map>

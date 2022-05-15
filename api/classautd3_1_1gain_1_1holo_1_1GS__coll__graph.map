@@ -1,0 +1,6 @@
+<map id="autd3::gain::holo::GS&lt; T, &gt;" name="autd3::gain::holo::GS&lt; T, &gt;">
+<area shape="rect" id="node1" title="Gain to produce multiple focal points with GS method. Refer to Asier Marzo and Bruce W Drinkwater,..." alt="" coords="50,273,170,315"/>
+<area shape="rect" id="node2" href="$classautd3_1_1gain_1_1holo_1_1Holo.html" title=" " alt="" coords="5,184,215,225"/>
+<area shape="rect" id="node3" href="$structautd3_1_1core_1_1Gain.html" title=" " alt="" coords="23,95,197,136"/>
+<area shape="rect" id="node4" href="$structautd3_1_1core_1_1DatagramBody.html" title=" " alt="" coords="19,5,201,47"/>
+</map>

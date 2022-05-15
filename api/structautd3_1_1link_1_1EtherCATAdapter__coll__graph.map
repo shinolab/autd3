@@ -1,0 +1,5 @@
+<map id="autd3::link::EtherCATAdapter" name="autd3::link::EtherCATAdapter">
+<area shape="rect" id="node1" title="EtherCAT adapter information to SOEM." alt="" coords="5,200,192,227"/>
+<area shape="rect" id="node2" title="STL class." alt="" coords="59,96,138,123"/>
+<area shape="rect" id="node3" title="STL class." alt="" coords="37,5,161,47"/>
+</map>
