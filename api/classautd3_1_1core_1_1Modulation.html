@@ -83,10 +83,15 @@ Inheritance diagram for autd3::core::Modulation:</div>
 <div class="dyncontent">
 <div class="center"><img src="classautd3_1_1core_1_1Modulation__inherit__graph.png" border="0" usemap="#autd3_1_1core_1_1Modulation_inherit__map" alt="Inheritance graph"/></div>
 <map name="autd3_1_1core_1_1Modulation_inherit__map" id="autd3_1_1core_1_1Modulation_inherit__map">
-<area shape="rect" title="Modulation controls the amplitude modulation." alt="" coords="88,80,243,107"/>
-<area shape="rect" href="classautd3_1_1modulation_1_1Sine.html" title="Sine wave modulation in ultrasound amplitude." alt="" coords="5,162,160,189"/>
-<area shape="rect" href="classautd3_1_1modulation_1_1Static.html" title="Static (Without modulation)" alt="" coords="183,155,313,196"/>
-<area shape="rect" href="structautd3_1_1core_1_1DatagramHeader.html" title="DatagramHeader is a data to be packed in the Header part of the driver::TxDatagram." alt="" coords="71,5,260,32"/>
+<area shape="rect" title="Modulation controls the amplitude modulation." alt="" coords="243,195,397,222"/>
+<area shape="rect" href="classautd3_1_1modulation_1_1RawPCM.html" title="Modulation created from raw pcm data." alt="" coords="458,5,587,47"/>
+<area shape="rect" href="classautd3_1_1modulation_1_1Sine.html" title="Sine wave modulation in ultrasound amplitude." alt="" coords="445,71,600,98"/>
+<area shape="rect" href="classautd3_1_1modulation_1_1SineLegacy.html" title="Sine wave modulation in ultrasound amplitude (Legacy)" alt="" coords="458,123,587,164"/>
+<area shape="rect" href="classautd3_1_1modulation_1_1SineSquared.html" title="Sine wave modulation in squared acoustic pressure, which is proportional to radiation pressure." alt="" coords="458,188,587,229"/>
+<area shape="rect" href="classautd3_1_1modulation_1_1Square.html" title="Square wave modulation." alt="" coords="458,253,587,295"/>
+<area shape="rect" href="classautd3_1_1modulation_1_1Static.html" title="Static (Without modulation)" alt="" coords="458,319,587,360"/>
+<area shape="rect" href="classautd3_1_1modulation_1_1Wav.html" title="Modulation created from wav file." alt="" coords="445,385,600,411"/>
+<area shape="rect" href="structautd3_1_1core_1_1DatagramHeader.html" title="DatagramHeader is a data to be packed in the Header part of the driver::TxDatagram." alt="" coords="5,195,195,222"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -386,7 +391,7 @@ Here is the caller graph for this function:</div>
 
 <p>Calculate modulation data. </p>
 
-<p>Implemented in <a class="el" href="classautd3_1_1modulation_1_1Sine.html#ac4dce2231a82e4c28993d7844e891691">autd3::modulation::Sine</a>, and <a class="el" href="classautd3_1_1modulation_1_1Static.html#a2d9a079ae038ce2cbcf0194f69705d50">autd3::modulation::Static</a>.</p>
+<p>Implemented in <a class="el" href="classautd3_1_1modulation_1_1Square.html#ac8e1e2cf31789e660e05c167456ff076">autd3::modulation::Square</a>, <a class="el" href="classautd3_1_1modulation_1_1SineLegacy.html#af78326a47c936ec9132acc99616d2731">autd3::modulation::SineLegacy</a>, <a class="el" href="classautd3_1_1modulation_1_1SineSquared.html#aa0147ab9d96d4043c3433240129b63bf">autd3::modulation::SineSquared</a>, <a class="el" href="classautd3_1_1modulation_1_1Wav.html#a10c236276047d05b7670bf762958e53b">autd3::modulation::Wav</a>, <a class="el" href="classautd3_1_1modulation_1_1Sine.html#ac4dce2231a82e4c28993d7844e891691">autd3::modulation::Sine</a>, <a class="el" href="classautd3_1_1modulation_1_1RawPCM.html#a1abd60b77c1a8e165612877711b7bc48">autd3::modulation::RawPCM</a>, and <a class="el" href="classautd3_1_1modulation_1_1Static.html#a2d9a079ae038ce2cbcf0194f69705d50">autd3::modulation::Static</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="modulation_8hpp_source.html#l00056">build()</a>.</p>
 <div class="dynheader">
@@ -672,14 +677,17 @@ Here is the call graph for this function:</div>
 
 <p class="reference">References <a class="el" href="fpga_2defined_8hpp_source.html#l00020">autd3::driver::FPGA_CLK_FREQ</a>, and <a class="el" href="modulation_8hpp_source.html#l00030">autd3::core::ModProps::freq_div</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="modulation_2primitive_8hpp_source.html#l00061">autd3::modulation::Sine::calc()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="modulation_2primitive_8hpp_source.html#l00061">autd3::modulation::Sine::calc()</a>, <a class="el" href="modulation_2primitive_8hpp_source.html#l00106">autd3::modulation::SineSquared::calc()</a>, <a class="el" href="modulation_2primitive_8hpp_source.html#l00151">autd3::modulation::SineLegacy::calc()</a>, and <a class="el" href="modulation_2primitive_8hpp_source.html#l00183">autd3::modulation::Square::calc()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classautd3_1_1core_1_1Modulation_ad894a72dab9409b4f954d7680d457539_icgraph.png" border="0" usemap="#classautd3_1_1core_1_1Modulation_ad894a72dab9409b4f954d7680d457539_icgraph" alt=""/></div>
 <map name="classautd3_1_1core_1_1Modulation_ad894a72dab9409b4f954d7680d457539_icgraph" id="classautd3_1_1core_1_1Modulation_ad894a72dab9409b4f954d7680d457539_icgraph">
-<area shape="rect" title="modulation sampling frequency" alt="" coords="183,5,337,47"/>
+<area shape="rect" title="modulation sampling frequency" alt="" coords="183,104,337,145"/>
 <area shape="rect" href="classautd3_1_1modulation_1_1Sine.html#ac4dce2231a82e4c28993d7844e891691" title="Calculate modulation data." alt="" coords="5,5,135,47"/>
+<area shape="rect" href="classautd3_1_1modulation_1_1SineSquared.html#aa0147ab9d96d4043c3433240129b63bf" title="Calculate modulation data." alt="" coords="5,71,135,112"/>
+<area shape="rect" href="classautd3_1_1modulation_1_1SineLegacy.html#af78326a47c936ec9132acc99616d2731" title="Calculate modulation data." alt="" coords="5,136,135,177"/>
+<area shape="rect" href="classautd3_1_1modulation_1_1Square.html#ac8e1e2cf31789e660e05c167456ff076" title="Calculate modulation data." alt="" coords="5,201,135,243"/>
 </map>
 </div>
 

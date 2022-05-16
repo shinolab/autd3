@@ -1,4 +1,7 @@
 <map id="autd3::core::Modulation::sampling_frequency" name="autd3::core::Modulation::sampling_frequency">
-<area shape="rect" id="node1" title="modulation sampling frequency" alt="" coords="183,5,337,47"/>
+<area shape="rect" id="node1" title="modulation sampling frequency" alt="" coords="183,104,337,145"/>
 <area shape="rect" id="node2" href="$classautd3_1_1modulation_1_1Sine.html#ac4dce2231a82e4c28993d7844e891691" title="Calculate modulation data." alt="" coords="5,5,135,47"/>
+<area shape="rect" id="node3" href="$classautd3_1_1modulation_1_1SineSquared.html#aa0147ab9d96d4043c3433240129b63bf" title="Calculate modulation data." alt="" coords="5,71,135,112"/>
+<area shape="rect" id="node4" href="$classautd3_1_1modulation_1_1SineLegacy.html#af78326a47c936ec9132acc99616d2731" title="Calculate modulation data." alt="" coords="5,136,135,177"/>
+<area shape="rect" id="node5" href="$classautd3_1_1modulation_1_1Square.html#ac8e1e2cf31789e660e05c167456ff076" title="Calculate modulation data." alt="" coords="5,201,135,243"/>
 </map>

@@ -163,6 +163,12 @@
   <img src="https://raw.githubusercontent.com/shinolab/autd3/master/book/src/fig/Users_Manual/1.4985159.figures.online.f1.jpg"/>
   <figcaption>Bessel beam ([hasegawa2017]より引用)</figcaption>
 </figure>
+<h2 id="planewave"><a class="header" href="#planewave">PlaneWave</a></h2>
+<p><code>PlaneWave</code>は平面波を出力する</p>
+<pre><code class="language-cpp">    gain::PlaneWave g(Vector3(x, y, z));
+</code></pre>
+<p>コンストラクタの第1引数には平面波の進行方向を指定する.
+第2引数として, 0-1の規格化された音圧振幅を指定できる.</p>
 <h2 id="null"><a class="header" href="#null">Null</a></h2>
 <p><code>Null</code>は振幅0の<code>Gain</code>である.</p>
 <pre><code class="language-cpp">    gain::Null g;

@@ -1,6 +1,11 @@
 <map id="autd3::core::DatagramHeader" name="autd3::core::DatagramHeader">
-<area shape="rect" id="node1" title="DatagramHeader is a data to be packed in the Header part of the driver::TxDatagram." alt="" coords="71,5,260,32"/>
-<area shape="rect" id="node2" href="$classautd3_1_1core_1_1Modulation.html" title="Modulation controls the amplitude modulation." alt="" coords="88,80,243,107"/>
-<area shape="rect" id="node3" href="$classautd3_1_1modulation_1_1Sine.html" title="Sine wave modulation in ultrasound amplitude." alt="" coords="5,162,160,189"/>
-<area shape="rect" id="node4" href="$classautd3_1_1modulation_1_1Static.html" title="Static (Without modulation)" alt="" coords="183,155,313,196"/>
+<area shape="rect" id="node1" title="DatagramHeader is a data to be packed in the Header part of the driver::TxDatagram." alt="" coords="5,195,195,222"/>
+<area shape="rect" id="node2" href="$classautd3_1_1core_1_1Modulation.html" title="Modulation controls the amplitude modulation." alt="" coords="243,195,397,222"/>
+<area shape="rect" id="node3" href="$classautd3_1_1modulation_1_1RawPCM.html" title="Modulation created from raw pcm data." alt="" coords="458,5,587,47"/>
+<area shape="rect" id="node4" href="$classautd3_1_1modulation_1_1Sine.html" title="Sine wave modulation in ultrasound amplitude." alt="" coords="445,71,600,98"/>
+<area shape="rect" id="node5" href="$classautd3_1_1modulation_1_1SineLegacy.html" title="Sine wave modulation in ultrasound amplitude (Legacy)" alt="" coords="458,123,587,164"/>
+<area shape="rect" id="node6" href="$classautd3_1_1modulation_1_1SineSquared.html" title="Sine wave modulation in squared acoustic pressure, which is proportional to radiation pressure." alt="" coords="458,188,587,229"/>
+<area shape="rect" id="node7" href="$classautd3_1_1modulation_1_1Square.html" title="Square wave modulation." alt="" coords="458,253,587,295"/>
+<area shape="rect" id="node8" href="$classautd3_1_1modulation_1_1Static.html" title="Static (Without modulation)" alt="" coords="458,319,587,360"/>
+<area shape="rect" id="node9" href="$classautd3_1_1modulation_1_1Wav.html" title="Modulation created from wav file." alt="" coords="445,385,600,411"/>
 </map>

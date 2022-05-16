@@ -11,13 +11,14 @@ var searchData=
   ['amplitudes_8',['amplitudes',['../classautd3_1_1gain_1_1holo_1_1Holo.html#a6292757b1e0e7c93f03d07f1c6b86211',1,'autd3::gain::holo::Holo']]],
   ['arg_9',['arg',['../classautd3_1_1gain_1_1holo_1_1Backend.html#a06ffbf38fa278389f8ce85b656b34366',1,'autd3::gain::holo::Backend::arg()'],['../classautd3_1_1gain_1_1holo_1_1EigenBackend.html#a24b233e9310913dff700ff6ef97081f7',1,'autd3::gain::holo::EigenBackend::arg()'],['../classautd3_1_1gain_1_1holo_1_1CUDABackend.html#a312209117cd07ffa7d8f2ef87473680c',1,'autd3::gain::holo::CUDABackend::arg()']]],
   ['attenuation_10',['attenuation',['../structautd3_1_1core_1_1Geometry.html#acdfae2ea41b17737187c496b067268d3',1,'autd3::core::Geometry']]],
-  ['autd3_11',['autd3',['../namespaceautd3.html',1,'']]],
-  ['autd3_2ehpp_12',['autd3.hpp',['../autd3_8hpp.html',1,'']]],
-  ['core_13',['core',['../namespaceautd3_1_1core.html',1,'autd3']]],
-  ['driver_14',['driver',['../namespaceautd3_1_1driver.html',1,'autd3']]],
-  ['gain_15',['gain',['../namespaceautd3_1_1gain.html',1,'autd3']]],
-  ['holo_16',['holo',['../namespaceautd3_1_1gain_1_1holo.html',1,'autd3::gain']]],
-  ['autd3_20api_20documents_17',['AUTD3 API Documents',['../index.html',1,'']]],
-  ['link_18',['link',['../namespaceautd3_1_1link.html',1,'autd3']]],
-  ['modulation_19',['modulation',['../namespaceautd3_1_1modulation.html',1,'autd3']]]
+  ['audio_5ffile_2ehpp_11',['audio_file.hpp',['../audio__file_8hpp.html',1,'']]],
+  ['autd3_12',['autd3',['../namespaceautd3.html',1,'']]],
+  ['autd3_2ehpp_13',['autd3.hpp',['../autd3_8hpp.html',1,'']]],
+  ['core_14',['core',['../namespaceautd3_1_1core.html',1,'autd3']]],
+  ['driver_15',['driver',['../namespaceautd3_1_1driver.html',1,'autd3']]],
+  ['gain_16',['gain',['../namespaceautd3_1_1gain.html',1,'autd3']]],
+  ['holo_17',['holo',['../namespaceautd3_1_1gain_1_1holo.html',1,'autd3::gain']]],
+  ['autd3_20api_20documents_18',['AUTD3 API Documents',['../index.html',1,'']]],
+  ['link_19',['link',['../namespaceautd3_1_1link.html',1,'autd3']]],
+  ['modulation_20',['modulation',['../namespaceautd3_1_1modulation.html',1,'autd3']]]
 ];

@@ -1,16 +1,17 @@
 <map id="include/autd3/core/geometry/geometry.hpp" name="include/autd3/core/geometry/geometry.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="228,5,388,47"/>
-<area shape="rect" id="node2" href="$controller_8hpp.html" title=" " alt="" coords="46,370,226,397"/>
-<area shape="rect" id="node3" href="$autd3_8hpp.html" title=" " alt="" coords="228,452,350,479"/>
-<area shape="rect" id="node4" href="$interface_8hpp.html" title=" " alt="" coords="320,95,448,136"/>
-<area shape="rect" id="node5" href="$gain_8hpp.html" title=" " alt="" coords="181,184,309,225"/>
-<area shape="rect" id="node12" href="$backend_8hpp.html" title=" " alt="" coords="520,95,647,136"/>
-<area shape="rect" id="node14" href="$emulator_8hpp.html" title=" " alt="" coords="672,95,794,136"/>
-<area shape="rect" id="node8" href="$modulation_8hpp.html" title=" " alt="" coords="333,184,461,225"/>
-<area shape="rect" id="node10" href="$stm_2gain_8hpp.html" title=" " alt="" coords="352,363,480,404"/>
-<area shape="rect" id="node11" href="$point_8hpp.html" title=" " alt="" coords="504,363,632,404"/>
-<area shape="rect" id="node6" href="$holo_8hpp.html" title=" " alt="" coords="598,273,724,315"/>
-<area shape="rect" id="node7" href="$gain_2primitive_8hpp.html" title=" " alt="" coords="154,273,280,315"/>
-<area shape="rect" id="node9" href="$modulation_2primitive_8hpp.html" title=" " alt="" coords="304,273,471,315"/>
-<area shape="rect" id="node13" href="$backend__cuda_8hpp.html" title=" " alt="" coords="648,184,783,225"/>
+<area shape="rect" id="node1" title=" " alt="" coords="351,5,511,47"/>
+<area shape="rect" id="node2" href="$controller_8hpp.html" title=" " alt="" coords="66,370,246,397"/>
+<area shape="rect" id="node3" href="$autd3_8hpp.html" title=" " alt="" coords="296,452,419,479"/>
+<area shape="rect" id="node4" href="$interface_8hpp.html" title=" " alt="" coords="452,95,580,136"/>
+<area shape="rect" id="node5" href="$gain_8hpp.html" title=" " alt="" coords="304,184,432,225"/>
+<area shape="rect" id="node13" href="$backend_8hpp.html" title=" " alt="" coords="682,95,809,136"/>
+<area shape="rect" id="node15" href="$emulator_8hpp.html" title=" " alt="" coords="833,95,956,136"/>
+<area shape="rect" id="node8" href="$modulation_8hpp.html" title=" " alt="" coords="465,184,593,225"/>
+<area shape="rect" id="node11" href="$stm_2gain_8hpp.html" title=" " alt="" coords="532,363,660,404"/>
+<area shape="rect" id="node12" href="$point_8hpp.html" title=" " alt="" coords="685,363,813,404"/>
+<area shape="rect" id="node6" href="$holo_8hpp.html" title=" " alt="" coords="295,273,422,315"/>
+<area shape="rect" id="node7" href="$gain_2primitive_8hpp.html" title=" " alt="" coords="145,273,271,315"/>
+<area shape="rect" id="node9" href="$audio__file_8hpp.html" title=" " alt="" coords="446,273,613,315"/>
+<area shape="rect" id="node10" href="$modulation_2primitive_8hpp.html" title=" " alt="" coords="338,363,505,404"/>
+<area shape="rect" id="node14" href="$backend__cuda_8hpp.html" title=" " alt="" coords="841,184,975,225"/>
 </map>

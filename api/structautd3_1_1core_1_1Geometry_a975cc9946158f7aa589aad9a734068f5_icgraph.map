@@ -1,8 +1,9 @@
 <map id="autd3::core::Geometry::end" name="autd3::core::Geometry::end">
-<area shape="rect" id="node1" title=" " alt="" coords="263,129,437,156"/>
+<area shape="rect" id="node1" title=" " alt="" coords="263,163,437,189"/>
 <area shape="rect" id="node2" href="$classautd3_1_1gain_1_1Null.html#a9e53ccf2d451a6d1617dab7c5affeae1" title=" " alt="" coords="39,5,181,32"/>
 <area shape="rect" id="node3" href="$classautd3_1_1gain_1_1Focus.html#af76e077f75462ed044c043f774bb2caf" title=" " alt="" coords="47,57,173,98"/>
 <area shape="rect" id="node4" href="$classautd3_1_1gain_1_1BesselBeam.html#aa82cc371b381e663ecd7f425f315e532" title=" " alt="" coords="28,122,192,163"/>
-<area shape="rect" id="node5" href="$structautd3_1_1core_1_1Geometry.html#a91924633b4369feae8f0d7ca7337a103" title="Center position of all connected devices." alt="" coords="5,187,215,243"/>
-<area shape="rect" id="node6" href="$structautd3_1_1core_1_1PointSTM.html#a2b913ef961d43bd49dd8a11615a3553f" title=" " alt="" coords="35,266,185,307"/>
+<area shape="rect" id="node5" href="$classautd3_1_1gain_1_1PlaneWave.html#a4b6672c316acfab7f5e0038e4783a62a" title=" " alt="" coords="32,187,188,229"/>
+<area shape="rect" id="node6" href="$structautd3_1_1core_1_1Geometry.html#a91924633b4369feae8f0d7ca7337a103" title="Center position of all connected devices." alt="" coords="5,252,215,308"/>
+<area shape="rect" id="node7" href="$structautd3_1_1core_1_1PointSTM.html#a2b913ef961d43bd49dd8a11615a3553f" title=" " alt="" coords="35,331,185,373"/>
 </map>
