@@ -1,5 +1,6 @@
 <map id="autd3::gain::holo::Backend" name="autd3::gain::holo::Backend">
-<area shape="rect" id="node1" title="Backend for Holo." alt="" coords="77,5,197,47"/>
-<area shape="rect" id="node2" href="$classautd3_1_1gain_1_1holo_1_1CUDABackend.html" title="Backend for Holo using CUDA." alt="" coords="5,95,125,136"/>
-<area shape="rect" id="node3" href="$classautd3_1_1gain_1_1holo_1_1EigenBackend.html" title="Backend for Holo using Eigen." alt="" coords="149,95,269,136"/>
+<area shape="rect" id="node1" title="Backend for Holo." alt="" coords="5,71,125,112"/>
+<area shape="rect" id="node2" href="$classautd3_1_1gain_1_1holo_1_1BLASBackend.html" title="Backend for Holo using Eigen." alt="" coords="173,5,293,47"/>
+<area shape="rect" id="node3" href="$classautd3_1_1gain_1_1holo_1_1CUDABackend.html" title="Backend for Holo using CUDA." alt="" coords="173,71,293,112"/>
+<area shape="rect" id="node4" href="$classautd3_1_1gain_1_1holo_1_1EigenBackend.html" title="Backend for Holo using Eigen." alt="" coords="173,136,293,177"/>
 </map>

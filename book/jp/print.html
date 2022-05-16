@@ -724,6 +724,50 @@ SDKには以下の<code>Backend</code>が用意されている</p>
 <pre><code>  cmake .. -DBUILD_GAIN_HOLO=ON -DBUILD_BACKEND_CUDA=ON
 </code></pre>
 <p>なお,  CUDA Toolkit version 11.7で動作を確認している.</p>
+<h3 id="blas-backend"><a class="header" href="#blas-backend">BLAS Backend</a></h3>
+<p>BLASバックエンドをビルドする場合, <code>BUILD_BACKEND_BLAS</code>フラグをONにし, BLASのInclude/lib directoryとBLASベンダーを指定する.</p>
+<pre><code>cmake .. -DBUILD_HOLO_GAIN=ON -DBUILD_BLAS_BACKEND=ON -DBLAS_LIB_DIR=&lt;your BLAS library path&gt; -DBLAS_INCLUDE_DIR=&lt;your BLAS include path&gt; -DBLA_VENDOR=&lt;your BLAS vendor&gt;
+</code></pre>
+<ul>
+<li>Intel MKLを使用する場合は更に<code>USE_MKL</code>フラグをONにする.
+<pre><code>cmake .. -DBUILD_HOLO_GAIN=ON -DBUILD_BLAS_BACKEND=ON -DBLAS_LIB_DIR=&lt;your MKL library path&gt; -DBLAS_INCLUDE_DIR=&lt;your MKL include path&gt; -DBLA_VENDOR=Intel10_64lp -DUSE_MKL=ON
+</code></pre>
+</li>
+</ul>
+<h4 id="openblas-install-example-in-windows"><a class="header" href="#openblas-install-example-in-windows">OpenBLAS install example in Windows</a></h4>
+<ul>
+<li>
+<p>ここでは, BLASの実装の一つである<a href="https://github.com/xianyi/OpenBLAS">OpenBLAS</a>のインストール例を載せる. <a href="https://github.com/xianyi/OpenBLAS/wiki/How-to-use-OpenBLAS-in-Microsoft-Visual-Studio">official instruction</a>も参考にすること.</p>
+<ul>
+<li>まず, Visual Studio 2022とAnaconda (or miniconda)をインストールし, Anaconda Promptを開き以下のコマンドを入力する.
+<pre><code>git clone https://github.com/xianyi/OpenBLAS
+cd OpenBLAS
+conda update -n base conda
+conda config --add channels conda-forge
+conda install -y cmake flang clangdev perl libflang ninja
+&quot;c:/Program Files/Microsoft Visual Studio/2022/Community/VC/Auxiliary/Build/vcvars64.bat&quot;
+set &quot;LIB=%CONDA_PREFIX%\Library\lib;%LIB%&quot;
+set &quot;CPATH=%CONDA_PREFIX%\Library\include;%CPATH%&quot;
+mkdir build
+cd build
+cmake .. -G &quot;Ninja&quot; -DCMAKE_CXX_COMPILER=clang-cl -DCMAKE_C_COMPILER=clang-cl -DCMAKE_Fortran_COMPILER=flang -DCMAKE_MT=mt -DBUILD_WITHOUT_LAPACK=no -DNOFORTRAN=0 -DDYNAMIC_ARCH=ON -DCMAKE_BUILD_TYPE=Release
+cmake --build . --config Release
+cmake --install . --prefix D:\lib\openblas -v
+</code></pre>
+</li>
+<li>ここでは, <code>D:/lib/open</code>にインストールしたが, どこでも良い.</li>
+<li>また, <code>%CONDA_HOME%\Library\bin</code>をPATHに追加する必要がある. ここで<code>CONDA_HOME</code>はAnaconda (or miniconda)のホームディレクトリである.</li>
+</ul>
+</li>
+<li>
+<p>上記の例に従った場合は, BLASBackendのオプションは以下のように指定する.</p>
+<pre><code>cmake .. -DBUILD_HOLO_GAIN=ON -DBUILD_BLAS_BACKEND=ON -DBLAS_LIB_DIR=D:/lib/openblas -DBLAS_INCLUDE_DIR=D:/lib/openblas/include/openblas -DBLA_VENDOR=OpenBLAS
+</code></pre>
+<ul>
+<li>もし, <code>flangxxx.lib</code>関連のlinkエラーが発生した場合は, <code>-DBLAS_DEPEND_LIB_DIR=%CONDA_HOME%/Library/lib</code>オプションを追加する.</li>
+</ul>
+</li>
+</ul>
 <h2 id="grouped"><a class="header" href="#grouped">Grouped</a></h2>
 <p><code>Grouped</code>は複数のデバイスを使用する際に,
 各デバイスで別々の<code>Gain</code>を使用するための<code>Gain</code>である.</p>
