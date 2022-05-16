@@ -2,5 +2,5 @@
 <area shape="rect" id="node1" title="Modulation controls the amplitude modulation." alt="" coords="88,80,243,107"/>
 <area shape="rect" id="node3" href="$classautd3_1_1modulation_1_1Sine.html" title="Sine wave modulation in ultrasound amplitude." alt="" coords="5,162,160,189"/>
 <area shape="rect" id="node4" href="$classautd3_1_1modulation_1_1Static.html" title="Static (Without modulation)" alt="" coords="183,155,313,196"/>
-<area shape="rect" id="node2" href="$structautd3_1_1core_1_1DatagramHeader.html" title=" " alt="" coords="71,5,260,32"/>
+<area shape="rect" id="node2" href="$structautd3_1_1core_1_1DatagramHeader.html" title="DatagramHeader is a data to be packed in the Header part of the driver::TxDatagram." alt="" coords="71,5,260,32"/>
 </map>

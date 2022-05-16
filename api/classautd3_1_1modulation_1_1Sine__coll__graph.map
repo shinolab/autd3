@@ -1,5 +1,5 @@
 <map id="autd3::modulation::Sine" name="autd3::modulation::Sine">
 <area shape="rect" id="node1" title="Sine wave modulation in ultrasound amplitude." alt="" coords="23,155,177,181"/>
 <area shape="rect" id="node2" href="$classautd3_1_1core_1_1Modulation.html" title="Modulation controls the amplitude modulation." alt="" coords="23,80,177,107"/>
-<area shape="rect" id="node3" href="$structautd3_1_1core_1_1DatagramHeader.html" title=" " alt="" coords="5,5,195,32"/>
+<area shape="rect" id="node3" href="$structautd3_1_1core_1_1DatagramHeader.html" title="DatagramHeader is a data to be packed in the Header part of the driver::TxDatagram." alt="" coords="5,5,195,32"/>
 </map>

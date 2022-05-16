@@ -86,12 +86,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a87a4fcf0cee61d926dd1d90894e80c4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create <a class="el" href="classautd3_1_1link_1_1SOEM.html" title="Link using SOEM">SOEM</a> link.  <a href="classautd3_1_1link_1_1SOEM.html#a87a4fcf0cee61d926dd1d90894e80c4f">More...</a><br /></td></tr>
 <tr class="separator:a87a4fcf0cee61d926dd1d90894e80c4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03c189815d9e43de1595295ccb761247"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classautd3_1_1link_1_1SOEM.html#a03c189815d9e43de1595295ccb761247">SOEM</a> (std::string ifname, const size_t device_num)</td></tr>
+<tr class="memdesc:a03c189815d9e43de1595295ccb761247"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classautd3_1_1link_1_1SOEM.html#a03c189815d9e43de1595295ccb761247">More...</a><br /></td></tr>
 <tr class="separator:a03c189815d9e43de1595295ccb761247"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2d3a8d75990b773d0922ba09e2c0f0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classautd3_1_1link_1_1SOEM.html">SOEM</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classautd3_1_1link_1_1SOEM.html#ad2d3a8d75990b773d0922ba09e2c0f0f">on_lost</a> (std::function&lt; void(std::string)&gt; callback)</td></tr>
+<tr class="memdesc:ad2d3a8d75990b773d0922ba09e2c0f0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set callback function which is called when the link is lost.  <a href="classautd3_1_1link_1_1SOEM.html#ad2d3a8d75990b773d0922ba09e2c0f0f">More...</a><br /></td></tr>
 <tr class="separator:ad2d3a8d75990b773d0922ba09e2c0f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0deeb379dd744ed44129ba3f2e65f853"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classautd3_1_1link_1_1SOEM.html">SOEM</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classautd3_1_1link_1_1SOEM.html#a0deeb379dd744ed44129ba3f2e65f853">cycle_ticks</a> (const uint16_t cycle_ticks)</td></tr>
+<tr class="memdesc:a0deeb379dd744ed44129ba3f2e65f853"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set EtherCAT Sync0 cycle ticks.  <a href="classautd3_1_1link_1_1SOEM.html#a0deeb379dd744ed44129ba3f2e65f853">More...</a><br /></td></tr>
 <tr class="separator:a0deeb379dd744ed44129ba3f2e65f853"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55fa3330e762f482211487867afaccd9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classautd3_1_1link_1_1SOEM.html">SOEM</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classautd3_1_1link_1_1SOEM.html#a55fa3330e762f482211487867afaccd9">high_precision</a> (const bool high_precision)</td></tr>
+<tr class="memdesc:a55fa3330e762f482211487867afaccd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set high precision mode.  <a href="classautd3_1_1link_1_1SOEM.html#a55fa3330e762f482211487867afaccd9">More...</a><br /></td></tr>
 <tr class="separator:a55fa3330e762f482211487867afaccd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b3f064d888f139fc260b421a5656c47"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classautd3_1_1link_1_1SOEM.html#a8b3f064d888f139fc260b421a5656c47">~SOEM</a> ()=default</td></tr>
 <tr class="separator:a8b3f064d888f139fc260b421a5656c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,7 +153,17 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="soem_8hpp_source.html#l00049">49</a> of file <a class="el" href="soem_8hpp_source.html">soem.hpp</a>.</p>
+<p>Constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ifname</td><td>Network interface name. (e.g. eth0) </td></tr>
+    <tr><td class="paramname">device_num</td><td>The number of AUTD you connected.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Available Network interface names are obtained by <a class="el" href="classautd3_1_1link_1_1SOEM.html#a160bf82fc2a1a30d7aa3163c967fd4db" title="Enumerate Ethernet adapters of the computer.">enumerate_adapters()</a>. The numbers of connected devices can be obtained by <a class="el" href="structautd3_1_1core_1_1Geometry.html#a3991eb7d3e038be0f2a412f3f62b7750" title="Number of devices.">Geometry::num_devices()</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="soem_8hpp_source.html#l00056">56</a> of file <a class="el" href="soem_8hpp_source.html">soem.hpp</a>.</p>
 
 </div>
 </div>
@@ -274,7 +288,9 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="soem_8hpp_source.html#l00057">57</a> of file <a class="el" href="soem_8hpp_source.html">soem.hpp</a>.</p>
+<p>Set EtherCAT Sync0 cycle ticks. </p>
+
+<p class="definition">Definition at line <a class="el" href="soem_8hpp_source.html#l00070">70</a> of file <a class="el" href="soem_8hpp_source.html">soem.hpp</a>.</p>
 
 </div>
 </div>
@@ -329,7 +345,10 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="soem_8hpp_source.html#l00062">62</a> of file <a class="el" href="soem_8hpp_source.html">soem.hpp</a>.</p>
+<p>Set high precision mode. </p>
+<p>The high precision mode provides more precise timer control but may increase CPU load. Only Windows is affected by this setting. </p>
+
+<p class="definition">Definition at line <a class="el" href="soem_8hpp_source.html#l00079">79</a> of file <a class="el" href="soem_8hpp_source.html">soem.hpp</a>.</p>
 
 </div>
 </div>
@@ -357,7 +376,9 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="soem_8hpp_source.html#l00052">52</a> of file <a class="el" href="soem_8hpp_source.html">soem.hpp</a>.</p>
+<p>Set callback function which is called when the link is lost. </p>
+
+<p class="definition">Definition at line <a class="el" href="soem_8hpp_source.html#l00062">62</a> of file <a class="el" href="soem_8hpp_source.html">soem.hpp</a>.</p>
 
 </div>
 </div>

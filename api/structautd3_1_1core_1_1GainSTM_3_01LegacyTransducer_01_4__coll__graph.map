@@ -1,5 +1,5 @@
 <map id="autd3::core::GainSTM&lt; LegacyTransducer &gt;" name="autd3::core::GainSTM&lt; LegacyTransducer &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="75,95,225,136"/>
-<area shape="rect" id="node2" href="$structautd3_1_1core_1_1STM.html" title=" " alt="" coords="5,13,124,39"/>
+<area shape="rect" id="node1" title="GainSTM for LegacyTransducer." alt="" coords="75,95,225,136"/>
+<area shape="rect" id="node2" href="$structautd3_1_1core_1_1STM.html" title="STM provide hardware Spatio&#45;Temporal Modulation or Lateral Modulation function." alt="" coords="5,13,124,39"/>
 <area shape="rect" id="node3" href="$structautd3_1_1core_1_1DatagramBody.html" title=" " alt="" coords="149,5,325,47"/>
 </map>

@@ -75,6 +75,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="structautd3_1_1core_1_1Geometry.html" title="Geometry of all devices.">Geometry</a> of all devices.  
+ <a href="structautd3_1_1core_1_1Geometry.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -82,14 +85,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a909f7499c00df3519bcb14fc6fd8bfea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Geometry.html#a909f7499c00df3519bcb14fc6fd8bfea">Geometry</a> ()</td></tr>
 <tr class="separator:a909f7499c00df3519bcb14fc6fd8bfea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3991eb7d3e038be0f2a412f3f62b7750"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Geometry.html#a3991eb7d3e038be0f2a412f3f62b7750">num_devices</a> () const noexcept</td></tr>
+<tr class="memdesc:a3991eb7d3e038be0f2a412f3f62b7750"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of devices.  <a href="structautd3_1_1core_1_1Geometry.html#a3991eb7d3e038be0f2a412f3f62b7750">More...</a><br /></td></tr>
 <tr class="separator:a3991eb7d3e038be0f2a412f3f62b7750"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b32f39b405d8fa3d75cf8ddaa873714"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Geometry.html#a7b32f39b405d8fa3d75cf8ddaa873714">num_transducers</a> () const noexcept</td></tr>
+<tr class="memdesc:a7b32f39b405d8fa3d75cf8ddaa873714"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of transducers.  <a href="structautd3_1_1core_1_1Geometry.html#a7b32f39b405d8fa3d75cf8ddaa873714">More...</a><br /></td></tr>
 <tr class="separator:a7b32f39b405d8fa3d75cf8ddaa873714"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91924633b4369feae8f0d7ca7337a103"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceautd3_1_1core.html#a568b18df520efce1b81b6a17277ad886">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Geometry.html#a91924633b4369feae8f0d7ca7337a103">center</a> () const</td></tr>
+<tr class="memdesc:a91924633b4369feae8f0d7ca7337a103"><td class="mdescLeft">&#160;</td><td class="mdescRight">Center position of all connected devices.  <a href="structautd3_1_1core_1_1Geometry.html#a91924633b4369feae8f0d7ca7337a103">More...</a><br /></td></tr>
 <tr class="separator:a91924633b4369feae8f0d7ca7337a103"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa26e6b093eca00718224bec61b7b51af"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Geometry.html#aa26e6b093eca00718224bec61b7b51af">add_device</a> (const <a class="el" href="namespaceautd3_1_1core.html#a568b18df520efce1b81b6a17277ad886">Vector3</a> &amp;position, const <a class="el" href="namespaceautd3_1_1core.html#a568b18df520efce1b81b6a17277ad886">Vector3</a> &amp;euler_angles)</td></tr>
+<tr class="memdesc:aa26e6b093eca00718224bec61b7b51af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add new device with position and rotation. Note that the transform is done with order: Translate -&gt; Rotate.  <a href="structautd3_1_1core_1_1Geometry.html#aa26e6b093eca00718224bec61b7b51af">More...</a><br /></td></tr>
 <tr class="separator:aa26e6b093eca00718224bec61b7b51af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a870f2508bbfa2052e475a5228b6c699f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Geometry.html#a870f2508bbfa2052e475a5228b6c699f">add_device</a> (const <a class="el" href="namespaceautd3_1_1core.html#a568b18df520efce1b81b6a17277ad886">Vector3</a> &amp;position, const <a class="el" href="namespaceautd3_1_1core.html#a7c61f934cd1defac26fe81cc47aedc86">Quaternion</a> &amp;quaternion)</td></tr>
+<tr class="memdesc:a870f2508bbfa2052e475a5228b6c699f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as <a class="el" href="structautd3_1_1core_1_1Geometry.html#aa26e6b093eca00718224bec61b7b51af" title="Add new device with position and rotation. Note that the transform is done with order: Translate -&gt; R...">add_device(const Vector3&amp;, const Vector3&amp;)</a>, but using quaternion rather than zyz euler angles.  <a href="structautd3_1_1core_1_1Geometry.html#a870f2508bbfa2052e475a5228b6c699f">More...</a><br /></td></tr>
 <tr class="separator:a870f2508bbfa2052e475a5228b6c699f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47a61738d4c30038c959e65773cd5cb3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structautd3_1_1core_1_1Device.html">Device</a>&lt; T &gt; &gt;::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Geometry.html#a47a61738d4c30038c959e65773cd5cb3">begin</a> () const noexcept</td></tr>
 <tr class="separator:a47a61738d4c30038c959e65773cd5cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -107,16 +115,19 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:acdfae2ea41b17737187c496b067268d3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Geometry.html#acdfae2ea41b17737187c496b067268d3">attenuation</a></td></tr>
+<tr class="memdesc:acdfae2ea41b17737187c496b067268d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attenuation coefficient in Np/mm.  <a href="structautd3_1_1core_1_1Geometry.html#acdfae2ea41b17737187c496b067268d3">More...</a><br /></td></tr>
 <tr class="separator:acdfae2ea41b17737187c496b067268d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b55e9a520c535eee4d372c635040da6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Geometry.html#a1b55e9a520c535eee4d372c635040da6">sound_speed</a></td></tr>
+<tr class="memdesc:a1b55e9a520c535eee4d372c635040da6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Speed of sound in m/s.  <a href="structautd3_1_1core_1_1Geometry.html#a1b55e9a520c535eee4d372c635040da6">More...</a><br /></td></tr>
 <tr class="separator:a1b55e9a520c535eee4d372c635040da6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T = LegacyTransducer, std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&lt; typename T::D &gt;, T &gt;, nullptr_t &gt; = nullptr&gt;<br />
 struct autd3::core::Geometry&lt; T, &gt;</h3>
 
+<p><a class="el" href="structautd3_1_1core_1_1Geometry.html" title="Geometry of all devices.">Geometry</a> of all devices. </p>
 
-<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00023">23</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00027">27</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a909f7499c00df3519bcb14fc6fd8bfea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a909f7499c00df3519bcb14fc6fd8bfea">&#9670;&nbsp;</a></span>Geometry()</h2>
@@ -143,7 +154,7 @@ template&lt;typename T  = LegacyTransducer, std::enable_if_t&lt; std::is_base_of
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00024">24</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00028">28</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
 
 </div>
 </div>
@@ -184,7 +195,17 @@ template&lt;typename T  = LegacyTransducer, std::enable_if_t&lt; std::is_base_of
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00047">47</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
+<p>Same as <a class="el" href="structautd3_1_1core_1_1Geometry.html#aa26e6b093eca00718224bec61b7b51af" title="Add new device with position and rotation. Note that the transform is done with order: Translate -&gt; R...">add_device(const Vector3&amp;, const Vector3&amp;)</a>, but using quaternion rather than zyz euler angles. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>Position of transducer #0, which is the one at the lower-left corner. </td></tr>
+    <tr><td class="paramname">quaternion</td><td>rotation quaternion of the device. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>an id of added device </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00080">80</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
 
 </div>
 </div>
@@ -224,15 +245,25 @@ template&lt;typename T  = LegacyTransducer, std::enable_if_t&lt; std::is_base_of
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00042">42</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
+<p>Add new device with position and rotation. Note that the transform is done with order: Translate -&gt; Rotate. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>Position of transducer #0, which is the one at the lower-left corner. </td></tr>
+    <tr><td class="paramname">euler_angles</td><td>ZYZ convention euler angle of the device </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>an id of added device </dd></dl>
 
-<p class="reference">Referenced by <a class="el" href="geometry_8hpp_source.html#l00042">autd3::core::Geometry&lt; autd3::core::LegacyTransducer &gt;::add_device()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00069">69</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="geometry_8hpp_source.html#l00069">autd3::core::Geometry&lt; autd3::core::LegacyTransducer &gt;::add_device()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="structautd3_1_1core_1_1Geometry_aa26e6b093eca00718224bec61b7b51af_icgraph.png" border="0" usemap="#structautd3_1_1core_1_1Geometry_aa26e6b093eca00718224bec61b7b51af_icgraph" alt=""/></div>
 <map name="structautd3_1_1core_1_1Geometry_aa26e6b093eca00718224bec61b7b51af_icgraph" id="structautd3_1_1core_1_1Geometry_aa26e6b093eca00718224bec61b7b51af_icgraph">
-<area shape="rect" title=" " alt="" coords="5,29,152,71"/>
+<area shape="rect" title="Add new device with position and rotation. Note that the transform is done with order: Translate &#45;&gt; R..." alt="" coords="5,29,152,71"/>
 </map>
 </div>
 
@@ -263,9 +294,9 @@ template&lt;typename T  = LegacyTransducer, std::enable_if_t&lt; std::is_base_of
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00053">53</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00086">86</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="gain_2primitive_8hpp_source.html#l00028">autd3::gain::Null&lt; T, &gt;::calc()</a>, <a class="el" href="gain_2primitive_8hpp_source.html#l00053">autd3::gain::Focus&lt; T, &gt;::calc()</a>, <a class="el" href="gain_2primitive_8hpp_source.html#l00089">autd3::gain::BesselBeam&lt; T, &gt;::calc()</a>, <a class="el" href="geometry_8hpp_source.html#l00032">autd3::core::Geometry&lt; autd3::core::LegacyTransducer &gt;::center()</a>, and <a class="el" href="point_8hpp_source.html#l00063">autd3::core::PointSTM&lt; T, &gt;::pack()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="gain_2primitive_8hpp_source.html#l00028">autd3::gain::Null&lt; T, &gt;::calc()</a>, <a class="el" href="gain_2primitive_8hpp_source.html#l00053">autd3::gain::Focus&lt; T, &gt;::calc()</a>, <a class="el" href="gain_2primitive_8hpp_source.html#l00089">autd3::gain::BesselBeam&lt; T, &gt;::calc()</a>, <a class="el" href="geometry_8hpp_source.html#l00053">autd3::core::Geometry&lt; autd3::core::LegacyTransducer &gt;::center()</a>, and <a class="el" href="point_8hpp_source.html#l00083">autd3::core::PointSTM&lt; T, &gt;::pack()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -275,7 +306,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="classautd3_1_1gain_1_1Null.html#a9e53ccf2d451a6d1617dab7c5affeae1" title=" " alt="" coords="39,5,181,32"/>
 <area shape="rect" href="classautd3_1_1gain_1_1Focus.html#af76e077f75462ed044c043f774bb2caf" title=" " alt="" coords="47,57,173,98"/>
 <area shape="rect" href="classautd3_1_1gain_1_1BesselBeam.html#aa82cc371b381e663ecd7f425f315e532" title=" " alt="" coords="28,122,192,163"/>
-<area shape="rect" href="structautd3_1_1core_1_1Geometry.html#a91924633b4369feae8f0d7ca7337a103" title=" " alt="" coords="5,187,215,243"/>
+<area shape="rect" href="structautd3_1_1core_1_1Geometry.html#a91924633b4369feae8f0d7ca7337a103" title="Center position of all connected devices." alt="" coords="5,187,215,243"/>
 <area shape="rect" href="structautd3_1_1core_1_1PointSTM.html#a2b913ef961d43bd49dd8a11615a3553f" title=" " alt="" coords="35,266,185,307"/>
 </map>
 </div>
@@ -307,7 +338,7 @@ template&lt;typename T  = LegacyTransducer, std::enable_if_t&lt; std::is_base_of
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00055">55</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00088">88</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
 
 </div>
 </div>
@@ -336,7 +367,9 @@ template&lt;typename T  = LegacyTransducer, std::enable_if_t&lt; std::is_base_of
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00032">32</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
+<p>Center position of all connected devices. </p>
+
+<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00053">53</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
 
 </div>
 </div>
@@ -365,9 +398,9 @@ template&lt;typename T  = LegacyTransducer, std::enable_if_t&lt; std::is_base_of
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00054">54</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00087">87</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="gain_2primitive_8hpp_source.html#l00028">autd3::gain::Null&lt; T, &gt;::calc()</a>, <a class="el" href="gain_2primitive_8hpp_source.html#l00053">autd3::gain::Focus&lt; T, &gt;::calc()</a>, <a class="el" href="gain_2primitive_8hpp_source.html#l00089">autd3::gain::BesselBeam&lt; T, &gt;::calc()</a>, <a class="el" href="geometry_8hpp_source.html#l00032">autd3::core::Geometry&lt; autd3::core::LegacyTransducer &gt;::center()</a>, and <a class="el" href="point_8hpp_source.html#l00063">autd3::core::PointSTM&lt; T, &gt;::pack()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="gain_2primitive_8hpp_source.html#l00028">autd3::gain::Null&lt; T, &gt;::calc()</a>, <a class="el" href="gain_2primitive_8hpp_source.html#l00053">autd3::gain::Focus&lt; T, &gt;::calc()</a>, <a class="el" href="gain_2primitive_8hpp_source.html#l00089">autd3::gain::BesselBeam&lt; T, &gt;::calc()</a>, <a class="el" href="geometry_8hpp_source.html#l00053">autd3::core::Geometry&lt; autd3::core::LegacyTransducer &gt;::center()</a>, and <a class="el" href="point_8hpp_source.html#l00083">autd3::core::PointSTM&lt; T, &gt;::pack()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -377,7 +410,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="classautd3_1_1gain_1_1Null.html#a9e53ccf2d451a6d1617dab7c5affeae1" title=" " alt="" coords="39,5,181,32"/>
 <area shape="rect" href="classautd3_1_1gain_1_1Focus.html#af76e077f75462ed044c043f774bb2caf" title=" " alt="" coords="47,57,173,98"/>
 <area shape="rect" href="classautd3_1_1gain_1_1BesselBeam.html#aa82cc371b381e663ecd7f425f315e532" title=" " alt="" coords="28,122,192,163"/>
-<area shape="rect" href="structautd3_1_1core_1_1Geometry.html#a91924633b4369feae8f0d7ca7337a103" title=" " alt="" coords="5,187,215,243"/>
+<area shape="rect" href="structautd3_1_1core_1_1Geometry.html#a91924633b4369feae8f0d7ca7337a103" title="Center position of all connected devices." alt="" coords="5,187,215,243"/>
 <area shape="rect" href="structautd3_1_1core_1_1PointSTM.html#a2b913ef961d43bd49dd8a11615a3553f" title=" " alt="" coords="35,266,185,307"/>
 </map>
 </div>
@@ -409,7 +442,7 @@ template&lt;typename T  = LegacyTransducer, std::enable_if_t&lt; std::is_base_of
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00056">56</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00089">89</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
 
 </div>
 </div>
@@ -438,16 +471,18 @@ template&lt;typename T  = LegacyTransducer, std::enable_if_t&lt; std::is_base_of
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00029">29</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
+<p>Number of devices. </p>
 
-<p class="reference">Referenced by <a class="el" href="gain_8hpp_source.html#l00048">autd3::core::Gain&lt; core::LegacyTransducer &gt;::build()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00043">43</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="gain_8hpp_source.html#l00062">autd3::core::Gain&lt; core::LegacyTransducer &gt;::build()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="structautd3_1_1core_1_1Geometry_a3991eb7d3e038be0f2a412f3f62b7750_icgraph.png" border="0" usemap="#structautd3_1_1core_1_1Geometry_a3991eb7d3e038be0f2a412f3f62b7750_icgraph" alt=""/></div>
 <map name="structautd3_1_1core_1_1Geometry_a3991eb7d3e038be0f2a412f3f62b7750_icgraph" id="structautd3_1_1core_1_1Geometry_a3991eb7d3e038be0f2a412f3f62b7750_icgraph">
-<area shape="rect" title=" " alt="" coords="216,13,363,54"/>
-<area shape="rect" href="structautd3_1_1core_1_1Gain.html#aad759be20c49b1f7ae078af2fe5d128b" title=" " alt="" coords="5,5,168,61"/>
+<area shape="rect" title="Number of devices." alt="" coords="216,13,363,54"/>
+<area shape="rect" href="structautd3_1_1core_1_1Gain.html#aad759be20c49b1f7ae078af2fe5d128b" title="Initialize data and call calc()." alt="" coords="5,5,168,61"/>
 </map>
 </div>
 
@@ -478,7 +513,9 @@ template&lt;typename T  = LegacyTransducer, std::enable_if_t&lt; std::is_base_of
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00031">31</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
+<p>Number of transducers. </p>
+
+<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00048">48</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
 
 </div>
 </div>
@@ -508,7 +545,7 @@ template&lt;typename T  = LegacyTransducer, std::enable_if_t&lt; std::is_base_of
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00058">58</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00091">91</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
 
 </div>
 </div>
@@ -538,7 +575,7 @@ template&lt;typename T  = LegacyTransducer, std::enable_if_t&lt; std::is_base_of
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00059">59</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00092">92</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
 
 </div>
 </div>
@@ -557,7 +594,9 @@ template&lt;typename T  = LegacyTransducer, std::enable_if_t&lt; std::is_base_of
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00026">26</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
+<p>Attenuation coefficient in Np/mm. </p>
+
+<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00033">33</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
 
 </div>
 </div>
@@ -575,7 +614,9 @@ template&lt;typename T  = LegacyTransducer, std::enable_if_t&lt; std::is_base_of
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00027">27</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
+<p>Speed of sound in m/s. </p>
+
+<p class="definition">Definition at line <a class="el" href="geometry_8hpp_source.html#l00038">38</a> of file <a class="el" href="geometry_8hpp_source.html">geometry.hpp</a>.</p>
 
 </div>
 </div>

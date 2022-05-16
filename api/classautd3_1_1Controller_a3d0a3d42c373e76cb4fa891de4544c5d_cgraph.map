@@ -1,5 +1,5 @@
 <map id="autd3::Controller::config_silencer" name="autd3::Controller::config_silencer">
-<area shape="rect" id="node1" title=" " alt="" coords="5,165,127,207"/>
+<area shape="rect" id="node1" title="Configure Silencer." alt="" coords="5,165,127,207"/>
 <area shape="rect" id="node2" href="$structautd3_1_1driver_1_1TxDatagram.html#a0f20210fb3fce46ec5e07eb2448dfc47" title=" " alt="" coords="175,71,343,112"/>
 <area shape="rect" id="node5" href="$namespaceautd3_1_1driver.html#a3a5a5cec213db26d8ffd6e9e106b3a7f" title=" " alt="" coords="193,136,325,177"/>
 <area shape="rect" id="node9" href="$namespaceautd3_1_1driver.html#a84f57e8df76700c2e2e64deff6fa4dd0" title=" " alt="" coords="183,202,335,229"/>

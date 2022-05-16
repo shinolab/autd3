@@ -1,7 +1,7 @@
 <map id="autd3::driver::force_fan" name="autd3::driver::force_fan">
 <area shape="rect" id="node1" title=" " alt="" coords="203,101,355,127"/>
-<area shape="rect" id="node2" href="$classautd3_1_1Controller.html#a3d0a3d42c373e76cb4fa891de4544c5d" title=" " alt="" coords="19,5,141,47"/>
-<area shape="rect" id="node3" href="$classautd3_1_1Controller.html#af8a0fa690d074b0ece86d88a9a6c6248" title=" " alt="" coords="5,71,155,98"/>
-<area shape="rect" id="node4" href="$classautd3_1_1Controller.html#aa88c8ecdd1dab9e2f154af88ba4d9434" title=" " alt="" coords="19,123,141,164"/>
-<area shape="rect" id="node5" href="$classautd3_1_1Controller.html#a1218309570961fb2dcd835b240e57b66" title=" " alt="" coords="19,188,141,229"/>
+<area shape="rect" id="node2" href="$classautd3_1_1Controller.html#a3d0a3d42c373e76cb4fa891de4544c5d" title="Configure Silencer." alt="" coords="19,5,141,47"/>
+<area shape="rect" id="node3" href="$classautd3_1_1Controller.html#af8a0fa690d074b0ece86d88a9a6c6248" title="Send header data to devices." alt="" coords="5,71,155,98"/>
+<area shape="rect" id="node4" href="$classautd3_1_1Controller.html#aa88c8ecdd1dab9e2f154af88ba4d9434" title="Synchronize devices." alt="" coords="19,123,141,164"/>
+<area shape="rect" id="node5" href="$classautd3_1_1Controller.html#a1218309570961fb2dcd835b240e57b66" title="Update flags (force fan and reads_fpga_info)" alt="" coords="19,188,141,229"/>
 </map>

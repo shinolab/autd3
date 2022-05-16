@@ -1,0 +1,1095 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js navy">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>AUTD3 Developers Manual v2.0.0</title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('navy')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="Software/index.html"><strong aria-hidden="true">1.</strong> Software</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Software/about_AUTD3.html"><strong aria-hidden="true">1.1.</strong> About AUTD3</a></li><li class="chapter-item expanded "><a href="Software/Users_Manual/index.html"><strong aria-hidden="true">1.2.</strong> C++ User's Manual</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Software/Users_Manual/concept.html"><strong aria-hidden="true">1.2.1.</strong> Concept</a></li><li class="chapter-item expanded "><a href="Software/Users_Manual/getting_started.html"><strong aria-hidden="true">1.2.2.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="Software/Users_Manual/geometry.html"><strong aria-hidden="true">1.2.3.</strong> Geometry</a></li><li class="chapter-item expanded "><a href="Software/Users_Manual/link.html"><strong aria-hidden="true">1.2.4.</strong> Link</a></li><li class="chapter-item expanded "><a href="Software/Users_Manual/gain.html"><strong aria-hidden="true">1.2.5.</strong> Gain</a></li><li class="chapter-item expanded "><a href="Software/Users_Manual/modulation.html"><strong aria-hidden="true">1.2.6.</strong> Modulation</a></li><li class="chapter-item expanded "><a href="Software/Users_Manual/stm.html"><strong aria-hidden="true">1.2.7.</strong> Spatio-Temporal Modulation</a></li><li class="chapter-item expanded "><a href="Software/Users_Manual/silencer.html"><strong aria-hidden="true">1.2.8.</strong> Silencer</a></li><li class="chapter-item expanded "><a href="Software/Users_Manual/controller.html"><strong aria-hidden="true">1.2.9.</strong> Controller</a></li></ol></li><li class="chapter-item expanded "><a href="Software/FFI/index.html"><strong aria-hidden="true">1.3.</strong> FFI</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Software/FFI/csharp.html"><strong aria-hidden="true">1.3.1.</strong> C#</a></li><li class="chapter-item expanded "><a href="Software/FFI/python.html"><strong aria-hidden="true">1.3.2.</strong> python</a></li><li class="chapter-item expanded "><a href="Software/FFI/julia.html"><strong aria-hidden="true">1.3.3.</strong> Julia</a></li><li class="chapter-item expanded "><a href="Software/FFI/rust.html"><strong aria-hidden="true">1.3.4.</strong> Rust</a></li><li class="chapter-item expanded "><a href="Software/FFI/reference.html"><strong aria-hidden="true">1.3.5.</strong> C API Reference</a></li></ol></li><li class="chapter-item expanded "><a href="Software/Emulator/index.html"><strong aria-hidden="true">1.4.</strong> Emulator</a></li><li class="chapter-item expanded "><a href="Software/GUI/index.html"><strong aria-hidden="true">1.5.</strong> GUI</a></li></ol></li><li class="chapter-item expanded "><a href="Citation/index.html"><strong aria-hidden="true">2.</strong> Citation</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">AUTD3 Developers Manual v2.0.0</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/shinolab/autd3" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="software"><a class="header" href="#software">Software</a></h1>
+<p>本文章は<a href="https://github.com/shinolab/autd3">autd3のライブラリ</a> (以下, SDKと呼ぶ) の使用方法について述べたものである.
+なお, プログラミング言語としてはC++を使用する.
+他言語向けのライブラリも用意されており, それらの使用方法については<a href="Software/./FFI/index.html">FFI</a>を参照されたい.
+また, <a href="Software/./Emulator/index.html">Emulator</a>や<a href="Software/./GUI/index.html">GUIコントローラ</a>などのtoolsの詳説も行う.</p>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="about-autd3"><a class="header" href="#about-autd3">About AUTD3</a></h1>
+<p>超音波フェーズドアレイとは, 位相を個別に制御できる超音波振動子を (典型的には格子状に) 配列したものである.
+超音波の位相を制御することで, 空間に任意の音場を発生させることができる.</p>
+<p>フェーズドアレイを用いて十分に収束させた音波のエネルギーは, 音響放射圧を生じる.
+この圧力を利用して, 人体の表面を非接触で押すことができる.
+収束焦点の位置は, フェーズドアレイを電子的に制御することで, 自由に制御できる.
+また, 逆問題を解くことで, 単一の焦点だけでなく, より複雑な音圧空間分布を作ることもできる.</p>
+<p>フェーズドアレイで生成できる圧力の大きさの上限は, 現在のところ約<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">5</span><span class="mord">0</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">m</span><span class="mord mathrm">N</span><span class="mord mathrm">/</span><span class="mord mathrm">c</span><span class="mord"><span class="mord mathrm">m</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">5</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm" style="margin-right:0.01389em;">g</span><span class="mord mathrm" style="margin-right:0.07778em;">f</span><span class="mord mathrm">/</span><span class="mord mathrm">c</span><span class="mord"><span class="mord mathrm">m</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></span>である.
+また, 空間分解能は使用する波長までとなる (例えば, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord"><span class="mord">4</span><span class="mord">0</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">k</span><span class="mord mathrm">H</span><span class="mord mathrm">z</span></span></span></span></span></span>で約<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord"><span class="mord">8</span><span class="mord">.</span><span class="mord">5</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">m</span><span class="mord mathrm">m</span></span></span></span></span></span>).
+フェーズドアレイにはこのような制約はあるものの, 力の時空間分布を自由にデザインし, さまざまな触覚を作り出すことができる技術として注目されている.</p>
+<p>このように非接触で触覚を刺激する技術分野を“空中触覚 (Midair Haptics)“と呼び, 我々はこの超音波空中触覚装置を“Airborne Ultrasound Tactile Display (AUTD)“と呼んでいる.
+AUTDの本質的な部分は, 2008年<sup class="footnote-reference"><a href="#1">1</a></sup>から2010年代初頭<sup class="footnote-reference"><a href="#2">2</a></sup>にかけて, 東京大学によって提案・確立された.
+その後, 各国の大学や企業が参入し, 活発な研究開発が行われている.</p>
+<p><a href="https://hapislab.org/airborne-ultrasound-tactile-display">研究室のホームページには、AUTDを使った研究の一覧も掲載されている, こちらも参照されたい.</a></p>
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p><a href="https://hapislab.org/public/hiroyuki_shinoda/research/pdf/08Eurohaptics_iwamoto.pdf">Takayuki Iwamoto, Mari Tatezono, and Hiroyuki Shinoda: Non-contact Method for Producing Tactile Sensation Using Airborne Ultrasound, Haptics: Perception, Devices and Scenarios: 6th International Conference, Eurohaptics 2008 Proceedings (Lecture Notes in Computer Science), pp.504-513, 2008.</a></p>
+</div>
+<div class="footnote-definition" id="2"><sup class="footnote-definition-label">2</sup>
+<p><a href="https://hapislab.org/public/hiroyuki_shinoda/research/pdf/10_Trans_Haptics_Hoshi.pdf">Takayuki Hoshi, Masafumi Takahashi, Takayuki Iwamoto, and Hiroyuki Shinoda: Noncontact Tactile Display Based on Radiation Pressure of Airborne Ultrasound, IEEE Trans. on Haptics, Vol. 3, No. 3, pp.155-165, 2010.</a></p>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="users-manual"><a class="header" href="#users-manual">User’s Manual</a></h1>
+<p>以下では, ライブラリの基本的な使用方法について述べる.</p>
+<p>オンラインの<a href="https://shinolab.github.io/autd3/api/index.html">API Reference</a>も合わせて参照すること.</p>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="concept"><a class="header" href="#concept">Concept</a></h1>
+<p>SDKを構成する主なクラスは以下の通りである.</p>
+<ul>
+<li><code>Controller</code> - コントローラクラス. すべての操作はこのクラスを介して行う.</li>
+<li><code>Geometry</code> - 現実世界におけるデバイスの配置を管理する</li>
+<li><code>Link</code> - Deviceとのインターフェース</li>
+<li><code>Gain</code> - 各振動子の位相/振幅を管理するクラス</li>
+<li><code>Modulation</code> - AM変調を管理するクラス</li>
+<li><code>STM</code> - Hardware上のSpatio-Temporal Modulation (STM) 機能を管理するクラス</li>
+</ul>
+<p>SDK使用の流れは次のようになる.</p>
+<ul>
+<li><code>Controller</code>の作成</li>
+<li>接続されているデバイスの位置と姿勢の設定</li>
+<li><code>Link</code>の作成, 及び, 接続</li>
+<li>デバイスの初期化</li>
+<li><code>Gain</code>, <code>STM</code>, <code>Modulation</code>の作成, 及び, 送信</li>
+</ul>
+<h2 id="hardware-description"><a class="header" href="#hardware-description">Hardware description</a></h2>
+<p>以下にAUTD3を上から見た写真を載せる.</p>
+<figure>
+  <img src="https://raw.githubusercontent.com/shinolab/autd3/master/book/src/fig/Users_Manual/autd_trans_idx.jpg"/>
+  <figcaption>AUTD front</figcaption>
+</figure>
+<p>また, 以下にAUTD3の背面の画像を載せる. 24V電源のコネクタはMolex社5566-02Aを使用している.</p>
+<figure>
+  <img src="https://raw.githubusercontent.com/shinolab/autd3/master/book/src/fig/Users_Manual/autd_back.jpg"/>
+  <figcaption>AUTD back</figcaption>
+</figure>
+<p>AUTD3には一台あたり249個<sup class="footnote-reference"><a href="#fn_asm">1</a></sup>の振動子から構成されており, それぞれ図のようにindex番号が振られている.
+SDKからはこの全ての振動子の周波数, 位相, 及び, 振幅をそれぞれ個別に指定できるようになっている.</p>
+<p>AUTD3の座標系は右手座標系を採用しており, 0番目の振動子の中心が原点になる.
+<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">x</span></span></span></span>軸は長軸方向, すなわち, 0→17の方向であり, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span>軸は0→18の方向である.
+また, 単位系として, 距離は<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord"><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">m</span><span class="mord mathrm">m</span></span></span></span></span></span>, 角度は<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord"><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">r</span><span class="mord mathrm">a</span><span class="mord mathrm">d</span></span></span></span></span></span>, 周波数は<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord"><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">H</span><span class="mord mathrm">z</span></span></span></span></span></span>を採用している.
+振動子は<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord"><span class="mord">1</span><span class="mord">0</span><span class="mord">.</span><span class="mord">1</span><span class="mord">6</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">m</span><span class="mord mathrm">m</span></span></span></span></span></span>の間隔で配置されており, 基板を含めたサイズは<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">1</span><span class="mord">9</span><span class="mord">2</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">m</span><span class="mord mathrm">m</span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord"><span class="mord">1</span><span class="mord">5</span><span class="mord">1</span><span class="mord">.</span><span class="mord">4</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">m</span><span class="mord mathrm">m</span></span></span></span></span></span>となっている.
+以下に, 振動子アレイの外形図を載せる.</p>
+<figure>
+  <img src="https://raw.githubusercontent.com/shinolab/autd3/master/book/src/fig/Users_Manual/transducers_array.jpg"/>
+  <figcaption>Design drawing of transducer array</figcaption>
+</figure>
+<p>さらに, AUTD3は復数のデバイスをデイジーチェーンで接続し拡張できるようになっている.
+PCと1台目のEherCAT Inをイーサネットケーブルを繋ぎ, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span>台目のEherCAT Outと<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.74285em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>台目のEherCAT Inを繋ぐことで拡張アレイを構成できる.
+使用するイーサネットケーブルはCAT 5e以上のものである必要がある.</p>
+<div class="footnote-definition" id="fn_asm"><sup class="footnote-definition-label">1</sup>
+<p><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mord">8</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">4</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">5</span><span class="mord">2</span></span></span></span>からネジ用に3つの振動子が抜けている. 態々この位置にネジ穴を持ってきたのは, 複数台並べたときの隙間を可能な限り小さくしようとしたため.</p>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="getting-started"><a class="header" href="#getting-started">Getting Started</a></h1>
+<p>ここでは, 実際にAUTD3を動かす手順について述べる.
+なお, 本章ではOSとしてWindows 11 64bitを使用する.
+他のOSの場合は適宜読み替えられたい.</p>
+<h2 id="install"><a class="header" href="#install">Install</a></h2>
+<p>まず, 必要なツールをインストールする.
+本節で使用するツールとversionは以下の通りである.
+各々公式の手順に従ってインストールすること.
+Visual Studio Community 2022は「C++によるデスクトップ開発」にチェックを入れてインストールすれば良い.
+なお, Linuxの場合はgccが, macOSの場合はclangが使えれば良い.
+また, 以下はターミナルから操作するため, PATHを通しておくことを推奨する.</p>
+<ul>
+<li>Visual Studio Community 2022 17.2.0</li>
+<li>CMake 3.22.2</li>
+<li>git 2.36.1.windows.1<sup class="footnote-reference"><a href="#fn_git">1</a></sup></li>
+<li>npcap 1.60<sup class="footnote-reference"><a href="#fn_npcap">2</a></sup></li>
+</ul>
+<h2 id="setup-device"><a class="header" href="#setup-device">Setup Device</a></h2>
+<p>次にデバイスをセットアップする.
+ここでは一台のAUTD3のみを使うこととする.
+PCのイーサネットポートとAUTD3デバイスのEtherCAT In (<a href="Software/Users_Manual/concept.html">Concept</a>参照) をイーサネットケーブルで接続する.
+次に, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="mord">4</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm" style="margin-right:0.01389em;">V</span></span></span></span></span></span>電源を接続する.</p>
+<h3 id="firmware-update"><a class="header" href="#firmware-update">Firmware update</a></h3>
+<p>firmwareが古い場合, 動作は保証されない.
+本文章におけるfirmwareのversionは2.0が想定される.</p>
+<p>firmwareのupdateには<a href="https://www.xilinx.com/products/design-tools/vivado.html">Vivado Design Suite</a>, 及び, <a href="https://www.segger.com/downloads/jlink/">J-Link Software</a>をインストールしたWindows 10/11 64bit PCが必要である<sup class="footnote-reference"><a href="#fn_vivado">3</a></sup>.
+なお, Vivado 2022.1, 及び, J-Link Software v7.58b (x64)での動作を確認している.</p>
+<p>まず, AUTD3デバイスとPCを<a href="https://www.xilinx.com/products/boards-and-kits/hw-usb-ii-g.html">XILINX Platform Cable</a>, 及び, <a href="https://www.segger-pocjapan.com/j-link-9-pin-cortex-m-adapter">J-Link 9-Pin Cortex-M Adapter</a>付きの<a href="https://www.segger.com/products/debug-probes/j-link/models/j-link-plus/">J-Link Plus</a>で接続し, AUTD3の電源を入れる.
+次に, <a href="https://github.com/shinolab/autd3">SDK</a>内の<code>dist/firmware/autd_firmware_writer.ps1</code>, または, <a href="https://github.com/shinolab/autd3/releases">GitHub Release</a>で配布されているパッケージ内の<code>firmware/autd_firmware_writer.ps1</code>をpowershellから実行し, 指示に従えばよい.
+updateには数分の時間を要する.</p>
+<h2 id="building-first-program"><a class="header" href="#building-first-program">Building first program</a></h2>
+<p>まず, ターミナルを開き, 適当なディレクトリを用意する.</p>
+<pre><code>  mkdir autd3_sample
+  cd autd3_sample
+</code></pre>
+<p>次に, <code>CMakeLists.txt</code>, <code>main.cpp</code>ファイルを作成する.</p>
+<pre><code>└─autd3_sample
+        CMakeLists.txt
+        main.cpp
+</code></pre>
+<p>次に, SDKの最新のバイナリをダウンロードしてくる.
+バイナリは<a href="https://github.com/shinolab/autd3/releases">GitHub Release</a>にて公開されている.
+ダウンロードしたものを解凍して, <code>include</code>フォルダと<code>lib</code>フォルダを<code>autd3_sample</code>フォルダにコピーする.</p>
+<pre><code>└─autd3_sample
+    │  CMakeLists.txt
+    │  main.cpp
+    ├─include
+    └─lib
+</code></pre>
+<p>次に, Eigen3をダウンロードしてくる.
+Eigen3は行列計算用のヘッダーオンリーライブラリである.
+ここでは, カレントディレクトリを<code>autd3_sample</code>に変更し, gitのサブモジュールとして追加する.</p>
+<pre><code>  git init
+  git submodule add https://gitlab.com/libeigen/eigen.git eigen
+  cd eigen
+  git checkout 3.4.0
+  cd ..
+</code></pre>
+<p>あるいは, 直接<a href="https://gitlab.com/libeigen/eigen">Eigen3</a>をダウンロードしてきて, <code>autd3_sample</code>フォルダ以下に置いても良い. SDKで使用しているversionは3.4.0である.</p>
+<p>この時点で, ディレクトリ構成は以下のようになっている.</p>
+<pre><code>└─autd3_sample
+    │  CMakeLists.txt
+    │  main.cpp
+    ├─include
+    ├─lib
+    └─eigen
+        ├─bench
+        ├─blas
+        ├─ci
+        ├─cmake
+        ...
+</code></pre>
+<p>次に, <code>CMakeLists.txt</code>を以下のようにする.</p>
+<pre><code>cmake_minimum_required(VERSION 3.16)
+
+project(autd3_sample)
+
+set (CMAKE_CXX_STANDARD 17)
+
+add_executable(main main.cpp)
+
+target_link_directories(main PRIVATE lib)
+target_include_directories(main PRIVATE include eigen)
+
+if(WIN32)
+  target_link_directories(main PRIVATE lib/wpcap)
+  target_link_libraries(main autd3 link_soem Packet.lib wpcap.lib ws2_32.lib winmm.lib)
+elseif(APPLE)
+  target_link_libraries(main pcap)
+else()
+  target_link_libraries(main rt)
+endif()
+
+if(WIN32)
+    set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT main)
+endif()
+</code></pre>
+<p>また, <code>main.cpp</code>を以下のようにする.
+これは単一焦点に<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord"><span class="mord">1</span><span class="mord">5</span><span class="mord">0</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">H</span><span class="mord mathrm">z</span></span></span></span></span></span>のAM変調をかける場合のソースコードである.</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+#include &quot;autd3.hpp&quot;
+#include &quot;autd3/link/soem.hpp&quot;
+
+using namespace std;
+using namespace autd3;
+
+string get_adapter_name() {
+  size_t i = 0;
+  const auto adapters = link::SOEM::enumerate_adapters();
+  for (auto&amp;&amp; [desc, name] : adapters) cout &lt;&lt; &quot;[&quot; &lt;&lt; i++ &lt;&lt; &quot;]: &quot; &lt;&lt; desc &lt;&lt; &quot;, &quot; &lt;&lt; name &lt;&lt; endl;
+
+  cout &lt;&lt; &quot;Choose number: &quot;;
+  string in;
+  getline(cin, in);
+  stringstream s(in);
+  if (const auto empty = in == &quot;\n&quot;; !(s &gt;&gt; i) || i &gt;= adapters.size() || empty) return &quot;&quot;;
+
+  return adapters[i].name;
+}
+
+int main() try {
+  Controller autd;
+
+  autd.geometry().add_device(Vector3::Zero(), Vector3::Zero());
+
+  const auto ifname = get_adapter_name();
+  auto link = link::SOEM(ifname, autd.geometry().num_devices()).build();
+  autd.open(std::move(link));
+
+  autd.clear();
+
+  const auto firm_infos = autd.firmware_infos();
+  std::copy(firm_infos.begin(), firm_infos.end(), std::ostream_iterator&lt;FirmwareInfo&gt;(std::cout, &quot;\n&quot;));
+
+  const auto config = SilencerConfig();
+  autd.config_silencer(config);
+
+  const auto focus = autd.geometry().center() + autd3::Vector3(0.0, 0.0, 150.0);
+  gain::Focus g(focus);
+  modulation::Sine m(150);
+
+  autd.send(m, g);
+
+  cout &lt;&lt; &quot;press enter to finish...&quot; &lt;&lt; endl;
+  cin.ignore();
+
+  autd.close();
+
+  return 0;
+} catch (exception&amp; ex) {
+  cerr &lt;&lt; ex.what() &lt;&lt; endl;
+}
+</code></pre>
+<p>次に, CMakeでbuildする.</p>
+<pre><code>  mkdir build
+  cd build
+  cmake .. -G &quot;Visual Studio 17 2022&quot; -A x64
+</code></pre>
+<p>これで, buildディレクトリ以下に<code>autd3_sample.sln</code>が生成されているはずなので, これを開き, mainプロジェクトを実行する.
+<strong>なお, 実行に際して, Visual StudioのConfigurationをDebugからReleaseに変更すること.</strong>
+また, Linux/macOSの場合は, 実行時にroot権限が必要な場合がある.</p>
+<h2 id="explanation"><a class="header" href="#explanation">Explanation</a></h2>
+<p>上記コードの解説を以下に示す.</p>
+<p>SDKを使用するには, <code>autd3.hpp</code>ヘッダーをインクルードする.
+また, <code>link::SOEM</code>を使用するために<code>autd3/link/soem.hpp</code>ヘッダーも必要となる.</p>
+<pre><code class="language-cpp">#include &quot;autd3.hpp&quot;
+#include &quot;autd3/link/soem.hpp&quot;
+</code></pre>
+<p>次に, <code>Controller</code>を作成する.</p>
+<pre><code class="language-cpp">  autd::Controller autd;
+</code></pre>
+<p>その後, デバイスの配置を指定する.</p>
+<pre><code class="language-cpp">  autd.geometry().add_device(Vector3::Zero(), Vector3::Zero());
+</code></pre>
+<p><code>add_device</code>の第一引数は位置, 第2引数は回転を表す.
+位置は自分の設定したグローバル座標系におけるデバイスの原点を指定する.
+また, 回転はZYZのオイラー角, または, クオータニオンで指定する.
+ここでは, 回転も移動も行わないものとする.</p>
+<p>次に, <code>Link</code>を作成し, デバイスと接続する.</p>
+<pre><code class="language-cpp">  const auto ifname = get_adapter_name();
+  auto link = link::SOEM(ifname, autd.geometry().num_devices()).build();
+  autd.open(std::move(link));
+</code></pre>
+<p><code>link::SOEM()</code>の第一引数はインターフェース名で, 第2引数は接続しているAUTD3デバイスの数である. 
+インターフェース名は, Windowsの場合は, <code>\Device\NPF_{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}</code>のような文字列となり, 確認するのはひと手間かかるので, ユーティリティ関数<code>get_adapter_name</code>を用意した. 実行時に適当なものを選択されたい.
+(macやLinuxの場合は<code>ifconfig</code>等で確認することもできる.)
+また, linkの型は<code>unique_ptr</code>であるため, <code>Controller</code>に渡す際は<code>move</code>する必要がある.</p>
+<p>次に, AUTDデバイスの初期化を行う.
+電源投入時に初期化されるので<code>clear()</code>は呼ばなくても良いかもしれない.</p>
+<pre><code class="language-cpp">  autd.clear();
+</code></pre>
+<p>次に, firmwareのバージョンを確認している.
+これも必須ではない.</p>
+<pre><code class="language-cpp">  const auto firm_infos = autd.firmware_infos();
+  std::copy(firm_infos.begin(), firm_infos.end(), std::ostream_iterator&lt;FirmwareInfo&gt;(std::cout, &quot;\n&quot;));
+</code></pre>
+<p>ここで, v2.0.0以外のヴァージョンが表示される場合は, 動作が保証されないので注意する.</p>
+<p>次に, silencerを設定する.</p>
+<pre><code class="language-cpp">  const auto config = SilencerConfig();
+  autd.config_silencer(config);
+</code></pre>
+<p>デフォルトではONになっているので, これも実際には呼ぶ必要はない.
+OFFにしたい場合は<code>SilencerConfig::none()</code>を使用する.
+silencerは, 振動子に与える位相/振幅パラメータをLow-pass filterに通すことで, 静音化を行う.</p>
+<p>その後, 単一焦点を表す<code>Gain</code>と<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord"><span class="mord">1</span><span class="mord">5</span><span class="mord">0</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">H</span><span class="mord mathrm">z</span></span></span></span></span></span>のSin波変調をかける<code>Modulation</code>を作成し, デバイスに送信する.</p>
+<pre><code class="language-cpp">  const auto focus = autd.geometry().center() + autd3::Vector3(0.0, 0.0, 150.0);
+  gain::Focus g(focus);
+  modulation::Sine m(150);
+  autd.send(m, g);
+</code></pre>
+<p>ここで, <code>focus</code>は振動子アレイの中心から直上<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord"><span class="mord">1</span><span class="mord">5</span><span class="mord">0</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">m</span><span class="mord mathrm">m</span></span></span></span></span></span>を表す.</p>
+<p>最後に, デバイスとの接続を切ってお終いである.</p>
+<pre><code class="language-cpp">  autd.close();
+</code></pre>
+<p>次頁では基本的な関数について解説していく.
+なお, <a href="https://shinolab.github.io/autd3/api/index.html">オンラインのAPIドキュメント</a>もあるのでそちらも参考にする事.</p>
+<div class="footnote-definition" id="fn_git"><sup class="footnote-definition-label">1</sup>
+<p>動かすのに必須ではないが, 作業の単純化のため使用</p>
+</div>
+<div class="footnote-definition" id="fn_npcap"><sup class="footnote-definition-label">2</sup>
+<p>SOEM linkを使用するのに使う. TwinCAT linkの場合は必要ない.</p>
+</div>
+<div class="footnote-definition" id="fn_vivado"><sup class="footnote-definition-label">3</sup>
+<p>Vivadoは最小構成でも数十GBの容量を食うので, 適当なPCを用意しておくことをおすすめする.</p>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="geometry"><a class="header" href="#geometry">Geometry</a></h1>
+<p>この章ではGeometryについて解説する.
+GeometryはAUTD3デバイスが現実世界でどのように配置されているかを管理している.</p>
+<h2 id="multiple-devices"><a class="header" href="#multiple-devices">Multiple devices</a></h2>
+<p>AUTD3のデバイスは複数台をデイジーチェーンで接続できるようになっている.
+SDKは複数台を接続したとしても, 透過的に使用できるように設計されている.</p>
+<p>複数のデバイスを接続する場合は,
+PCと1台目のEtherCAT Inをケーブルでつなぎ, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span>台目のEtherCAT Outと<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.74285em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>台目のEtherCAT Inをケーブルで接続する (<a href="Software/Users_Manual/concept.html">Concept</a>参照).
+なお, 電源もデイジーチェーンで接続でき, 電源コネクタは3つの内で好きなところを使って良い.</p>
+<p>SDKで複数台のデバイスを使用する場合は<code>add_device</code>関数を接続しているデバイスの分だけ呼び出せば良い.
+<code>add_device</code>関数の第1引数は位置であり, 第2引数は回転を表す.
+回転はZYZのオイラー角, または, Quaternionで指定する.</p>
+<figure>
+  <img src="https://raw.githubusercontent.com/shinolab/autd3/master/book/src/fig/Users_Manual/autd_hori.jpg"/>
+  <figcaption>Horizontal alignment</figcaption>
+</figure>
+<p>例えば, 上図のように配置・接続しており, 図左側のデバイスが1台目, 右側のデバイスが2台目だとする.
+さらに, グローバル座標を1台目のローカル座標と同じだとすると,</p>
+<pre><code class="language-cpp">  autd.geometry().add_device(Vector3::Zero(), Vector3::Zero());
+  autd.geometry().add_device(Vector3(DEVICE_WIDTH, 0, 0), Vector3::Zero());
+</code></pre>
+<p>とすれば良い.
+ここで, <code>DEVICE_WIDTH</code>はデバイスの (基板外形を含めた) 横幅である.
+回転はしないので, 第2引数はゼロで良い.</p>
+<p>また, 例えば, グローバル座標を2台目のローカル座標と同じだとすると,</p>
+<pre><code class="language-cpp">  autd.geometry().add_device(Vector3(-DEVICE_WIDTH, 0, 0), Vector3::Zero());
+  autd.geometry().add_device(Vector3::Zero(), Vector3::Zero());
+</code></pre>
+<p>とすれば良い.</p>
+<figure>
+  <img src="https://raw.githubusercontent.com/shinolab/autd3/master/book/src/fig/Users_Manual/autd_vert.jpg"/>
+  <figcaption>Vertical alignment</figcaption>
+</figure>
+<p>さらに, 例えば, 上図のように配置されており, 下が1台目, 左が2台目で, グローバル座標を1台目のローカル座標と同じだとすると,</p>
+<pre><code class="language-cpp">  autd.geometry().add_device(Vector3::Zero(), Vector3::Zero());
+  autd.geometry().add_device(Vector3(0, 0, DEVICE_WIDTH), Vector3(0, pi / 2.0, 0));
+</code></pre>
+<p>のように指定する.</p>
+<p>SDKにおけるAPIでは, すべてグローバル座標を用いるため, 接続するデバイスの数に依存せず透過的に使用できる.</p>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="link"><a class="header" href="#link">Link</a></h1>
+<p>LinkはDeviceとのインターフェースである.
+以下の中から一つを選択する必要がある.</p>
+<h2 id="twincat"><a class="header" href="#twincat">TwinCAT</a></h2>
+<p>TwinCATはPCでEherCATを使用する際の唯一の公式の方法である.
+TwinCATはWindowsのみをサポートする非常に特殊なソフトウェアであり, Windowsを半ば強引にリアルタイム化する.</p>
+<p>また, 特定のネットワークコントローラが必要になるため,
+<a href="https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_overview/9309844363.html&amp;id=">対応するネットワークコントローラの一覧</a>を確認すること.</p>
+<blockquote>
+<p>Note: 或いは, TwinCATのインストール後に, <code>C:/TwinCAT/3.1/Driver/System/TcI8254x.inf</code>に対応するデバイスのVendor IDとDevice IDが書かれているので, デバイスマネージャー→イーサネットアダプタ→プロパティ→詳細→ハードウェアIDと照らし合わせることでも確認できる.</p>
+</blockquote>
+<h3 id="how-to-install-twincat"><a class="header" href="#how-to-install-twincat">How to install TwinCAT</a></h3>
+<p>前提として, TwinCATはHyper-VやVirtual Machine Platformと共存できない.
+そのため, これらのfeatureを無効にする必要がある.
+これには, 例えば, PowerShellを管理者権限で起動し,</p>
+<pre><code>Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Hypervisor
+Disable-WindowsOptionalFeature -online -featurename VirtualMachinePlatform
+</code></pre>
+<p>と打ち込めば良い.</p>
+<p>まず, TwinCAT XAEを<a href="https://www.beckhoff.com/en-en/">公式サイト</a>からダウンロードする.
+ダウンロードには登録 (無料) が必要になる.</p>
+<p>ダウンロードしたインストーラを起動し, 指示に従う.
+<strong>この時, TwinCAT XAE Shell installにチェックを入れ, Visual Studio Integrationのチェックを外すこと.</strong></p>
+<p>インストール後に再起動し, <code>C:/TwinCAT/3.1/System/win8settick.bat</code>を管理者権限で実行し, 再び再起動する.</p>
+<p>最後に, SDK内の<code>AUTDServer/AUTD.xml</code>を<code>C:/TwinCAT/3.1/Config/Io/EtherCAT</code>にコピーする.</p>
+<h3 id="autdserver"><a class="header" href="#autdserver">AUTDServer</a></h3>
+<p>TwinCATのLinkを使うには, まず, <code>AUTDServer/AUTDServer.exe</code>を実行する.
+AUTDServer実行後に, IPアドレスの入力を求められるがここは空欄のままEnterすればよい.
+すると, しばらくしてTwinCAT XAE Shellが起動する.
+最後に, Shellを閉じるかを聞かれるが, 以下の設定がまだなら<code>No</code>を入力し, 設定を続ける.
+以下の設定が済んでいるなら, 閉じてしまってかまわない.</p>
+<blockquote>
+<p>Note: もし閉じてしまった場合は, <code>%Temp%/TwinCATAUTDServer/TwinCATAUTDServer.sln</code>をTcXaeShell Applicationとして開けば良い. <code>%Temp%</code>は環境変数で, 普通は<code>C:/Users/(user name)/AppData/Local/Temp</code>である.</p>
+</blockquote>
+<p>なお, AUTDServerはPCの電源を切る, スリープモードに入る等でLinkが途切れるので, その都度実行し直すこと.</p>
+<h4 id="install-driver"><a class="header" href="#install-driver">Install Driver</a></h4>
+<p>初回はEherCAT用のドライバのインストールが必要になる.
+TwinCAT XAE Shell上部メニューからTwinCAT→Show Realtime Ethernet Compatible Devicesを開きCompatible devicesの中の対応デバイスを選択肢Installをクリックする.
+なお, Compatible devicesに何も表示されていない場合はそのPCのイーサネットデバイスはTwinCATに対応していない.</p>
+<h4 id="license"><a class="header" href="#license">License</a></h4>
+<p>また, 初回はライセンス関係のエラーが出るので, XAE ShellでSolution Explorer→SYSTEM→Licenseを開き, “7 Days Trial License …“をクリックし, 画面に表示される文字を入力する.
+なお. ライセンスは7日間限定のトライアルライセンスだが, 切れたら再び同じ作業を行うことで再発行できる.
+ライセンスを発行し終わったら, TwinCAT XAE Shellを閉じて, 再び“AUTDServer.exe“を実行する.</p>
+<h3 id="trouble-shooting"><a class="header" href="#trouble-shooting">Trouble shooting</a></h3>
+<p>大量のDeviceを使用しようとすると, 下の図のようなエラーが発生することがある.
+このときは, <code>settings.ini</code>内の<code>CycleTicks</code>との値を増やし, AUTDServerを再び実行する.
+<code>CycleTicks</code>の値はエラーが出ない中で, 可能な限り小さな値が望ましい.
+デフォルトは2であり, どの程度の値にすべきかは接続している台数に依存する.
+例えば, 9台の場合は4程度の値にしておけば動作するはずである.</p>
+<p><strong>また, この<code>CycleTicks</code>の値を変更した場合は, <code>TwinCAT</code>のコンストラクタにその値を入力すること.</strong></p>
+<figure>
+  <img src="https://raw.githubusercontent.com/shinolab/autd3/master/book/src/fig/Users_Manual/tcerror.jpg"/>
+  <figcaption>TwinCAT error when using 9 devices</figcaption>
+</figure>
+<h2 id="remotetwincat"><a class="header" href="#remotetwincat">RemoteTwinCAT</a></h2>
+<p>前述の通り, AUTD3とTwinCATを使う場合はWindows OSと特定のネットワークアダプタが必要になる.
+しかし, Windows以外のPCで開発したい需要も多い (後述のSOEMもマルチプラットフォームで動作する).
+その場合は, RemoteTwinCAT linkを用いて遠隔からTwinCATを操作することができる.</p>
+<p>RemoteTwinCATを使用する場合はPCを2台用意する必要がある.
+この時, 片方のPCは上記のTwinCAT linkが使えるである必要がある.
+このPCをここでは“サーバ“と呼ぶ.
+一方, 開発側のPC, 即ちSDKを使用する側は特に制約はなく, サーバと同じLANに繋がっていれば良い, こちらをここでは“クライアント“と呼ぶ.</p>
+<p>まず, サーバとAUTDデバイスを接続する.
+この時使うLANのアダプタはTwinCAT linkと同じく, TwinCAT対応のアダプタである必要がある.
+また, サーバとクライアントを別のLANで繋ぐ.
+こちらのLANアダプタはTwinCAT対応である必要はない<sup class="footnote-reference"><a href="#fn_remote_twin">1</a></sup>.
+そして, サーバとクライアント間のLANのIPを確認しておく.
+ここでは例えば, サーバ側が“169.254.205.219“, クライアント側が“169.254.175.45“だったとする.
+次に, サーバでAUTDServerを起動する.
+起動後にIPの入力を求められるが, ここでクライアント側のIP (この例だと<code>169.254.175.45</code>) を入力する.
+また, 最後に“No“を入力し, TwinCATAUTDServerを開いたままにしておく.
+以下の図のように, System→Routesを開き, Current RouteタブのAmsNetId及び, NetId ManagementタブのLocal NetIdを確認する.</p>
+<figure>
+  <img src="https://raw.githubusercontent.com/shinolab/autd3/master/book/src/fig/Users_Manual/Current_Route.jpg"/>
+  <img src="https://raw.githubusercontent.com/shinolab/autd3/master/book/src/fig/Users_Manual/NetId_Management.jpg"/>
+  <figcaption>AmsNetId/Local NetId</figcaption>
+</figure>
+<p>ここでは, それぞれ“169.254.175.45.1.1“, “172.16.99.194.1.1“だったとする.
+この時, クライアント側は<code>autd3/link/remote_twincat.hpp</code>ヘッダーをincludeして,</p>
+<pre><code class="language-cpp">#include &quot;autd3/link/remote_twincat.hpp&quot;
+
+...
+  const string remote_ipv4_addr = &quot;169.254.205.219&quot;;
+  const string remote_ams_net_id = &quot;172.16.99.194.1.1&quot;;
+  const string local_ams_net_id = &quot;169.254.175.45.1.1&quot;;
+  auto link = link::RemoteTwinCAT(remote_ipv4_addr, remote_ams_net_id).local_ams_net_id(local_ams_net_id).build();
+</code></pre>
+<p>のようにすれば良い.</p>
+<p>なお, TCP関係のエラーが出る場合は, ファイアウォールでADSプロトコルがブロックされている可能性がある.
+その場合は, ファイアウォールの設定でTCP/UDPの48898番ポートの接続を許可する.</p>
+<h2 id="soem"><a class="header" href="#soem">SOEM</a></h2>
+<p><a href="https://github.com/OpenEtherCATsociety/SOEM">SOEM</a>は有志が開発しているOpen-sourceのEherCAT Masterライブラリである.
+TwinCATとは異なり通常のWindows上で動作するためリアルタイム性は保証されない.
+そのため, 基本的にTwinCATを使用することを推奨する.
+SOEMを使用するのはやむを得ない理由があるか, 開発時のみに限定するべきである.
+一方, SOEMはクロスプラットフォームで動作し, インストールも単純という利点がある.</p>
+<p>Windowsの場合は, <a href="https://nmap.org/npcap/">npcap</a>, または, <a href="https://www.winpcap.org/">WinPcap</a>を予めインストールしておくこと.
+npcapはWinPcapの後継であり, こちらの利用を推奨する.
+<strong>なお, npcapをインストールする場合は“WinPcap API compatible mode“でインストールすること.</strong>
+Linux/macの場合は, 特に準備は必要ない.</p>
+<p>SOEMのLinkを使用する際は<code>autd3/link/soem.hpp</code>ヘッダーをインクルードする.</p>
+<pre><code class="language-cpp">#include &quot;autd3/link/soem.hpp&quot;
+
+...
+  auto link = link::SOEM(ifname, autd.geometry().num_devices()).build();
+</code></pre>
+<p><code>SOEM()</code>の第1引数はインターフェース名で, 第2引数はデバイスの数である.
+インターフェース名はAUTD3デバイスに接続しているehernetインターフェース名である.
+これの一覧は, <code>SOEM::enumerate_adapters</code>関数によって取得できる.</p>
+<pre><code class="language-cpp">  const auto adapters = link::SOEM::enumerate_adapters();
+  for (auto&amp;&amp; [desc, name] : adapters) cout &lt;&lt; desc &lt;&lt; &quot;, &quot; &lt;&lt; name &lt;&lt; endl;
+</code></pre>
+<p>なお, SOEMも大量のDeviceを使用すると挙動が不安定になる時がある<sup class="footnote-reference"><a href="#fn_soem">2</a></sup>.
+このときは, <code>cycle_ticks</code>関数を仕様し, その値を増やす.</p>
+<pre><code class="language-cpp">  auto link = link::SOEM(ifname, autd.geometry().num_devices())
+                .cycle_ticks(4)
+                .build();
+</code></pre>
+<p><code>cycle_ticks</code>の値はエラーが出ない中で, 可能な限り小さな値が望ましい.
+デフォルトは2であり, どの程度の値にすべきかは接続している台数に依存する.
+例えば, 9台の場合は4程度の値にしておけば動作するはずである.</p>
+<p>また, SOEM Linkは回復不能なエラー (例えば, ケーブルが抜けるなど) が発生したときのコールバックを設定することができる<sup class="footnote-reference"><a href="#fn_soem_err">3</a></sup>.
+callbackはエラーメッセージを引数に取る.</p>
+<pre><code class="language-cpp">  auto link = link::SOEM(ifname, autd.geometry().num_devices())
+                .cycle_ticks(4)
+                .on_lost([](const string&amp; msg) {
+                  cerr &lt;&lt; &quot;Link is lost\n&quot;;
+                  cerr &lt;&lt; msg;
+                  quick_exit(-1);
+                })
+                .build();
+</code></pre>
+<p>さらに, Windowsの場合はHigh Precisionモードの設定ができる.</p>
+<pre><code class="language-cpp">  auto link = link::SOEM(ifname, autd.geometry().num_devices())
+                .cycle_ticks(4)
+                .on_lost([](const string&amp; msg) {
+                  cerr &lt;&lt; &quot;Link is lost\n&quot;;
+                  cerr &lt;&lt; msg;
+                  quick_exit(-1);
+                })
+                .high_precision(true)
+                .build();
+</code></pre>
+<p>High Precisionモードを<code>true</code>にすると, より高精度なタイマが使用できるが, 代わりにCPUの負荷が高くなる.</p>
+<h2 id="emulator"><a class="header" href="#emulator">Emulator</a></h2>
+<p>Emulator linkは<a href="https://github.com/shinolab/autd-emulator">autd-emulator</a> を使用する際に使うLinkである.</p>
+<p>使用の前に, AUTD Emulatorを実行しておく必要がある.</p>
+<p>EmulatorのLinkを使用する際は<code>autd3/link/emulator.hpp</code>ヘッダーをインクルードする.</p>
+<pre><code class="language-cpp">#include &quot;autd3/link/emulator.hpp&quot;
+
+...
+
+  auto link = autd::link::Emulator(autd.geometry()).port(50632).build();
+</code></pre>
+<p><code>Emulator()</code>の引数はGeometryである.
+ポート番号はautd-emulatorの設定と同じにしておく.</p>
+<div class="footnote-definition" id="fn_remote_twin"><sup class="footnote-definition-label">1</sup>
+<p>無線LANでも可</p>
+</div>
+<div class="footnote-definition" id="fn_soem"><sup class="footnote-definition-label">2</sup>
+<p>TwinCATよりは緩く, 普通に動くこともある.</p>
+</div>
+<div class="footnote-definition" id="fn_soem_err"><sup class="footnote-definition-label">3</sup>
+<p>なお, 回復不能なので直ちに終了するくらいしかできることはない.</p>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="gain"><a class="header" href="#gain">Gain</a></h1>
+<p>AUTDは各振動子の位相/振幅を個別に制御することができ, これによって様々な音場を生成できる.
+<code>Gain</code>はこれを管理するクラスであり, SDKにはデフォルトでいくつかの種類の音場を生成するための<code>Gain</code>がデフォルトでいくつか用意されている.</p>
+<h2 id="focalpoint"><a class="header" href="#focalpoint">FocalPoint</a></h2>
+<p><code>Focus</code>は最も単純な<code>Gain</code>であり, 単一焦点を生成する.</p>
+<pre><code class="language-cpp">    gain::Focus g(Vector3(x, y, z));
+</code></pre>
+<p>コンストラクタの第1引数には焦点の位置を指定する.
+第2引数として, 0-1の規格化された音圧振幅を指定できる.</p>
+<h2 id="besselbeam"><a class="header" href="#besselbeam">BesselBeam</a></h2>
+<p><code>BesselBeam</code>ではその名の通りBessel beamを生成する.
+この<code>Gain</code>は長谷川らの論文[hasegawa2017]に基づく.</p>
+<pre><code class="language-cpp">  const Vector3 apex(x, y, z);
+  const Vector3 dir = Vector3::UnitZ();
+  const double theta_z = 0.3;
+  gain::BesselBeam g(apex, dir, theta_z);
+</code></pre>
+<p>コンストラクタの第1引数はビームを生成する仮想円錐の頂点であり, 第2引数はビームの方向, 第3引数はビームに垂直な面とビームを生成する仮想円錐の側面となす角度である (下図の<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.04398em;">z</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>).
+第4引数として, 0-1の規格化された音圧振幅で指定できる.</p>
+<figure>
+  <img src="https://raw.githubusercontent.com/shinolab/autd3/master/book/src/fig/Users_Manual/1.4985159.figures.online.f1.jpg"/>
+  <figcaption>Bessel beam ([hasegawa2017]より引用)</figcaption>
+</figure>
+<h2 id="null"><a class="header" href="#null">Null</a></h2>
+<p><code>Null</code>は振幅0の<code>Gain</code>である.</p>
+<pre><code class="language-cpp">    gain::Null g;
+</code></pre>
+<h2 id="holo-multiple-foci"><a class="header" href="#holo-multiple-foci">Holo (Multiple foci)</a></h2>
+<p><code>Holo</code>は多焦点を生成するための<code>Gain</code>である.
+多焦点を生成するアルゴリズムが幾つか提案されており, SDKには以下のアルゴリズムが実装されている.</p>
+<ul>
+<li><code>SDP</code> - Semidefinite programming, 井上らの論文[inoue2015]に基づく</li>
+<li><code>EVD</code> - Eigen value decomposition, Longらの論文[long2014]に基づく</li>
+<li><code>Naive</code> - 単一焦点解の重ね合わせ</li>
+<li><code>GS</code> - Gershberg-Saxon, Marzoらの論文[marzo2019]に基づく</li>
+<li><code>GSPAT</code> - Gershberg-Saxon for Phased Arrays of Transducers, Plasenciaらの論文[plasencia2020]に基づく</li>
+<li><code>LM</code> - Levenberg-Marquardt, LM法は[levenberg1944,marquardt1963]で提案された非線形最小二乗問題の最適化法, 実装は[madsen2004]に基づく.</li>
+<li><code>GaussNewton</code> - Gauss-Newton法</li>
+<li><code>GradientDescent</code> - Gradient descent法</li>
+<li><code>Greedy</code> - Greedy algorithm and Brute-force search, 鈴木らの論文[suzuki2021]に基づく</li>
+</ul>
+<p>また, 各手法は計算Backendを選べるようになっている.
+SDKには以下の<code>Backend</code>が用意されている</p>
+<ul>
+<li><code>EigenBackend</code> - <a href="https://eigen.tuxfamily.org/index.php?title=Main_Page">Eigen</a>を使用, デフォルトで利用可能</li>
+<li><code>CUDABackend</code> - CUDAを使用, GPUで実行</li>
+</ul>
+<p><code>Holo</code>を使用するには<code>autd3/gain/holo.hpp</code>を<code>include</code>する.</p>
+<pre><code class="language-cpp">#include &quot;autd3/gain/holo.hpp&quot;
+...
+
+  const auto backend = gain::holo::EigenBackend::create();
+  gain::holo::GSPAT g(backend);
+  g.add_focus(Vector3(x1, y1, z1), 1.0);
+  g.add_focus(Vector3(x2, y2, z2), 1.0);
+</code></pre>
+<p>各アルゴリズムのコンストラクタの引数は<code>backend</code>である.
+<code>add_focus</code>関数により各焦点の位置と音圧を指定する.
+また, 各アルゴリズムごとに追加のパラメータが存在する.
+各パラメータの詳細はそれぞれの論文を参照されたい.</p>
+<p>また, Eigen以外の<code>Backend</code>を使用するには, それぞれの<code>Backend</code>ライブラリをコンパイルする必要がある.</p>
+<h3 id="cuda-backend"><a class="header" href="#cuda-backend">CUDA Backend</a></h3>
+<p>CUDAバックエンドをビルドする場合, <a href="https://developer.nvidia.com/cuda-toolkit">CUDA Toolkit</a>をインストールし, CMakeで<code>BUILD_BACKEND_CUDA</code>フラグをOnにすれば良い.</p>
+<pre><code>  cmake .. -DBUILD_GAIN_HOLO=ON -DBUILD_BACKEND_CUDA=ON
+</code></pre>
+<p>なお,  CUDA Toolkit version 11.7で動作を確認している.</p>
+<h2 id="grouped"><a class="header" href="#grouped">Grouped</a></h2>
+<p><code>Grouped</code>は複数のデバイスを使用する際に,
+各デバイスで別々の<code>Gain</code>を使用するための<code>Gain</code>である.</p>
+<p><code>Grouped</code>では, デバイスIDと任意の<code>Gain</code>を紐付けて使用する.</p>
+<pre><code class="language-cpp">  const auto g0 = ...;
+  const auto g1 = ...;
+
+  gain::Grouped g(autd.geometry());
+  g.add(0, g0);
+  g.add(1, g1);
+</code></pre>
+<p>上の場合は, デバイス0が<code>Gain g0</code>, デバイス1が<code>Gain g1</code>を使用する.</p>
+<h2 id="create-custom-gain-tutorial"><a class="header" href="#create-custom-gain-tutorial">Create Custom Gain Tutorial</a></h2>
+<p><code>Gain</code>クラスを継承することで独自の<code>Gain</code>を作成することができる.
+ここでは, <code>Focus</code>と同じように単一焦点を生成する<code>FocalPoint</code>を実際に定義してみることにする.</p>
+<pre><code class="language-cpp">#include &quot;autd3.hpp&quot;
+
+template &lt;typename T = LegacyTransducer, enable_if_t&lt;is_base_of_v&lt;Transducer&lt;typename T::D&gt;, T&gt;, nullptr_t&gt; = nullptr&gt;
+class FocalPoint final : public Gain&lt;T&gt; {
+ public:
+  explicit FocalPoint(Vector3 point) : _point(move(point)) {}
+
+  void calc(const Geometry&lt;T&gt;&amp; geometry) override {
+    std::for_each(geometry.begin(), geometry.end(), [&amp;](const auto&amp; dev) {
+      std::for_each(dev.begin(), dev.end(), [&amp;](const auto&amp; transducer) {
+        const auto dist = (_point - transducer.position()).norm();
+        const auto phase = transducer.align_phase_at(dist, geometry.sound_speed);
+        this-&gt;_props.drives.set_drive(transducer, phase, 1.0);
+      });
+    });
+  } 
+
+ private:
+  autd::Vector3 _point;
+};
+</code></pre>
+<p><code>Controller::send</code>関数は<code>Gain</code>型を継承したクラスを引数に取る.
+そのため, <code>Gain</code>型を継承をしておく.
+<code>Gain</code>型は<code>Transducer</code>型を継承したクラスをテンプレート引数に取る.
+<code>Transducer</code>を継承した型として, \SI{40}{kHz}の周波数に固定されている<code>LegacyTransducer</code>とか変周波数の<code>NormalTransducer</code>が用意されている.</p>
+<p><code>Controller::send</code>関数内部では<code>Gain::calc</code>メソッドが呼ばれる.
+そのため, この<code>calc</code>メソッド内で位相/振幅の計算を行えば良い.
+Geometryにはイテレータが定義されており, <code>Device</code>のイテレータが返される.
+また, <code>Device</code>にもイテレータが定義されており, <code>Transducer</code>のイテレータが返され, ここから振動子の位置を取得できる.
+ある点<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.63888em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord"><span class="mord"><span class="mord boldsymbol">p</span></span></span></span></span></span></span>で多数の振動子からの放出された超音波の音圧が最大になるためには, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.63888em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord"><span class="mord"><span class="mord boldsymbol">p</span></span></span></span></span></span></span>での位相が揃えば良い.
+これは, <code>Transducer</code>クラスに用意されている<code>align_phase_at</code>関数で計算できる.</p>
+<p>[hasegawa2017]: Hasegawa, Keisuke, et al. “Electronically steerable ultrasound-driven long narrow air stream.” Applied Physics Letters 111.6 (2017): 064104.</p>
+<p>[inoue2015]: Inoue, Seki, Yasutoshi Makino, and Hiroyuki Shinoda. “Active touch perception produced by airborne ultrasonic haptic hologram.” 2015 IEEE World Haptics Conference (WHC). IEEE, 2015.</p>
+<p>[long2014]: Long, Benjamin, et al. “Rendering volumetric haptic shapes in mid-air using ultrasound.” ACM Transactions on Graphics (TOG) 33.6 (2014): 1-10.</p>
+<p>[marzo2019]: Marzo, Asier, and Bruce W. Drinkwater. “Holographic acoustic tweezers.” Proceedings of the National Academy of Sciences 116.1 (2019): 84-89.</p>
+<p>[plasencia2020]: Plasencia, Diego Martinez, et al. “GS-PAT: high-speed multi-point sound-fields for phased arrays of transducers.” ACM Transactions on Graphics (TOG) 39.4 (2020): 138-1.</p>
+<p>[levenberg1944]: Levenberg, Kenneth. “A method for the solution of certain non-linear problems in least squares.” Quarterly of applied mathematics 2.2 (1944): 164-168.</p>
+<p>[marquardt1963]: Marquardt, Donald W. “An algorithm for least-squares estimation of nonlinear parameters.” Journal of the society for Industrial and Applied Mathematics 11.2 (1963): 431-441.</p>
+<p>[madsen2004]: Madsen, Kaj, Hans Bruun Nielsen, and Ole Tingleff. “Methods for non-linear least squares problems.” (2004).</p>
+<p>[suzuki2021]: Suzuki, Shun, et al. “Radiation Pressure Field Reconstruction for Ultrasound Midair Haptics by Greedy Algorithm with Brute-Force Search.” IEEE Transactions on Haptics (2021).</p>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="modulation"><a class="header" href="#modulation">Modulation</a></h1>
+<p><code>Modulation</code>はAM変調を制御するための仕組みである.
+<code>Modulation</code>は, バッファに貯められた<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord"><span class="mord">8</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">b</span><span class="mord mathrm">i</span><span class="mord mathrm">t</span></span></span></span></span></span>データから, 一定のサンプリングレートでデータを順番にサンプリングし, Duty比に掛け合わすことで実現されている.
+現在, <code>Modulation</code>には以下の制約がある.</p>
+<ul>
+<li>バッファサイズは最大で65536</li>
+<li>サンプリングレートは<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">1</span><span class="mord">6</span><span class="mord">3</span><span class="mord">.</span><span class="mord">8</span><span class="mord">4</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">M</span><span class="mord mathrm">H</span><span class="mord mathrm">z</span></span></span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span>で, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span>は32-bit符号なし整数であり, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">3</span><span class="mord">2</span><span class="mord">0</span></span></span></span>以上の値である必要がある.</li>
+<li>Modulationは全デバイスで共通</li>
+<li>Modulationは自動でループする. 1ループだけ, 等の制御は不可能.</li>
+</ul>
+<p>SDKにはデフォルトでいくつかの種類のAMを生成するための<code>Modulation</code>がデフォルトで用意されている.</p>
+<h2 id="static"><a class="header" href="#static">Static</a></h2>
+<p>変調なし.</p>
+<pre><code class="language-cpp">  modulation::Static m;
+</code></pre>
+<p>なお, 第1引数は0-1の規格化された振幅を引数に取れ, 超音波の出力を一律で変更するために使うことができる.</p>
+<h2 id="sine"><a class="header" href="#sine">Sine</a></h2>
+<p>音圧をSin波状に変形するための<code>Modulation</code>.</p>
+<pre><code class="language-cpp">  autd::modulation::Sine m(f, amplitude, offset); 
+</code></pre>
+<p>第1引数は周波数<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span>, 第2引数は<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">a</span><span class="mord mathnormal">m</span><span class="mord mathnormal">p</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">i</span><span class="mord mathnormal">t</span><span class="mord mathnormal">u</span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span></span></span></span> (デフォルトで1), 第3引数は<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal">s</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span></span></span></span> (デフォルトで0.5)になっており, 音圧の波形が
+<span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.0574399999999997em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714399999999998em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="mord mathnormal">m</span><span class="mord mathnormal">p</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">i</span><span class="mord mathnormal">t</span><span class="mord mathnormal">u</span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">sin</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal">s</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span></span></span></span></span>
+となるようなAMをかける.
+ただし, 上記で<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mclose">]</span></span></span></span>を超えるような値は<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mclose">]</span></span></span></span>に収まるように変換される.
+また, サンプリング周波数はデフォルトで<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord"><span class="mord">4</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">k</span><span class="mord mathrm">H</span><span class="mord mathrm">z</span></span></span></span></span></span> (<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span><span class="mord">0</span><span class="mord">9</span><span class="mord">6</span><span class="mord">0</span></span></span></span>) になっている.</p>
+<h2 id="create-custom-modulation-tutorial"><a class="header" href="#create-custom-modulation-tutorial">Create Custom Modulation Tutorial</a></h2>
+<p><code>Modulation</code>も独自の<code>Modulation</code>を作成することができる.
+ここでは, 周期中のある一瞬だけ出力する<code>Burst</code>を作ってみる<sup class="footnote-reference"><a href="#fn_burst">1</a></sup>.</p>
+<p>以下が, この<code>Burst</code>のサンプルである.</p>
+<pre><code class="language-cpp">class Burst final : public Modulation {
+ public:
+  void calc() override {
+    this-&gt;_buffer.resize(_buf_size, 0);
+    this-&gt;_buffer[_buf_size - 1] = 0xFF;
+  }
+
+  explicit Burst(const size_t buf_size = 4000, const uint16_t freq_div = 40960) noexcept : _buf_size(buf_size) 
+  {
+    _props.freq_div = freq_div;
+  }
+
+ private:
+  size_t _buf_size;
+};
+</code></pre>
+<p><code>Modulation</code>も<code>Gain</code>と同じく, <code>Controller::send</code>内部で<code>Modulation::calc</code>メソッドが呼ばれる.
+この<code>calc</code>の中で, <code>buffer</code>の中身を書き換えれば良い.
+<code>Modulation</code>サンプリング周波数<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">1</span><span class="mord">6</span><span class="mord">3</span><span class="mord">.</span><span class="mord">8</span><span class="mord">4</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">M</span><span class="mord mathrm">H</span><span class="mord mathrm">z</span></span></span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span>を決定する<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span>は<code>_props.freq_div</code>に設定する.
+この例だと, デフォルトで<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span><span class="mord">0</span><span class="mord">9</span><span class="mord">6</span><span class="mord">0</span></span></span></span>なので, サンプリング周波数は<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord"><span class="mord">4</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">k</span><span class="mord mathrm">H</span><span class="mord mathrm">z</span></span></span></span></span></span>になる.
+さらに, 例えば, <code>buf_size</code>を4000とすると, AMは<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>が<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">9</span><span class="mord">9</span><span class="mord">9</span></span></span></span>回サンプリングされた後, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">5</span><span class="mord">5</span></span></span></span>が一回サンプリングされる.
+したがって, 周期<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">s</span></span></span></span></span></span>の中で, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord"><span class="mord">0</span><span class="mord">.</span><span class="mord">2</span><span class="mord">5</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">m</span><span class="mord mathrm">s</span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mord">/</span><span class="mord"><span class="mord">4</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">k</span><span class="mord mathrm">H</span><span class="mord mathrm">z</span></span></span></span></span></span>だけ出力されるようなAMがかかる.</p>
+<h2 id="modulation-common-functions"><a class="header" href="#modulation-common-functions">Modulation common functions</a></h2>
+<h3 id="sampling-frequency-division-ratio"><a class="header" href="#sampling-frequency-division-ratio">Sampling frequency division ratio</a></h3>
+<p><code>sampling_freq_div_ratio</code>でサンプリング周波数の分周比<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span>の確認, 設定ができる.
+サンプリング周波数の基本周波数は<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord"><span class="mord">4</span><span class="mord">0</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">k</span><span class="mord mathrm">H</span><span class="mord mathrm">z</span></span></span></span></span></span>である.
+<code>sampling_freq_div_ratio</code>は1以上65536以下の整数が指定できる.</p>
+<pre><code class="language-cpp">    m.sampling_frequency_division() = 20480; // 163.84MHz/20480 = 8kHz
+</code></pre>
+<h3 id="sampling-frequency"><a class="header" href="#sampling-frequency">Sampling frequency</a></h3>
+<p><code>sampling_frequency</code>でサンプリング周波数を取得できる.</p>
+<div class="footnote-definition" id="fn_burst"><sup class="footnote-definition-label">1</sup>
+<p>SDKにはない.</p>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="stm"><a class="header" href="#stm">STM</a></h1>
+<p><code>STM</code>はHardwareのタイマでSpatio-Temporal Modulationを実現する機能である.
+SDKには単一焦点のみをサポートする<code>PointSTM</code>と任意の<code>Gain</code>をサポートする<code>GainSTM</code>が用意されている.</p>
+<h3 id="pointstm"><a class="header" href="#pointstm">PointSTM</a></h3>
+<p><code>PointSTM</code>には以下の制約がある.</p>
+<ul>
+<li>最大サンプリング点は65536</li>
+<li>サンプリング周波数は<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">1</span><span class="mord">6</span><span class="mord">3</span><span class="mord">.</span><span class="mord">8</span><span class="mord">4</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">M</span><span class="mord mathrm">H</span><span class="mord mathrm">z</span></span></span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span>. ここで, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span>は32-bit符号なし整数であり, 3224以上の値である必要がある.</li>
+</ul>
+<p><code>PointSTM</code>の使用方法は以下のようになる.</p>
+<pre><code class="language-cpp">  PointSTM stm;
+
+  const Vector3 center = autd.geometry().center() + Vector3(0.0, 0.0, 150.0);
+  constexpr size_t points_num = 200;
+  constexpr auto radius = 30.0;
+  vector&lt;size_t&gt; points(points_num);
+  iota(points.begin(), points.end(), 0);
+  transform(points.begin(), points.end(), back_inserter(stm), [&amp;](const size_t i) {
+    const auto theta = 2.0 * pi * static_cast&lt;double&gt;(i) / static_cast&lt;double&gt;(points_num);
+    return Point(center + Vector3(radius * cos(theta), radius * sin(theta), 0));
+  });
+
+  const auto actual_freq = stm.set_frequency(1);
+  cout &lt;&lt; &quot;Actual frequency is &quot; &lt;&lt; actual_freq &lt;&lt; &quot; Hz\n&quot;;
+  autd.send(stm);
+</code></pre>
+<p>サンプリング点数とサンプリング周期に関する制約によって, 指定した周波数と実際の周波数は異なる可能性がある.
+例えば, 上記の例は, 200点を<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">H</span><span class="mord mathrm">z</span></span></span></span></span></span>で回すため, サンプリング周波数は<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="mord">0</span><span class="mord">0</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">H</span><span class="mord mathrm">z</span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">1</span><span class="mord">6</span><span class="mord">3</span><span class="mord">.</span><span class="mord">8</span><span class="mord">4</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">M</span><span class="mord mathrm">H</span><span class="mord mathrm">z</span></span></span><span class="mord">/</span><span class="mord">8</span><span class="mord">1</span><span class="mord">9</span><span class="mord">2</span><span class="mord">0</span><span class="mord">0</span></span></span></span>とすればよく, 制約を満たす.
+しかし, <code>point_num</code>=199にすると, サンプリング周波数を<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord"><span class="mord">1</span><span class="mord">9</span><span class="mord">9</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">H</span><span class="mord mathrm">z</span></span></span></span></span></span>にしなければならないが, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord"><span class="mord">1</span><span class="mord">9</span><span class="mord">9</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">H</span><span class="mord mathrm">z</span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">1</span><span class="mord">6</span><span class="mord">3</span><span class="mord">.</span><span class="mord">8</span><span class="mord">4</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">M</span><span class="mord mathrm">H</span><span class="mord mathrm">z</span></span></span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span>を満たすような<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span>は存在しない, そのため, 最も近い<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span>が選択される.
+これによって, 指定した周波数と実際の周波数がずれる.
+<code>set_frequency</code>関数はこの実際の周波数を返してくる.</p>
+<h3 id="gainstm"><a class="header" href="#gainstm">GainSTM</a></h3>
+<p><code>GainSTM</code>は任意の<code>Gain</code>を扱えるが, 代わりに使用できる<code>Gain</code>の個数が1024個に減る.</p>
+<p><code>GainSTM</code>の使用サンプルは<code>PointSTM</code>とほぼ同じである.</p>
+<pre><code class="language-cpp">  GainSTM stm(autd.geometry());
+
+  const Vector3 center = autd.geometry().center() + Vector3(0.0, 0.0, 150.0);
+  constexpr size_t points_num = 200;
+  constexpr auto radius = 30.0;
+  vector&lt;size_t&gt; points(points_num);
+  iota(points.begin(), points.end(), 0);
+  for_each(points.begin(), points.end(), [&amp;](const size_t i) {
+    const auto theta = 2.0 * pi * static_cast&lt;double&gt;(i) / static_cast&lt;double&gt;(points_num);
+    gain::Focus g(center + Vector3(radius * cos(theta), radius * sin(theta), 0.0));
+    stm.add(g);
+  });
+
+  const auto actual_freq = stm.set_frequency(1);
+  std::cout &lt;&lt; &quot;Actual frequency is &quot; &lt;&lt; actual_freq &lt;&lt; &quot; Hz\n&quot;;
+  autd.send(stm);
+</code></pre>
+<p>周波数の制約も<code>PointSTM</code>と同じである.</p>
+<p><code>GainSTM</code>は位相/振幅データをすべて送信するため, レイテンシが大きい<sup class="footnote-reference"><a href="#fn_gain_seq">1</a></sup>.</p>
+<h3 id="stm-common-functions"><a class="header" href="#stm-common-functions">STM common functions</a></h3>
+<h4 id="frequency"><a class="header" href="#frequency">frequency</a></h4>
+<p><code>STM</code>の周波数を取得する.</p>
+<h4 id="sampling_frequency"><a class="header" href="#sampling_frequency">sampling_frequency</a></h4>
+<p><code>STM</code>のサンプリング周波数を取得する.</p>
+<h4 id="sampling_frequency_division"><a class="header" href="#sampling_frequency_division">sampling_frequency_division</a></h4>
+<p><code>STM</code>のサンプリング周波数の分周比を取得, 設定する.
+サンプリング周波数の基本周波数は<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord"><span class="mord">1</span><span class="mord">6</span><span class="mord">3</span><span class="mord">.</span><span class="mord">8</span><span class="mord">4</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">M</span><span class="mord mathrm">H</span><span class="mord mathrm">z</span></span></span></span></span></span>である.</p>
+<pre><code class="language-cpp">    stm.sampling_frequency_division() = 20480; // 163.84MHz/20480 = 8kHz
+</code></pre>
+<div class="footnote-definition" id="fn_gain_seq"><sup class="footnote-definition-label">1</sup>
+<p><code>PointSTM</code>のおよそ60倍のレイテンシ.</p>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="silencer"><a class="header" href="#silencer">Silencer</a></h1>
+<p>AUTD3には出力を静音化するためのSilencerが用意されている.
+Silencerは, 振動子の駆動信号の急激な変動を抑制し, 静音化する.</p>
+<h2 id="理論"><a class="header" href="#理論">理論</a></h2>
+<p>詳細は[suzuki2020]を参照されたい.</p>
+<p>大まかに概要を述べると, </p>
+<ul>
+<li>振幅変調された超音波は可聴音を生じる</li>
+<li>超音波振動子を駆動する際に, 位相変化が振幅変動を引き起こす
+<ul>
+<li>したがって, 可聴音の騒音が生じる</li>
+</ul>
+</li>
+<li>位相変化を線形に補間し, 段階的に変化させることで振幅変動を抑えられる
+<ul>
+<li>したがって, 騒音を低減できる</li>
+</ul>
+</li>
+<li>補間を細かくやると, その分だけ騒音を小さくできる</li>
+</ul>
+<p>となる.</p>
+<h2 id="silencerの設定"><a class="header" href="#silencerの設定">Silencerの設定</a></h2>
+<p>Silencerの設定には<code>SilencerConfig</code>を<code>Controller</code>の<code>config_silencer</code>に渡す.</p>
+<pre><code class="language-cpp">  const auto config = SilencerConfig();
+  autd.config_silencer(config);
+</code></pre>
+<p><code>SilencerConfig</code>には<code>step</code>と<code>cycle</code>の2つの設定がある.
+詳細は以下を参照されたいが, 大まかには<code>step</code>を小さく, <code>cycle</code>を大きくするほどより静かになる.</p>
+<h2 id="silencerによる位相の変化"><a class="header" href="#silencerによる位相の変化">Silencerによる位相の変化</a></h2>
+<p>Silencerは位相<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span>の変化を線形補間し, 段階的にすることで静音化を行う.
+即ち, 位相<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span>の時系列データを(単純)移動平均フィルタに通しているのにほとんど等しい.
+ただし, 位相データが周期的であるという事を考慮している点で異なる.</p>
+<p>例えば, 超音波の周期<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span>が<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">2</span></span></span></span>の場合を考える. 即ち, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>が<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">r</span><span class="mord mathrm">a</span><span class="mord mathrm">d</span></span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">2</span></span></span></span>が<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">r</span><span class="mord mathrm">a</span><span class="mord mathrm">d</span></span></span></span></span>に対応する. 
+ここで, 時刻<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76508em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>で, 位相が<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span>から<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span></span></span></span>に変化したとする.
+この時, Silencerによる位相変化は以下の図のようになる.</p>
+<figure>
+  <img src="https://raw.githubusercontent.com/shinolab/autd3/master/book/src/fig/Users_Manual/silent/phase.svg"/>
+<figcaption>位相<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span>の変化</figcaption>
+</figure>
+<p>一方, 時刻<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76508em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>で, 位相が<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span>から<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">0</span></span></span></span>に変化したとする.
+この時のSilencerによる位相変化は以下の図のようになる.
+これは, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">0</span></span></span></span>よりも, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord">2</span></span></span></span>のほうが近いためである.</p>
+<figure>
+  <img src="https://raw.githubusercontent.com/shinolab/autd3/master/book/src/fig/Users_Manual/silent/phase2.svg"/>
+<figcaption>位相<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span>の変化 (位相変化量が<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span></span>より大きい場合)</figcaption>
+</figure>
+<p>つまり, Silencerは現在の<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span>と目標値<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>に対して
+<span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">←</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:3.0000299999999998em;vertical-align:-1.25003em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size4">{</span></span><span class="mord"><span class="mtable"><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.69em;"><span style="top:-3.69em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathrm">s</span><span class="mord mathrm">i</span><span class="mord mathrm" style="margin-right:0.01389em;">g</span><span class="mord mathrm">n</span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">min</span><span class="mopen">(</span><span class="mord">∣</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord">∣</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">Δ</span><span class="mclose">)</span></span></span><span style="top:-2.25em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathrm">s</span><span class="mord mathrm">i</span><span class="mord mathrm" style="margin-right:0.01389em;">g</span><span class="mord mathrm">n</span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">min</span><span class="mopen">(</span><span class="mord">∣</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord">∣</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">Δ</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.19em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:1em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.69em;"><span style="top:-3.69em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord text"><span class="mord">if </span></span><span class="mord">∣</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mord">/</span><span class="mord">2</span></span></span><span style="top:-2.25em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord text"><span class="mord">(otherwise)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.19em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span></span></span></span></span>
+として位相<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span>を更新する.
+ここで, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Δ</span></span></span></span>は1ステップ当たりの更新量 (<code>SilencerConfig</code>の<code>step</code>) を表す.
+また, 更新周期は<code>SilencerConfig</code>の<code>cycle</code>で設定でき, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">1</span><span class="mord">6</span><span class="mord">3</span><span class="mord">.</span><span class="mord">8</span><span class="mord">4</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">M</span><span class="mord mathrm">H</span><span class="mord mathrm">z</span></span></span><span class="mord">/</span><span class="mord mathnormal">c</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mord mathnormal">c</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">e</span></span></span></span>となる.</p>
+<p><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Δ</span></span></span></span>が小さいほど, また, 更新周期が遅いほど, 位相変化はなだらかになり騒音が抑制される.</p>
+<figure>
+  <img src="https://raw.githubusercontent.com/shinolab/autd3/master/book/src/fig/Users_Manual/silent/duty.svg"/>
+<figcaption><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Δ</span></span></span></span>による変化の違い</figcaption>
+</figure>
+<p>この実装の都合上, 移動平均フィルタとは異なる挙動を示す場合がある.
+一つは, 上に示した位相変化量が<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span></span>より大きい場合であり, もう一つが, 途中でもう一度位相が変化する場合である.
+この時の位相変化の例を以下に示す.
+元時系列に対する忠実度という観点では移動平均フィルタが正しいが, 位相変化量が<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span></span>より大きい場合を考慮したり, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Δ</span></span></span></span>を可変にする (即ち, フィルタ長を可変にする) のが大変なため現在のような実装となっている.</p>
+<figure>
+  <img src="https://raw.githubusercontent.com/shinolab/autd3/master/book/src/fig/Users_Manual/silent/mean.svg"/>
+<figcaption>移動平均フィルタとの比較</figcaption>
+</figure>
+<h2 id="silencerによるduty比の変化"><a class="header" href="#silencerによるduty比の変化">SilencerによるDuty比の変化</a></h2>
+<p>振幅変動が騒音を引き起こすので, Duty比<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span></span></span></span>も同等のフィルタをかけることでAMによる騒音を抑制できる.</p>
+<p>Duty比<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span></span></span></span>は位相とは異なり周期的ではないので, 現在の<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span></span></span></span>と目標値<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>に対して
+<span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">←</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathrm">s</span><span class="mord mathrm">i</span><span class="mord mathrm" style="margin-right:0.01389em;">g</span><span class="mord mathrm">n</span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">min</span><span class="mopen">(</span><span class="mord">∣</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord">∣</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">Δ</span><span class="mclose">)</span><span class="mpunct">,</span></span></span></span></span>
+のように更新する.</p>
+<p>[suzuki2020]: Suzuki, Shun, et al. “Reducing amplitude fluctuation by gradual phase shift in midair ultrasound haptics.” IEEE transactions on haptics 13.1 (2020): 87-93.</p>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="controller"><a class="header" href="#controller">Controller</a></h1>
+<p>ここでは, Controllerクラスに存在するその他の機能を紹介する.</p>
+<h2 id="check-ack"><a class="header" href="#check-ack">Check Ack</a></h2>
+<p><code>check_ack</code>フラグをOnにすると, デバイスへのデータ送信時に, 送信データがきちんとデバイスで処理されたかどうかを確認するようになる.</p>
+<pre><code class="language-cpp">  autd.check_ack = true;
+</code></pre>
+<p><code>check_ack</code>が<code>true</code>の場合, デバイスにデータを送信する関数 (<a href="Software/Users_Manual/controller.html#send-functions">Send functions</a>) は, 送信データがきちんとデバイスで処理されたかどうかを返すようになる.</p>
+<p>基本的にOffで問題ないはずだが, 確実にデータを送りたいときにはOnにする.
+なお, Onにすると<a href="Software/Users_Manual/controller.html#send-functions">Send functions</a>の実行時間は増加する.</p>
+<h2 id="force-fan"><a class="header" href="#force-fan">Force fan</a></h2>
+<p>AUTD3のファン制御はAuto, Off, Onの3つのモードが有る. 
+Autoモードでは温度監視ICがICの温度を監視し, 一定温度以上になった際に自動的にファンを起動する. 
+Offモードではファンは常時オフであり, Onモードでは常時オンになる.</p>
+<p>モードの切替は, ファン横のジャンパスイッチで行う. 少しわかりにくいが, 下図のようにファン側をショートするとAuto, 真ん中でOff, 右側でOnとなる.</p>
+<figure>
+  <img src="https://raw.githubusercontent.com/shinolab/autd3/master/book/src/fig/Users_Manual/fan.jpg"/>
+  <figcaption>AUTD Fan jumper switch</figcaption>
+</figure>
+<p>Autoモードの場合は温度が高くなると自動的にファンが起動する.
+<code>force_fan</code>フラグはこのAutoモードでファンを強制的に起動するためのフラグである.
+実際にフラグが更新されるのは<a href="Software/Users_Manual/controller.html#send-functions">Send functions</a>のどれかを呼び出し後になる.</p>
+<pre><code class="language-cpp">  autd.force_fan = true;
+</code></pre>
+<h2 id="read-fpga-info"><a class="header" href="#read-fpga-info">Read FPGA info</a></h2>
+<p><code>reads_fpga_info</code>フラグをONにすると, デバイスがFPGAの状態を返すようになる.
+実際にフラグが更新されるのは<a href="Software/Users_Manual/controller.html#send-functions">Send functions</a>のどれかを呼び出し後になる.</p>
+<p>FPGAの状態は<code>fpga_info</code>関数で取得できる.</p>
+<pre><code class="language-cpp">  autd.reads_fpga_info = true;
+  autd.update_flag();
+  const auto fpga_info = autd.read_fpga_info();
+</code></pre>
+<p><code>fpga_info</code>の返り値は<code>FPGAInfo</code>のデバイス分だけの<code>vector</code>である.</p>
+<h2 id="stop"><a class="header" href="#stop">stop</a></h2>
+<p><code>stop</code>関数で出力を止めることができる.</p>
+<h2 id="clear"><a class="header" href="#clear">clear</a></h2>
+<p>デバイス内のフラグや<code>Gain</code>/<code>Modulation</code>データ等をクリアする.</p>
+<h2 id="firmware-information"><a class="header" href="#firmware-information">Firmware information</a></h2>
+<p><code>firmware_infos</code>関数でFirmwareのバージョン情報を取得できる.</p>
+<pre><code class="language-cpp"> for (auto&amp;&amp; firm_info : autd.firmware_infos()) std::cout &lt;&lt; firm_info &lt;&lt; std::endl;
+</code></pre>
+<h2 id="send-functions"><a class="header" href="#send-functions">Send functions</a></h2>
+<p>Send functionsとは, 実際にデバイスにデータを送信する関数の総称である.
+これらの関数を呼び出すことで, <code>force fan</code>, <code>reads FPGA info</code>のフラグが更新される.
+また, これらの関数は<code>check_ack</code>フラグによって挙動が変わる.
+<code>check_ack</code>が<code>true</code>の場合, これらの関数はデバイスが実際にデータを処理するまで待機する.
+特に, <code>Modulation</code>/<code>STM</code>を送信する際は1フレーム毎に確認が入るので, 処理時間が大きく増加する可能性がある.
+また, デバイスがデータを処理したことを確認できなかった場合に<code>false</code>を返してくる.
+<code>check_ack</code>が<code>false</code>の場合はデータが処理されたかどうかを確認しない, また, 返り値は常に<code>true</code>になる.</p>
+<p>送信系の関数の一覧は次のとおりである.</p>
+<ul>
+<li><code>update_flag</code></li>
+<li><code>clear</code><sup class="footnote-reference"><a href="#fn_clear">1</a></sup></li>
+<li><code>close</code></li>
+<li><code>stop</code></li>
+<li><code>send</code></li>
+</ul>
+<div class="footnote-definition" id="fn_clear"><sup class="footnote-definition-label">1</sup>
+<p>フラグもクリアされる</p>
+</div>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="ffi"><a class="header" href="#ffi">FFI</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="c"><a class="header" href="#c">C#</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="python"><a class="header" href="#python">python</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="julia"><a class="header" href="#julia">Julia</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="rust"><a class="header" href="#rust">Rust</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="c-api-reference"><a class="header" href="#c-api-reference">C API Reference</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="emulator-1"><a class="header" href="#emulator-1">Emulator</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="gui"><a class="header" href="#gui">GUI</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="citation"><a class="header" href="#citation">Citation</a></h1>
+<p>本SDKを使用する場合は, 以下の論文の引用を検討して下さい.</p>
+<ul>
+<li><a href="https://ieeexplore.ieee.org/document/9392322">S. Suzuki, S. Inoue, M. Fujiwara, Y. Makino and H. Shinoda, “AUTD3: Scalable Airborne Ultrasound Tactile Display,” in IEEE Transactions on Haptics, doi: 10.1109/TOH.2021.3069976.</a></li>
+<li>S. Inoue, Y. Makino and H. Shinoda “Scalable Architecture for Airborne Ultrasound Tactile Display”, Asia Haptics 2016</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
+        });
+        </script>
+    </body>
+</html>

@@ -1,5 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structautd3_1_1core_1_1DatagramHeader.html" title=" " alt="" coords="5,35,195,61"/>
+<area shape="rect" id="node1" href="$structautd3_1_1core_1_1DatagramHeader.html" title="DatagramHeader is a data to be packed in the Header part of the driver::TxDatagram." alt="" coords="5,35,195,61"/>
 <area shape="rect" id="node2" href="$classautd3_1_1core_1_1Modulation.html" title="Modulation controls the amplitude modulation." alt="" coords="243,35,397,61"/>
 <area shape="rect" id="node3" href="$classautd3_1_1modulation_1_1Sine.html" title="Sine wave modulation in ultrasound amplitude." alt="" coords="445,5,600,32"/>
 <area shape="rect" id="node4" href="$classautd3_1_1modulation_1_1Static.html" title="Static (Without modulation)" alt="" coords="458,57,587,98"/>

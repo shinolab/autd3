@@ -1,8 +1,8 @@
 <map id="autd3::driver::operator&lt;&lt;" name="autd3::driver::operator&lt;&lt;">
 <area shape="rect" id="node1" title=" " alt="" coords="5,143,167,170"/>
 <area shape="rect" id="node2" href="$structautd3_1_1driver_1_1FirmwareInfo.html#a5fafc78ce642912c8c4c49323cd7af92" title=" " alt="" coords="215,136,389,177"/>
-<area shape="rect" id="node3" href="$structautd3_1_1driver_1_1FirmwareInfo.html#ab1efb9544b86b6f107557630ca1eddb3" title=" " alt="" coords="437,5,612,47"/>
-<area shape="rect" id="node4" href="$structautd3_1_1driver_1_1FirmwareInfo.html#a040c8bdbfa39e83548fb9e5f79fab74c" title=" " alt="" coords="437,71,612,112"/>
+<area shape="rect" id="node3" href="$structautd3_1_1driver_1_1FirmwareInfo.html#ab1efb9544b86b6f107557630ca1eddb3" title="Get cpu firmware version." alt="" coords="437,5,612,47"/>
+<area shape="rect" id="node4" href="$structautd3_1_1driver_1_1FirmwareInfo.html#a040c8bdbfa39e83548fb9e5f79fab74c" title="Get fpga firmware version." alt="" coords="437,71,612,112"/>
 <area shape="rect" id="node5" href="$structautd3_1_1driver_1_1FirmwareInfo.html#a44d41fc8629bad9c6e13694b5f4feada" title=" " alt="" coords="437,136,612,177"/>
 <area shape="rect" id="node6" href="$structautd3_1_1driver_1_1FirmwareInfo.html#af0afa78d7ede7c82d2edb8a33768a420" title=" " alt="" coords="437,201,612,243"/>
 <area shape="rect" id="node7" href="$structautd3_1_1driver_1_1FirmwareInfo.html#ab663fa12e4209944ecb4754a3ae47678" title=" " alt="" coords="437,267,612,308"/>

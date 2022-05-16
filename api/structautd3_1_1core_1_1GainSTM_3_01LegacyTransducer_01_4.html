@@ -74,14 +74,17 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="structautd3_1_1core_1_1GainSTM.html" title="GainSTM provides a function to display Gain sequentially and periodically.">GainSTM</a> for <a class="el" href="structautd3_1_1core_1_1LegacyTransducer.html" title="Transduce with 40kHz frequency.">LegacyTransducer</a>.  
+ <a href="structautd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="stm_2gain_8hpp_source.html">gain.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for autd3::core::GainSTM&lt; LegacyTransducer &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="structautd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4__inherit__graph.png" border="0" usemap="#autd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="autd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4_inherit__map" id="autd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4_inherit__map">
-<area shape="rect" title=" " alt="" coords="75,95,225,136"/>
-<area shape="rect" href="structautd3_1_1core_1_1STM.html" title=" " alt="" coords="5,13,124,39"/>
+<area shape="rect" title="GainSTM for LegacyTransducer." alt="" coords="75,95,225,136"/>
+<area shape="rect" href="structautd3_1_1core_1_1STM.html" title="STM provide hardware Spatio&#45;Temporal Modulation or Lateral Modulation function." alt="" coords="5,13,124,39"/>
 <area shape="rect" href="structautd3_1_1core_1_1DatagramBody.html" title=" " alt="" coords="149,5,325,47"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -90,8 +93,8 @@ Collaboration diagram for autd3::core::GainSTM&lt; LegacyTransducer &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="structautd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4__coll__graph.png" border="0" usemap="#autd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="autd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4_coll__map" id="autd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4_coll__map">
-<area shape="rect" title=" " alt="" coords="75,95,225,136"/>
-<area shape="rect" href="structautd3_1_1core_1_1STM.html" title=" " alt="" coords="5,13,124,39"/>
+<area shape="rect" title="GainSTM for LegacyTransducer." alt="" coords="75,95,225,136"/>
+<area shape="rect" href="structautd3_1_1core_1_1STM.html" title="STM provide hardware Spatio&#45;Temporal Modulation or Lateral Modulation function." alt="" coords="5,13,124,39"/>
 <area shape="rect" href="structautd3_1_1core_1_1DatagramBody.html" title=" " alt="" coords="149,5,325,47"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -100,9 +103,10 @@ Collaboration diagram for autd3::core::GainSTM&lt; LegacyTransducer &gt;:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a438b3051649a11bc1a6fc2e353fca8be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4.html#a438b3051649a11bc1a6fc2e353fca8be">GainSTM</a> (const <a class="el" href="structautd3_1_1core_1_1Geometry.html">Geometry</a>&lt; <a class="el" href="structautd3_1_1core_1_1LegacyTransducer.html">LegacyTransducer</a> &gt; &amp;geometry)</td></tr>
 <tr class="separator:a438b3051649a11bc1a6fc2e353fca8be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b7fafb8ac9d90e813d47d34341b219c"><td class="memTemplParams" colspan="2">template&lt;typename G &gt; </td></tr>
-<tr class="memitem:a7b7fafb8ac9d90e813d47d34341b219c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4.html#a7b7fafb8ac9d90e813d47d34341b219c">add</a> (G &amp;gain)</td></tr>
-<tr class="separator:a7b7fafb8ac9d90e813d47d34341b219c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ff5ba85d8119ebb6c4136f3c48be34b"><td class="memTemplParams" colspan="2">template&lt;typename G , std::enable_if_t&lt; std::is_base_of_v&lt; Gain&lt; LegacyTransducer &gt;, G &gt;, nullptr_t &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a6ff5ba85d8119ebb6c4136f3c48be34b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4.html#a6ff5ba85d8119ebb6c4136f3c48be34b">add</a> (G &amp;gain)</td></tr>
+<tr class="memdesc:a6ff5ba85d8119ebb6c4136f3c48be34b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add gain.  <a href="structautd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4.html#a6ff5ba85d8119ebb6c4136f3c48be34b">More...</a><br /></td></tr>
+<tr class="separator:a6ff5ba85d8119ebb6c4136f3c48be34b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae91a505aaec2622944048c4fb7bc3939"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4.html#ae91a505aaec2622944048c4fb7bc3939">size</a> () override</td></tr>
 <tr class="separator:ae91a505aaec2622944048c4fb7bc3939"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e5007f04b36ac056c1cc66687b6fe74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4.html#a9e5007f04b36ac056c1cc66687b6fe74">init</a> () override</td></tr>
@@ -125,14 +129,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adea6d2a778b3a7caaf8784d70fecca3a inherit pub_methods_structautd3_1_1core_1_1STM"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structautd3_1_1core_1_1STM.html">STM</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1STM.html#adea6d2a778b3a7caaf8784d70fecca3a">operator=</a> (<a class="el" href="structautd3_1_1core_1_1STM.html">STM</a> &amp;&amp;obj)=default</td></tr>
 <tr class="separator:adea6d2a778b3a7caaf8784d70fecca3a inherit pub_methods_structautd3_1_1core_1_1STM"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add8b16927e6a55a12b3034d1460cdba4 inherit pub_methods_structautd3_1_1core_1_1STM"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1STM.html#add8b16927e6a55a12b3034d1460cdba4">set_frequency</a> (const double freq)</td></tr>
+<tr class="memdesc:add8b16927e6a55a12b3034d1460cdba4 inherit pub_methods_structautd3_1_1core_1_1STM"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set frequency of the <a class="el" href="structautd3_1_1core_1_1STM.html" title="STM provide hardware Spatio-Temporal Modulation or Lateral Modulation function.">STM</a>.  <a href="structautd3_1_1core_1_1STM.html#add8b16927e6a55a12b3034d1460cdba4">More...</a><br /></td></tr>
 <tr class="separator:add8b16927e6a55a12b3034d1460cdba4 inherit pub_methods_structautd3_1_1core_1_1STM"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc7c9d5fde1366c599e3a52285eecfc9 inherit pub_methods_structautd3_1_1core_1_1STM"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1STM.html#abc7c9d5fde1366c599e3a52285eecfc9">frequency</a> ()</td></tr>
 <tr class="separator:abc7c9d5fde1366c599e3a52285eecfc9 inherit pub_methods_structautd3_1_1core_1_1STM"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af477129800134e0599f12dd2c792138f inherit pub_methods_structautd3_1_1core_1_1STM"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1STM.html#af477129800134e0599f12dd2c792138f">sampling_frequency</a> () const noexcept</td></tr>
+<tr class="memdesc:af477129800134e0599f12dd2c792138f inherit pub_methods_structautd3_1_1core_1_1STM"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sampling frequency.  <a href="structautd3_1_1core_1_1STM.html#af477129800134e0599f12dd2c792138f">More...</a><br /></td></tr>
 <tr class="separator:af477129800134e0599f12dd2c792138f inherit pub_methods_structautd3_1_1core_1_1STM"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb9ec92b6d057735a024299d602b693d inherit pub_methods_structautd3_1_1core_1_1STM"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1STM.html#adb9ec92b6d057735a024299d602b693d">sampling_frequency_division</a> () const noexcept</td></tr>
+<tr class="memdesc:adb9ec92b6d057735a024299d602b693d inherit pub_methods_structautd3_1_1core_1_1STM"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sampling frequency division.  <a href="structautd3_1_1core_1_1STM.html#adb9ec92b6d057735a024299d602b693d">More...</a><br /></td></tr>
 <tr class="separator:adb9ec92b6d057735a024299d602b693d inherit pub_methods_structautd3_1_1core_1_1STM"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf34b181e0b1b6a689990d1790e7cd75 inherit pub_methods_structautd3_1_1core_1_1STM"><td class="memItemLeft" align="right" valign="top">uint32_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1STM.html#acf34b181e0b1b6a689990d1790e7cd75">sampling_frequency_division</a> () noexcept</td></tr>
+<tr class="memdesc:acf34b181e0b1b6a689990d1790e7cd75 inherit pub_methods_structautd3_1_1core_1_1STM"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sampling frequency division.  <a href="structautd3_1_1core_1_1STM.html#acf34b181e0b1b6a689990d1790e7cd75">More...</a><br /></td></tr>
 <tr class="separator:acf34b181e0b1b6a689990d1790e7cd75 inherit pub_methods_structautd3_1_1core_1_1STM"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_structautd3_1_1core_1_1DatagramBody"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structautd3_1_1core_1_1DatagramBody')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="structautd3_1_1core_1_1DatagramBody.html">autd3::core::DatagramBody&lt; LegacyTransducer &gt;</a></td></tr>
 <tr class="memitem:adc71077ba9488a3ce7485abf8f672a0f inherit pub_methods_structautd3_1_1core_1_1DatagramBody"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1DatagramBody.html#adc71077ba9488a3ce7485abf8f672a0f">DatagramBody</a> ()=default</td></tr>
@@ -151,8 +159,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae003ece872359a65252a8555c3960383 inherit pub_methods_structautd3_1_1core_1_1DatagramBody"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="stm_2gain_8hpp_source.html#l00028">28</a> of file <a class="el" href="stm_2gain_8hpp_source.html">gain.hpp</a>.</p>
+<div class="textblock"><p><a class="el" href="structautd3_1_1core_1_1GainSTM.html" title="GainSTM provides a function to display Gain sequentially and periodically.">GainSTM</a> for <a class="el" href="structautd3_1_1core_1_1LegacyTransducer.html" title="Transduce with 40kHz frequency.">LegacyTransducer</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="stm_2gain_8hpp_source.html#l00037">37</a> of file <a class="el" href="stm_2gain_8hpp_source.html">gain.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a438b3051649a11bc1a6fc2e353fca8be"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a438b3051649a11bc1a6fc2e353fca8be">&#9670;&nbsp;</a></span>GainSTM()</h2>
@@ -178,18 +187,18 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm_2gain_8hpp_source.html#l00029">29</a> of file <a class="el" href="stm_2gain_8hpp_source.html">gain.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm_2gain_8hpp_source.html#l00038">38</a> of file <a class="el" href="stm_2gain_8hpp_source.html">gain.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7b7fafb8ac9d90e813d47d34341b219c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b7fafb8ac9d90e813d47d34341b219c">&#9670;&nbsp;</a></span>add()</h2>
+<a id="a6ff5ba85d8119ebb6c4136f3c48be34b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ff5ba85d8119ebb6c4136f3c48be34b">&#9670;&nbsp;</a></span>add()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename G &gt; </div>
+template&lt;typename G , std::enable_if_t&lt; std::is_base_of_v&lt; Gain&lt; LegacyTransducer &gt;, G &gt;, nullptr_t &gt;  = nullptr&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -209,7 +218,15 @@ template&lt;typename G &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm_2gain_8hpp_source.html#l00032">32</a> of file <a class="el" href="stm_2gain_8hpp_source.html">gain.hpp</a>.</p>
+<p>Add gain. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">gain</td><td>gain </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="stm_2gain_8hpp_source.html#l00045">45</a> of file <a class="el" href="stm_2gain_8hpp_source.html">gain.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="fpga_2defined_8hpp_source.html#l00031">autd3::driver::GAIN_STM_BUF_SIZE_MAX</a>.</p>
 
@@ -240,7 +257,7 @@ template&lt;typename G &gt; </div>
 
 <p>Implements <a class="el" href="structautd3_1_1core_1_1DatagramBody.html#a5feb78891a83265c2381269e5cc79904">autd3::core::DatagramBody&lt; LegacyTransducer &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="stm_2gain_8hpp_source.html#l00042">42</a> of file <a class="el" href="stm_2gain_8hpp_source.html">gain.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm_2gain_8hpp_source.html#l00055">55</a> of file <a class="el" href="stm_2gain_8hpp_source.html">gain.hpp</a>.</p>
 
 </div>
 </div>
@@ -267,7 +284,7 @@ template&lt;typename G &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stm_2gain_8hpp_source.html#l00062">62</a> of file <a class="el" href="stm_2gain_8hpp_source.html">gain.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm_2gain_8hpp_source.html#l00075">75</a> of file <a class="el" href="stm_2gain_8hpp_source.html">gain.hpp</a>.</p>
 
 </div>
 </div>
@@ -313,7 +330,7 @@ template&lt;typename G &gt; </div>
 
 <p>Implements <a class="el" href="structautd3_1_1core_1_1DatagramBody.html#a1b8f7b4add5d8107001fd88da07b318b">autd3::core::DatagramBody&lt; LegacyTransducer &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="stm_2gain_8hpp_source.html#l00044">44</a> of file <a class="el" href="stm_2gain_8hpp_source.html">gain.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm_2gain_8hpp_source.html#l00057">57</a> of file <a class="el" href="stm_2gain_8hpp_source.html">gain.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="operation_8hpp_source.html#l00160">autd3::driver::gain_stm_legacy_body()</a>, and <a class="el" href="operation_8hpp_source.html#l00152">autd3::driver::gain_stm_legacy_header()</a>.</p>
 <div class="dynheader">
@@ -354,7 +371,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="structautd3_1_1core_1_1STM.html#aad65e27db20ff20f58a027b837596c21">autd3::core::STM</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="stm_2gain_8hpp_source.html#l00040">40</a> of file <a class="el" href="stm_2gain_8hpp_source.html">gain.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stm_2gain_8hpp_source.html#l00053">53</a> of file <a class="el" href="stm_2gain_8hpp_source.html">gain.hpp</a>.</p>
 
 </div>
 </div>

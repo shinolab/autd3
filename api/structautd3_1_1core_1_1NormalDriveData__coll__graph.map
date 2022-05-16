@@ -1,6 +1,6 @@
 <map id="autd3::core::NormalDriveData&lt; T &gt;" name="autd3::core::NormalDriveData&lt; T &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="517,57,680,98"/>
-<area shape="rect" id="node2" href="$structautd3_1_1core_1_1DriveData.html" title=" " alt="" coords="245,5,424,32"/>
+<area shape="rect" id="node1" title="DriveData for NormalTransducer." alt="" coords="517,57,680,98"/>
+<area shape="rect" id="node2" href="$structautd3_1_1core_1_1DriveData.html" title="Abstract container of duty ratio and phase." alt="" coords="245,5,424,32"/>
 <area shape="rect" id="node3" title=" " alt="" coords="272,57,397,98"/>
 <area shape="rect" id="node4" href="$structautd3_1_1driver_1_1Duty.html" title=" " alt="" coords="11,64,135,91"/>
 <area shape="rect" id="node5" title=" " alt="" coords="272,122,397,163"/>

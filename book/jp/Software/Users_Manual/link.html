@@ -1,0 +1,347 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js navy">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Link - AUTD3 Developers Manual v2.0.0</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('navy')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../Software/index.html"><strong aria-hidden="true">1.</strong> Software</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Software/about_AUTD3.html"><strong aria-hidden="true">1.1.</strong> About AUTD3</a></li><li class="chapter-item expanded "><a href="../../Software/Users_Manual/index.html"><strong aria-hidden="true">1.2.</strong> C++ User's Manual</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Software/Users_Manual/concept.html"><strong aria-hidden="true">1.2.1.</strong> Concept</a></li><li class="chapter-item expanded "><a href="../../Software/Users_Manual/getting_started.html"><strong aria-hidden="true">1.2.2.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="../../Software/Users_Manual/geometry.html"><strong aria-hidden="true">1.2.3.</strong> Geometry</a></li><li class="chapter-item expanded "><a href="../../Software/Users_Manual/link.html" class="active"><strong aria-hidden="true">1.2.4.</strong> Link</a></li><li class="chapter-item expanded "><a href="../../Software/Users_Manual/gain.html"><strong aria-hidden="true">1.2.5.</strong> Gain</a></li><li class="chapter-item expanded "><a href="../../Software/Users_Manual/modulation.html"><strong aria-hidden="true">1.2.6.</strong> Modulation</a></li><li class="chapter-item expanded "><a href="../../Software/Users_Manual/stm.html"><strong aria-hidden="true">1.2.7.</strong> Spatio-Temporal Modulation</a></li><li class="chapter-item expanded "><a href="../../Software/Users_Manual/silencer.html"><strong aria-hidden="true">1.2.8.</strong> Silencer</a></li><li class="chapter-item expanded "><a href="../../Software/Users_Manual/controller.html"><strong aria-hidden="true">1.2.9.</strong> Controller</a></li></ol></li><li class="chapter-item expanded "><a href="../../Software/FFI/index.html"><strong aria-hidden="true">1.3.</strong> FFI</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Software/FFI/csharp.html"><strong aria-hidden="true">1.3.1.</strong> C#</a></li><li class="chapter-item expanded "><a href="../../Software/FFI/python.html"><strong aria-hidden="true">1.3.2.</strong> python</a></li><li class="chapter-item expanded "><a href="../../Software/FFI/julia.html"><strong aria-hidden="true">1.3.3.</strong> Julia</a></li><li class="chapter-item expanded "><a href="../../Software/FFI/rust.html"><strong aria-hidden="true">1.3.4.</strong> Rust</a></li><li class="chapter-item expanded "><a href="../../Software/FFI/reference.html"><strong aria-hidden="true">1.3.5.</strong> C API Reference</a></li></ol></li><li class="chapter-item expanded "><a href="../../Software/Emulator/index.html"><strong aria-hidden="true">1.4.</strong> Emulator</a></li><li class="chapter-item expanded "><a href="../../Software/GUI/index.html"><strong aria-hidden="true">1.5.</strong> GUI</a></li></ol></li><li class="chapter-item expanded "><a href="../../Citation/index.html"><strong aria-hidden="true">2.</strong> Citation</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">AUTD3 Developers Manual v2.0.0</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/shinolab/autd3" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="link"><a class="header" href="#link">Link</a></h1>
+<p>LinkはDeviceとのインターフェースである.
+以下の中から一つを選択する必要がある.</p>
+<h2 id="twincat"><a class="header" href="#twincat">TwinCAT</a></h2>
+<p>TwinCATはPCでEherCATを使用する際の唯一の公式の方法である.
+TwinCATはWindowsのみをサポートする非常に特殊なソフトウェアであり, Windowsを半ば強引にリアルタイム化する.</p>
+<p>また, 特定のネットワークコントローラが必要になるため,
+<a href="https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_overview/9309844363.html&amp;id=">対応するネットワークコントローラの一覧</a>を確認すること.</p>
+<blockquote>
+<p>Note: 或いは, TwinCATのインストール後に, <code>C:/TwinCAT/3.1/Driver/System/TcI8254x.inf</code>に対応するデバイスのVendor IDとDevice IDが書かれているので, デバイスマネージャー→イーサネットアダプタ→プロパティ→詳細→ハードウェアIDと照らし合わせることでも確認できる.</p>
+</blockquote>
+<h3 id="how-to-install-twincat"><a class="header" href="#how-to-install-twincat">How to install TwinCAT</a></h3>
+<p>前提として, TwinCATはHyper-VやVirtual Machine Platformと共存できない.
+そのため, これらのfeatureを無効にする必要がある.
+これには, 例えば, PowerShellを管理者権限で起動し,</p>
+<pre><code>Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Hypervisor
+Disable-WindowsOptionalFeature -online -featurename VirtualMachinePlatform
+</code></pre>
+<p>と打ち込めば良い.</p>
+<p>まず, TwinCAT XAEを<a href="https://www.beckhoff.com/en-en/">公式サイト</a>からダウンロードする.
+ダウンロードには登録 (無料) が必要になる.</p>
+<p>ダウンロードしたインストーラを起動し, 指示に従う.
+<strong>この時, TwinCAT XAE Shell installにチェックを入れ, Visual Studio Integrationのチェックを外すこと.</strong></p>
+<p>インストール後に再起動し, <code>C:/TwinCAT/3.1/System/win8settick.bat</code>を管理者権限で実行し, 再び再起動する.</p>
+<p>最後に, SDK内の<code>AUTDServer/AUTD.xml</code>を<code>C:/TwinCAT/3.1/Config/Io/EtherCAT</code>にコピーする.</p>
+<h3 id="autdserver"><a class="header" href="#autdserver">AUTDServer</a></h3>
+<p>TwinCATのLinkを使うには, まず, <code>AUTDServer/AUTDServer.exe</code>を実行する.
+AUTDServer実行後に, IPアドレスの入力を求められるがここは空欄のままEnterすればよい.
+すると, しばらくしてTwinCAT XAE Shellが起動する.
+最後に, Shellを閉じるかを聞かれるが, 以下の設定がまだなら<code>No</code>を入力し, 設定を続ける.
+以下の設定が済んでいるなら, 閉じてしまってかまわない.</p>
+<blockquote>
+<p>Note: もし閉じてしまった場合は, <code>%Temp%/TwinCATAUTDServer/TwinCATAUTDServer.sln</code>をTcXaeShell Applicationとして開けば良い. <code>%Temp%</code>は環境変数で, 普通は<code>C:/Users/(user name)/AppData/Local/Temp</code>である.</p>
+</blockquote>
+<p>なお, AUTDServerはPCの電源を切る, スリープモードに入る等でLinkが途切れるので, その都度実行し直すこと.</p>
+<h4 id="install-driver"><a class="header" href="#install-driver">Install Driver</a></h4>
+<p>初回はEherCAT用のドライバのインストールが必要になる.
+TwinCAT XAE Shell上部メニューからTwinCAT→Show Realtime Ethernet Compatible Devicesを開きCompatible devicesの中の対応デバイスを選択肢Installをクリックする.
+なお, Compatible devicesに何も表示されていない場合はそのPCのイーサネットデバイスはTwinCATに対応していない.</p>
+<h4 id="license"><a class="header" href="#license">License</a></h4>
+<p>また, 初回はライセンス関係のエラーが出るので, XAE ShellでSolution Explorer→SYSTEM→Licenseを開き, “7 Days Trial License …“をクリックし, 画面に表示される文字を入力する.
+なお. ライセンスは7日間限定のトライアルライセンスだが, 切れたら再び同じ作業を行うことで再発行できる.
+ライセンスを発行し終わったら, TwinCAT XAE Shellを閉じて, 再び“AUTDServer.exe“を実行する.</p>
+<h3 id="trouble-shooting"><a class="header" href="#trouble-shooting">Trouble shooting</a></h3>
+<p>大量のDeviceを使用しようとすると, 下の図のようなエラーが発生することがある.
+このときは, <code>settings.ini</code>内の<code>CycleTicks</code>との値を増やし, AUTDServerを再び実行する.
+<code>CycleTicks</code>の値はエラーが出ない中で, 可能な限り小さな値が望ましい.
+デフォルトは2であり, どの程度の値にすべきかは接続している台数に依存する.
+例えば, 9台の場合は4程度の値にしておけば動作するはずである.</p>
+<p><strong>また, この<code>CycleTicks</code>の値を変更した場合は, <code>TwinCAT</code>のコンストラクタにその値を入力すること.</strong></p>
+<figure>
+  <img src="https://raw.githubusercontent.com/shinolab/autd3/master/book/src/fig/Users_Manual/tcerror.jpg"/>
+  <figcaption>TwinCAT error when using 9 devices</figcaption>
+</figure>
+<h2 id="remotetwincat"><a class="header" href="#remotetwincat">RemoteTwinCAT</a></h2>
+<p>前述の通り, AUTD3とTwinCATを使う場合はWindows OSと特定のネットワークアダプタが必要になる.
+しかし, Windows以外のPCで開発したい需要も多い (後述のSOEMもマルチプラットフォームで動作する).
+その場合は, RemoteTwinCAT linkを用いて遠隔からTwinCATを操作することができる.</p>
+<p>RemoteTwinCATを使用する場合はPCを2台用意する必要がある.
+この時, 片方のPCは上記のTwinCAT linkが使えるである必要がある.
+このPCをここでは“サーバ“と呼ぶ.
+一方, 開発側のPC, 即ちSDKを使用する側は特に制約はなく, サーバと同じLANに繋がっていれば良い, こちらをここでは“クライアント“と呼ぶ.</p>
+<p>まず, サーバとAUTDデバイスを接続する.
+この時使うLANのアダプタはTwinCAT linkと同じく, TwinCAT対応のアダプタである必要がある.
+また, サーバとクライアントを別のLANで繋ぐ.
+こちらのLANアダプタはTwinCAT対応である必要はない<sup class="footnote-reference"><a href="#fn_remote_twin">1</a></sup>.
+そして, サーバとクライアント間のLANのIPを確認しておく.
+ここでは例えば, サーバ側が“169.254.205.219“, クライアント側が“169.254.175.45“だったとする.
+次に, サーバでAUTDServerを起動する.
+起動後にIPの入力を求められるが, ここでクライアント側のIP (この例だと<code>169.254.175.45</code>) を入力する.
+また, 最後に“No“を入力し, TwinCATAUTDServerを開いたままにしておく.
+以下の図のように, System→Routesを開き, Current RouteタブのAmsNetId及び, NetId ManagementタブのLocal NetIdを確認する.</p>
+<figure>
+  <img src="https://raw.githubusercontent.com/shinolab/autd3/master/book/src/fig/Users_Manual/Current_Route.jpg"/>
+  <img src="https://raw.githubusercontent.com/shinolab/autd3/master/book/src/fig/Users_Manual/NetId_Management.jpg"/>
+  <figcaption>AmsNetId/Local NetId</figcaption>
+</figure>
+<p>ここでは, それぞれ“169.254.175.45.1.1“, “172.16.99.194.1.1“だったとする.
+この時, クライアント側は<code>autd3/link/remote_twincat.hpp</code>ヘッダーをincludeして,</p>
+<pre><code class="language-cpp">#include &quot;autd3/link/remote_twincat.hpp&quot;
+
+...
+  const string remote_ipv4_addr = &quot;169.254.205.219&quot;;
+  const string remote_ams_net_id = &quot;172.16.99.194.1.1&quot;;
+  const string local_ams_net_id = &quot;169.254.175.45.1.1&quot;;
+  auto link = link::RemoteTwinCAT(remote_ipv4_addr, remote_ams_net_id).local_ams_net_id(local_ams_net_id).build();
+</code></pre>
+<p>のようにすれば良い.</p>
+<p>なお, TCP関係のエラーが出る場合は, ファイアウォールでADSプロトコルがブロックされている可能性がある.
+その場合は, ファイアウォールの設定でTCP/UDPの48898番ポートの接続を許可する.</p>
+<h2 id="soem"><a class="header" href="#soem">SOEM</a></h2>
+<p><a href="https://github.com/OpenEtherCATsociety/SOEM">SOEM</a>は有志が開発しているOpen-sourceのEherCAT Masterライブラリである.
+TwinCATとは異なり通常のWindows上で動作するためリアルタイム性は保証されない.
+そのため, 基本的にTwinCATを使用することを推奨する.
+SOEMを使用するのはやむを得ない理由があるか, 開発時のみに限定するべきである.
+一方, SOEMはクロスプラットフォームで動作し, インストールも単純という利点がある.</p>
+<p>Windowsの場合は, <a href="https://nmap.org/npcap/">npcap</a>, または, <a href="https://www.winpcap.org/">WinPcap</a>を予めインストールしておくこと.
+npcapはWinPcapの後継であり, こちらの利用を推奨する.
+<strong>なお, npcapをインストールする場合は“WinPcap API compatible mode“でインストールすること.</strong>
+Linux/macの場合は, 特に準備は必要ない.</p>
+<p>SOEMのLinkを使用する際は<code>autd3/link/soem.hpp</code>ヘッダーをインクルードする.</p>
+<pre><code class="language-cpp">#include &quot;autd3/link/soem.hpp&quot;
+
+...
+  auto link = link::SOEM(ifname, autd.geometry().num_devices()).build();
+</code></pre>
+<p><code>SOEM()</code>の第1引数はインターフェース名で, 第2引数はデバイスの数である.
+インターフェース名はAUTD3デバイスに接続しているehernetインターフェース名である.
+これの一覧は, <code>SOEM::enumerate_adapters</code>関数によって取得できる.</p>
+<pre><code class="language-cpp">  const auto adapters = link::SOEM::enumerate_adapters();
+  for (auto&amp;&amp; [desc, name] : adapters) cout &lt;&lt; desc &lt;&lt; &quot;, &quot; &lt;&lt; name &lt;&lt; endl;
+</code></pre>
+<p>なお, SOEMも大量のDeviceを使用すると挙動が不安定になる時がある<sup class="footnote-reference"><a href="#fn_soem">2</a></sup>.
+このときは, <code>cycle_ticks</code>関数を仕様し, その値を増やす.</p>
+<pre><code class="language-cpp">  auto link = link::SOEM(ifname, autd.geometry().num_devices())
+                .cycle_ticks(4)
+                .build();
+</code></pre>
+<p><code>cycle_ticks</code>の値はエラーが出ない中で, 可能な限り小さな値が望ましい.
+デフォルトは2であり, どの程度の値にすべきかは接続している台数に依存する.
+例えば, 9台の場合は4程度の値にしておけば動作するはずである.</p>
+<p>また, SOEM Linkは回復不能なエラー (例えば, ケーブルが抜けるなど) が発生したときのコールバックを設定することができる<sup class="footnote-reference"><a href="#fn_soem_err">3</a></sup>.
+callbackはエラーメッセージを引数に取る.</p>
+<pre><code class="language-cpp">  auto link = link::SOEM(ifname, autd.geometry().num_devices())
+                .cycle_ticks(4)
+                .on_lost([](const string&amp; msg) {
+                  cerr &lt;&lt; &quot;Link is lost\n&quot;;
+                  cerr &lt;&lt; msg;
+                  quick_exit(-1);
+                })
+                .build();
+</code></pre>
+<p>さらに, Windowsの場合はHigh Precisionモードの設定ができる.</p>
+<pre><code class="language-cpp">  auto link = link::SOEM(ifname, autd.geometry().num_devices())
+                .cycle_ticks(4)
+                .on_lost([](const string&amp; msg) {
+                  cerr &lt;&lt; &quot;Link is lost\n&quot;;
+                  cerr &lt;&lt; msg;
+                  quick_exit(-1);
+                })
+                .high_precision(true)
+                .build();
+</code></pre>
+<p>High Precisionモードを<code>true</code>にすると, より高精度なタイマが使用できるが, 代わりにCPUの負荷が高くなる.</p>
+<h2 id="emulator"><a class="header" href="#emulator">Emulator</a></h2>
+<p>Emulator linkは<a href="https://github.com/shinolab/autd-emulator">autd-emulator</a> を使用する際に使うLinkである.</p>
+<p>使用の前に, AUTD Emulatorを実行しておく必要がある.</p>
+<p>EmulatorのLinkを使用する際は<code>autd3/link/emulator.hpp</code>ヘッダーをインクルードする.</p>
+<pre><code class="language-cpp">#include &quot;autd3/link/emulator.hpp&quot;
+
+...
+
+  auto link = autd::link::Emulator(autd.geometry()).port(50632).build();
+</code></pre>
+<p><code>Emulator()</code>の引数はGeometryである.
+ポート番号はautd-emulatorの設定と同じにしておく.</p>
+<div class="footnote-definition" id="fn_remote_twin"><sup class="footnote-definition-label">1</sup>
+<p>無線LANでも可</p>
+</div>
+<div class="footnote-definition" id="fn_soem"><sup class="footnote-definition-label">2</sup>
+<p>TwinCATよりは緩く, 普通に動くこともある.</p>
+</div>
+<div class="footnote-definition" id="fn_soem_err"><sup class="footnote-definition-label">3</sup>
+<p>なお, 回復不能なので直ちに終了するくらいしかできることはない.</p>
+</div>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../Software/Users_Manual/geometry.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../Software/Users_Manual/gain.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../Software/Users_Manual/geometry.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../Software/Users_Manual/gain.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
