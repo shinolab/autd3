@@ -1,5 +1,5 @@
 <map id="autd3::core::GainSTM&lt; NormalTransducer &gt;" name="autd3::core::GainSTM&lt; NormalTransducer &gt;">
-<area shape="rect" id="node1" title="GainSTM for NormalTransducer." alt="" coords="75,95,225,136"/>
-<area shape="rect" id="node2" href="$structautd3_1_1core_1_1STM.html" title="STM provide hardware Spatio&#45;Temporal Modulation or Lateral Modulation function." alt="" coords="5,13,124,39"/>
-<area shape="rect" id="node3" href="$structautd3_1_1core_1_1DatagramBody.html" title=" " alt="" coords="149,5,325,47"/>
+<area shape="rect" id="node1" title="GainSTM for NormalTransducer." alt="" coords="18,184,169,225"/>
+<area shape="rect" id="node2" href="$structautd3_1_1core_1_1STM.html" title=" " alt="" coords="7,95,179,136"/>
+<area shape="rect" id="node3" href="$structautd3_1_1core_1_1DatagramBody.html" title=" " alt="" coords="5,5,181,47"/>
 </map>

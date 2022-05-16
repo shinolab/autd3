@@ -1,4 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structautd3_1_1core_1_1DatagramBody.html" title=" " alt="" coords="5,5,212,32"/>
-<area shape="rect" id="node2" href="$structautd3_1_1core_1_1Gain.html" title="Gain controls the duty ratio and phase of each transducer in AUTD devices." alt="" coords="260,5,412,32"/>
+<area shape="rect" id="node1" href="$structautd3_1_1core_1_1DatagramBody.html" title=" " alt="" coords="5,27,181,69"/>
+<area shape="rect" id="node2" href="$structautd3_1_1core_1_1STM.html" title="STM provide hardware Spatio&#45;Temporal Modulation or Lateral Modulation function." alt="" coords="239,5,392,32"/>
+<area shape="rect" id="node3" href="$structautd3_1_1core_1_1STM.html" title=" " alt="" coords="229,57,401,98"/>
+<area shape="rect" id="node4" href="$structautd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4.html" title="GainSTM for LegacyTransducer." alt="" coords="449,23,600,65"/>
+<area shape="rect" id="node5" href="$structautd3_1_1core_1_1PointSTM.html" title="PointSTM provides a function to display the focus sequentially and periodically." alt="" coords="450,89,599,130"/>
 </map>

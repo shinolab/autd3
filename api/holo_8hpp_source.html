@@ -70,15 +70,15 @@ $(function() {
 <div class="title">holo.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="holo_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// File: holo_gain.hpp</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Project: include</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Created Date: 16/05/2021</span></div>
+<a href="holo_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// File: holo.hpp</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Project: gain</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Created Date: 16/05/2022</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Author: Shun Suzuki</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// -----</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// Last Modified: 16/05/2022</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Modified By: Shun Suzuki (suzuki@hapis.k.u-tokyo.ac.jp)</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// -----</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// Copyright (c) 2021 Hapis Lab. All rights reserved.</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// Copyright (c) 2022 Hapis Lab. All rights reserved.</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#pragma once</span></div>
@@ -319,7 +319,7 @@ $(function() {
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="comment">/**</span></div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="comment"> * @brief Gain to produce multiple focal points with Greedy algorithm.</span></div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="comment"> * Refer to Shun suzuki, et al. “Radiation Pressure Field Reconstruction for Ultrasound Midair Haptics by Greedy Algorithm with Brute-Force Search,”</span></div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="comment"> * in IEEE Transactions on Haptics, doi: 10.1109/TOH.2021.3076489</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="comment"> * in IEEE Transactions on Haptics, doi: 10.1109/TOH.STM.3076489</span></div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="comment"> * @details This method is computed on the CPU.</span></div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T = core::LegacyTransducer, std::enable_if_t&lt;std::is_base_of_v&lt;core::Transducer&lt;<span class="keyword">typename</span> T::D&gt;, T&gt;, <span class="keywordtype">nullptr</span>_t&gt; = <span class="keywordtype">nullptr</span>&gt;</div>

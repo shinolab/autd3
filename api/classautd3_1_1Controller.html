@@ -92,9 +92,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3e6aaa5d2dba36170ab0fb42df220650"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a366d7e43be950787fc2baca3b05a2deb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classautd3_1_1Controller.html#a366d7e43be950787fc2baca3b05a2deb">open</a> (<a class="el" href="namespaceautd3_1_1core.html#aeb7a471c6532b5c4888a461d378c6ae0">core::LinkPtr</a> link)</td></tr>
 <tr class="separator:a366d7e43be950787fc2baca3b05a2deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e0a42491925de805d9ccf00564579b0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classautd3_1_1Controller.html#a4e0a42491925de805d9ccf00564579b0">is_open</a> ()</td></tr>
-<tr class="memdesc:a4e0a42491925de805d9ccf00564579b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify the device is properly connected.  <a href="classautd3_1_1Controller.html#a4e0a42491925de805d9ccf00564579b0">More...</a><br /></td></tr>
-<tr class="separator:a4e0a42491925de805d9ccf00564579b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25e3e6f6d2ef2e6bdd00b72af1347152"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classautd3_1_1Controller.html#a25e3e6f6d2ef2e6bdd00b72af1347152">is_open</a> () const noexcept</td></tr>
+<tr class="memdesc:a25e3e6f6d2ef2e6bdd00b72af1347152"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify the device is properly connected.  <a href="classautd3_1_1Controller.html#a25e3e6f6d2ef2e6bdd00b72af1347152">More...</a><br /></td></tr>
+<tr class="separator:a25e3e6f6d2ef2e6bdd00b72af1347152"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d0a3d42c373e76cb4fa891de4544c5d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classautd3_1_1Controller.html#a3d0a3d42c373e76cb4fa891de4544c5d">config_silencer</a> (const <a class="el" href="structautd3_1_1SilencerConfig.html">SilencerConfig</a> config)</td></tr>
 <tr class="memdesc:a3d0a3d42c373e76cb4fa891de4544c5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure Silencer.  <a href="classautd3_1_1Controller.html#a3d0a3d42c373e76cb4fa891de4544c5d">More...</a><br /></td></tr>
 <tr class="separator:a3d0a3d42c373e76cb4fa891de4544c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -210,7 +210,7 @@ template&lt;typename T  = core::LegacyTransducer&gt; </div>
 <p>Clear all data in devices. </p>
 <dl class="section return"><dt>Returns</dt><dd>if this function returns true and check_ack is true, it guarantees that the devices have processed the data. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00137">137</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00131">131</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="operation_8hpp_source.html#l00021">autd3::driver::clear()</a>.</p>
 <div class="dynheader">
@@ -253,7 +253,7 @@ template&lt;typename T  = core::LegacyTransducer&gt; </div>
 <p>Close the controller. </p>
 <dl class="section return"><dt>Returns</dt><dd>if this function returns true and check_ack is true, it guarantees that the devices have processed the data. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00165">165</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00159">159</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="operation_8hpp_source.html#l00021">autd3::driver::clear()</a>.</p>
 <div class="dynheader">
@@ -299,22 +299,20 @@ template&lt;typename T  = core::LegacyTransducer&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00071">71</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="datagram_8hpp_source.html#l00052">autd3::driver::TxDatagram::clear()</a>, <a class="el" href="operation_8hpp_source.html#l00060">autd3::driver::config_silencer()</a>, <a class="el" href="silencer__config_8hpp_source.html#l00039">autd3::SilencerConfig::cycle</a>, <a class="el" href="operation_8hpp_source.html#l00216">autd3::driver::force_fan()</a>, <a class="el" href="controller_8hpp_source.html#l00283">autd3::Controller&lt; T &gt;::force_fan</a>, <a class="el" href="operation_8hpp_source.html#l00223">autd3::driver::reads_fpga_info()</a>, <a class="el" href="controller_8hpp_source.html#l00288">autd3::Controller&lt; T &gt;::reads_fpga_info</a>, and <a class="el" href="silencer__config_8hpp_source.html#l00034">autd3::SilencerConfig::step</a>.</p>
+<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00062">autd3::driver::config_silencer()</a>, <a class="el" href="silencer__config_8hpp_source.html#l00039">autd3::SilencerConfig::cycle</a>, <a class="el" href="operation_8hpp_source.html#l00219">autd3::driver::force_fan()</a>, <a class="el" href="controller_8hpp_source.html#l00275">autd3::Controller&lt; T &gt;::force_fan</a>, <a class="el" href="operation_8hpp_source.html#l00226">autd3::driver::reads_fpga_info()</a>, <a class="el" href="controller_8hpp_source.html#l00280">autd3::Controller&lt; T &gt;::reads_fpga_info</a>, and <a class="el" href="silencer__config_8hpp_source.html#l00034">autd3::SilencerConfig::step</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classautd3_1_1Controller_a3d0a3d42c373e76cb4fa891de4544c5d_cgraph.png" border="0" usemap="#classautd3_1_1Controller_a3d0a3d42c373e76cb4fa891de4544c5d_cgraph" alt=""/></div>
 <map name="classautd3_1_1Controller_a3d0a3d42c373e76cb4fa891de4544c5d_cgraph" id="classautd3_1_1Controller_a3d0a3d42c373e76cb4fa891de4544c5d_cgraph">
-<area shape="rect" title="Configure Silencer." alt="" coords="5,165,127,207"/>
-<area shape="rect" href="structautd3_1_1driver_1_1TxDatagram.html#a0f20210fb3fce46ec5e07eb2448dfc47" title=" " alt="" coords="175,71,343,112"/>
-<area shape="rect" href="namespaceautd3_1_1driver.html#a3a5a5cec213db26d8ffd6e9e106b3a7f" title=" " alt="" coords="193,136,325,177"/>
-<area shape="rect" href="namespaceautd3_1_1driver.html#a84f57e8df76700c2e2e64deff6fa4dd0" title=" " alt="" coords="183,202,335,229"/>
-<area shape="rect" href="namespaceautd3_1_1driver.html#a9b24e12394df6f7774ba7783bfbdd5e2" title=" " alt="" coords="193,253,324,295"/>
-<area shape="rect" href="structautd3_1_1driver_1_1GlobalHeader.html#ad2cd69b61e0c364d01083c63b6bb40b2" title=" " alt="" coords="391,5,568,47"/>
-<area shape="rect" href="structautd3_1_1driver_1_1TxDatagram.html#a9c039888105bb208c24e106841382b70" title=" " alt="" coords="395,71,563,112"/>
-<area shape="rect" href="classautd3_1_1driver_1_1CPUControlFlags.html#aa27cd820b11fd7436f4e4576c555b461" title=" " alt="" coords="396,136,563,177"/>
-<area shape="rect" href="classautd3_1_1driver_1_1CPUControlFlags.html#a0e14af47f397e23a74a4df47f082ab7f" title=" " alt="" coords="396,201,563,243"/>
-<area shape="rect" href="structautd3_1_1driver_1_1GlobalHeader.html#a318d02739e28d4186cfa9138a96e75cf" title=" " alt="" coords="391,267,568,308"/>
+<area shape="rect" title="Configure Silencer." alt="" coords="5,163,127,204"/>
+<area shape="rect" href="namespaceautd3_1_1driver.html#a3a5a5cec213db26d8ffd6e9e106b3a7f" title=" " alt="" coords="185,104,317,145"/>
+<area shape="rect" href="namespaceautd3_1_1driver.html#a84f57e8df76700c2e2e64deff6fa4dd0" title=" " alt="" coords="175,170,327,197"/>
+<area shape="rect" href="namespaceautd3_1_1driver.html#a9b24e12394df6f7774ba7783bfbdd5e2" title=" " alt="" coords="185,221,316,263"/>
+<area shape="rect" href="structautd3_1_1driver_1_1TxDatagram.html#a9c039888105bb208c24e106841382b70" title=" " alt="" coords="379,5,547,47"/>
+<area shape="rect" href="classautd3_1_1driver_1_1CPUControlFlags.html#aa27cd820b11fd7436f4e4576c555b461" title=" " alt="" coords="380,71,547,112"/>
+<area shape="rect" href="classautd3_1_1driver_1_1CPUControlFlags.html#a0e14af47f397e23a74a4df47f082ab7f" title=" " alt="" coords="380,136,547,177"/>
+<area shape="rect" href="structautd3_1_1driver_1_1GlobalHeader.html#a318d02739e28d4186cfa9138a96e75cf" title=" " alt="" coords="375,201,552,243"/>
 </map>
 </div>
 
@@ -348,9 +346,9 @@ template&lt;typename T  = core::LegacyTransducer&gt; </div>
 <p>Enumerate firmware information. </p>
 <dl class="section return"><dt>Returns</dt><dd>vector of <a class="el" href="structautd3_1_1driver_1_1FirmwareInfo.html" title="Firmware information.">driver::FirmwareInfo</a>. If failed, the vector is empty. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00176">176</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00170">170</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00230">autd3::driver::cpu_version()</a>, <a class="el" href="operation_8hpp_source.html#l00242">autd3::driver::fpga_functions()</a>, and <a class="el" href="operation_8hpp_source.html#l00236">autd3::driver::fpga_version()</a>.</p>
+<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00233">autd3::driver::cpu_version()</a>, <a class="el" href="operation_8hpp_source.html#l00245">autd3::driver::fpga_functions()</a>, and <a class="el" href="operation_8hpp_source.html#l00239">autd3::driver::fpga_version()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -427,8 +425,8 @@ template&lt;typename T  = core::LegacyTransducer&gt; </div>
 
 </div>
 </div>
-<a id="a4e0a42491925de805d9ccf00564579b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e0a42491925de805d9ccf00564579b0">&#9670;&nbsp;</a></span>is_open()</h2>
+<a id="a25e3e6f6d2ef2e6bdd00b72af1347152"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25e3e6f6d2ef2e6bdd00b72af1347152">&#9670;&nbsp;</a></span>is_open()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -442,12 +440,12 @@ template&lt;typename T  = core::LegacyTransducer&gt; </div>
           <td class="memname">bool <a class="el" href="classautd3_1_1Controller.html">autd3::Controller</a>&lt; T &gt;::is_open </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -460,8 +458,8 @@ template&lt;typename T  = core::LegacyTransducer&gt; </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classautd3_1_1Controller_a4e0a42491925de805d9ccf00564579b0_icgraph.png" border="0" usemap="#classautd3_1_1Controller_a4e0a42491925de805d9ccf00564579b0_icgraph" alt=""/></div>
-<map name="classautd3_1_1Controller_a4e0a42491925de805d9ccf00564579b0_icgraph" id="classautd3_1_1Controller_a4e0a42491925de805d9ccf00564579b0_icgraph">
+<div class="center"><img src="classautd3_1_1Controller_a25e3e6f6d2ef2e6bdd00b72af1347152_icgraph.png" border="0" usemap="#classautd3_1_1Controller_a25e3e6f6d2ef2e6bdd00b72af1347152_icgraph" alt=""/></div>
+<map name="classautd3_1_1Controller_a25e3e6f6d2ef2e6bdd00b72af1347152_icgraph" id="classautd3_1_1Controller_a25e3e6f6d2ef2e6bdd00b72af1347152_icgraph">
 <area shape="rect" title="Verify the device is properly connected." alt="" coords="203,5,324,47"/>
 <area shape="rect" href="classautd3_1_1Controller.html#a366d7e43be950787fc2baca3b05a2deb" title=" " alt="" coords="5,13,155,39"/>
 </map>
@@ -504,7 +502,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classautd3_1_1Controller_a366d7e43be950787fc2baca3b05a2deb_cgraph.png" border="0" usemap="#classautd3_1_1Controller_a366d7e43be950787fc2baca3b05a2deb_cgraph" alt=""/></div>
 <map name="classautd3_1_1Controller_a366d7e43be950787fc2baca3b05a2deb_cgraph" id="classautd3_1_1Controller_a366d7e43be950787fc2baca3b05a2deb_cgraph">
 <area shape="rect" title=" " alt="" coords="5,13,155,39"/>
-<area shape="rect" href="classautd3_1_1Controller.html#a4e0a42491925de805d9ccf00564579b0" title="Verify the device is properly connected." alt="" coords="203,5,324,47"/>
+<area shape="rect" href="classautd3_1_1Controller.html#a25e3e6f6d2ef2e6bdd00b72af1347152" title="Verify the device is properly connected." alt="" coords="203,5,324,47"/>
 </map>
 </div>
 
@@ -538,7 +536,7 @@ template&lt;typename T  = core::LegacyTransducer&gt; </div>
 <p>FPGA info. </p>
 <dl class="section return"><dt>Returns</dt><dd>veetor of FPGAInfo. If failed, the vector is empty </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00125">125</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00119">119</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
 
 </div>
 </div>
@@ -573,9 +571,9 @@ template&lt;typename B &gt; </div>
 <p>Send body data to devices. </p>
 <dl class="section return"><dt>Returns</dt><dd>if this function returns true and check_ack is true, it guarantees that the devices have processed the data. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00236">236</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00228">228</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00216">autd3::driver::force_fan()</a>, and <a class="el" href="operation_8hpp_source.html#l00223">autd3::driver::reads_fpga_info()</a>.</p>
+<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00219">autd3::driver::force_fan()</a>, and <a class="el" href="operation_8hpp_source.html#l00226">autd3::driver::reads_fpga_info()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -620,9 +618,9 @@ template&lt;typename H &gt; </div>
 <p>Send header data to devices. </p>
 <dl class="section return"><dt>Returns</dt><dd>if this function returns true and check_ack is true, it guarantees that the devices have processed the data. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00213">213</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00207">207</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00216">autd3::driver::force_fan()</a>, and <a class="el" href="operation_8hpp_source.html#l00223">autd3::driver::reads_fpga_info()</a>.</p>
+<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00219">autd3::driver::force_fan()</a>, and <a class="el" href="operation_8hpp_source.html#l00226">autd3::driver::reads_fpga_info()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -677,9 +675,9 @@ template&lt;typename H , typename B &gt; </div>
 <p>Send header and body data to devices. </p>
 <dl class="section return"><dt>Returns</dt><dd>if this function returns true and check_ack is true, it guarantees that the devices have processed the data. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00259">259</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00251">251</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00216">autd3::driver::force_fan()</a>, and <a class="el" href="operation_8hpp_source.html#l00223">autd3::driver::reads_fpga_info()</a>.</p>
+<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00219">autd3::driver::force_fan()</a>, and <a class="el" href="operation_8hpp_source.html#l00226">autd3::driver::reads_fpga_info()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -721,9 +719,9 @@ template&lt;typename T  = core::LegacyTransducer&gt; </div>
 <p>Stop outputting. </p>
 <dl class="section return"><dt>Returns</dt><dd>if this function returns true and check_ack is true, it guarantees that the devices have processed the data. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00155">155</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00149">149</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00060">autd3::driver::config_silencer()</a>.</p>
+<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00062">autd3::driver::config_silencer()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -768,20 +766,17 @@ template&lt;typename T  = core::LegacyTransducer&gt; </div>
 <p>Synchronize devices. </p>
 <dl class="section return"><dt>Returns</dt><dd>if this function returns true and check_ack is true, it guarantees that the devices have processed the data. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00088">88</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00086">86</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="datagram_8hpp_source.html#l00052">autd3::driver::TxDatagram::clear()</a>, <a class="el" href="operation_8hpp_source.html#l00216">autd3::driver::force_fan()</a>, <a class="el" href="controller_8hpp_source.html#l00283">autd3::Controller&lt; T &gt;::force_fan</a>, <a class="el" href="operation_8hpp_source.html#l00223">autd3::driver::reads_fpga_info()</a>, and <a class="el" href="controller_8hpp_source.html#l00288">autd3::Controller&lt; T &gt;::reads_fpga_info</a>.</p>
+<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00219">autd3::driver::force_fan()</a>, <a class="el" href="controller_8hpp_source.html#l00275">autd3::Controller&lt; T &gt;::force_fan</a>, <a class="el" href="operation_8hpp_source.html#l00226">autd3::driver::reads_fpga_info()</a>, and <a class="el" href="controller_8hpp_source.html#l00280">autd3::Controller&lt; T &gt;::reads_fpga_info</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classautd3_1_1Controller_aa88c8ecdd1dab9e2f154af88ba4d9434_cgraph.png" border="0" usemap="#classautd3_1_1Controller_aa88c8ecdd1dab9e2f154af88ba4d9434_cgraph" alt=""/></div>
 <map name="classautd3_1_1Controller_aa88c8ecdd1dab9e2f154af88ba4d9434_cgraph" id="classautd3_1_1Controller_aa88c8ecdd1dab9e2f154af88ba4d9434_cgraph">
-<area shape="rect" title="Synchronize devices." alt="" coords="5,96,127,137"/>
-<area shape="rect" href="structautd3_1_1driver_1_1TxDatagram.html#a0f20210fb3fce46ec5e07eb2448dfc47" title=" " alt="" coords="175,37,343,79"/>
-<area shape="rect" href="namespaceautd3_1_1driver.html#a84f57e8df76700c2e2e64deff6fa4dd0" title=" " alt="" coords="183,103,335,130"/>
-<area shape="rect" href="namespaceautd3_1_1driver.html#a9b24e12394df6f7774ba7783bfbdd5e2" title=" " alt="" coords="193,155,324,196"/>
-<area shape="rect" href="structautd3_1_1driver_1_1GlobalHeader.html#ad2cd69b61e0c364d01083c63b6bb40b2" title=" " alt="" coords="391,5,568,47"/>
-<area shape="rect" href="structautd3_1_1driver_1_1TxDatagram.html#a9c039888105bb208c24e106841382b70" title=" " alt="" coords="395,71,563,112"/>
+<area shape="rect" title="Synchronize devices." alt="" coords="5,27,127,69"/>
+<area shape="rect" href="namespaceautd3_1_1driver.html#a84f57e8df76700c2e2e64deff6fa4dd0" title=" " alt="" coords="175,5,327,32"/>
+<area shape="rect" href="namespaceautd3_1_1driver.html#a9b24e12394df6f7774ba7783bfbdd5e2" title=" " alt="" coords="185,57,316,98"/>
 </map>
 </div>
 
@@ -815,9 +810,9 @@ template&lt;typename T  = core::LegacyTransducer&gt; </div>
 <p>Update flags (force fan and reads_fpga_info) </p>
 <dl class="section return"><dt>Returns</dt><dd>if this function returns true and check_ack is true, it guarantees that the devices have processed the data. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00110">110</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00106">106</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00216">autd3::driver::force_fan()</a>, and <a class="el" href="operation_8hpp_source.html#l00223">autd3::driver::reads_fpga_info()</a>.</p>
+<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00219">autd3::driver::force_fan()</a>, and <a class="el" href="operation_8hpp_source.html#l00226">autd3::driver::reads_fpga_info()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -848,7 +843,7 @@ template&lt;typename T  = core::LegacyTransducer&gt; </div>
 
 <p>If true, this controller check ack from devices. </p>
 
-<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00293">293</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00285">285</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
 
 </div>
 </div>
@@ -868,9 +863,9 @@ template&lt;typename T  = core::LegacyTransducer&gt; </div>
 
 <p>If true, the fan will be forced to start. </p>
 
-<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00283">283</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00275">275</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="controller_8hpp_source.html#l00071">autd3::Controller&lt; T &gt;::config_silencer()</a>, and <a class="el" href="controller_8hpp_source.html#l00088">autd3::Controller&lt; T &gt;::synchronize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="controller_8hpp_source.html#l00071">autd3::Controller&lt; T &gt;::config_silencer()</a>, and <a class="el" href="controller_8hpp_source.html#l00086">autd3::Controller&lt; T &gt;::synchronize()</a>.</p>
 
 </div>
 </div>
@@ -890,9 +885,9 @@ template&lt;typename T  = core::LegacyTransducer&gt; </div>
 
 <p>If true, the devices return FPGA info in all frames. The FPGA info can be read by fpga_info(). </p>
 
-<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00288">288</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00280">280</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="controller_8hpp_source.html#l00071">autd3::Controller&lt; T &gt;::config_silencer()</a>, and <a class="el" href="controller_8hpp_source.html#l00088">autd3::Controller&lt; T &gt;::synchronize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="controller_8hpp_source.html#l00071">autd3::Controller&lt; T &gt;::config_silencer()</a>, and <a class="el" href="controller_8hpp_source.html#l00086">autd3::Controller&lt; T &gt;::synchronize()</a>.</p>
 
 </div>
 </div>

@@ -1,6 +1,5 @@
 <map id="autd3::core::Modulation::pack" name="autd3::core::Modulation::pack">
 <area shape="rect" id="node1" title=" " alt="" coords="5,35,160,76"/>
-<area shape="rect" id="node2" href="$classautd3_1_1core_1_1Modulation.html#a91dc99672db3619d4c679edc03ae2068" title="modulation data" alt="" coords="417,5,572,47"/>
-<area shape="rect" id="node3" href="$classautd3_1_1core_1_1Modulation.html#aa6dce3b38c18cf29d8d34f617cac6b60" title=" " alt="" coords="211,35,366,76"/>
-<area shape="rect" id="node4" href="$namespaceautd3_1_1driver.html#a0f006e836a089826efb80619018d0f6b" title=" " alt="" coords="208,101,369,127"/>
+<area shape="rect" id="node2" href="$classautd3_1_1core_1_1Modulation.html#a91dc99672db3619d4c679edc03ae2068" title="modulation data" alt="" coords="211,5,366,47"/>
+<area shape="rect" id="node3" href="$namespaceautd3_1_1driver.html#a0f006e836a089826efb80619018d0f6b" title=" " alt="" coords="208,71,369,98"/>
 </map>

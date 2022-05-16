@@ -1,6 +1,0 @@
-<map id="autd3::core::STM::set_frequency" name="autd3::core::STM::set_frequency">
-<area shape="rect" id="node1" title="Set frequency of the STM." alt="" coords="5,39,148,80"/>
-<area shape="rect" id="node2" href="$structautd3_1_1core_1_1STM.html#abc7c9d5fde1366c599e3a52285eecfc9" title=" " alt="" coords="196,21,377,47"/>
-<area shape="rect" id="node4" href="$structautd3_1_1core_1_1STM.html#aad65e27db20ff20f58a027b837596c21" title=" " alt="" coords="440,71,588,98"/>
-<area shape="rect" id="node3" href="$structautd3_1_1core_1_1STM.html#af477129800134e0599f12dd2c792138f" title="Sampling frequency." alt="" coords="425,5,603,47"/>
-</map>
