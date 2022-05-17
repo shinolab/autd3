@@ -151,7 +151,7 @@
 第2引数として, 0-1の規格化された音圧振幅を指定できる.</p>
 <h2 id="besselbeam"><a class="header" href="#besselbeam">BesselBeam</a></h2>
 <p><code>BesselBeam</code>ではその名の通りBessel beamを生成する.
-この<code>Gain</code>は長谷川らの論文[hasegawa2017]に基づく.</p>
+この<code>Gain</code>は長谷川らの論文<sup class="footnote-reference"><a href="#hasegawa2017">1</a></sup>に基づく.</p>
 <pre><code class="language-cpp">  const Vector3 apex(x, y, z);
   const Vector3 dir = Vector3::UnitZ();
   const double theta_z = 0.3;
@@ -161,7 +161,7 @@
 第4引数として, 0-1の規格化された音圧振幅で指定できる.</p>
 <figure>
   <img src="https://raw.githubusercontent.com/shinolab/autd3/master/book/src/fig/Users_Manual/1.4985159.figures.online.f1.jpg"/>
-  <figcaption>Bessel beam ([hasegawa2017]より引用)</figcaption>
+  <figcaption>Bessel beam (長谷川らの論文より引用)</figcaption>
 </figure>
 <h2 id="planewave"><a class="header" href="#planewave">PlaneWave</a></h2>
 <p><code>PlaneWave</code>は平面波を出力する</p>
@@ -177,21 +177,22 @@
 <p><code>Holo</code>は多焦点を生成するための<code>Gain</code>である.
 多焦点を生成するアルゴリズムが幾つか提案されており, SDKには以下のアルゴリズムが実装されている.</p>
 <ul>
-<li><code>SDP</code> - Semidefinite programming, 井上らの論文[inoue2015]に基づく</li>
-<li><code>EVD</code> - Eigen value decomposition, Longらの論文[long2014]に基づく</li>
+<li><code>SDP</code> - Semidefinite programming, 井上らの論文<sup class="footnote-reference"><a href="#inoue2015">2</a></sup>に基づく</li>
+<li><code>EVD</code> - Eigen value decomposition, Longらの論文<sup class="footnote-reference"><a href="#long2014">3</a></sup>に基づく</li>
 <li><code>Naive</code> - 単一焦点解の重ね合わせ</li>
-<li><code>GS</code> - Gershberg-Saxon, Marzoらの論文[marzo2019]に基づく</li>
-<li><code>GSPAT</code> - Gershberg-Saxon for Phased Arrays of Transducers, Plasenciaらの論文[plasencia2020]に基づく</li>
-<li><code>LM</code> - Levenberg-Marquardt, LM法は[levenberg1944,marquardt1963]で提案された非線形最小二乗問題の最適化法, 実装は[madsen2004]に基づく.</li>
+<li><code>GS</code> - Gershberg-Saxon, Marzoらの論文<sup class="footnote-reference"><a href="#marzo2019">4</a></sup>に基づく</li>
+<li><code>GSPAT</code> - Gershberg-Saxon for Phased Arrays of Transducers, Plasenciaらの論文<sup class="footnote-reference"><a href="#plasencia2020">5</a></sup>に基づく</li>
+<li><code>LM</code> - Levenberg-Marquardt, LM法はLevenberg<sup class="footnote-reference"><a href="#levenberg1944">6</a></sup>とMarquardt<sup class="footnote-reference"><a href="#marquardt1963">7</a></sup>で提案された非線形最小二乗問題の最適化法, 実装はMadsenのテキスト<sup class="footnote-reference"><a href="#madsen2004">8</a></sup>に基づく.</li>
 <li><code>GaussNewton</code> - Gauss-Newton法</li>
 <li><code>GradientDescent</code> - Gradient descent法</li>
-<li><code>Greedy</code> - Greedy algorithm and Brute-force search, 鈴木らの論文[suzuki2021]に基づく</li>
+<li><code>Greedy</code> - Greedy algorithm and Brute-force search, 鈴木らの論文<sup class="footnote-reference"><a href="#suzuki2021">9</a></sup>に基づく</li>
 </ul>
 <p>また, 各手法は計算Backendを選べるようになっている.
 SDKには以下の<code>Backend</code>が用意されている</p>
 <ul>
 <li><code>EigenBackend</code> - <a href="https://eigen.tuxfamily.org/index.php?title=Main_Page">Eigen</a>を使用, デフォルトで利用可能</li>
 <li><code>CUDABackend</code> - CUDAを使用, GPUで実行</li>
+<li><code>BLASBackend</code> - BLASを使用</li>
 </ul>
 <p><code>Holo</code>を使用するには<code>autd3/gain/holo.hpp</code>を<code>include</code>する.</p>
 <pre><code class="language-cpp">#include &quot;autd3/gain/holo.hpp&quot;
@@ -302,16 +303,34 @@ Geometryにはイテレータが定義されており, <code>Device</code>のイ
 また, <code>Device</code>にもイテレータが定義されており, <code>Transducer</code>のイテレータが返され, ここから振動子の位置を取得できる.
 ある点<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.63888em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord"><span class="mord"><span class="mord boldsymbol">p</span></span></span></span></span></span></span>で多数の振動子からの放出された超音波の音圧が最大になるためには, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.63888em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord"><span class="mord"><span class="mord boldsymbol">p</span></span></span></span></span></span></span>での位相が揃えば良い.
 これは, <code>Transducer</code>クラスに用意されている<code>align_phase_at</code>関数で計算できる.</p>
-<p>[hasegawa2017]: Hasegawa, Keisuke, et al. “Electronically steerable ultrasound-driven long narrow air stream.” Applied Physics Letters 111.6 (2017): 064104.</p>
-<p>[inoue2015]: Inoue, Seki, Yasutoshi Makino, and Hiroyuki Shinoda. “Active touch perception produced by airborne ultrasonic haptic hologram.” 2015 IEEE World Haptics Conference (WHC). IEEE, 2015.</p>
-<p>[long2014]: Long, Benjamin, et al. “Rendering volumetric haptic shapes in mid-air using ultrasound.” ACM Transactions on Graphics (TOG) 33.6 (2014): 1-10.</p>
-<p>[marzo2019]: Marzo, Asier, and Bruce W. Drinkwater. “Holographic acoustic tweezers.” Proceedings of the National Academy of Sciences 116.1 (2019): 84-89.</p>
-<p>[plasencia2020]: Plasencia, Diego Martinez, et al. “GS-PAT: high-speed multi-point sound-fields for phased arrays of transducers.” ACM Transactions on Graphics (TOG) 39.4 (2020): 138-1.</p>
-<p>[levenberg1944]: Levenberg, Kenneth. “A method for the solution of certain non-linear problems in least squares.” Quarterly of applied mathematics 2.2 (1944): 164-168.</p>
-<p>[marquardt1963]: Marquardt, Donald W. “An algorithm for least-squares estimation of nonlinear parameters.” Journal of the society for Industrial and Applied Mathematics 11.2 (1963): 431-441.</p>
-<p>[madsen2004]: Madsen, Kaj, Hans Bruun Nielsen, and Ole Tingleff. “Methods for non-linear least squares problems.” (2004).</p>
-<p>[suzuki2021]: Suzuki, Shun, et al. “Radiation Pressure Field Reconstruction for Ultrasound Midair Haptics by Greedy Algorithm with Brute-Force Search.” IEEE Transactions on Haptics (2021).</p>
-
+<div class="footnote-definition" id="hasegawa2017"><sup class="footnote-definition-label">1</sup>
+<p>Hasegawa, Keisuke, et al. “Electronically steerable ultrasound-driven long narrow air stream.” Applied Physics Letters 111.6 (2017): 064104.</p>
+</div>
+<div class="footnote-definition" id="inoue2015"><sup class="footnote-definition-label">2</sup>
+<p>Inoue, Seki, Yasutoshi Makino, and Hiroyuki Shinoda. “Active touch perception produced by airborne ultrasonic haptic hologram.” 2015 IEEE World Haptics Conference (WHC). IEEE, 2015.</p>
+</div>
+<div class="footnote-definition" id="long2014"><sup class="footnote-definition-label">3</sup>
+<p>Long, Benjamin, et al. “Rendering volumetric haptic shapes in mid-air using ultrasound.” ACM Transactions on Graphics (TOG) 33.6 (2014): 1-10.</p>
+</div>
+<div class="footnote-definition" id="marzo2019"><sup class="footnote-definition-label">4</sup>
+<p>Marzo, Asier, and Bruce W. Drinkwater. “Holographic acoustic tweezers.” Proceedings of the National Academy of Sciences 116.1 (2019): 84-89.</p>
+</div>
+<div class="footnote-definition" id="plasencia2020"><sup class="footnote-definition-label">5</sup>
+<p>Plasencia, Diego Martinez, et al. “GS-PAT: high-speed multi-point sound-fields for phased arrays of transducers.” ACM Transactions on Graphics (TOG) 39.4 (2020): 138-1.</p>
+</div>
+<div class="footnote-definition" id="levenberg1944"><sup class="footnote-definition-label">6</sup>
+<p>Levenberg, Kenneth. “A method for the solution of certain non-linear problems in least squares.” Quarterly of applied mathematics 2.2 (1944): 164-168.</p>
+</div>
+<div class="footnote-definition" id="marquardt1963"><sup class="footnote-definition-label">7</sup>
+<p>Marquardt, Donald W. “An algorithm for least-squares estimation of nonlinear parameters.” Journal of the society for Industrial and Applied Mathematics 11.2 (1963): 431-441.</p>
+</div>
+<div class="footnote-definition" id="madsen2004"><sup class="footnote-definition-label">8</sup>
+<p>Madsen, Kaj, Hans Bruun Nielsen, and Ole Tingleff. “Methods for non-linear least squares problems.” (2004).</p>
+</div>
+<div class="footnote-definition" id="suzuki2021"><sup class="footnote-definition-label">9</sup>
+<p>Suzuki, Shun, et al. “Radiation Pressure Field Reconstruction for Ultrasound Midair Haptics by Greedy Algorithm with Brute-Force Search.” IEEE Transactions on Haptics (2021).</p>
+</div>
+<footer id="open-on-gh">Found a bug? <a href="https://github.com/shinolab/autd3/edit/main/book/src/jp/Software/Users_Manual/gain.md">Edit this file on GitHub.</a></footer>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
