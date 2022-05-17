@@ -226,7 +226,7 @@ target_include_directories(main PRIVATE include eigen)
 
 if(WIN32)
   target_link_directories(main PRIVATE lib/wpcap)
-  target_link_libraries(main autd3 link_soem Packet.lib wpcap.lib ws2_32.lib winmm.lib)
+  target_link_libraries(main link_soem Packet.lib wpcap.lib ws2_32.lib winmm.lib)
 elseif(APPLE)
   target_link_libraries(main pcap)
 else()
@@ -271,6 +271,8 @@ int main() try {
   autd.open(std::move(link));
 
   autd.clear();
+
+  autd.synchronize();
 
   const auto firm_infos = autd.firmware_infos();
   std::copy(firm_infos.begin(), firm_infos.end(), std::ostream_iterator&lt;FirmwareInfo&gt;(std::cout, &quot;\n&quot;));
@@ -332,6 +334,10 @@ int main() try {
 電源投入時に初期化されるので<code>clear()</code>は呼ばなくても良いかもしれない.</p>
 <pre><code class="language-cpp">  autd.clear();
 </code></pre>
+<p>次に, AUTDデバイスの同期を行う.</p>
+<pre><code class="language-cpp">  autd.synchronize();
+</code></pre>
+<p><strong>例え, 一台のデバイスしか使用しない場合でも, この関数を初期化後に一度呼び出す必要がある.</strong></p>
 <p>次に, firmwareのバージョンを確認している.
 これも必須ではない.</p>
 <pre><code class="language-cpp">  const auto firm_infos = autd.firmware_infos();
