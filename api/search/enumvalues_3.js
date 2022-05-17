@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['is_5fduty_917',['IS_DUTY',['../classautd3_1_1driver_1_1CPUControlFlags.html#ad15956b7f095f547a235f2a515879664a28b9af94631e9401f2630e0ee2cc72eb',1,'autd3::driver::CPUControlFlags']]]
+  ['legacy_5fmode_918',['LEGACY_MODE',['../classautd3_1_1driver_1_1FPGAControlFlags.html#a99017ed547678419c96f2af8819688eaaa8a83346882ef75c8b26852d9181da2d',1,'autd3::driver::FPGAControlFlags']]]
 ];

@@ -81,16 +81,19 @@ $(function() {
 Public Types</h2></td></tr>
 <tr class="memitem:ad15956b7f095f547a235f2a515879664"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classautd3_1_1driver_1_1CPUControlFlags.html#ad15956b7f095f547a235f2a515879664">VALUE</a> : uint8_t { <br />
 &#160;&#160;<a class="el" href="classautd3_1_1driver_1_1CPUControlFlags.html#ad15956b7f095f547a235f2a515879664a017ce990aad2af083489052ab0db887a">NONE</a> = 0, 
-<a class="el" href="classautd3_1_1driver_1_1CPUControlFlags.html#ad15956b7f095f547a235f2a515879664a72b0612c34d1599886fe92288b5f8fb5">MOD_BEGIN</a> = 1 &lt;&lt; 0, 
-<a class="el" href="classautd3_1_1driver_1_1CPUControlFlags.html#ad15956b7f095f547a235f2a515879664a82da045b4bd11df041b9c69b79d7a7a4">MOD_END</a> = 1 &lt;&lt; 1, 
-<a class="el" href="classautd3_1_1driver_1_1CPUControlFlags.html#ad15956b7f095f547a235f2a515879664a7d5b9bd51fb6738a64c05dc4aac0f7d1">STM_BEGIN</a> = 1 &lt;&lt; 2, 
+<a class="el" href="classautd3_1_1driver_1_1CPUControlFlags.html#ad15956b7f095f547a235f2a515879664a9276e5e3b111ebd3e26d88b4768007f0">MOD</a> = 1 &lt;&lt; 0, 
+<a class="el" href="classautd3_1_1driver_1_1CPUControlFlags.html#ad15956b7f095f547a235f2a515879664a72b0612c34d1599886fe92288b5f8fb5">MOD_BEGIN</a> = 1 &lt;&lt; 1, 
+<a class="el" href="classautd3_1_1driver_1_1CPUControlFlags.html#ad15956b7f095f547a235f2a515879664a82da045b4bd11df041b9c69b79d7a7a4">MOD_END</a> = 1 &lt;&lt; 2, 
 <br />
-&#160;&#160;<a class="el" href="classautd3_1_1driver_1_1CPUControlFlags.html#ad15956b7f095f547a235f2a515879664a9c4c4fb64d2c061949eddff863a30ba3">STM_END</a> = 1 &lt;&lt; 3, 
-<a class="el" href="classautd3_1_1driver_1_1CPUControlFlags.html#ad15956b7f095f547a235f2a515879664a28b9af94631e9401f2630e0ee2cc72eb">IS_DUTY</a> = 1 &lt;&lt; 4, 
-<a class="el" href="classautd3_1_1driver_1_1CPUControlFlags.html#ad15956b7f095f547a235f2a515879664aac87cb75ed86508c08e3d6255c7a5bb2">CONFIG_SILENCER</a> = 1 &lt;&lt; 5, 
-<a class="el" href="classautd3_1_1driver_1_1CPUControlFlags.html#ad15956b7f095f547a235f2a515879664ab9c74aea6e1c14da3e2610d3b01a36f0">READS_FPGA_INFO</a> = 1 &lt;&lt; 6, 
+&#160;&#160;<a class="el" href="classautd3_1_1driver_1_1CPUControlFlags.html#ad15956b7f095f547a235f2a515879664a6ee98fe78e1d06dad0d28acddf3973d3">CONFIG_EN_N</a> = 1 &lt;&lt; 0, 
+<a class="el" href="classautd3_1_1driver_1_1CPUControlFlags.html#ad15956b7f095f547a235f2a515879664aac87cb75ed86508c08e3d6255c7a5bb2">CONFIG_SILENCER</a> = 1 &lt;&lt; 1, 
+<a class="el" href="classautd3_1_1driver_1_1CPUControlFlags.html#ad15956b7f095f547a235f2a515879664a50a62f08467acecd5b495ea43a8d960c">CONFIG_SYNC</a> = 1 &lt;&lt; 2, 
+<a class="el" href="classautd3_1_1driver_1_1CPUControlFlags.html#ad15956b7f095f547a235f2a515879664af8774732b1b645423cc314800f0af58f">WRITE_BODY</a> = 1 &lt;&lt; 3, 
 <br />
-&#160;&#160;<a class="el" href="classautd3_1_1driver_1_1CPUControlFlags.html#ad15956b7f095f547a235f2a515879664aa2b3efd0bfed615b5aedbc986151a1ac">DO_SYNC</a> = 1 &lt;&lt; 7
+&#160;&#160;<a class="el" href="classautd3_1_1driver_1_1CPUControlFlags.html#ad15956b7f095f547a235f2a515879664a7d5b9bd51fb6738a64c05dc4aac0f7d1">STM_BEGIN</a> = 1 &lt;&lt; 4, 
+<a class="el" href="classautd3_1_1driver_1_1CPUControlFlags.html#ad15956b7f095f547a235f2a515879664a9c4c4fb64d2c061949eddff863a30ba3">STM_END</a> = 1 &lt;&lt; 5, 
+<a class="el" href="classautd3_1_1driver_1_1CPUControlFlags.html#ad15956b7f095f547a235f2a515879664a28b9af94631e9401f2630e0ee2cc72eb">IS_DUTY</a> = 1 &lt;&lt; 6, 
+<a class="el" href="classautd3_1_1driver_1_1CPUControlFlags.html#ad15956b7f095f547a235f2a515879664ab9c74aea6e1c14da3e2610d3b01a36f0">READS_FPGA_INFO</a> = 1 &lt;&lt; 7
 <br />
  }</td></tr>
 <tr class="separator:ad15956b7f095f547a235f2a515879664"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,7 +127,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="cpu_2defined_8hpp_source.html#l00035">35</a> of file <a class="el" href="cpu_2defined_8hpp_source.html">defined.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cpu_2defined_8hpp_source.html#l00033">33</a> of file <a class="el" href="cpu_2defined_8hpp_source.html">defined.hpp</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="ad15956b7f095f547a235f2a515879664"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad15956b7f095f547a235f2a515879664">&#9670;&nbsp;</a></span>VALUE</h2>
@@ -139,17 +142,20 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad15956b7f095f547a235f2a515879664a017ce990aad2af083489052ab0db887a"></a>NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad15956b7f095f547a235f2a515879664a9276e5e3b111ebd3e26d88b4768007f0"></a>MOD&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ad15956b7f095f547a235f2a515879664a72b0612c34d1599886fe92288b5f8fb5"></a>MOD_BEGIN&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ad15956b7f095f547a235f2a515879664a82da045b4bd11df041b9c69b79d7a7a4"></a>MOD_END&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad15956b7f095f547a235f2a515879664a6ee98fe78e1d06dad0d28acddf3973d3"></a>CONFIG_EN_N&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad15956b7f095f547a235f2a515879664aac87cb75ed86508c08e3d6255c7a5bb2"></a>CONFIG_SILENCER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad15956b7f095f547a235f2a515879664a50a62f08467acecd5b495ea43a8d960c"></a>CONFIG_SYNC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad15956b7f095f547a235f2a515879664af8774732b1b645423cc314800f0af58f"></a>WRITE_BODY&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ad15956b7f095f547a235f2a515879664a7d5b9bd51fb6738a64c05dc4aac0f7d1"></a>STM_BEGIN&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ad15956b7f095f547a235f2a515879664a9c4c4fb64d2c061949eddff863a30ba3"></a>STM_END&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ad15956b7f095f547a235f2a515879664a28b9af94631e9401f2630e0ee2cc72eb"></a>IS_DUTY&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad15956b7f095f547a235f2a515879664aac87cb75ed86508c08e3d6255c7a5bb2"></a>CONFIG_SILENCER&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ad15956b7f095f547a235f2a515879664ab9c74aea6e1c14da3e2610d3b01a36f0"></a>READS_FPGA_INFO&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ad15956b7f095f547a235f2a515879664aa2b3efd0bfed615b5aedbc986151a1ac"></a>DO_SYNC&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="cpu_2defined_8hpp_source.html#l00037">37</a> of file <a class="el" href="cpu_2defined_8hpp_source.html">defined.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cpu_2defined_8hpp_source.html#l00035">35</a> of file <a class="el" href="cpu_2defined_8hpp_source.html">defined.hpp</a>.</p>
 
 </div>
 </div>
@@ -203,7 +209,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="cpu_2defined_8hpp_source.html#l00050">50</a> of file <a class="el" href="cpu_2defined_8hpp_source.html">defined.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cpu_2defined_8hpp_source.html#l00051">51</a> of file <a class="el" href="cpu_2defined_8hpp_source.html">defined.hpp</a>.</p>
 
 </div>
 </div>
@@ -309,7 +315,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="cpu_2defined_8hpp_source.html#l00063">63</a> of file <a class="el" href="cpu_2defined_8hpp_source.html">defined.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cpu_2defined_8hpp_source.html#l00064">64</a> of file <a class="el" href="cpu_2defined_8hpp_source.html">defined.hpp</a>.</p>
 
 </div>
 </div>
@@ -363,7 +369,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="cpu_2defined_8hpp_source.html#l00055">55</a> of file <a class="el" href="cpu_2defined_8hpp_source.html">defined.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cpu_2defined_8hpp_source.html#l00056">56</a> of file <a class="el" href="cpu_2defined_8hpp_source.html">defined.hpp</a>.</p>
 
 </div>
 </div>
@@ -417,7 +423,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="cpu_2defined_8hpp_source.html#l00062">62</a> of file <a class="el" href="cpu_2defined_8hpp_source.html">defined.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cpu_2defined_8hpp_source.html#l00063">63</a> of file <a class="el" href="cpu_2defined_8hpp_source.html">defined.hpp</a>.</p>
 
 </div>
 </div>
@@ -445,9 +451,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="cpu_2defined_8hpp_source.html#l00067">67</a> of file <a class="el" href="cpu_2defined_8hpp_source.html">defined.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cpu_2defined_8hpp_source.html#l00068">68</a> of file <a class="el" href="cpu_2defined_8hpp_source.html">defined.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="operation_8hpp_source.html#l00062">autd3::driver::config_silencer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="operation_8hpp_source.html#l00069">autd3::driver::config_silencer()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -486,9 +492,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="cpu_2defined_8hpp_source.html#l00065">65</a> of file <a class="el" href="cpu_2defined_8hpp_source.html">defined.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cpu_2defined_8hpp_source.html#l00066">66</a> of file <a class="el" href="cpu_2defined_8hpp_source.html">defined.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="operation_8hpp_source.html#l00062">autd3::driver::config_silencer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="operation_8hpp_source.html#l00069">autd3::driver::config_silencer()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

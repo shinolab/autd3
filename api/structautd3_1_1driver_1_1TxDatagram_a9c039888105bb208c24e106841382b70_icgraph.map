@@ -1,7 +1,6 @@
 <map id="autd3::driver::TxDatagram::header" name="autd3::driver::TxDatagram::header">
-<area shape="rect" id="node1" title=" " alt="" coords="416,39,584,80"/>
-<area shape="rect" id="node2" href="$structautd3_1_1driver_1_1TxDatagram.html#a0f20210fb3fce46ec5e07eb2448dfc47" title=" " alt="" coords="200,5,368,47"/>
-<area shape="rect" id="node3" href="$namespaceautd3_1_1driver.html#a3a5a5cec213db26d8ffd6e9e106b3a7f" title=" " alt="" coords="218,71,350,112"/>
-<area shape="rect" id="node4" href="$classautd3_1_1Controller.html#a3d0a3d42c373e76cb4fa891de4544c5d" title="Configure Silencer." alt="" coords="18,41,139,83"/>
-<area shape="rect" id="node5" href="$classautd3_1_1Controller.html#a0e3cf74d2309edbc7317ce22d67388e9" title="Stop outputting." alt="" coords="5,107,152,134"/>
+<area shape="rect" id="node1" title=" " alt="" coords="380,35,548,76"/>
+<area shape="rect" id="node2" href="$namespaceautd3_1_1driver.html#a3a5a5cec213db26d8ffd6e9e106b3a7f" title=" " alt="" coords="200,35,332,76"/>
+<area shape="rect" id="node3" href="$classautd3_1_1Controller.html#a3d0a3d42c373e76cb4fa891de4544c5d" title="Configure Silencer." alt="" coords="18,5,139,47"/>
+<area shape="rect" id="node4" href="$classautd3_1_1Controller.html#a0e3cf74d2309edbc7317ce22d67388e9" title="Stop outputting." alt="" coords="5,71,152,98"/>
 </map>

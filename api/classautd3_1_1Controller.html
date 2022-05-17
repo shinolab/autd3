@@ -253,7 +253,7 @@ template&lt;typename T  = core::LegacyTransducer&gt; </div>
 <p>Close the controller. </p>
 <dl class="section return"><dt>Returns</dt><dd>if this function returns true and check_ack is true, it guarantees that the devices have processed the data. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00159">159</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00158">158</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="operation_8hpp_source.html#l00021">autd3::driver::clear()</a>.</p>
 <div class="dynheader">
@@ -299,7 +299,7 @@ template&lt;typename T  = core::LegacyTransducer&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00071">71</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00062">autd3::driver::config_silencer()</a>, <a class="el" href="silencer__config_8hpp_source.html#l00039">autd3::SilencerConfig::cycle</a>, <a class="el" href="operation_8hpp_source.html#l00219">autd3::driver::force_fan()</a>, <a class="el" href="controller_8hpp_source.html#l00275">autd3::Controller&lt; T &gt;::force_fan</a>, <a class="el" href="operation_8hpp_source.html#l00226">autd3::driver::reads_fpga_info()</a>, <a class="el" href="controller_8hpp_source.html#l00280">autd3::Controller&lt; T &gt;::reads_fpga_info</a>, and <a class="el" href="silencer__config_8hpp_source.html#l00034">autd3::SilencerConfig::step</a>.</p>
+<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00069">autd3::driver::config_silencer()</a>, <a class="el" href="silencer__config_8hpp_source.html#l00039">autd3::SilencerConfig::cycle</a>, <a class="el" href="operation_8hpp_source.html#l00268">autd3::driver::force_fan()</a>, <a class="el" href="controller_8hpp_source.html#l00270">autd3::Controller&lt; T &gt;::force_fan</a>, <a class="el" href="controller_8hpp_source.html#l00275">autd3::Controller&lt; T &gt;::reads_fpga_info</a>, <a class="el" href="operation_8hpp_source.html#l00275">autd3::driver::reads_fpga_info()</a>, and <a class="el" href="silencer__config_8hpp_source.html#l00034">autd3::SilencerConfig::step</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -346,9 +346,9 @@ template&lt;typename T  = core::LegacyTransducer&gt; </div>
 <p>Enumerate firmware information. </p>
 <dl class="section return"><dt>Returns</dt><dd>vector of <a class="el" href="structautd3_1_1driver_1_1FirmwareInfo.html" title="Firmware information.">driver::FirmwareInfo</a>. If failed, the vector is empty. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00170">170</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00169">169</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00233">autd3::driver::cpu_version()</a>, <a class="el" href="operation_8hpp_source.html#l00245">autd3::driver::fpga_functions()</a>, and <a class="el" href="operation_8hpp_source.html#l00239">autd3::driver::fpga_version()</a>.</p>
+<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00282">autd3::driver::cpu_version()</a>, <a class="el" href="operation_8hpp_source.html#l00294">autd3::driver::fpga_functions()</a>, and <a class="el" href="operation_8hpp_source.html#l00288">autd3::driver::fpga_version()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -571,9 +571,9 @@ template&lt;typename B &gt; </div>
 <p>Send body data to devices. </p>
 <dl class="section return"><dt>Returns</dt><dd>if this function returns true and check_ack is true, it guarantees that the devices have processed the data. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00228">228</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00227">227</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00219">autd3::driver::force_fan()</a>, and <a class="el" href="operation_8hpp_source.html#l00226">autd3::driver::reads_fpga_info()</a>.</p>
+<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00268">autd3::driver::force_fan()</a>, and <a class="el" href="operation_8hpp_source.html#l00275">autd3::driver::reads_fpga_info()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -618,9 +618,9 @@ template&lt;typename H &gt; </div>
 <p>Send header data to devices. </p>
 <dl class="section return"><dt>Returns</dt><dd>if this function returns true and check_ack is true, it guarantees that the devices have processed the data. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00207">207</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00206">206</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00219">autd3::driver::force_fan()</a>, and <a class="el" href="operation_8hpp_source.html#l00226">autd3::driver::reads_fpga_info()</a>.</p>
+<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00268">autd3::driver::force_fan()</a>, and <a class="el" href="operation_8hpp_source.html#l00275">autd3::driver::reads_fpga_info()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -675,9 +675,9 @@ template&lt;typename H , typename B &gt; </div>
 <p>Send header and body data to devices. </p>
 <dl class="section return"><dt>Returns</dt><dd>if this function returns true and check_ack is true, it guarantees that the devices have processed the data. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00251">251</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00248">248</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00219">autd3::driver::force_fan()</a>, and <a class="el" href="operation_8hpp_source.html#l00226">autd3::driver::reads_fpga_info()</a>.</p>
+<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00268">autd3::driver::force_fan()</a>, and <a class="el" href="operation_8hpp_source.html#l00275">autd3::driver::reads_fpga_info()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -719,9 +719,9 @@ template&lt;typename T  = core::LegacyTransducer&gt; </div>
 <p>Stop outputting. </p>
 <dl class="section return"><dt>Returns</dt><dd>if this function returns true and check_ack is true, it guarantees that the devices have processed the data. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00149">149</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00148">148</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00062">autd3::driver::config_silencer()</a>.</p>
+<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00069">autd3::driver::config_silencer()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -768,7 +768,7 @@ template&lt;typename T  = core::LegacyTransducer&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00086">86</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00219">autd3::driver::force_fan()</a>, <a class="el" href="controller_8hpp_source.html#l00275">autd3::Controller&lt; T &gt;::force_fan</a>, <a class="el" href="operation_8hpp_source.html#l00226">autd3::driver::reads_fpga_info()</a>, and <a class="el" href="controller_8hpp_source.html#l00280">autd3::Controller&lt; T &gt;::reads_fpga_info</a>.</p>
+<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00268">autd3::driver::force_fan()</a>, <a class="el" href="controller_8hpp_source.html#l00270">autd3::Controller&lt; T &gt;::force_fan</a>, <a class="el" href="operation_8hpp_source.html#l00275">autd3::driver::reads_fpga_info()</a>, and <a class="el" href="controller_8hpp_source.html#l00275">autd3::Controller&lt; T &gt;::reads_fpga_info</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -812,7 +812,7 @@ template&lt;typename T  = core::LegacyTransducer&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00106">106</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00219">autd3::driver::force_fan()</a>, and <a class="el" href="operation_8hpp_source.html#l00226">autd3::driver::reads_fpga_info()</a>.</p>
+<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00268">autd3::driver::force_fan()</a>, and <a class="el" href="operation_8hpp_source.html#l00275">autd3::driver::reads_fpga_info()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -843,7 +843,7 @@ template&lt;typename T  = core::LegacyTransducer&gt; </div>
 
 <p>If true, this controller check ack from devices. </p>
 
-<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00285">285</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00280">280</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
 
 </div>
 </div>
@@ -863,7 +863,7 @@ template&lt;typename T  = core::LegacyTransducer&gt; </div>
 
 <p>If true, the fan will be forced to start. </p>
 
-<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00275">275</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00270">270</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="controller_8hpp_source.html#l00071">autd3::Controller&lt; T &gt;::config_silencer()</a>, and <a class="el" href="controller_8hpp_source.html#l00086">autd3::Controller&lt; T &gt;::synchronize()</a>.</p>
 
@@ -885,7 +885,7 @@ template&lt;typename T  = core::LegacyTransducer&gt; </div>
 
 <p>If true, the devices return FPGA info in all frames. The FPGA info can be read by fpga_info(). </p>
 
-<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00280">280</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8hpp_source.html#l00275">275</a> of file <a class="el" href="controller_8hpp_source.html">controller.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="controller_8hpp_source.html#l00071">autd3::Controller&lt; T &gt;::config_silencer()</a>, and <a class="el" href="controller_8hpp_source.html#l00086">autd3::Controller&lt; T &gt;::synchronize()</a>.</p>
 
