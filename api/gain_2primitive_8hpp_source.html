@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">autd3
-   &#160;<span id="projectnumber">2.0.0</span>
+   &#160;<span id="projectnumber">2.0.1</span>
    </div>
   </td>
  </tr>
@@ -75,7 +75,7 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Created Date: 10/05/2022</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Author: Shun Suzuki</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// -----</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// Last Modified: 16/05/2022</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// Last Modified: 22/05/2022</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Modified By: Shun Suzuki (suzuki@hapis.k.u-tokyo.ac.jp)</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// -----</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// Copyright (c) 2022 Hapis Lab. All rights reserved.</span></div>
@@ -239,7 +239,7 @@ $(function() {
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">if</span> (device_id &lt; _geometry.num_devices()) this-&gt;_props.drives.copy_from(device_id, gain.drives());</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  }</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
-<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="classautd3_1_1gain_1_1Grouped.html#a325388090c0df607b6f493ca9b818d00">  170</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classautd3_1_1gain_1_1Grouped.html#a325388090c0df607b6f493ca9b818d00">calc</a>(<span class="keyword">const</span> <a class="code" href="structautd3_1_1core_1_1Geometry.html">core::Geometry&lt;T&gt;</a>&amp; geometry)<span class="keyword"> override </span>{}</div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="classautd3_1_1gain_1_1Grouped.html#aedae37274e9e97dbe0fbc6ab2f41e850">  170</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classautd3_1_1gain_1_1Grouped.html#aedae37274e9e97dbe0fbc6ab2f41e850">calc</a>(<span class="keyword">const</span> <a class="code" href="structautd3_1_1core_1_1Geometry.html">core::Geometry&lt;T&gt;</a>&amp;)<span class="keyword"> override </span>{}</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
 <div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="classautd3_1_1gain_1_1Grouped.html#a8cf766f7179ce904a5d52a9f11a31196">  172</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classautd3_1_1gain_1_1Grouped.html#a8cf766f7179ce904a5d52a9f11a31196">Grouped</a>(<span class="keyword">const</span> <a class="code" href="structautd3_1_1core_1_1Geometry.html">core::Geometry&lt;T&gt;</a>&amp; geometry) : core::<a class="code" href="structautd3_1_1core_1_1Gain.html">Gain</a>&lt;T&gt;(), _geometry(geometry) {</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    this-&gt;_props.<a class="code" href="structautd3_1_1core_1_1Gain.html#a124b921b84486ba524553c1f44be3bf2">init</a>(_geometry.num_devices() * <a class="code" href="namespaceautd3_1_1driver.html#a8cc34319e314122bb0b1af51d25ddee0">driver::NUM_TRANS_IN_UNIT</a>);</div>
@@ -295,9 +295,9 @@ $(function() {
 <div class="ttc" id="aclassautd3_1_1gain_1_1PlaneWave_html_a424c7456c971b339c58775198fdb334d"><div class="ttname"><a href="classautd3_1_1gain_1_1PlaneWave.html#a424c7456c971b339c58775198fdb334d">autd3::gain::PlaneWave::PlaneWave</a></div><div class="ttdeci">PlaneWave(core::Vector3 direction, const double amp=1.0) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="gain_2primitive_8hpp_source.html#l00130">primitive.hpp:130</a></div></div>
 <div class="ttc" id="aclassautd3_1_1gain_1_1Focus_html_aedd66bd95f19926401460dc63f4f4b57"><div class="ttname"><a href="classautd3_1_1gain_1_1Focus.html#aedd66bd95f19926401460dc63f4f4b57">autd3::gain::Focus::Focus</a></div><div class="ttdeci">Focus(Focus &amp;&amp;obj)=default</div></div>
 <div class="ttc" id="aclassautd3_1_1gain_1_1Null_html_ac95e3cadf685b513d1f39e83365d2349"><div class="ttname"><a href="classautd3_1_1gain_1_1Null.html#ac95e3cadf685b513d1f39e83365d2349">autd3::gain::Null::operator=</a></div><div class="ttdeci">Null &amp; operator=(Null &amp;&amp;obj)=default</div></div>
-<div class="ttc" id="aclassautd3_1_1gain_1_1Grouped_html_a325388090c0df607b6f493ca9b818d00"><div class="ttname"><a href="classautd3_1_1gain_1_1Grouped.html#a325388090c0df607b6f493ca9b818d00">autd3::gain::Grouped::calc</a></div><div class="ttdeci">void calc(const core::Geometry&lt; T &gt; &amp;geometry) override</div><div class="ttdef"><b>Definition:</b> <a href="gain_2primitive_8hpp_source.html#l00170">primitive.hpp:170</a></div></div>
 <div class="ttc" id="aclassautd3_1_1gain_1_1Focus_html_a93373e88ad8ba6a4179b335249987cbd"><div class="ttname"><a href="classautd3_1_1gain_1_1Focus.html#a93373e88ad8ba6a4179b335249987cbd">autd3::gain::Focus::operator=</a></div><div class="ttdeci">Focus &amp; operator=(const Focus &amp;obj)=delete</div></div>
 <div class="ttc" id="aclassautd3_1_1gain_1_1Null_html_a9e53ccf2d451a6d1617dab7c5affeae1"><div class="ttname"><a href="classautd3_1_1gain_1_1Null.html#a9e53ccf2d451a6d1617dab7c5affeae1">autd3::gain::Null::calc</a></div><div class="ttdeci">void calc(const core::Geometry&lt; T &gt; &amp;geometry) override</div><div class="ttdef"><b>Definition:</b> <a href="gain_2primitive_8hpp_source.html#l00028">primitive.hpp:28</a></div></div>
+<div class="ttc" id="aclassautd3_1_1gain_1_1Grouped_html_aedae37274e9e97dbe0fbc6ab2f41e850"><div class="ttname"><a href="classautd3_1_1gain_1_1Grouped.html#aedae37274e9e97dbe0fbc6ab2f41e850">autd3::gain::Grouped::calc</a></div><div class="ttdeci">void calc(const core::Geometry&lt; T &gt; &amp;) override</div><div class="ttdef"><b>Definition:</b> <a href="gain_2primitive_8hpp_source.html#l00170">primitive.hpp:170</a></div></div>
 <div class="ttc" id="aclassautd3_1_1gain_1_1Grouped_html_a4da80f244b5b4cb04b13566a940bedb4"><div class="ttname"><a href="classautd3_1_1gain_1_1Grouped.html#a4da80f244b5b4cb04b13566a940bedb4">autd3::gain::Grouped::Grouped</a></div><div class="ttdeci">Grouped(const Grouped &amp;v) noexcept=delete</div></div>
 <div class="ttc" id="aclassautd3_1_1gain_1_1Grouped_html_aa47db0a0b2229f907a19a6305ecbf96a"><div class="ttname"><a href="classautd3_1_1gain_1_1Grouped.html#aa47db0a0b2229f907a19a6305ecbf96a">autd3::gain::Grouped::Grouped</a></div><div class="ttdeci">Grouped(Grouped &amp;&amp;obj)=default</div></div>
 <div class="ttc" id="aclassautd3_1_1gain_1_1BesselBeam_html_ae61787cb7c7693b393903b24034a16b9"><div class="ttname"><a href="classautd3_1_1gain_1_1BesselBeam.html#ae61787cb7c7693b393903b24034a16b9">autd3::gain::BesselBeam::BesselBeam</a></div><div class="ttdeci">BesselBeam(BesselBeam &amp;&amp;obj)=default</div></div>

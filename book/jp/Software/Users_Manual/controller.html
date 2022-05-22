@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Controller - AUTD3 Developers Manual v2.0.0</title>
+        <title>Controller - AUTD3 Developers Manual v2.0.1</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -106,7 +106,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">AUTD3 Developers Manual v2.0.0</h1>
+                    <h1 class="menu-title">AUTD3 Developers Manual v2.0.1</h1>
 
                     <div class="right-buttons">
                         <a href="../../print.html" title="Print this book" aria-label="Print this book">
@@ -147,7 +147,7 @@
 <pre><code class="language-cpp">  autd.check_ack = true;
 </code></pre>
 <p><code>check_ack</code>が<code>true</code>の場合, デバイスにデータを送信する関数 (<a href="#send-functions">Send functions</a>) は, 送信データがきちんとデバイスで処理されたかどうかを返すようになる.</p>
-<p>基本的にOffで問題ないはずだが, 確実にデータを送りたいときにはOnにする.
+<p>信頼性の低いlinkを使用する際はOnにしておくことをおすすめする.
 なお, Onにすると<a href="#send-functions">Send functions</a>の実行時間は増加する.</p>
 <h2 id="force-fan"><a class="header" href="#force-fan">Force fan</a></h2>
 <p>AUTD3のファン制御はAuto, Off, Onの3つのモードが有る. 

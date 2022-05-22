@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Emulator - AUTD3 Developers Manual v2.0.0</title>
+        <title>Emulator - AUTD3 Developers Manual v2.0.1</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -106,7 +106,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">AUTD3 Developers Manual v2.0.0</h1>
+                    <h1 class="menu-title">AUTD3 Developers Manual v2.0.1</h1>
 
                     <div class="right-buttons">
                         <a href="../../print.html" title="Print this book" aria-label="Print this book">
@@ -141,6 +141,61 @@
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="emulator"><a class="header" href="#emulator">Emulator</a></h1>
+<p><a href="https://github.com/shinolab/autd-emulator">autd-emulator</a>はその名の通り, クロスプラットフォームで動作するAUTD3のエミュレータである.</p>
+<h2 id="install"><a class="header" href="#install">Install</a></h2>
+<p>Windows 10/11 64bit版のみコンパイル済みのバイナリが<a href="https://github.com/shinolab/autd-emulator/releases">GitHubで配布されている</a>のでこれをダウンロードして実行すれば良い.</p>
+<p>その他の場合はRustのコンパイラをインストールして, 各自コンパイルすること.</p>
+<pre><code>git clone https://github.com/shinolab/autd-emulator.git
+cd autd-emulator
+cargo run --release
+</code></pre>
+<h1 id="how-to"><a class="header" href="#how-to">How to</a></h1>
+<figure>
+  <img src="https://raw.githubusercontent.com/shinolab/autd3/master/book/src/fig/Users_Manual/emu-home.jpg"/>
+  <figcaption>Emulator</figcaption>
+</figure>
+<p>autd-emulatorを実行すると上図のような画面になる.
+この状態で, Emulator linkを使用したクライアントプログラムを実行すると, クライアントプログラムの内容に合わせた音場が表示される.
+図の中央の黒いパネルをSliceと呼び, このSliceを使って任意の位置の音場を可視化できる.
+また, 振動子の位相が色相で, 振幅が色強度で表される.</p>
+<p>なお, エミュレータで表示される音場はシンプルな球面波の重ね合わせであり, 指向性や非線形効果などは考慮されない.</p>
+<p>画面左に表示されるGUIでSliceやカメラの操作が行える.
+なお, GUIには<a href="https://github.com/ocornut/imgui">Dear ImGui</a>を用いており, マウスによる操作のほか, “Ctrl+クリック“で数値入力モードになる.</p>
+<p>また, GUI以外の場面の“ドラッグ“でカメラの移動, “Shift+ドラッグ“でカメラの回転が行える.</p>
+<h2 id="slice-tab"><a class="header" href="#slice-tab">Slice tab</a></h2>
+<p>SliceタブではSliceの大きさと位置, 回転を変えられる.
+回転はXYZのオイラー角で指定する.
+なお, “xy”, “yz”, “zx“ボタンを押すと, Sliceを各平面に平行な状態に回転させる.</p>
+<p>Sliceでは音圧の強さを色で表現する.
+Color scaleはこの色空間の音圧の最大値を表す.
+大量のデバイスを使用すると色が飽和する場合があるので, その時はColor scaleの値を大きくすれば良い.
+また, Sliceそのもののアルファ値をSlice alphaで指定できる.</p>
+<p>Sliceに表示されている音場の保存及び録画ができる.</p>
+<h2 id="camera-tab"><a class="header" href="#camera-tab">Camera tab</a></h2>
+<p>Cameraタブではカメラの位置, 回転, Field of Viewの角度, Near clip, Far clipの設定を変えられる.
+回転はXYZのオイラー角で指定する.</p>
+<h2 id="config-tab"><a class="header" href="#config-tab">Config tab</a></h2>
+<p>Configタブでは音速と振動子のアルファ値, 及び, 背景色の設定ができる.</p>
+<p>また, Emulator linkと接続した後は, 各デバイスごとの表示/イネーブルを切り替えられる.
+表示をOffにした場合は, 表示されないだけで音場に寄与する.
+イネーブルをOffにすると音場に寄与しなくなる.
+さらに, デバイス毎の軸の表示もできる.</p>
+<h2 id="info-tab"><a class="header" href="#info-tab">Info tab</a></h2>
+<p>InfoタブではSilencerやModulation, STMの情報が確認できる.</p>
+<p>Silencerの設定は確認できるがこれは音場には反映されない.</p>
+<p>また, Modulationも音場には反映されない.
+代わりに, 音圧がどのように変調されるかがこのタブで表示される.
+また, rawモードではDuty比がどのように変調されるかが表示される.</p>
+<p>STMを送信した場合は, STMの情報が表示される.
+STMは自動的に切り替わったりしない, 代わりにSTM idxで何番目のデータを表示するかを指定する.</p>
+<h2 id="log-tab"><a class="header" href="#log-tab">Log tab</a></h2>
+<p>Logタブではデバッグ用のログが表示される.</p>
+<h2 id="other-settings"><a class="header" href="#other-settings">Other settings</a></h2>
+<p>すべての設定は<code>settings.json</code>に保存される.
+幾つかの設定は<code>settings.json</code>からのみ編集できる.
+この中で重要なものとして, portとvsyncがある.</p>
+<p>portはSDKのEmulator linkとの間で使うポート番号である.
+また, vsyncをtrueにすると垂直同期が有効になる.</p>
 
                     </main>
 

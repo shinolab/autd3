@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Rust - AUTD3 Developers Manual v2.0.0</title>
+        <title>Rust - AUTD3 Developers Manual v2.0.1</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -106,7 +106,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">AUTD3 Developers Manual v2.0.0</h1>
+                    <h1 class="menu-title">AUTD3 Developers Manual v2.0.1</h1>
 
                     <div class="right-buttons">
                         <a href="../../print.html" title="Print this book" aria-label="Print this book">
@@ -141,6 +141,108 @@
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="rust"><a class="header" href="#rust">Rust</a></h1>
+<p><a href="https://github.com/shinolab/rust-autd">rust-autd</a>ではRust版のライブラリを提供している.</p>
+<p>Rust版のライブラリはC++版をラップしたものではなく, Rustで再実装している.
+そのため, 一部機能が異なる可能性がある.</p>
+<h2 id="installation"><a class="header" href="#installation">Installation</a></h2>
+<p><a href="https://crates.io/crates/autd3">crate.io</a>で公開しているので, <code>Cargo.toml</code>にて以下のようにすれば良い.</p>
+<pre><code>[dependencies]
+autd3 = &quot;2.0.0&quot;
+</code></pre>
+<p>また, 各種Link, Gain等は別crateとして公開しているので必要に応じてdependenciesに追加すること.</p>
+<pre><code>[dependencies]
+autd3-link-soem = &quot;2.0.0&quot;
+autd3-link-twincat = &quot;2.0.0&quot;
+autd3-link-emulator = &quot;2.0.0&quot;
+autd3-gain-holo = &quot;2.0.0&quot;
+</code></pre>
+<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
+<p>基本的には, C++版と同じになるように設計している.</p>
+<p>たとえば, <a href="../Users_Manual/getting_started.html">Getting Started</a>と等価なコードは以下のようになる.</p>
+<pre><pre class="playground"><code class="language-rust">use autd3::prelude::*;
+use autd3_link_soem::{Config, EthernetAdapters, SOEM};
+use std::io::{self, Write};
+
+fn get_adapter() -&gt; String {
+    let adapters: EthernetAdapters = Default::default();
+    adapters
+        .into_iter()
+        .enumerate()
+        .for_each(|(index, adapter)| {
+            println!(&quot;[{}]: {}&quot;, index, adapter);
+        });
+
+    let i: usize;
+    loop {
+        let mut s = String::new();
+        print!(&quot;Choose number: &quot;);
+        io::stdout().flush().unwrap();
+
+        io::stdin().read_line(&amp;mut s).unwrap();
+        match s.trim().parse() {
+            Ok(num) if num &lt; adapters.len() =&gt; {
+                i = num;
+                break;
+            }
+            _ =&gt; continue,
+        };
+    }
+    let adapter = &amp;adapters[i];
+    adapter.name.to_string()
+}
+
+fn main() {
+    let mut geometry = GeometryBuilder::new().legacy_mode().build();
+    geometry.add_device(Vector3::zeros(), Vector3::zeros());
+
+    let ifname = get_adapter();
+    let config = Config {
+        cycle_ticks: 2,
+        high_precision_timer: true,
+    };
+    let link = SOEM::new(&amp;ifname, geometry.num_devices() as u16, config, |msg| {
+        eprintln!(&quot;unrecoverable error occurred: {}&quot;, msg);
+        std::process::exit(-1);
+    });
+    let mut autd = Controller::open(geometry, link).expect(&quot;Failed to open&quot;);
+
+    autd.clear().unwrap();
+
+    autd.synchronize().unwrap();
+
+    println!(&quot;***** Firmware information *****&quot;);
+    autd.firmware_infos().unwrap().iter().for_each(|firm_info| {
+        println!(&quot;{}&quot;, firm_info);
+    });
+    println!(&quot;********************************&quot;);
+
+    let silencer_config = SilencerConfig::default();
+    autd.config_silencer(silencer_config).unwrap();
+
+    let center = autd.geometry().center() + Vector3::new(0., 0., 150.0);
+
+    let mut g = Focus::new(center);
+    let mut m = Sine::new(150);
+
+    autd.send(&amp;mut m).send(&amp;mut g).unwrap();
+
+    let mut _s = String::new();
+    io::stdin().read_line(&amp;mut _s).unwrap();
+
+    autd.close().unwrap();
+}
+</code></pre></pre>
+<p>注意点として, Rust版の<code>send</code>関数は引数を一つしか取らない. 
+ヘッダーとボディーデータを同時に送りたいときは<code>send</code>を続けて呼び出し, そうでない場合は, <code>flush</code>を呼ぶこと.</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>    autd.send(&amp;mut m).flush().unwrap();
+<span class="boring">}
+</span></code></pre></pre>
+<p>より詳細なサンプルは<a href="https://github.com/shinolab/rust-autd/tree/master/autd3-examples">rust-autdのexample</a>を参照されたい.</p>
+<h2 id="trouble-shooting"><a class="header" href="#trouble-shooting">Trouble shooting</a></h2>
+<p>質問があれば<a href="https://github.com/shinolab/rust-autd/issues">GitHubのissue</a>にてお願いします.</p>
 <footer id="open-on-gh">Found a bug? <a href="https://github.com/shinolab/autd3/edit/main/book/src/jp/Software/FFI/rust.md">Edit this file on GitHub.</a></footer>
                     </main>
 

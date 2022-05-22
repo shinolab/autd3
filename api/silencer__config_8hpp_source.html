@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>autd3: include/autd3/silencer_config.hpp Source File</title>
+<title>autd3: include/autd3/core/silencer_config.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">autd3
-   &#160;<span id="projectnumber">2.0.0</span>
+   &#160;<span id="projectnumber">2.0.1</span>
    </div>
   </td>
  </tr>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1fc4d2f00eb33c304e612fe3259377ce.html">autd3</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_1fc4d2f00eb33c304e612fe3259377ce.html">autd3</a></li><li class="navelem"><a class="el" href="dir_093eba31318096f2ce02eb11877fe717.html">core</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -75,7 +75,7 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Created Date: 11/05/2022</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Author: Shun Suzuki</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// -----</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// Last Modified: 16/05/2022</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// Last Modified: 21/05/2022</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Modified By: Shun Suzuki (suzuki@hapis.k.u-tokyo.ac.jp)</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// -----</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// Copyright (c) 2022 Hapis Lab. All rights reserved.</span></div>
@@ -85,40 +85,65 @@ $(function() {
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceautd3.html">autd3</a> {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * @brief Silencer Configuration</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structautd3_1_1SilencerConfig.html">   21</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structautd3_1_1SilencerConfig.html">SilencerConfig</a> {</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structautd3_1_1SilencerConfig.html#ab61b27f786970dadd49d441303557b48">   22</a></span>&#160;  <a class="code" href="structautd3_1_1SilencerConfig.html#ab61b27f786970dadd49d441303557b48">SilencerConfig</a>() noexcept : <a class="code" href="structautd3_1_1SilencerConfig.html">SilencerConfig</a>(10, 4096) {}</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structautd3_1_1SilencerConfig.html#a7f7df90a4121978ebf0cc984bc03480d">   23</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="structautd3_1_1SilencerConfig.html#a7f7df90a4121978ebf0cc984bc03480d">SilencerConfig</a>(<span class="keyword">const</span> uint16_t <a class="code" href="structautd3_1_1SilencerConfig.html#aef04be80271a090b5f17af87cc93fb46">step</a>, <span class="keyword">const</span> uint16_t <a class="code" href="structautd3_1_1SilencerConfig.html#abe93af03c5382de1fbafaa5a00458de2">cycle</a>) noexcept : <a class="code" href="structautd3_1_1SilencerConfig.html#aef04be80271a090b5f17af87cc93fb46">step</a>(<a class="code" href="structautd3_1_1SilencerConfig.html#aef04be80271a090b5f17af87cc93fb46">step</a>), <a class="code" href="structautd3_1_1SilencerConfig.html#abe93af03c5382de1fbafaa5a00458de2">cycle</a>(<a class="code" href="structautd3_1_1SilencerConfig.html#abe93af03c5382de1fbafaa5a00458de2">cycle</a>) {}</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">  /**</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">   * @brief Create SilencerConfig to disable Silencer</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structautd3_1_1SilencerConfig.html#a6ad6ce5001a9c62ccf776c8a6a0252fd">   28</a></span>&#160;  <span class="keyword">static</span> <a class="code" href="structautd3_1_1SilencerConfig.html">SilencerConfig</a> <a class="code" href="structautd3_1_1SilencerConfig.html#a6ad6ce5001a9c62ccf776c8a6a0252fd">none</a>() noexcept { <span class="keywordflow">return</span> <a class="code" href="structautd3_1_1SilencerConfig.html#ab61b27f786970dadd49d441303557b48">SilencerConfig</a>(0xFFFF, 4096); }</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">  /**</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">   * @brief Silencer update step.</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">   * @details The smaller the step, the stronger the effect of noise reduction.</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structautd3_1_1SilencerConfig.html#aef04be80271a090b5f17af87cc93fb46">   34</a></span>&#160;  uint16_t <a class="code" href="structautd3_1_1SilencerConfig.html#aef04be80271a090b5f17af87cc93fb46">step</a>;<span class="comment"></span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">  /**</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">   * @brief Silencer sampling frequency division ratio.</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">   * @details The sampling frequency will be driver::FPGA_CLK_FREQ/cycle. The larger the cycle, the stronger the effect of noise reduction.</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structautd3_1_1SilencerConfig.html#abe93af03c5382de1fbafaa5a00458de2">   39</a></span>&#160;  uint16_t <a class="code" href="structautd3_1_1SilencerConfig.html#abe93af03c5382de1fbafaa5a00458de2">cycle</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}  <span class="comment">// namespace autd3</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="interface_8hpp.html">autd3/core/interface.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceautd3.html">autd3</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * @brief Silencer Configuration</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structautd3_1_1SilencerConfig.html">   23</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structautd3_1_1SilencerConfig.html">SilencerConfig</a> final : <a class="code" href="structautd3_1_1core_1_1DatagramHeader.html">core::DatagramHeader</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structautd3_1_1SilencerConfig.html#ab61b27f786970dadd49d441303557b48">   24</a></span>&#160;  <a class="code" href="structautd3_1_1SilencerConfig.html#ab61b27f786970dadd49d441303557b48">SilencerConfig</a>() noexcept : <a class="code" href="structautd3_1_1SilencerConfig.html">SilencerConfig</a>(10, 4096) {}</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structautd3_1_1SilencerConfig.html#a7f7df90a4121978ebf0cc984bc03480d">   25</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="structautd3_1_1SilencerConfig.html#a7f7df90a4121978ebf0cc984bc03480d">SilencerConfig</a>(<span class="keyword">const</span> uint16_t <a class="code" href="structautd3_1_1SilencerConfig.html#aef04be80271a090b5f17af87cc93fb46">step</a>, <span class="keyword">const</span> uint16_t <a class="code" href="structautd3_1_1SilencerConfig.html#abe93af03c5382de1fbafaa5a00458de2">cycle</a>) noexcept : <a class="code" href="structautd3_1_1SilencerConfig.html#aef04be80271a090b5f17af87cc93fb46">step</a>(<a class="code" href="structautd3_1_1SilencerConfig.html#aef04be80271a090b5f17af87cc93fb46">step</a>), <a class="code" href="structautd3_1_1SilencerConfig.html#abe93af03c5382de1fbafaa5a00458de2">cycle</a>(<a class="code" href="structautd3_1_1SilencerConfig.html#abe93af03c5382de1fbafaa5a00458de2">cycle</a>), _sent(<span class="keyword">false</span>) {}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">  /**</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">   * @brief Create SilencerConfig to disable Silencer</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structautd3_1_1SilencerConfig.html#a6ad6ce5001a9c62ccf776c8a6a0252fd">   30</a></span>&#160;  <span class="keyword">static</span> <a class="code" href="structautd3_1_1SilencerConfig.html">SilencerConfig</a> <a class="code" href="structautd3_1_1SilencerConfig.html#a6ad6ce5001a9c62ccf776c8a6a0252fd">none</a>() noexcept { <span class="keywordflow">return</span> <a class="code" href="structautd3_1_1SilencerConfig.html#ab61b27f786970dadd49d441303557b48">SilencerConfig</a>(0xFFFF, 4096); }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">  /**</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">   * @brief Silencer update step.</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">   * @details The smaller the step, the stronger the effect of noise reduction.</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structautd3_1_1SilencerConfig.html#aef04be80271a090b5f17af87cc93fb46">   36</a></span>&#160;  uint16_t <a class="code" href="structautd3_1_1SilencerConfig.html#aef04be80271a090b5f17af87cc93fb46">step</a>;<span class="comment"></span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">  /**</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">   * @brief Silencer sampling frequency division ratio.</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">   * @details The sampling frequency will be driver::FPGA_CLK_FREQ/cycle. The larger the cycle, the stronger the effect of noise reduction.</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structautd3_1_1SilencerConfig.html#abe93af03c5382de1fbafaa5a00458de2">   41</a></span>&#160;  uint16_t <a class="code" href="structautd3_1_1SilencerConfig.html#abe93af03c5382de1fbafaa5a00458de2">cycle</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structautd3_1_1SilencerConfig.html#aa7912b4b56646e2055eab039276959e9">   43</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="structautd3_1_1SilencerConfig.html#aa7912b4b56646e2055eab039276959e9">init</a>()<span class="keyword"> override </span>{ _sent = <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="structautd3_1_1SilencerConfig.html#a2e41d374e091b1bff4ef615e950b35f8">   45</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="structautd3_1_1SilencerConfig.html#a2e41d374e091b1bff4ef615e950b35f8">pack</a>(<span class="keyword">const</span> uint8_t msg_id, <a class="code" href="structautd3_1_1driver_1_1TxDatagram.html">driver::TxDatagram</a>&amp; tx)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">if</span> (_sent)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <a class="code" href="namespaceautd3_1_1driver.html#aefd8ee9798b2d78e8073b660d0bdeffd">driver::null_header</a>(msg_id, tx);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <a class="code" href="namespaceautd3_1_1driver.html#a3a5a5cec213db26d8ffd6e9e106b3a7f">driver::config_silencer</a>(msg_id, <a class="code" href="structautd3_1_1SilencerConfig.html#abe93af03c5382de1fbafaa5a00458de2">cycle</a>, <a class="code" href="structautd3_1_1SilencerConfig.html#aef04be80271a090b5f17af87cc93fb46">step</a>, tx);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    _sent = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="structautd3_1_1SilencerConfig.html#a840fca04c4551c459ebd5e2d3c021b59">   53</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="structautd3_1_1SilencerConfig.html#a840fca04c4551c459ebd5e2d3c021b59">is_finished</a>()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordtype">bool</span> _sent;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;};</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}  <span class="comment">// namespace autd3</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="astructautd3_1_1SilencerConfig_html_ab61b27f786970dadd49d441303557b48"><div class="ttname"><a href="structautd3_1_1SilencerConfig.html#ab61b27f786970dadd49d441303557b48">autd3::SilencerConfig::SilencerConfig</a></div><div class="ttdeci">SilencerConfig() noexcept</div><div class="ttdef"><b>Definition:</b> <a href="silencer__config_8hpp_source.html#l00022">silencer_config.hpp:22</a></div></div>
-<div class="ttc" id="astructautd3_1_1SilencerConfig_html_abe93af03c5382de1fbafaa5a00458de2"><div class="ttname"><a href="structautd3_1_1SilencerConfig.html#abe93af03c5382de1fbafaa5a00458de2">autd3::SilencerConfig::cycle</a></div><div class="ttdeci">uint16_t cycle</div><div class="ttdoc">Silencer sampling frequency division ratio.</div><div class="ttdef"><b>Definition:</b> <a href="silencer__config_8hpp_source.html#l00039">silencer_config.hpp:39</a></div></div>
-<div class="ttc" id="astructautd3_1_1SilencerConfig_html_a6ad6ce5001a9c62ccf776c8a6a0252fd"><div class="ttname"><a href="structautd3_1_1SilencerConfig.html#a6ad6ce5001a9c62ccf776c8a6a0252fd">autd3::SilencerConfig::none</a></div><div class="ttdeci">static SilencerConfig none() noexcept</div><div class="ttdoc">Create SilencerConfig to disable Silencer.</div><div class="ttdef"><b>Definition:</b> <a href="silencer__config_8hpp_source.html#l00028">silencer_config.hpp:28</a></div></div>
-<div class="ttc" id="astructautd3_1_1SilencerConfig_html_a7f7df90a4121978ebf0cc984bc03480d"><div class="ttname"><a href="structautd3_1_1SilencerConfig.html#a7f7df90a4121978ebf0cc984bc03480d">autd3::SilencerConfig::SilencerConfig</a></div><div class="ttdeci">SilencerConfig(const uint16_t step, const uint16_t cycle) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="silencer__config_8hpp_source.html#l00023">silencer_config.hpp:23</a></div></div>
-<div class="ttc" id="astructautd3_1_1SilencerConfig_html_aef04be80271a090b5f17af87cc93fb46"><div class="ttname"><a href="structautd3_1_1SilencerConfig.html#aef04be80271a090b5f17af87cc93fb46">autd3::SilencerConfig::step</a></div><div class="ttdeci">uint16_t step</div><div class="ttdoc">Silencer update step.</div><div class="ttdef"><b>Definition:</b> <a href="silencer__config_8hpp_source.html#l00034">silencer_config.hpp:34</a></div></div>
-<div class="ttc" id="astructautd3_1_1SilencerConfig_html"><div class="ttname"><a href="structautd3_1_1SilencerConfig.html">autd3::SilencerConfig</a></div><div class="ttdoc">Silencer Configuration.</div><div class="ttdef"><b>Definition:</b> <a href="silencer__config_8hpp_source.html#l00021">silencer_config.hpp:21</a></div></div>
+<div class="ttc" id="astructautd3_1_1SilencerConfig_html_a840fca04c4551c459ebd5e2d3c021b59"><div class="ttname"><a href="structautd3_1_1SilencerConfig.html#a840fca04c4551c459ebd5e2d3c021b59">autd3::SilencerConfig::is_finished</a></div><div class="ttdeci">bool is_finished() const override</div><div class="ttdef"><b>Definition:</b> <a href="silencer__config_8hpp_source.html#l00053">silencer_config.hpp:53</a></div></div>
+<div class="ttc" id="astructautd3_1_1core_1_1DatagramHeader_html"><div class="ttname"><a href="structautd3_1_1core_1_1DatagramHeader.html">autd3::core::DatagramHeader</a></div><div class="ttdoc">DatagramHeader is a data to be packed in the Header part of the driver::TxDatagram.</div><div class="ttdef"><b>Definition:</b> <a href="interface_8hpp_source.html#l00025">interface.hpp:25</a></div></div>
+<div class="ttc" id="astructautd3_1_1driver_1_1TxDatagram_html"><div class="ttname"><a href="structautd3_1_1driver_1_1TxDatagram.html">autd3::driver::TxDatagram</a></div><div class="ttdef"><b>Definition:</b> <a href="datagram_8hpp_source.html#l00023">datagram.hpp:23</a></div></div>
+<div class="ttc" id="astructautd3_1_1SilencerConfig_html_ab61b27f786970dadd49d441303557b48"><div class="ttname"><a href="structautd3_1_1SilencerConfig.html#ab61b27f786970dadd49d441303557b48">autd3::SilencerConfig::SilencerConfig</a></div><div class="ttdeci">SilencerConfig() noexcept</div><div class="ttdef"><b>Definition:</b> <a href="silencer__config_8hpp_source.html#l00024">silencer_config.hpp:24</a></div></div>
+<div class="ttc" id="astructautd3_1_1SilencerConfig_html_abe93af03c5382de1fbafaa5a00458de2"><div class="ttname"><a href="structautd3_1_1SilencerConfig.html#abe93af03c5382de1fbafaa5a00458de2">autd3::SilencerConfig::cycle</a></div><div class="ttdeci">uint16_t cycle</div><div class="ttdoc">Silencer sampling frequency division ratio.</div><div class="ttdef"><b>Definition:</b> <a href="silencer__config_8hpp_source.html#l00041">silencer_config.hpp:41</a></div></div>
+<div class="ttc" id="anamespaceautd3_1_1driver_html_a3a5a5cec213db26d8ffd6e9e106b3a7f"><div class="ttname"><a href="namespaceautd3_1_1driver.html#a3a5a5cec213db26d8ffd6e9e106b3a7f">autd3::driver::config_silencer</a></div><div class="ttdeci">void config_silencer(const uint8_t msg_id, const uint16_t cycle, const uint16_t step, TxDatagram &amp;tx)</div><div class="ttdef"><b>Definition:</b> <a href="operation_8hpp_source.html#l00080">operation.hpp:80</a></div></div>
+<div class="ttc" id="astructautd3_1_1SilencerConfig_html_a6ad6ce5001a9c62ccf776c8a6a0252fd"><div class="ttname"><a href="structautd3_1_1SilencerConfig.html#a6ad6ce5001a9c62ccf776c8a6a0252fd">autd3::SilencerConfig::none</a></div><div class="ttdeci">static SilencerConfig none() noexcept</div><div class="ttdoc">Create SilencerConfig to disable Silencer.</div><div class="ttdef"><b>Definition:</b> <a href="silencer__config_8hpp_source.html#l00030">silencer_config.hpp:30</a></div></div>
+<div class="ttc" id="astructautd3_1_1SilencerConfig_html_a2e41d374e091b1bff4ef615e950b35f8"><div class="ttname"><a href="structautd3_1_1SilencerConfig.html#a2e41d374e091b1bff4ef615e950b35f8">autd3::SilencerConfig::pack</a></div><div class="ttdeci">void pack(const uint8_t msg_id, driver::TxDatagram &amp;tx) override</div><div class="ttdef"><b>Definition:</b> <a href="silencer__config_8hpp_source.html#l00045">silencer_config.hpp:45</a></div></div>
+<div class="ttc" id="astructautd3_1_1SilencerConfig_html_aa7912b4b56646e2055eab039276959e9"><div class="ttname"><a href="structautd3_1_1SilencerConfig.html#aa7912b4b56646e2055eab039276959e9">autd3::SilencerConfig::init</a></div><div class="ttdeci">void init() override</div><div class="ttdef"><b>Definition:</b> <a href="silencer__config_8hpp_source.html#l00043">silencer_config.hpp:43</a></div></div>
+<div class="ttc" id="astructautd3_1_1SilencerConfig_html_a7f7df90a4121978ebf0cc984bc03480d"><div class="ttname"><a href="structautd3_1_1SilencerConfig.html#a7f7df90a4121978ebf0cc984bc03480d">autd3::SilencerConfig::SilencerConfig</a></div><div class="ttdeci">SilencerConfig(const uint16_t step, const uint16_t cycle) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="silencer__config_8hpp_source.html#l00025">silencer_config.hpp:25</a></div></div>
+<div class="ttc" id="ainterface_8hpp_html"><div class="ttname"><a href="interface_8hpp.html">interface.hpp</a></div></div>
+<div class="ttc" id="astructautd3_1_1SilencerConfig_html_aef04be80271a090b5f17af87cc93fb46"><div class="ttname"><a href="structautd3_1_1SilencerConfig.html#aef04be80271a090b5f17af87cc93fb46">autd3::SilencerConfig::step</a></div><div class="ttdeci">uint16_t step</div><div class="ttdoc">Silencer update step.</div><div class="ttdef"><b>Definition:</b> <a href="silencer__config_8hpp_source.html#l00036">silencer_config.hpp:36</a></div></div>
+<div class="ttc" id="anamespaceautd3_1_1driver_html_aefd8ee9798b2d78e8073b660d0bdeffd"><div class="ttname"><a href="namespaceautd3_1_1driver.html#aefd8ee9798b2d78e8073b660d0bdeffd">autd3::driver::null_header</a></div><div class="ttdeci">void null_header(const uint8_t msg_id, TxDatagram &amp;tx) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="operation_8hpp_source.html#l00026">operation.hpp:26</a></div></div>
+<div class="ttc" id="astructautd3_1_1SilencerConfig_html"><div class="ttname"><a href="structautd3_1_1SilencerConfig.html">autd3::SilencerConfig</a></div><div class="ttdoc">Silencer Configuration.</div><div class="ttdef"><b>Definition:</b> <a href="silencer__config_8hpp_source.html#l00023">silencer_config.hpp:23</a></div></div>
 <div class="ttc" id="anamespaceautd3_html"><div class="ttname"><a href="namespaceautd3.html">autd3</a></div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00033">controller.hpp:33</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

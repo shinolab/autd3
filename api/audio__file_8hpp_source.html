@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">autd3
-   &#160;<span id="projectnumber">2.0.0</span>
+   &#160;<span id="projectnumber">2.0.1</span>
    </div>
   </td>
  </tr>
@@ -75,7 +75,7 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Created Date: 16/05/2022</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Author: Shun Suzuki</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// -----</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// Last Modified: 16/05/2022</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// Last Modified: 20/05/2022</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Modified By: Shun Suzuki (suzuki@hapis.k.u-tokyo.ac.jp)</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// -----</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// Copyright (c) 2022 Hapis Lab. All rights reserved.</span></div>
@@ -103,7 +103,7 @@ $(function() {
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">   * If samplingFreq is less than the Nyquist frequency, the data will be up-sampled.</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">   * The maximum modulation buffer size is shown in autd::MOD_BUF_SIZE. Only the data up to MOD_BUF_SIZE/MOD_SAMPLING_FREQ seconds can be output.</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classautd3_1_1modulation_1_1RawPCM.html#a26470fe29bb93b1d2f0cc9e28c3ce2d1">   34</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classautd3_1_1modulation_1_1RawPCM.html#a26470fe29bb93b1d2f0cc9e28c3ce2d1">RawPCM</a>(<span class="keyword">const</span> std::string&amp; filename, <span class="keywordtype">double</span> sampling_freq, uint16_t mod_sampling_freq_div = 40960);</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classautd3_1_1modulation_1_1RawPCM.html#abb7f0520ec2898cbbe3369c62137f46c">   34</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classautd3_1_1modulation_1_1RawPCM.html#abb7f0520ec2898cbbe3369c62137f46c">RawPCM</a>(<span class="keyword">const</span> std::string&amp; filename, <span class="keywordtype">double</span> sampling_freq, uint32_t mod_sampling_freq_div = 40960);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classautd3_1_1modulation_1_1RawPCM.html#a1abd60b77c1a8e165612877711b7bc48">   36</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classautd3_1_1modulation_1_1RawPCM.html#a1abd60b77c1a8e165612877711b7bc48">calc</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
@@ -131,7 +131,7 @@ $(function() {
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">   * If samplingFreq is less than the Nyquist frequency, the data will be up-sampled.</span></div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">   * The maximum modulation buffer size is shown in autd::MOD_BUF_SIZE. Only the data up to MOD_BUF_SIZE/MOD_SAMPLING_FREQ seconds can be output.</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classautd3_1_1modulation_1_1Wav.html#a4707000bce08bd659458eb6bd51e5ac0">   62</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classautd3_1_1modulation_1_1Wav.html#a4707000bce08bd659458eb6bd51e5ac0">Wav</a>(<span class="keyword">const</span> std::string&amp; filename, uint16_t mod_sampling_freq_div = 40960);</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classautd3_1_1modulation_1_1Wav.html#a5f0e30afbfc71e5743c156763e140af5">   62</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classautd3_1_1modulation_1_1Wav.html#a5f0e30afbfc71e5743c156763e140af5">Wav</a>(<span class="keyword">const</span> std::string&amp; filename, uint32_t mod_sampling_freq_div = 40960);</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
 <div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classautd3_1_1modulation_1_1Wav.html#a10c236276047d05b7670bf762958e53b">   64</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classautd3_1_1modulation_1_1Wav.html#a10c236276047d05b7670bf762958e53b">calc</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
@@ -149,8 +149,9 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassautd3_1_1modulation_1_1RawPCM_html_adf431624d60d247b4b76ad3d590aed12"><div class="ttname"><a href="classautd3_1_1modulation_1_1RawPCM.html#adf431624d60d247b4b76ad3d590aed12">autd3::modulation::RawPCM::operator=</a></div><div class="ttdeci">RawPCM &amp; operator=(RawPCM &amp;&amp;obj)=default</div></div>
 <div class="ttc" id="aclassautd3_1_1modulation_1_1Wav_html"><div class="ttname"><a href="classautd3_1_1modulation_1_1Wav.html">autd3::modulation::Wav</a></div><div class="ttdoc">Modulation created from wav file.</div><div class="ttdef"><b>Definition:</b> <a href="audio__file_8hpp_source.html#l00052">audio_file.hpp:52</a></div></div>
-<div class="ttc" id="aclassautd3_1_1modulation_1_1Wav_html_a4707000bce08bd659458eb6bd51e5ac0"><div class="ttname"><a href="classautd3_1_1modulation_1_1Wav.html#a4707000bce08bd659458eb6bd51e5ac0">autd3::modulation::Wav::Wav</a></div><div class="ttdeci">Wav(const std::string &amp;filename, uint16_t mod_sampling_freq_div=40960)</div></div>
 <div class="ttc" id="aclassautd3_1_1modulation_1_1Wav_html_adb09291f0b1eea90ec6b181b48c4c633"><div class="ttname"><a href="classautd3_1_1modulation_1_1Wav.html#adb09291f0b1eea90ec6b181b48c4c633">autd3::modulation::Wav::~Wav</a></div><div class="ttdeci">~Wav() override=default</div></div>
+<div class="ttc" id="aclassautd3_1_1modulation_1_1RawPCM_html_abb7f0520ec2898cbbe3369c62137f46c"><div class="ttname"><a href="classautd3_1_1modulation_1_1RawPCM.html#abb7f0520ec2898cbbe3369c62137f46c">autd3::modulation::RawPCM::RawPCM</a></div><div class="ttdeci">RawPCM(const std::string &amp;filename, double sampling_freq, uint32_t mod_sampling_freq_div=40960)</div></div>
+<div class="ttc" id="aclassautd3_1_1modulation_1_1Wav_html_a5f0e30afbfc71e5743c156763e140af5"><div class="ttname"><a href="classautd3_1_1modulation_1_1Wav.html#a5f0e30afbfc71e5743c156763e140af5">autd3::modulation::Wav::Wav</a></div><div class="ttdeci">Wav(const std::string &amp;filename, uint32_t mod_sampling_freq_div=40960)</div></div>
 <div class="ttc" id="aclassautd3_1_1core_1_1Modulation_html"><div class="ttname"><a href="classautd3_1_1core_1_1Modulation.html">autd3::core::Modulation</a></div><div class="ttdoc">Modulation controls the amplitude modulation.</div><div class="ttdef"><b>Definition:</b> <a href="modulation_8hpp_source.html#l00038">modulation.hpp:38</a></div></div>
 <div class="ttc" id="aclassautd3_1_1modulation_1_1Wav_html_a3d257d7a140a0da9cbdacfe5784471f3"><div class="ttname"><a href="classautd3_1_1modulation_1_1Wav.html#a3d257d7a140a0da9cbdacfe5784471f3">autd3::modulation::Wav::Wav</a></div><div class="ttdeci">Wav(Wav &amp;&amp;obj)=default</div></div>
 <div class="ttc" id="amodulation_8hpp_html"><div class="ttname"><a href="modulation_8hpp.html">modulation.hpp</a></div></div>
@@ -161,7 +162,6 @@ $(function() {
 <div class="ttc" id="aclassautd3_1_1modulation_1_1Wav_html_aaed03961c6b527d567f1b71cc1de6545"><div class="ttname"><a href="classautd3_1_1modulation_1_1Wav.html#aaed03961c6b527d567f1b71cc1de6545">autd3::modulation::Wav::operator=</a></div><div class="ttdeci">Wav &amp; operator=(Wav &amp;&amp;obj)=default</div></div>
 <div class="ttc" id="aclassautd3_1_1modulation_1_1RawPCM_html_a1ca3a2d7f5abd922a500d4e9f7f4d154"><div class="ttname"><a href="classautd3_1_1modulation_1_1RawPCM.html#a1ca3a2d7f5abd922a500d4e9f7f4d154">autd3::modulation::RawPCM::RawPCM</a></div><div class="ttdeci">RawPCM(const RawPCM &amp;v) noexcept=delete</div></div>
 <div class="ttc" id="aclassautd3_1_1modulation_1_1RawPCM_html_a8a1565fb1e08732b64e0899ea4b895f5"><div class="ttname"><a href="classautd3_1_1modulation_1_1RawPCM.html#a8a1565fb1e08732b64e0899ea4b895f5">autd3::modulation::RawPCM::operator=</a></div><div class="ttdeci">RawPCM &amp; operator=(const RawPCM &amp;obj)=delete</div></div>
-<div class="ttc" id="aclassautd3_1_1modulation_1_1RawPCM_html_a26470fe29bb93b1d2f0cc9e28c3ce2d1"><div class="ttname"><a href="classautd3_1_1modulation_1_1RawPCM.html#a26470fe29bb93b1d2f0cc9e28c3ce2d1">autd3::modulation::RawPCM::RawPCM</a></div><div class="ttdeci">RawPCM(const std::string &amp;filename, double sampling_freq, uint16_t mod_sampling_freq_div=40960)</div></div>
 <div class="ttc" id="aclassautd3_1_1modulation_1_1RawPCM_html_a15b5213d69d3c4f2e3562be60ea339fd"><div class="ttname"><a href="classautd3_1_1modulation_1_1RawPCM.html#a15b5213d69d3c4f2e3562be60ea339fd">autd3::modulation::RawPCM::~RawPCM</a></div><div class="ttdeci">~RawPCM() override=default</div></div>
 <div class="ttc" id="aclassautd3_1_1modulation_1_1Wav_html_a4f5885f756359b8861263dd5d4b7527f"><div class="ttname"><a href="classautd3_1_1modulation_1_1Wav.html#a4f5885f756359b8861263dd5d4b7527f">autd3::modulation::Wav::operator=</a></div><div class="ttdeci">Wav &amp; operator=(const Wav &amp;obj)=delete</div></div>
 <div class="ttc" id="aclassautd3_1_1modulation_1_1RawPCM_html_a1abd60b77c1a8e165612877711b7bc48"><div class="ttname"><a href="classautd3_1_1modulation_1_1RawPCM.html#a1abd60b77c1a8e165612877711b7bc48">autd3::modulation::RawPCM::calc</a></div><div class="ttdeci">void calc() override</div><div class="ttdoc">Calculate modulation data.</div></div>

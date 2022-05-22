@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Getting Started - AUTD3 Developers Manual v2.0.0</title>
+        <title>Getting Started - AUTD3 Developers Manual v2.0.1</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -106,7 +106,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">AUTD3 Developers Manual v2.0.0</h1>
+                    <h1 class="menu-title">AUTD3 Developers Manual v2.0.1</h1>
 
                     <div class="right-buttons">
                         <a href="../../print.html" title="Print this book" aria-label="Print this book">
@@ -270,6 +270,8 @@ int main() try {
   auto link = link::SOEM(ifname, autd.geometry().num_devices()).build();
   autd.open(std::move(link));
 
+  autd.check_ack = true;
+
   autd.clear();
 
   autd.synchronize();
@@ -277,8 +279,8 @@ int main() try {
   const auto firm_infos = autd.firmware_infos();
   std::copy(firm_infos.begin(), firm_infos.end(), std::ostream_iterator&lt;FirmwareInfo&gt;(std::cout, &quot;\n&quot;));
 
-  const auto config = SilencerConfig();
-  autd.config_silencer(config);
+  SilencerConfig config;
+  autd.send(config);
 
   const auto focus = autd.geometry().center() + autd3::Vector3(0.0, 0.0, 150.0);
   gain::Focus g(focus);
@@ -330,6 +332,11 @@ int main() try {
 インターフェース名は, Windowsの場合は, <code>\Device\NPF_{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}</code>のような文字列となり, 確認するのはひと手間かかるので, ユーティリティ関数<code>get_adapter_name</code>を用意した. 実行時に適当なものを選択されたい.
 (macやLinuxの場合は<code>ifconfig</code>等で確認することもできる.)
 また, linkの型は<code>unique_ptr</code>であるため, <code>Controller</code>に渡す際は<code>move</code>する必要がある.</p>
+<p>次に, <code>check_ack</code>フラグをセットしている.
+セットしなくても良いが, セットしておくと信頼性が増す.
+SOEM link使用時はセットしておくことをおすすめする.</p>
+<pre><code class="language-cpp">  autd.check_ack = true;
+</code></pre>
 <p>次に, AUTDデバイスの初期化を行う.
 電源投入時に初期化されるので<code>clear()</code>は呼ばなくても良いかもしれない.</p>
 <pre><code class="language-cpp">  autd.clear();
@@ -343,10 +350,10 @@ int main() try {
 <pre><code class="language-cpp">  const auto firm_infos = autd.firmware_infos();
   std::copy(firm_infos.begin(), firm_infos.end(), std::ostream_iterator&lt;FirmwareInfo&gt;(std::cout, &quot;\n&quot;));
 </code></pre>
-<p>ここで, v2.0.0以外のヴァージョンが表示される場合は, 動作が保証されないので注意する.</p>
+<p>ここで, v2.0以外のヴァージョンが表示される場合は, 動作が保証されないので注意する.</p>
 <p>次に, silencerを設定する.</p>
-<pre><code class="language-cpp">  const auto config = SilencerConfig();
-  autd.config_silencer(config);
+<pre><code class="language-cpp">  SilencerConfig config;
+  autd.send(config);
 </code></pre>
 <p>デフォルトではONになっているので, これも実際には呼ぶ必要はない.
 OFFにしたい場合は<code>SilencerConfig::none()</code>を使用する.

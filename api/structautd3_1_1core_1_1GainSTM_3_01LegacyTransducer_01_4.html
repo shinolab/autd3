@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">autd3
-   &#160;<span id="projectnumber">2.0.0</span>
+   &#160;<span id="projectnumber">2.0.1</span>
    </div>
   </td>
  </tr>
@@ -111,8 +111,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac832ed4a48d8c1865c82ffdf87086102"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e5007f04b36ac056c1cc66687b6fe74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4.html#a9e5007f04b36ac056c1cc66687b6fe74">init</a> () override</td></tr>
 <tr class="separator:a9e5007f04b36ac056c1cc66687b6fe74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac680b1b7aba7df348f494af9e7f8f8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4.html#aac680b1b7aba7df348f494af9e7f8f8d">pack</a> (const uint8_t msg_id, const <a class="el" href="structautd3_1_1core_1_1Geometry.html">Geometry</a>&lt; <a class="el" href="structautd3_1_1core_1_1LegacyTransducer.html">LegacyTransducer</a> &gt; &amp;geometry, <a class="el" href="structautd3_1_1driver_1_1TxDatagram.html">driver::TxDatagram</a> &amp;tx) override</td></tr>
-<tr class="separator:aac680b1b7aba7df348f494af9e7f8f8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b9e640ae260b63c8fdbbc831fc83f8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4.html#a8b9e640ae260b63c8fdbbc831fc83f8b">pack</a> (const <a class="el" href="structautd3_1_1core_1_1Geometry.html">Geometry</a>&lt; <a class="el" href="structautd3_1_1core_1_1LegacyTransducer.html">LegacyTransducer</a> &gt; &amp;, <a class="el" href="structautd3_1_1driver_1_1TxDatagram.html">driver::TxDatagram</a> &amp;tx) override</td></tr>
+<tr class="separator:a8b9e640ae260b63c8fdbbc831fc83f8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e7d684eb6e03b43d6bb816f898f9e1b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4.html#a4e7d684eb6e03b43d6bb816f898f9e1b">is_finished</a> () const override</td></tr>
 <tr class="separator:a4e7d684eb6e03b43d6bb816f898f9e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_structautd3_1_1core_1_1STM"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structautd3_1_1core_1_1STM')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="structautd3_1_1core_1_1STM.html">autd3::core::STM&lt; LegacyTransducer &gt;</a></td></tr>
@@ -290,8 +290,8 @@ template&lt;typename G , std::enable_if_t&lt; std::is_base_of_v&lt; Gain&lt; Leg
 
 </div>
 </div>
-<a id="aac680b1b7aba7df348f494af9e7f8f8d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac680b1b7aba7df348f494af9e7f8f8d">&#9670;&nbsp;</a></span>pack()</h2>
+<a id="a8b9e640ae260b63c8fdbbc831fc83f8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b9e640ae260b63c8fdbbc831fc83f8b">&#9670;&nbsp;</a></span>pack()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -302,14 +302,8 @@ template&lt;typename G , std::enable_if_t&lt; std::is_base_of_v&lt; Gain&lt; Leg
         <tr>
           <td class="memname">void <a class="el" href="structautd3_1_1core_1_1GainSTM.html">autd3::core::GainSTM</a>&lt; <a class="el" href="structautd3_1_1core_1_1LegacyTransducer.html">LegacyTransducer</a> &gt;::pack </td>
           <td>(</td>
-          <td class="paramtype">const uint8_t&#160;</td>
-          <td class="paramname"><em>msg_id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const <a class="el" href="structautd3_1_1core_1_1Geometry.html">Geometry</a>&lt; <a class="el" href="structautd3_1_1core_1_1LegacyTransducer.html">LegacyTransducer</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>geometry</em>, </td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -330,19 +324,19 @@ template&lt;typename G , std::enable_if_t&lt; std::is_base_of_v&lt; Gain&lt; Leg
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="structautd3_1_1core_1_1DatagramBody.html#a1b8f7b4add5d8107001fd88da07b318b">autd3::core::DatagramBody&lt; LegacyTransducer &gt;</a>.</p>
+<p>Implements <a class="el" href="structautd3_1_1core_1_1DatagramBody.html#afd8bc986b7960a633f50172e91fd8f27">autd3::core::DatagramBody&lt; LegacyTransducer &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="stm_2gain_8hpp_source.html#l00057">57</a> of file <a class="el" href="stm_2gain_8hpp_source.html">gain.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00200">autd3::driver::gain_stm_legacy_body()</a>, and <a class="el" href="operation_8hpp_source.html#l00186">autd3::driver::gain_stm_legacy_header()</a>.</p>
+<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00201">autd3::driver::gain_stm_legacy_body()</a>, and <a class="el" href="operation_8hpp_source.html#l00189">autd3::driver::gain_stm_legacy_header()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="structautd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4_aac680b1b7aba7df348f494af9e7f8f8d_cgraph.png" border="0" usemap="#structautd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4_aac680b1b7aba7df348f494af9e7f8f8d_cgraph" alt=""/></div>
-<map name="structautd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4_aac680b1b7aba7df348f494af9e7f8f8d_cgraph" id="structautd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4_aac680b1b7aba7df348f494af9e7f8f8d_cgraph">
+<div class="center"><img src="structautd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4_a8b9e640ae260b63c8fdbbc831fc83f8b_cgraph.png" border="0" usemap="#structautd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4_a8b9e640ae260b63c8fdbbc831fc83f8b_cgraph" alt=""/></div>
+<map name="structautd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4_a8b9e640ae260b63c8fdbbc831fc83f8b_cgraph" id="structautd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4_a8b9e640ae260b63c8fdbbc831fc83f8b_cgraph">
 <area shape="rect" title=" " alt="" coords="5,39,191,80"/>
 <area shape="rect" href="namespaceautd3_1_1driver.html#a8321f092f66d050c8f130d8b0eca6138" title=" " alt="" coords="245,5,374,47"/>
-<area shape="rect" href="namespaceautd3_1_1driver.html#a8ba659c2b7836f7db76bb11b12992af6" title=" " alt="" coords="239,71,380,112"/>
+<area shape="rect" href="namespaceautd3_1_1driver.html#af7b44f3b70d445c6c6312ca473c97188" title=" " alt="" coords="239,71,380,112"/>
 </map>
 </div>
 

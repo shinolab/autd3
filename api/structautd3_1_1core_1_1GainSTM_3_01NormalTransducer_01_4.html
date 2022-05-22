@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">autd3
-   &#160;<span id="projectnumber">2.0.0</span>
+   &#160;<span id="projectnumber">2.0.1</span>
    </div>
   </td>
  </tr>
@@ -111,8 +111,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afcd345539ed4bf43287ca744ba7dd384"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a760dff1e2a5d0ed0c7b748474f4faab5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1GainSTM_3_01NormalTransducer_01_4.html#a760dff1e2a5d0ed0c7b748474f4faab5">init</a> () override</td></tr>
 <tr class="separator:a760dff1e2a5d0ed0c7b748474f4faab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d9c2d0928e4dea0bb41779ccdaaa0fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1GainSTM_3_01NormalTransducer_01_4.html#a9d9c2d0928e4dea0bb41779ccdaaa0fb">pack</a> (const uint8_t msg_id, const <a class="el" href="structautd3_1_1core_1_1Geometry.html">Geometry</a>&lt; <a class="el" href="structautd3_1_1core_1_1NormalTransducer.html">NormalTransducer</a> &gt; &amp;geometry, <a class="el" href="structautd3_1_1driver_1_1TxDatagram.html">driver::TxDatagram</a> &amp;tx) override</td></tr>
-<tr class="separator:a9d9c2d0928e4dea0bb41779ccdaaa0fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b217c25c07b6ee57d08b88243a0844f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1GainSTM_3_01NormalTransducer_01_4.html#a4b217c25c07b6ee57d08b88243a0844f">pack</a> (const <a class="el" href="structautd3_1_1core_1_1Geometry.html">Geometry</a>&lt; <a class="el" href="structautd3_1_1core_1_1NormalTransducer.html">NormalTransducer</a> &gt; &amp;, <a class="el" href="structautd3_1_1driver_1_1TxDatagram.html">driver::TxDatagram</a> &amp;tx) override</td></tr>
+<tr class="separator:a4b217c25c07b6ee57d08b88243a0844f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6af153bae1c48ae4c6d735b99701a2f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1GainSTM_3_01NormalTransducer_01_4.html#a6af153bae1c48ae4c6d735b99701a2f1">is_finished</a> () const override</td></tr>
 <tr class="separator:a6af153bae1c48ae4c6d735b99701a2f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_structautd3_1_1core_1_1STM"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structautd3_1_1core_1_1STM')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="structautd3_1_1core_1_1STM.html">autd3::core::STM&lt; NormalTransducer &gt;</a></td></tr>
@@ -290,8 +290,8 @@ template&lt;typename G , std::enable_if_t&lt; std::is_base_of_v&lt; Gain&lt; Nor
 
 </div>
 </div>
-<a id="a9d9c2d0928e4dea0bb41779ccdaaa0fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d9c2d0928e4dea0bb41779ccdaaa0fb">&#9670;&nbsp;</a></span>pack()</h2>
+<a id="a4b217c25c07b6ee57d08b88243a0844f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b217c25c07b6ee57d08b88243a0844f">&#9670;&nbsp;</a></span>pack()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -302,14 +302,8 @@ template&lt;typename G , std::enable_if_t&lt; std::is_base_of_v&lt; Gain&lt; Nor
         <tr>
           <td class="memname">void <a class="el" href="structautd3_1_1core_1_1GainSTM.html">autd3::core::GainSTM</a>&lt; <a class="el" href="structautd3_1_1core_1_1NormalTransducer.html">NormalTransducer</a> &gt;::pack </td>
           <td>(</td>
-          <td class="paramtype">const uint8_t&#160;</td>
-          <td class="paramname"><em>msg_id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const <a class="el" href="structautd3_1_1core_1_1Geometry.html">Geometry</a>&lt; <a class="el" href="structautd3_1_1core_1_1NormalTransducer.html">NormalTransducer</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>geometry</em>, </td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -330,19 +324,19 @@ template&lt;typename G , std::enable_if_t&lt; std::is_base_of_v&lt; Gain&lt; Nor
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="structautd3_1_1core_1_1DatagramBody.html#a1b8f7b4add5d8107001fd88da07b318b">autd3::core::DatagramBody&lt; NormalTransducer &gt;</a>.</p>
+<p>Implements <a class="el" href="structautd3_1_1core_1_1DatagramBody.html#afd8bc986b7960a633f50172e91fd8f27">autd3::core::DatagramBody&lt; NormalTransducer &gt;</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="stm_2gain_8hpp_source.html#l00107">107</a> of file <a class="el" href="stm_2gain_8hpp_source.html">gain.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00257">autd3::driver::gain_stm_normal_duty()</a>, <a class="el" href="operation_8hpp_source.html#l00222">autd3::driver::gain_stm_normal_header()</a>, and <a class="el" href="operation_8hpp_source.html#l00236">autd3::driver::gain_stm_normal_phase()</a>.</p>
+<p class="reference">References <a class="el" href="operation_8hpp_source.html#l00256">autd3::driver::gain_stm_normal_duty()</a>, <a class="el" href="operation_8hpp_source.html#l00223">autd3::driver::gain_stm_normal_header()</a>, and <a class="el" href="operation_8hpp_source.html#l00235">autd3::driver::gain_stm_normal_phase()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="structautd3_1_1core_1_1GainSTM_3_01NormalTransducer_01_4_a9d9c2d0928e4dea0bb41779ccdaaa0fb_cgraph.png" border="0" usemap="#structautd3_1_1core_1_1GainSTM_3_01NormalTransducer_01_4_a9d9c2d0928e4dea0bb41779ccdaaa0fb_cgraph" alt=""/></div>
-<map name="structautd3_1_1core_1_1GainSTM_3_01NormalTransducer_01_4_a9d9c2d0928e4dea0bb41779ccdaaa0fb_cgraph" id="structautd3_1_1core_1_1GainSTM_3_01NormalTransducer_01_4_a9d9c2d0928e4dea0bb41779ccdaaa0fb_cgraph">
+<div class="center"><img src="structautd3_1_1core_1_1GainSTM_3_01NormalTransducer_01_4_a4b217c25c07b6ee57d08b88243a0844f_cgraph.png" border="0" usemap="#structautd3_1_1core_1_1GainSTM_3_01NormalTransducer_01_4_a4b217c25c07b6ee57d08b88243a0844f_cgraph" alt=""/></div>
+<map name="structautd3_1_1core_1_1GainSTM_3_01NormalTransducer_01_4_a4b217c25c07b6ee57d08b88243a0844f_cgraph" id="structautd3_1_1core_1_1GainSTM_3_01NormalTransducer_01_4_a4b217c25c07b6ee57d08b88243a0844f_cgraph">
 <area shape="rect" title=" " alt="" coords="5,71,191,112"/>
 <area shape="rect" href="namespaceautd3_1_1driver.html#a9de7963528a43e36d5fa34f098d8154d" title=" " alt="" coords="246,5,374,47"/>
-<area shape="rect" href="namespaceautd3_1_1driver.html#ab3be50962e5d429194e141c864723bed" title=" " alt="" coords="239,71,381,112"/>
+<area shape="rect" href="namespaceautd3_1_1driver.html#a40b091570b21176e6d1014fb123bc32f" title=" " alt="" coords="239,71,381,112"/>
 <area shape="rect" href="namespaceautd3_1_1driver.html#ab5c1e65969bceac27dd22b35f848cdfe" title=" " alt="" coords="241,136,379,177"/>
 </map>
 </div>
