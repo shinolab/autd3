@@ -340,7 +340,7 @@ x, y, zは位置で, qw, qx, qy, qzは回転を表すクオータニオンであ
 <p>指定した振動子の周波数を設定する.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う.
 振動子の指定はデバイスのインデックスとローカルの振動子インデックスでおこなう.</p>
-<p>autd3capi-legacyにおいては, この関数は何もしない.</p>
+<p>Legacyモードにおいては, この関数は何もしない.</p>
 <table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>device_idx</td><td>int32_t</td><td>in</td><td>device index</td></tr>
@@ -362,7 +362,7 @@ x, y, zは位置で, qw, qx, qy, qzは回転を表すクオータニオンであ
 <p>指定した振動子の周期を設定する.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う.
 振動子の指定はデバイスのインデックスとローカルの振動子インデックスでおこなう.</p>
-<p>autd3capi-legacyにおいては, この関数は何もしない.</p>
+<p>Legacyモードにおいては, この関数は何もしない.</p>
 <table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>device_idx</td><td>int32_t</td><td>in</td><td>device index</td></tr>
@@ -950,15 +950,7 @@ force fan/reads FPGA info flagを設定した後に呼び出すと, これらの
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
 <h2 id="autdlinkemulator-autd3capi-link-emulator"><a class="header" href="#autdlinkemulator-autd3capi-link-emulator">AUTDLinkEmulator (autd3capi-link-emulator)</a></h2>
-<p>NormalモードのEmulator linkを作成する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
-<tr><td>out</td><td>void**</td><td>out</td><td>pointer to pointer to Emulator link</td></tr>
-<tr><td>port</td><td>uint16_t</td><td>in</td><td>port number</td></tr>
-<tr><td>cnt</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
-<tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
-</tbody></table>
-<h2 id="autdlinkemulatorlegacy-autd3capi-link-emulator"><a class="header" href="#autdlinkemulatorlegacy-autd3capi-link-emulator">AUTDLinkEmulatorLegacy (autd3capi-link-emulator)</a></h2>
-<p>LegacyモードのEmulator linkを作成する.</p>
+<p>Emulator linkを作成する.</p>
 <table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>out</td><td>void**</td><td>out</td><td>pointer to pointer to Emulator link</td></tr>
 <tr><td>port</td><td>uint16_t</td><td>in</td><td>port number</td></tr>
