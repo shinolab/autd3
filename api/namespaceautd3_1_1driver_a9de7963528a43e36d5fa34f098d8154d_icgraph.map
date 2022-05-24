@@ -1,4 +1,5 @@
 <map id="autd3::driver::gain_stm_normal_duty" name="autd3::driver::gain_stm_normal_duty">
-<area shape="rect" id="node1" title=" " alt="" coords="239,5,367,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="239,41,367,83"/>
 <area shape="rect" id="node2" href="$structautd3_1_1core_1_1GainSTM_3_01NormalTransducer_01_4.html#a4b217c25c07b6ee57d08b88243a0844f" title=" " alt="" coords="5,5,191,47"/>
+<area shape="rect" id="node3" href="$structautd3_1_1core_1_1GainSTM_3_01DynamicTransducer_01_4.html#aa1d557fcecf348f0bf5ce51d29322819" title=" " alt="" coords="19,70,177,126"/>
 </map>

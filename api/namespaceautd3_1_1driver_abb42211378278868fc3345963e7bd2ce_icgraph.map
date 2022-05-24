@@ -1,4 +1,5 @@
 <map id="autd3::driver::normal_legacy_body" name="autd3::driver::normal_legacy_body">
-<area shape="rect" id="node1" title=" " alt="" coords="252,5,389,47"/>
-<area shape="rect" id="node2" href="$structautd3_1_1core_1_1LegacyTransducer.html#a8a65d75b68b55f544996e3d9aecc3010" title=" " alt="" coords="5,5,204,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="260,39,397,80"/>
+<area shape="rect" id="node2" href="$structautd3_1_1core_1_1LegacyTransducer.html#a8a65d75b68b55f544996e3d9aecc3010" title=" " alt="" coords="9,5,208,47"/>
+<area shape="rect" id="node3" href="$structautd3_1_1core_1_1DynamicTransducer.html#a6f7c882a9a048767ec07c3e69fc21f01" title=" " alt="" coords="5,71,212,112"/>
 </map>

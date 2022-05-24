@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">autd3
-   &#160;<span id="projectnumber">2.0.1</span>
+   &#160;<span id="projectnumber">2.0.2</span>
    </div>
   </td>
  </tr>
@@ -69,6 +69,7 @@ $(function() {
 : <a class="el" href="structautd3_1_1core_1_1DatagramBody.html#afd8bc986b7960a633f50172e91fd8f27">autd3::core::DatagramBody&lt; T, &gt;</a>
 , <a class="el" href="structautd3_1_1core_1_1DatagramHeader.html#a5e542bc8202a675876d313c7728750dc">autd3::core::DatagramHeader</a>
 , <a class="el" href="structautd3_1_1core_1_1Gain.html#a9c59b40f2ac114117e33ee2ac56d8585">autd3::core::Gain&lt; T, &gt;</a>
+, <a class="el" href="structautd3_1_1core_1_1GainSTM_3_01DynamicTransducer_01_4.html#aa1d557fcecf348f0bf5ce51d29322819">autd3::core::GainSTM&lt; DynamicTransducer &gt;</a>
 , <a class="el" href="structautd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4.html#a8b9e640ae260b63c8fdbbc831fc83f8b">autd3::core::GainSTM&lt; LegacyTransducer &gt;</a>
 , <a class="el" href="structautd3_1_1core_1_1GainSTM_3_01NormalTransducer_01_4.html#a4b217c25c07b6ee57d08b88243a0844f">autd3::core::GainSTM&lt; NormalTransducer &gt;</a>
 , <a class="el" href="classautd3_1_1core_1_1Modulation.html#a266d73fb0a5c369c78a2c781a7713f24">autd3::core::Modulation</a>
@@ -78,12 +79,14 @@ $(function() {
 , <a class="el" href="structautd3_1_1SilencerConfig.html#a2e41d374e091b1bff4ef615e950b35f8">autd3::SilencerConfig</a>
 </li>
 <li>pack_body()
-: <a class="el" href="structautd3_1_1core_1_1GainProps.html#ab5621f7b611f5ad0503e77458c2b5ee6">autd3::core::GainProps&lt; T, &gt;</a>
+: <a class="el" href="structautd3_1_1core_1_1DynamicTransducer.html#a6f7c882a9a048767ec07c3e69fc21f01">autd3::core::DynamicTransducer</a>
+, <a class="el" href="structautd3_1_1core_1_1GainProps.html#ab5621f7b611f5ad0503e77458c2b5ee6">autd3::core::GainProps&lt; T, &gt;</a>
 , <a class="el" href="structautd3_1_1core_1_1LegacyTransducer.html#a8a65d75b68b55f544996e3d9aecc3010">autd3::core::LegacyTransducer</a>
 , <a class="el" href="structautd3_1_1core_1_1NormalTransducer.html#a03ddae93c2952a210f609b4cb966b6bb">autd3::core::NormalTransducer</a>
 </li>
 <li>pack_header()
-: <a class="el" href="structautd3_1_1core_1_1GainProps.html#aceb62b192f2892d1104e87279b030ab8">autd3::core::GainProps&lt; T, &gt;</a>
+: <a class="el" href="structautd3_1_1core_1_1DynamicTransducer.html#a9bd37b0af7a612370242b97fab22df97">autd3::core::DynamicTransducer</a>
+, <a class="el" href="structautd3_1_1core_1_1GainProps.html#aceb62b192f2892d1104e87279b030ab8">autd3::core::GainProps&lt; T, &gt;</a>
 , <a class="el" href="structautd3_1_1core_1_1LegacyTransducer.html#a94ee29908cc277f1e874e3652098b033">autd3::core::LegacyTransducer</a>
 , <a class="el" href="structautd3_1_1core_1_1NormalTransducer.html#a9b1a0ef2095f8beedd642f6f102c8acf">autd3::core::NormalTransducer</a>
 </li>
@@ -101,19 +104,23 @@ $(function() {
 : <a class="el" href="structautd3_1_1core_1_1GainProps.html#acb36ec8a0d2cefe7cd6b319e0cde66ef">autd3::core::GainProps&lt; T, &gt;</a>
 </li>
 <li>phases
-: <a class="el" href="structautd3_1_1core_1_1NormalDriveData.html#a369aade78ad76d9970847eb633d1bbab">autd3::core::NormalDriveData&lt; T &gt;</a>
+: <a class="el" href="structautd3_1_1core_1_1DynamicDriveData.html#a5266c66e5651316b7ceb3e4b014f25ad">autd3::core::DynamicDriveData&lt; T &gt;</a>
+, <a class="el" href="structautd3_1_1core_1_1NormalDriveData.html#a369aade78ad76d9970847eb633d1bbab">autd3::core::NormalDriveData&lt; T &gt;</a>
 </li>
 <li>PlaneWave()
 : <a class="el" href="classautd3_1_1gain_1_1PlaneWave.html#a424c7456c971b339c58775198fdb334d">autd3::gain::PlaneWave&lt; T, &gt;</a>
 </li>
 <li>Point()
-: <a class="el" href="structautd3_1_1core_1_1Point.html#a118e6b83fe1efd8881f6623e40ec6c25">autd3::core::Point</a>
+: <a class="el" href="structautd3_1_1core_1_1Point.html#a8c01e365b724d37fc072aabd70ba751f">autd3::core::Point</a>
 </li>
 <li>point
 : <a class="el" href="structautd3_1_1core_1_1Point.html#a3898622f76981233e49997c5db2a2791">autd3::core::Point</a>
 </li>
+<li>Point()
+: <a class="el" href="structautd3_1_1core_1_1Point.html#a118e6b83fe1efd8881f6623e40ec6c25">autd3::core::Point</a>
+</li>
 <li>point_stm_body()
-: <a class="el" href="structautd3_1_1driver_1_1Body.html#a9f510403738316384a26c1dba16dec49">autd3::driver::Body</a>
+: <a class="el" href="structautd3_1_1driver_1_1Body.html#ad8e25e3f5732b652be87959a4df840be">autd3::driver::Body</a>
 </li>
 <li>point_stm_head()
 : <a class="el" href="structautd3_1_1driver_1_1Body.html#a82873bd6622ecebecf273b6c24d8a08f">autd3::driver::Body</a>
@@ -135,9 +142,9 @@ $(function() {
 </li>
 <li>pseudo_inverse_svd()
 : <a class="el" href="classautd3_1_1gain_1_1holo_1_1Backend.html#afba5f46d43fc3fb5ae48853202f95e99">autd3::gain::holo::Backend</a>
-, <a class="el" href="classautd3_1_1gain_1_1holo_1_1BLASBackend.html#abda2e06168bb0ef0d1c6b6a037b54375">autd3::gain::holo::BLASBackend</a>
-, <a class="el" href="classautd3_1_1gain_1_1holo_1_1CUDABackend.html#a39e9b5177b08943f989524acea866f7d">autd3::gain::holo::CUDABackend</a>
-, <a class="el" href="classautd3_1_1gain_1_1holo_1_1EigenBackend.html#a4643cfab565ed22823d50c67f8238f96">autd3::gain::holo::EigenBackend</a>
+, <a class="el" href="classautd3_1_1gain_1_1holo_1_1BLASBackend.html#a068fa1efb91627cd30b5308fa8906ec1">autd3::gain::holo::BLASBackend</a>
+, <a class="el" href="classautd3_1_1gain_1_1holo_1_1CUDABackend.html#ad4e7e1f110abda5022543f16701e4671">autd3::gain::holo::CUDABackend</a>
+, <a class="el" href="classautd3_1_1gain_1_1holo_1_1EigenBackend.html#a4e77439e02841edc8a92e4fc28919458">autd3::gain::holo::EigenBackend</a>
 </li>
 <li>push_back()
 : <a class="el" href="structautd3_1_1core_1_1PointSTM.html#ad90c49b5b80d79f0e1bb5a7f5e8b82b4">autd3::core::PointSTM&lt; T, &gt;</a>

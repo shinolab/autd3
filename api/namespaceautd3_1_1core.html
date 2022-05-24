@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">autd3
-   &#160;<span id="projectnumber">2.0.1</span>
+   &#160;<span id="projectnumber">2.0.2</span>
    </div>
   </td>
  </tr>
@@ -96,6 +96,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1DriveData.html">DriveData</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract container of duty ratio and phase.  <a href="structautd3_1_1core_1_1DriveData.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1DynamicDriveData.html">DynamicDriveData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structautd3_1_1core_1_1DriveData.html" title="Abstract container of duty ratio and phase.">DriveData</a> for <a class="el" href="structautd3_1_1core_1_1DynamicTransducer.html" title="Transduce with variable frequency.">DynamicTransducer</a>.  <a href="structautd3_1_1core_1_1DynamicDriveData.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1DynamicTransducer.html">DynamicTransducer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transduce with variable frequency.  <a href="structautd3_1_1core_1_1DynamicTransducer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Gain.html">Gain</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structautd3_1_1core_1_1Gain.html" title="Gain controls the duty ratio and phase of each transducer in AUTD devices.">Gain</a> controls the duty ratio and phase of each transducer in AUTD devices.  <a href="structautd3_1_1core_1_1Gain.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -104,6 +110,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1GainSTM.html">GainSTM</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structautd3_1_1core_1_1GainSTM.html" title="GainSTM provides a function to display Gain sequentially and periodically.">GainSTM</a> provides a function to display <a class="el" href="structautd3_1_1core_1_1Gain.html" title="Gain controls the duty ratio and phase of each transducer in AUTD devices.">Gain</a> sequentially and periodically.  <a href="structautd3_1_1core_1_1GainSTM.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1GainSTM_3_01DynamicTransducer_01_4.html">GainSTM&lt; DynamicTransducer &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structautd3_1_1core_1_1GainSTM.html" title="GainSTM provides a function to display Gain sequentially and periodically.">GainSTM</a> for <a class="el" href="structautd3_1_1core_1_1DynamicTransducer.html" title="Transduce with variable frequency.">DynamicTransducer</a>.  <a href="structautd3_1_1core_1_1GainSTM_3_01DynamicTransducer_01_4.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4.html">GainSTM&lt; LegacyTransducer &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structautd3_1_1core_1_1GainSTM.html" title="GainSTM provides a function to display Gain sequentially and periodically.">GainSTM</a> for <a class="el" href="structautd3_1_1core_1_1LegacyTransducer.html" title="Transduce with 40kHz frequency.">LegacyTransducer</a>.  <a href="structautd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4.html#details">More...</a><br /></td></tr>
@@ -373,14 +382,15 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="utils_8hpp_source.html#l00056">56</a> of file <a class="el" href="utils_8hpp_source.html">utils.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="normal__transducer_8hpp_source.html#l00034">autd3::core::NormalDriveData&lt; T &gt;::set_drive()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="normal__transducer_8hpp_source.html#l00034">autd3::core::NormalDriveData&lt; T &gt;::set_drive()</a>, and <a class="el" href="dynamic__transducer_8hpp_source.html#l00035">autd3::core::DynamicDriveData&lt; T &gt;::set_drive()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceautd3_1_1core_a36f4c5a4dd5867a2e8ac4f2ad316caf2_icgraph.png" border="0" usemap="#namespaceautd3_1_1core_a36f4c5a4dd5867a2e8ac4f2ad316caf2_icgraph" alt=""/></div>
 <map name="namespaceautd3_1_1core_a36f4c5a4dd5867a2e8ac4f2ad316caf2_icgraph" id="namespaceautd3_1_1core_a36f4c5a4dd5867a2e8ac4f2ad316caf2_icgraph">
-<area shape="rect" title=" " alt="" coords="216,13,371,39"/>
-<area shape="rect" href="structautd3_1_1core_1_1NormalDriveData.html#aa5c888aaeb743e4d81e0c9668d2b6087" title=" " alt="" coords="5,5,168,47"/>
+<area shape="rect" title=" " alt="" coords="224,46,379,73"/>
+<area shape="rect" href="structautd3_1_1core_1_1NormalDriveData.html#aa5c888aaeb743e4d81e0c9668d2b6087" title=" " alt="" coords="9,5,172,47"/>
+<area shape="rect" href="structautd3_1_1core_1_1DynamicDriveData.html#a45c596d1014effc510da5351778c1b6b" title=" " alt="" coords="5,71,176,112"/>
 </map>
 </div>
 
