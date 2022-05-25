@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>AUTD3 Developers Manual v2.0.2</title>
+        <title>AUTD3 Developers Manual v2.0.3</title>
         <meta name="robots" content="noindex" />
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -107,7 +107,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">AUTD3 Developers Manual v2.0.2</h1>
+                    <h1 class="menu-title">AUTD3 Developers Manual v2.0.3</h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -1579,7 +1579,7 @@ x, y, zは位置で, qw, qx, qy, qzは回転を表すクオータニオンであ
 <h2 id="autddeletesilencer-autd3capi"><a class="header" href="#autddeletesilencer-autd3capi">AUTDDeleteSilencer (autd3capi)</a></h2>
 <p>SilencerConfigを削除する.</p>
 <table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
-<tr><td>config</td><td>void*</td><td>out</td><td>pointer to SilencerConfig</td></tr>
+<tr><td>config</td><td>void*</td><td>in</td><td>pointer to SilencerConfig</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
 <h2 id="autdfreecontroller-autd3capi"><a class="header" href="#autdfreecontroller-autd3capi">AUTDFreeController (autd3capi)</a></h2>
@@ -1632,7 +1632,7 @@ x, y, zは位置で, qw, qx, qy, qzは回転を表すクオータニオンであ
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
 <table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
-<tr><td>check ack</td><td>bool</td><td>in</td><td>check ack flag</td></tr>
+<tr><td>check_ack</td><td>bool</td><td>in</td><td>check ack flag</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
 <h2 id="autdsetforcefan-autd3capi"><a class="header" href="#autdsetforcefan-autd3capi">AUTDSetForceFan (autd3capi)</a></h2>
@@ -1641,7 +1641,7 @@ x, y, zは位置で, qw, qx, qy, qzは回転を表すクオータニオンであ
 <p>デバイスに実際に反映されるのはsend functionsのどれかを呼び出し後である.</p>
 <table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
-<tr><td>force_fan</td><td>bool</td><td>in</td><td>force fan      flag</td></tr>
+<tr><td>force</td><td>bool</td><td>in</td><td>force fan flag</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
 <h2 id="autdgetsoundspeed-autd3capi"><a class="header" href="#autdgetsoundspeed-autd3capi">AUTDGetSoundSpeed (autd3capi)</a></h2>
@@ -1678,7 +1678,7 @@ x, y, zは位置で, qw, qx, qy, qzは回転を表すクオータニオンであ
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>device_idx</td><td>int32_t</td><td>in</td><td>device index</td></tr>
 <tr><td>local_trans_idx</td><td>int32_t</td><td>in</td><td>local transducer index</td></tr>
-<tr><td>frequency</td><td>double</td><td>-</td><td>frequency of the transducer</td></tr>
+<tr><td>frequency</td><td>double</td><td>in</td><td>frequency of the transducer</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
 <h2 id="autdgettranscycle-autd3capi"><a class="header" href="#autdgettranscycle-autd3capi">AUTDGetTransCycle (autd3capi)</a></h2>
@@ -1700,7 +1700,7 @@ x, y, zは位置で, qw, qx, qy, qzは回転を表すクオータニオンであ
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>device_idx</td><td>int32_t</td><td>in</td><td>device index</td></tr>
 <tr><td>local_trans_idx</td><td>int32_t</td><td>in</td><td>local transducer index</td></tr>
-<tr><td>frequency</td><td>uint16_t</td><td>-</td><td>cycle of the transducer</td></tr>
+<tr><td>cycle</td><td>uint16_t</td><td>in</td><td>cycle of the transducer</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
 <h2 id="autdgetwavelength-autd3capi"><a class="header" href="#autdgetwavelength-autd3capi">AUTDGetWavelength (autd3capi)</a></h2>
@@ -1739,7 +1739,7 @@ outポインタが指す領域は, 接続しているデバイスと同じ長さ
 falseの場合には<code>AUTDGetLastError</code>でエラーメッセージを取得できる.</p>
 <table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
-<tr><td>out</td><td>uint8_t*</td><td>out</td><td>FPGA information list</td></tr>
+<tr><td>out</td><td>uint8_t*</td><td>in</td><td>FPGA information list</td></tr>
 <tr><td>return</td><td>bool</td><td>-</td><td>true if success</td></tr>
 </tbody></table>
 <h2 id="autdupdateflags-autd3capi"><a class="header" href="#autdupdateflags-autd3capi">AUTDUpdateFlags (autd3capi)</a></h2>
@@ -2013,9 +2013,11 @@ force fan/reads FPGA info flagを設定した後に呼び出すと, これらの
 </tbody></table>
 <h2 id="autdgainstm-autd3capi"><a class="header" href="#autdgainstm-autd3capi">AUTDGainSTM (autd3capi)</a></h2>
 <p>Gain STMを作成する.</p>
+<p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
 <p>作成したSTMは最後に<code>AUTDDeleteSTM</code>で削除する必要がある. </p>
 <table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>out</td><td>void**</td><td>out</td><td>pointer to pointer to Gain STM</td></tr>
+<tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
 <h2 id="autdpointstmadd-autd3capi"><a class="header" href="#autdpointstmadd-autd3capi">AUTDPointSTMAdd (autd3capi)</a></h2>
@@ -2026,21 +2028,21 @@ force fan/reads FPGA info flagを設定した後に呼び出すと, これらの
 <tr><td>y</td><td>double</td><td>in</td><td>y coordinate of focal point</td></tr>
 <tr><td>z</td><td>double</td><td>in</td><td>z coordinate of focal point</td></tr>
 <tr><td>shift</td><td>uint8_t</td><td>in</td><td>duty shift</td></tr>
-<tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
+<tr><td>return</td><td>bool</td><td>-</td><td>true if success</td></tr>
 </tbody></table>
 <h2 id="autdgainstmadd-autd3capi"><a class="header" href="#autdgainstmadd-autd3capi">AUTDGainSTMAdd (autd3capi)</a></h2>
 <p>Gain STMにgainを追加する.</p>
 <table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>stm</td><td>void*</td><td>in</td><td>pointer to Point STM</td></tr>
 <tr><td>gain</td><td>void*</td><td>in</td><td>pointer to Gain</td></tr>
-<tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
+<tr><td>return</td><td>bool</td><td>-</td><td>true if success</td></tr>
 </tbody></table>
 <h2 id="autdstmsetfrequency-autd3capi"><a class="header" href="#autdstmsetfrequency-autd3capi">AUTDSTMSetFrequency (autd3capi)</a></h2>
 <p>STMのfrequencyを設定する.</p>
 <table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>stm</td><td>void*</td><td>in</td><td>pointer to STM</td></tr>
 <tr><td>freq</td><td>double</td><td>in</td><td>frequency of STM</td></tr>
-<tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
+<tr><td>return</td><td>double</td><td>-</td><td>actual frequency</td></tr>
 </tbody></table>
 <h2 id="autdstmfrequency-autd3capi"><a class="header" href="#autdstmfrequency-autd3capi">AUTDSTMFrequency (autd3capi)</a></h2>
 <p>STMのfrequencyを取得する.</p>
@@ -2148,7 +2150,6 @@ force fan/reads FPGA info flagを設定した後に呼び出すと, これらの
 <tr><td>alpha</td><td>double</td><td>in</td><td>parameter</td></tr>
 <tr><td>lambda</td><td>double</td><td>in</td><td>parameter</td></tr>
 <tr><td>repeat</td><td>uint64_t</td><td>in</td><td>parameter</td></tr>
-<tr><td>constraint</td><td>void*</td><td>in</td><td>pointer to amplitude constraint</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
 <h2 id="autdgainholoevd-autd3capi-gain-holo"><a class="header" href="#autdgainholoevd-autd3capi-gain-holo">AUTDGainHoloEVD (autd3capi-gain-holo)</a></h2>
@@ -2158,7 +2159,6 @@ force fan/reads FPGA info flagを設定した後に呼び出すと, これらの
 <tr><td>gain</td><td>void**</td><td>out</td><td>pointer to pointer to EVD gain</td></tr>
 <tr><td>backend</td><td>void*</td><td>in</td><td>pointer to backend</td></tr>
 <tr><td>gamma</td><td>double</td><td>in</td><td>parameter</td></tr>
-<tr><td>constraint</td><td>void*</td><td>in</td><td>pointer to amplitude constraint</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
 <h2 id="autdgainholonaive-autd3capi-gain-holo"><a class="header" href="#autdgainholonaive-autd3capi-gain-holo">AUTDGainHoloNaive (autd3capi-gain-holo)</a></h2>
@@ -2167,7 +2167,6 @@ force fan/reads FPGA info flagを設定した後に呼び出すと, これらの
 <table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>gain</td><td>void**</td><td>out</td><td>pointer to pointer to Naive gain</td></tr>
 <tr><td>backend</td><td>void*</td><td>in</td><td>pointer to backend</td></tr>
-<tr><td>constraint</td><td>void*</td><td>in</td><td>pointer to amplitude constraint</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
 <h2 id="autdgainhologs-autd3capi-gain-holo"><a class="header" href="#autdgainhologs-autd3capi-gain-holo">AUTDGainHoloGS (autd3capi-gain-holo)</a></h2>
@@ -2177,7 +2176,6 @@ force fan/reads FPGA info flagを設定した後に呼び出すと, これらの
 <tr><td>gain</td><td>void**</td><td>out</td><td>pointer to pointer to GS gain</td></tr>
 <tr><td>backend</td><td>void*</td><td>in</td><td>pointer to backend</td></tr>
 <tr><td>repeat</td><td>uint64_t</td><td>in</td><td>parameter</td></tr>
-<tr><td>constraint</td><td>void*</td><td>in</td><td>pointer to amplitude constraint</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
 <h2 id="autdgainhologspat-autd3capi-gain-holo"><a class="header" href="#autdgainhologspat-autd3capi-gain-holo">AUTDGainHoloGSPAT (autd3capi-gain-holo)</a></h2>
@@ -2187,7 +2185,6 @@ force fan/reads FPGA info flagを設定した後に呼び出すと, これらの
 <tr><td>gain</td><td>void**</td><td>out</td><td>pointer to pointer to GSPAT gain</td></tr>
 <tr><td>backend</td><td>void*</td><td>in</td><td>pointer to backend</td></tr>
 <tr><td>repeat</td><td>uint64_t</td><td>in</td><td>parameter</td></tr>
-<tr><td>constraint</td><td>void*</td><td>in</td><td>pointer to amplitude constraint</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
 <h2 id="autdgainhololm-autd3capi-gain-holo"><a class="header" href="#autdgainhololm-autd3capi-gain-holo">AUTDGainHoloLM (autd3capi-gain-holo)</a></h2>
@@ -2202,7 +2199,6 @@ force fan/reads FPGA info flagを設定した後に呼び出すと, これらの
 <tr><td>k_max</td><td>uint64_t</td><td>in</td><td>parameter</td></tr>
 <tr><td>initial</td><td>double*</td><td>in</td><td>initial guess</td></tr>
 <tr><td>initial_size</td><td>int32_t</td><td>in</td><td>size of initial</td></tr>
-<tr><td>constraint</td><td>void*</td><td>in</td><td>pointer to amplitude constraint</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
 <h2 id="autdgainhologaussnewton-autd3capi-gain-holo"><a class="header" href="#autdgainhologaussnewton-autd3capi-gain-holo">AUTDGainHoloGaussNewton (autd3capi-gain-holo)</a></h2>
@@ -2216,7 +2212,6 @@ force fan/reads FPGA info flagを設定した後に呼び出すと, これらの
 <tr><td>k_max</td><td>uint64_t</td><td>in</td><td>parameter</td></tr>
 <tr><td>initial</td><td>double*</td><td>in</td><td>initial guess</td></tr>
 <tr><td>initial_size</td><td>int32_t</td><td>in</td><td>size of initial</td></tr>
-<tr><td>constraint</td><td>void*</td><td>in</td><td>pointer to amplitude constraint</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
 <h2 id="autdgainhologradientdescent-autd3capi-gain-holo"><a class="header" href="#autdgainhologradientdescent-autd3capi-gain-holo">AUTDGainHoloGradientDescent (autd3capi-gain-holo)</a></h2>
@@ -2230,7 +2225,6 @@ force fan/reads FPGA info flagを設定した後に呼び出すと, これらの
 <tr><td>k_max</td><td>uint64_t</td><td>in</td><td>parameter</td></tr>
 <tr><td>initial</td><td>double*</td><td>in</td><td>initial guess</td></tr>
 <tr><td>initial_size</td><td>int32_t</td><td>in</td><td>size of initial</td></tr>
-<tr><td>constraint</td><td>void*</td><td>in</td><td>pointer to amplitude constraint</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
 <h2 id="autdgainhologreedy-autd3capi-gain-holo"><a class="header" href="#autdgainhologreedy-autd3capi-gain-holo">AUTDGainHoloGreedy (autd3capi-gain-holo)</a></h2>
@@ -2240,7 +2234,6 @@ force fan/reads FPGA info flagを設定した後に呼び出すと, これらの
 <tr><td>gain</td><td>void**</td><td>out</td><td>pointer to pointer to Greedy gain</td></tr>
 <tr><td>backend</td><td>void*</td><td>in</td><td>pointer to backend</td></tr>
 <tr><td>phase_div</td><td>int32_t</td><td>in</td><td>parameter</td></tr>
-<tr><td>constraint</td><td>void*</td><td>in</td><td>pointer to amplitude constraint</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
 <h2 id="autdgainholoadd-autd3capi-gain-holo"><a class="header" href="#autdgainholoadd-autd3capi-gain-holo">AUTDGainHoloAdd (autd3capi-gain-holo)</a></h2>
@@ -2324,7 +2317,7 @@ force fan/reads FPGA info flagを設定した後に呼び出すと, これらの
 <p>Adapter listへのポインタを削除する.</p>
 <table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>p_adapter</td><td>void*</td><td>in</td><td>pointer to adapter list</td></tr>
-<tr><td>return</td><td>int32_t</td><td>-</td><td>size of adapter list</td></tr>
+<tr><td>return</td><td>void</td><td>-</td><td>size of adapter list</td></tr>
 </tbody></table>
 <h2 id="autdlinksoem-autd3capi-link-soem"><a class="header" href="#autdlinksoem-autd3capi-link-soem">AUTDLinkSOEM (autd3capi-link-soem)</a></h2>
 <table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
@@ -2426,13 +2419,15 @@ STMは自動的に切り替わったりしない, 代わりにSTM idxで何番�
 <tr><td style="text-align: left">2022/5/22</td><td style="text-align: left">Version 2.0.1 初版</td></tr>
 <tr><td style="text-align: left">2022/5/23</td><td style="text-align: left">FFI/python, FFI/csharp, migration_guideを追加</td></tr>
 <tr><td style="text-align: left">2022/5/24</td><td style="text-align: left">Version 2.0.2 初版</td></tr>
+<tr><td style="text-align: left">2022/5/25</td><td style="text-align: left">Version 2.0.3 初版</td></tr>
 </tbody></table>
 <footer id="open-on-gh">Found a bug? <a href="https://github.com/shinolab/autd3/edit/master/book/src/jp/document_history.md">Edit this file on GitHub.</a></footer><div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="release-notes"><a class="header" href="#release-notes">Release Notes</a></h1>
 <table><thead><tr><th style="text-align: left">Date</th><th style="text-align: left">Version</th></tr></thead><tbody>
 <tr><td style="text-align: left">2022/5/17</td><td style="text-align: left">2.0.0</td></tr>
 <tr><td style="text-align: left">2022/5/22</td><td style="text-align: left">2.0.1</td></tr>
-<tr><td style="text-align: left">2022/5/22</td><td style="text-align: left">2.0.2</td></tr>
+<tr><td style="text-align: left">2022/5/24</td><td style="text-align: left">2.0.2</td></tr>
+<tr><td style="text-align: left">2022/5/25</td><td style="text-align: left">2.0.3</td></tr>
 </tbody></table>
 <footer id="open-on-gh">Found a bug? <a href="https://github.com/shinolab/autd3/edit/master/book/src/jp/release_notes.md">Edit this file on GitHub.</a></footer><div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="citation"><a class="header" href="#citation">Citation</a></h1>
