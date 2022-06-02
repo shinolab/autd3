@@ -1,5 +1,5 @@
 <map id="autd3::driver::force_fan" name="autd3::driver::force_fan">
-<area shape="rect" id="node1" title=" " alt="" coords="203,35,355,61"/>
-<area shape="rect" id="node2" href="$classautd3_1_1Controller.html#aa77e39c7b33e960fbe8ce93ec0520196" title="Send header and body data to devices." alt="" coords="5,5,155,32"/>
-<area shape="rect" id="node3" href="$classautd3_1_1Controller.html#aa88c8ecdd1dab9e2f154af88ba4d9434" title="Synchronize devices." alt="" coords="19,57,141,98"/>
+<area shape="rect" id="node1" title=" " alt="" coords="177,46,329,73"/>
+<area shape="rect" id="node2" href="$classautd3_1_1ControllerX.html#ad04a28be2e7c7d5165bdc42c1c16c6f0" title="Send header and body data to devices." alt="" coords="5,5,129,47"/>
+<area shape="rect" id="node3" href="$classautd3_1_1ControllerX.html#ad8f5c96c7773ee9e53ef3fdb31728df6" title="Synchronize devices." alt="" coords="5,71,129,112"/>
 </map>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['value_950',['VALUE',['../classautd3_1_1driver_1_1CPUControlFlags.html#ad15956b7f095f547a235f2a515879664',1,'autd3::driver::CPUControlFlags::VALUE()'],['../classautd3_1_1driver_1_1FPGAControlFlags.html#a99017ed547678419c96f2af8819688ea',1,'autd3::driver::FPGAControlFlags::VALUE()']]]
+  ['transducermode_1018',['TransducerMode',['../namespaceautd3_1_1core.html#ad596bd9c3d4205ede109082bf8b29c3b',1,'autd3::core']]],
+  ['transpose_1019',['TRANSPOSE',['../namespaceautd3_1_1gain_1_1holo.html#a32cadcae3cf6056b5842077371eceee1',1,'autd3::gain::holo']]]
 ];

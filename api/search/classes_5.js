@@ -1,26 +1,7 @@
 var searchData=
 [
-  ['gain_481',['Gain',['../structautd3_1_1core_1_1Gain.html',1,'autd3::core']]],
-  ['gain_3c_20core_3a_3alegacytransducer_20_3e_482',['Gain&lt; core::LegacyTransducer &gt;',['../structautd3_1_1core_1_1Gain.html',1,'autd3::core']]],
-  ['gainprops_483',['GainProps',['../structautd3_1_1core_1_1GainProps.html',1,'autd3::core']]],
-  ['gainprops_3c_20core_3a_3alegacytransducer_20_3e_484',['GainProps&lt; core::LegacyTransducer &gt;',['../structautd3_1_1core_1_1GainProps.html',1,'autd3::core']]],
-  ['gainprops_3c_20t_20_3e_485',['GainProps&lt; T &gt;',['../structautd3_1_1core_1_1GainProps.html',1,'autd3::core']]],
-  ['gainstm_486',['GainSTM',['../structautd3_1_1core_1_1GainSTM.html',1,'autd3::core']]],
-  ['gainstm_3c_20dynamictransducer_20_3e_487',['GainSTM&lt; DynamicTransducer &gt;',['../structautd3_1_1core_1_1GainSTM_3_01DynamicTransducer_01_4.html',1,'autd3::core']]],
-  ['gainstm_3c_20legacytransducer_20_3e_488',['GainSTM&lt; LegacyTransducer &gt;',['../structautd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4.html',1,'autd3::core']]],
-  ['gainstm_3c_20normaltransducer_20_3e_489',['GainSTM&lt; NormalTransducer &gt;',['../structautd3_1_1core_1_1GainSTM_3_01NormalTransducer_01_4.html',1,'autd3::core']]],
-  ['gainstmbodybody_490',['GainSTMBodyBody',['../structautd3_1_1driver_1_1GainSTMBodyBody.html',1,'autd3::driver']]],
-  ['gainstmbodyhead_491',['GainSTMBodyHead',['../structautd3_1_1driver_1_1GainSTMBodyHead.html',1,'autd3::driver']]],
-  ['gaussnewton_492',['GaussNewton',['../classautd3_1_1gain_1_1holo_1_1GaussNewton.html',1,'autd3::gain::holo']]],
-  ['geometry_493',['Geometry',['../structautd3_1_1core_1_1Geometry.html',1,'autd3::core']]],
-  ['geometry_3c_20autd3_3a_3acore_3a_3adynamictransducer_20_3e_494',['Geometry&lt; autd3::core::DynamicTransducer &gt;',['../structautd3_1_1core_1_1Geometry.html',1,'autd3::core']]],
-  ['geometry_3c_20autd3_3a_3acore_3a_3alegacytransducer_20_3e_495',['Geometry&lt; autd3::core::LegacyTransducer &gt;',['../structautd3_1_1core_1_1Geometry.html',1,'autd3::core']]],
-  ['geometry_3c_20autd3_3a_3acore_3a_3anormaltransducer_20_3e_496',['Geometry&lt; autd3::core::NormalTransducer &gt;',['../structautd3_1_1core_1_1Geometry.html',1,'autd3::core']]],
-  ['geometry_3c_20core_3a_3alegacytransducer_20_3e_497',['Geometry&lt; core::LegacyTransducer &gt;',['../structautd3_1_1core_1_1Geometry.html',1,'autd3::core']]],
-  ['globalheader_498',['GlobalHeader',['../structautd3_1_1driver_1_1GlobalHeader.html',1,'autd3::driver']]],
-  ['gradientdescent_499',['GradientDescent',['../classautd3_1_1gain_1_1holo_1_1GradientDescent.html',1,'autd3::gain::holo']]],
-  ['greedy_500',['Greedy',['../classautd3_1_1gain_1_1holo_1_1Greedy.html',1,'autd3::gain::holo']]],
-  ['grouped_501',['Grouped',['../classautd3_1_1gain_1_1Grouped.html',1,'autd3::gain']]],
-  ['gs_502',['GS',['../classautd3_1_1gain_1_1holo_1_1GS.html',1,'autd3::gain::holo']]],
-  ['gspat_503',['GSPAT',['../classautd3_1_1gain_1_1holo_1_1GSPAT.html',1,'autd3::gain::holo']]]
+  ['firmwareinfo_518',['FirmwareInfo',['../structautd3_1_1driver_1_1FirmwareInfo.html',1,'autd3::driver']]],
+  ['focus_519',['Focus',['../classautd3_1_1gain_1_1Focus.html',1,'autd3::gain']]],
+  ['fpgacontrolflags_520',['FPGAControlFlags',['../classautd3_1_1driver_1_1FPGAControlFlags.html',1,'autd3::driver']]],
+  ['fpgainfo_521',['FPGAInfo',['../structautd3_1_1driver_1_1FPGAInfo.html',1,'autd3::driver']]]
 ];

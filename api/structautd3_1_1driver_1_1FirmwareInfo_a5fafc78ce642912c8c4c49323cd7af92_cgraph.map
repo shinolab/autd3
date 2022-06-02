@@ -1,8 +1,9 @@
 <map id="autd3::driver::FirmwareInfo::to_string" name="autd3::driver::FirmwareInfo::to_string">
-<area shape="rect" id="node1" title=" " alt="" coords="5,136,180,177"/>
-<area shape="rect" id="node2" href="$structautd3_1_1driver_1_1FirmwareInfo.html#ab1efb9544b86b6f107557630ca1eddb3" title="Get cpu firmware version." alt="" coords="228,5,403,47"/>
-<area shape="rect" id="node3" href="$structautd3_1_1driver_1_1FirmwareInfo.html#a040c8bdbfa39e83548fb9e5f79fab74c" title="Get fpga firmware version." alt="" coords="228,71,403,112"/>
-<area shape="rect" id="node4" href="$structautd3_1_1driver_1_1FirmwareInfo.html#a44d41fc8629bad9c6e13694b5f4feada" title=" " alt="" coords="228,136,403,177"/>
-<area shape="rect" id="node5" href="$structautd3_1_1driver_1_1FirmwareInfo.html#af0afa78d7ede7c82d2edb8a33768a420" title=" " alt="" coords="228,201,403,243"/>
-<area shape="rect" id="node6" href="$structautd3_1_1driver_1_1FirmwareInfo.html#ab663fa12e4209944ecb4754a3ae47678" title=" " alt="" coords="228,267,403,308"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,169,180,211"/>
+<area shape="rect" id="node2" href="$structautd3_1_1driver_1_1FirmwareInfo.html#ab1efb9544b86b6f107557630ca1eddb3" title="Get cpu firmware version." alt="" coords="231,5,405,47"/>
+<area shape="rect" id="node3" href="$structautd3_1_1driver_1_1FirmwareInfo.html#a040c8bdbfa39e83548fb9e5f79fab74c" title="Get fpga firmware version." alt="" coords="231,71,405,112"/>
+<area shape="rect" id="node4" href="$structautd3_1_1driver_1_1FirmwareInfo.html#afe889eda34495602a29953a916ed9422" title=" " alt="" coords="228,136,408,177"/>
+<area shape="rect" id="node5" href="$structautd3_1_1driver_1_1FirmwareInfo.html#a44d41fc8629bad9c6e13694b5f4feada" title=" " alt="" coords="231,201,405,243"/>
+<area shape="rect" id="node6" href="$structautd3_1_1driver_1_1FirmwareInfo.html#af0afa78d7ede7c82d2edb8a33768a420" title=" " alt="" coords="231,267,405,308"/>
+<area shape="rect" id="node7" href="$structautd3_1_1driver_1_1FirmwareInfo.html#ab663fa12e4209944ecb4754a3ae47678" title=" " alt="" coords="231,332,405,373"/>
 </map>

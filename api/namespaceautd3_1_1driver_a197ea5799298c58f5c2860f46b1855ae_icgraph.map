@@ -1,5 +1,7 @@
 <map id="autd3::driver::normal_duty_body" name="autd3::driver::normal_duty_body">
-<area shape="rect" id="node1" title=" " alt="" coords="260,39,397,80"/>
-<area shape="rect" id="node2" href="$structautd3_1_1core_1_1NormalTransducer.html#a03ddae93c2952a210f609b4cb966b6bb" title=" " alt="" coords="9,5,208,47"/>
-<area shape="rect" id="node3" href="$structautd3_1_1core_1_1DynamicTransducer.html#a6f7c882a9a048767ec07c3e69fc21f01" title=" " alt="" coords="5,71,212,112"/>
+<area shape="rect" id="node1" title=" " alt="" coords="260,118,397,159"/>
+<area shape="rect" id="node2" href="$structautd3_1_1core_1_1Amplitudes_3_01NormalPhaseTransducer_01_4.html#ad7f80c32c6b61944632eb92a2d4ea044" title=" " alt="" coords="20,5,197,61"/>
+<area shape="rect" id="node3" href="$structautd3_1_1core_1_1Amplitudes_3_01DynamicTransducer_01_4.html#a3af20044334a7838fd15997cb1f2bc60" title=" " alt="" coords="12,85,205,126"/>
+<area shape="rect" id="node4" href="$structautd3_1_1core_1_1NormalTransducer.html#a03ddae93c2952a210f609b4cb966b6bb" title=" " alt="" coords="9,150,208,191"/>
+<area shape="rect" id="node5" href="$structautd3_1_1core_1_1DynamicTransducer.html#a6f7c882a9a048767ec07c3e69fc21f01" title=" " alt="" coords="5,215,212,257"/>
 </map>

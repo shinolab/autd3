@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">autd3
-   &#160;<span id="projectnumber">2.0.2</span>
+   &#160;<span id="projectnumber">2.1.0</span>
    </div>
   </td>
  </tr>
@@ -69,7 +69,7 @@ $(function() {
 : <a class="el" href="classautd3_1_1link_1_1SOEM.html#ad2d3a8d75990b773d0922ba09e2c0f0f">autd3::link::SOEM</a>
 </li>
 <li>open()
-: <a class="el" href="classautd3_1_1Controller.html#a366d7e43be950787fc2baca3b05a2deb">autd3::Controller&lt; T &gt;</a>
+: <a class="el" href="classautd3_1_1ControllerX.html#ab0ca546ae05e1c076c3eecac68054987">autd3::ControllerX&lt; T, &gt;</a>
 , <a class="el" href="classautd3_1_1core_1_1Link.html#ace321b0431d3449378d1d9db3c7a6ff4">autd3::core::Link</a>
 </li>
 <li>operator!=()
@@ -77,7 +77,9 @@ $(function() {
 , <a class="el" href="classautd3_1_1driver_1_1FPGAControlFlags.html#ae3217fff379cb791b124044ad3c804e6">autd3::driver::FPGAControlFlags</a>
 </li>
 <li>operator=()
-: <a class="el" href="structautd3_1_1core_1_1DatagramBody.html#aa8949d7b22caff7b1b9d39d50e816676">autd3::core::DatagramBody&lt; T, &gt;</a>
+: <a class="el" href="structautd3_1_1core_1_1Amplitudes_3_01DynamicTransducer_01_4.html#a04e130384df008a5ee1c37521643da34">autd3::core::Amplitudes&lt; DynamicTransducer &gt;</a>
+, <a class="el" href="structautd3_1_1core_1_1Amplitudes_3_01NormalPhaseTransducer_01_4.html#a81866eabeaf5b4fb7b0be8a15f276ed0">autd3::core::Amplitudes&lt; NormalPhaseTransducer &gt;</a>
+, <a class="el" href="structautd3_1_1core_1_1DatagramBody.html#aa8949d7b22caff7b1b9d39d50e816676">autd3::core::DatagramBody&lt; T, &gt;</a>
 , <a class="el" href="structautd3_1_1core_1_1DatagramHeader.html#aea2d540b065b51bc8188aa5360d80b6d">autd3::core::DatagramHeader</a>
 , <a class="el" href="structautd3_1_1core_1_1Device.html#aec148eda995213ee7d29615677289601">autd3::core::Device&lt; T &gt;</a>
 , <a class="el" href="structautd3_1_1core_1_1DriveData.html#af527eaaf71c9479f2c6f204fc00a909b">autd3::core::DriveData&lt; T &gt;</a>
@@ -85,7 +87,9 @@ $(function() {
 , <a class="el" href="structautd3_1_1core_1_1Gain.html#a890aa0c8dd94362f686ef728181e4044">autd3::core::Gain&lt; T, &gt;</a>
 , <a class="el" href="structautd3_1_1core_1_1LegacyTransducer.html#a3f9099f86b32d86ba98f54e26bc75efc">autd3::core::LegacyTransducer</a>
 , <a class="el" href="classautd3_1_1core_1_1Link.html#a13299c8463be4485f8a2d7247a5cb361">autd3::core::Link</a>
+, <a class="el" href="structautd3_1_1core_1_1ModDelayConfig.html#af345f1395d7639abc8a6ffa62a4031ec">autd3::core::ModDelayConfig&lt; T, &gt;</a>
 , <a class="el" href="classautd3_1_1core_1_1Modulation.html#afa547d416a90edab92dce03b4ccf523f">autd3::core::Modulation</a>
+, <a class="el" href="structautd3_1_1core_1_1NormalPhaseTransducer.html#a3be156cab504b7f057bec3788778abce">autd3::core::NormalPhaseTransducer</a>
 , <a class="el" href="structautd3_1_1core_1_1NormalTransducer.html#ade753f4ce1474ac23382698a20c4f265">autd3::core::NormalTransducer</a>
 , <a class="el" href="structautd3_1_1core_1_1Point.html#acd71959bc33b44d018cbcac8c6d89620">autd3::core::Point</a>
 , <a class="el" href="structautd3_1_1core_1_1STM.html#a03eadc92cde00ea22180cdaea805bbb0">autd3::core::STM&lt; T, &gt;</a>
@@ -99,22 +103,22 @@ $(function() {
 , <a class="el" href="classautd3_1_1gain_1_1holo_1_1Backend.html#a30053f59f764ced4ae259be14a4755bf">autd3::gain::holo::Backend</a>
 , <a class="el" href="classautd3_1_1gain_1_1holo_1_1BLASBackend.html#a2b2d2100f2e980cf8f165f94e3e6a5b3">autd3::gain::holo::BLASBackend</a>
 , <a class="el" href="classautd3_1_1gain_1_1holo_1_1CUDABackend.html#a26fd34ee146ab934feba256ed4e56412">autd3::gain::holo::CUDABackend</a>
-, <a class="el" href="classautd3_1_1gain_1_1holo_1_1EigenBackend.html#a32d05388089aa90fb6c924b954771072">autd3::gain::holo::EigenBackend</a>
-, <a class="el" href="classautd3_1_1gain_1_1holo_1_1Holo.html#aa51543c9bf38a995ab9b76bb2af9afc7">autd3::gain::holo::Holo&lt; T, &gt;</a>
+, <a class="el" href="classautd3_1_1gain_1_1holo_1_1EigenBackend.html#a9016ede2d99e0b648e8a209d4b0cf112">autd3::gain::holo::EigenBackend</a>
+, <a class="el" href="classautd3_1_1gain_1_1holo_1_1Holo.html#a27434b15323a293330848cfc7751f3f9">autd3::gain::holo::Holo&lt; T, &gt;</a>
 , <a class="el" href="classautd3_1_1gain_1_1Null.html#ac95e3cadf685b513d1f39e83365d2349">autd3::gain::Null&lt; T, &gt;</a>
 , <a class="el" href="classautd3_1_1gain_1_1PlaneWave.html#ae58d8c5210fdb782c7fe51c026d4c409">autd3::gain::PlaneWave&lt; T, &gt;</a>
-, <a class="el" href="classautd3_1_1link_1_1Emulator.html#adbcf19b071f0d27e488bf4666d6b8fbb">autd3::link::Emulator&lt; T &gt;</a>
+, <a class="el" href="classautd3_1_1link_1_1Emulator.html#ad878846a4307952eb5d61c74e202ea71">autd3::link::Emulator&lt; T &gt;</a>
 , <a class="el" href="classautd3_1_1link_1_1RemoteTwinCAT.html#a6111efcde186acb6955c80e41e2c6aea">autd3::link::RemoteTwinCAT</a>
-, <a class="el" href="classautd3_1_1link_1_1SOEM.html#af0b7143d9544c08a786ca5bf49293745">autd3::link::SOEM</a>
-, <a class="el" href="classautd3_1_1link_1_1TwinCAT.html#a172e638a112abb22af4098ec6669247d">autd3::link::TwinCAT</a>
-, <a class="el" href="classautd3_1_1modulation_1_1RawPCM.html#adf431624d60d247b4b76ad3d590aed12">autd3::modulation::RawPCM</a>
-, <a class="el" href="classautd3_1_1modulation_1_1Sine.html#a1c768c17805d4b2717285a7b7d4d95c2">autd3::modulation::Sine</a>
-, <a class="el" href="classautd3_1_1modulation_1_1SineSquared.html#ae501af01c4ad052495fe6b5b4d34854d">autd3::modulation::SineSquared</a>
-, <a class="el" href="classautd3_1_1modulation_1_1Static.html#afe9cbff5507ee84c470ef16a8ff06243">autd3::modulation::Static</a>
+, <a class="el" href="classautd3_1_1link_1_1SOEM.html#aa54cf597bca0438e40eb1a3c665f75cb">autd3::link::SOEM</a>
+, <a class="el" href="classautd3_1_1link_1_1TwinCAT.html#a02fcc92531fe358ab1173defbbc0b526">autd3::link::TwinCAT</a>
+, <a class="el" href="classautd3_1_1modulation_1_1RawPCM.html#a8a1565fb1e08732b64e0899ea4b895f5">autd3::modulation::RawPCM</a>
+, <a class="el" href="classautd3_1_1modulation_1_1Sine.html#ad5a27104732fae06080515cd4b1d1df2">autd3::modulation::Sine</a>
+, <a class="el" href="classautd3_1_1modulation_1_1SineSquared.html#a878fe124b881451d351c1facce16056f">autd3::modulation::SineSquared</a>
+, <a class="el" href="classautd3_1_1modulation_1_1Static.html#a925df55f08de6cf8cbd694a6a8684e84">autd3::modulation::Static</a>
 , <a class="el" href="classautd3_1_1modulation_1_1Wav.html#aaed03961c6b527d567f1b71cc1de6545">autd3::modulation::Wav</a>
 </li>
 <li>operator==()
-: <a class="el" href="classautd3_1_1driver_1_1CPUControlFlags.html#ad766d716f55f69ce949a7ba476b18da4">autd3::driver::CPUControlFlags</a>
+: <a class="el" href="classautd3_1_1driver_1_1CPUControlFlags.html#af53f7da2bc7718487d6a9f26e73e3a08">autd3::driver::CPUControlFlags</a>
 , <a class="el" href="classautd3_1_1driver_1_1FPGAControlFlags.html#a3405bae7efef46d70a0056abac93220c">autd3::driver::FPGAControlFlags</a>
 </li>
 <li>operator[]()

@@ -1,6 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structautd3_1_1core_1_1DriveData.html" title="Abstract container of duty ratio and phase." alt="" coords="5,78,184,105"/>
-<area shape="rect" id="node2" href="$structautd3_1_1core_1_1DynamicDriveData.html" title="DriveData for DynamicTransducer." alt="" coords="232,5,403,47"/>
-<area shape="rect" id="node3" href="$structautd3_1_1core_1_1LegacyDriveData.html" title="DriveData for LegacyTransducer." alt="" coords="236,71,399,112"/>
-<area shape="rect" id="node4" href="$structautd3_1_1core_1_1NormalDriveData.html" title="DriveData for NormalTransducer." alt="" coords="236,136,399,177"/>
+<area shape="rect" id="node1" href="$structautd3_1_1core_1_1Device.html" title=" " alt="" coords="5,5,188,47"/>
 </map>

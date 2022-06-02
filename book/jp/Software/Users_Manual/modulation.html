@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Modulation - AUTD3 Developers Manual v2.0.3</title>
+        <title>Modulation - AUTD3 Developers Manual v2.1.0</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -106,7 +106,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">AUTD3 Developers Manual v2.0.3</h1>
+                    <h1 class="menu-title">AUTD3 Developers Manual v2.1.0</h1>
 
                     <div class="right-buttons">
                         <a href="../../print.html" title="Print this book" aria-label="Print this book">
@@ -226,6 +226,18 @@ duty比は<span class="katex"><span class="katex-html" aria-hidden="true"><span 
 </code></pre>
 <h3 id="sampling-frequency"><a class="header" href="#sampling-frequency">Sampling frequency</a></h3>
 <p><code>sampling_frequency</code>でサンプリング周波数を取得できる.</p>
+<h2 id="modulation-delay"><a class="header" href="#modulation-delay">Modulation Delay</a></h2>
+<p>Modulationはすべての振動子に同時に作用し, 伝搬遅延を考慮しない.
+そのため, 振動子と焦点位置との間の距離に応じて, 変調はずれる可能性がある.</p>
+<p>これを保証するために, 振動子毎にサンプリングするインデックスを遅らせる機能が備わっている.</p>
+<p>例えば, 以下のようにすると, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>番目のデバイスの<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">7</span></span></span></span>番目の振動子は<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>番目の振動子 (及び, 他のすべての振動子) に対して, サンプリングするインデックスが一つ遅れる.</p>
+<pre><code class="language-cpp">  autd.geometry()[0][0].mod_delay() = 0;
+  autd.geometry()[0][17].mod_delay() = 1;
+  autd.send(autd3::ModDelayConfig());
+</code></pre>
+<p>サンプリングされるインデックスに対する遅れであるため, どの程度遅れるかはModulationのサンプリング周波数に依存する.
+<code>mod_delay</code>が<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>でサンプリング周波数が<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord"><span class="mord">4</span><span class="mord">0</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">k</span><span class="mord mathrm">H</span><span class="mord mathrm">z</span></span></span></span></span></span>の場合は<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="mord">5</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord text"><span class="mord">μ</span></span><span class="mord mathrm">s</span></span></span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord"><span class="mord">4</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">k</span><span class="mord mathrm">H</span><span class="mord mathrm">z</span></span></span></span></span></span>の場合は<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="mord">5</span><span class="mord">0</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord text"><span class="mord">μ</span></span><span class="mord mathrm">s</span></span></span></span></span></span>の遅れになる.</p>
+<p>また, <code>mod_delay</code>の値は変調の長さ, すなわち, <code>buffer</code>サイズ未満でなくてはならない.</p>
 <div class="footnote-definition" id="fn_burst"><sup class="footnote-definition-label">1</sup>
 <p>SDKにはない.</p>
 </div>

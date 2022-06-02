@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>C API Reference - AUTD3 Developers Manual v2.0.3</title>
+        <title>C API Reference - AUTD3 Developers Manual v2.1.0</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -106,7 +106,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">AUTD3 Developers Manual v2.0.3</h1>
+                    <h1 class="menu-title">AUTD3 Developers Manual v2.1.0</h1>
 
                     <div class="right-buttons">
                         <a href="../../print.html" title="Print this book" aria-label="Print this book">
@@ -704,6 +704,19 @@ force fan/reads FPGA info flagを設定した後に呼び出すと, これらの
 <tr><td>gain</td><td>void*</td><td>in</td><td>pointer to Gain</td></tr>
 <tr><td>return</td><td>bool</td><td>-</td><td>true if success</td></tr>
 </tbody></table>
+<h2 id="autdsetgainstmmode-autd3capi"><a class="header" href="#autdsetgainstmmode-autd3capi">AUTDSetGainSTMMode (autd3capi)</a></h2>
+<p>GainSTMのmodeを設定する.</p>
+<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<tr><td>stm</td><td>void*</td><td>in</td><td>pointer to STM</td></tr>
+<tr><td>mode</td><td>uint16_t</td><td>in</td><td>GainSTM mode (0x0001 = PhaseDutyFull, 0x0002 = PhaseFull, 0x0004 = PhaseHalf)</td></tr>
+<tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
+</tbody></table>
+<h2 id="autdgetgainstmmode-autd3capi"><a class="header" href="#autdgetgainstmmode-autd3capi">AUTDGetGainSTMMode (autd3capi)</a></h2>
+<p>GainSTMのmodeを取得する.</p>
+<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<tr><td>stm</td><td>void*</td><td>in</td><td>pointer to STM</td></tr>
+<tr><td>return</td><td>uint16_t</td><td>-</td><td>GainSTM mode</td></tr>
+</tbody></table>
 <h2 id="autdstmsetfrequency-autd3capi"><a class="header" href="#autdstmsetfrequency-autd3capi">AUTDSTMSetFrequency (autd3capi)</a></h2>
 <p>STMのfrequencyを設定する.</p>
 <table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
@@ -789,10 +802,49 @@ force fan/reads FPGA info flagを設定した後に呼び出すと, これらの
 <tr><td>body</td><td>void*</td><td>in</td><td>pointer to body data</td></tr>
 <tr><td>return</td><td>int32_t</td><td>-</td><td>if <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> and check ack flag is true, it guarantees devices have processed data. if <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>, error ocurred.</td></tr>
 </tbody></table>
+<h2 id="autdsetmoddelay-autd3capi"><a class="header" href="#autdsetmoddelay-autd3capi">AUTDSetModDelay (autd3capi)</a></h2>
+<p>指定した振動子のModulation Delayを設定する.</p>
+<p>handleは<code>AUTDCreateController</code>で作成したものを使う.
+振動子の指定はデバイスのインデックスとローカルの振動子インデックスでおこなう.</p>
+<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
+<tr><td>device_idx</td><td>int32_t</td><td>in</td><td>device index</td></tr>
+<tr><td>local_trans_idx</td><td>int32_t</td><td>in</td><td>local transducer index</td></tr>
+<tr><td>delay</td><td>uint16_t</td><td>in</td><td>modulation delay of the transducer</td></tr>
+<tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
+</tbody></table>
+<h2 id="autdcreatemoddelayconfig-autd3capi"><a class="header" href="#autdcreatemoddelayconfig-autd3capi">AUTDCreateModDelayConfig (autd3capi)</a></h2>
+<p>ModDelayConfigを作成する.</p>
+<p>作成したSilencerConfigは最後に<code>AUTDDeleteModDelayConfig</code>で削除する必要がある.</p>
+<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<tr><td>out</td><td>void**</td><td>out</td><td>pointer to pointer to ModDelayConfig</td></tr>
+<tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
+</tbody></table>
+<h2 id="autddeletemoddelayconfig-autd3capi"><a class="header" href="#autddeletemoddelayconfig-autd3capi">AUTDDeleteModDelayConfig (autd3capi)</a></h2>
+<p>ModDelayConfigを削除する.</p>
+<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<tr><td>config</td><td>void*</td><td>in</td><td>pointer to ModDelayConfig</td></tr>
+<tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
+</tbody></table>
+<h2 id="autdcreateamplitudes-autd3capi"><a class="header" href="#autdcreateamplitudes-autd3capi">AUTDCreateAmplitudes (autd3capi)</a></h2>
+<p>Amplitudesを作成する.</p>
+<p>作成したSilencerConfigは最後に<code>AUTDDeleteAmplitudes</code>で削除する必要がある.</p>
+<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<tr><td>out</td><td>void**</td><td>out</td><td>pointer to pointer to Amplitudes</td></tr>
+<tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
+<tr><td>amp</td><td>double</td><td>in</td><td>amplitudes</td></tr>
+<tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
+</tbody></table>
+<h2 id="autddeleteamplitudes-autd3capi"><a class="header" href="#autddeleteamplitudes-autd3capi">AUTDDeleteAmplitudes (autd3capi)</a></h2>
+<p>Amplitudesを削除する.</p>
+<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<tr><td>amplitudes</td><td>void*</td><td>in</td><td>pointer to Amplitudes</td></tr>
+<tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
+</tbody></table>
 <h2 id="autdsetmode-autd3capi"><a class="header" href="#autdsetmode-autd3capi">AUTDSetMode (autd3capi)</a></h2>
 <p>Legacy/Normalモードの設定を行う.</p>
 <table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
-<tr><td>mode</td><td>int32_t</td><td>in</td><td>mode (0: Legacy mode, 1: Normal mode)</td></tr>
+<tr><td>mode</td><td>uint8_t</td><td>in</td><td>mode (0: Legacy mode, 1: Normal mode, 2: Normal Phase mode)</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
 <h2 id="autdeigenbackend-autd3capi-gain-holo"><a class="header" href="#autdeigenbackend-autd3capi-gain-holo">AUTDEigenBackend (autd3capi-gain-holo)</a></h2>
@@ -925,7 +977,7 @@ force fan/reads FPGA info flagを設定した後に呼び出すと, これらの
 <p>Normal/Legacyモードを設定する.</p>
 <p><code>AUTDSetMode</code>同じ値を設定すること.</p>
 <table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
-<tr><td>mode</td><td>int32_t</td><td>in</td><td>mode (0: Legacy mode, 1: Normal mode)</td></tr>
+<tr><td>mode</td><td>uint8_t</td><td>in</td><td>mode (0: Legacy mode, 1: Normal mode, 2: Normal Phase mode)</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
 <h2 id="autdblasbackend-autd3capi-backend-blas"><a class="header" href="#autdblasbackend-autd3capi-backend-blas">AUTDBLASBackend (autd3capi-backend-blas)</a></h2>

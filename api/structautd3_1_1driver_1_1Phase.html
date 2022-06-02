@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">autd3
-   &#160;<span id="projectnumber">2.0.2</span>
+   &#160;<span id="projectnumber">2.1.0</span>
    </div>
   </td>
  </tr>
@@ -67,6 +67,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="structautd3_1_1driver_1_1Phase-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -76,6 +77,11 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ae227813601041163d20f210ceb3590c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1driver_1_1Phase.html#ae227813601041163d20f210ceb3590c7">set</a> (const double p, const uint16_t cycle)</td></tr>
+<tr class="separator:ae227813601041163d20f210ceb3590c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a111989e1667d75ea7e7e1911439957d4"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1driver_1_1Phase.html#a111989e1667d75ea7e7e1911439957d4">phase</a></td></tr>
@@ -83,8 +89,58 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="fpga_2defined_8hpp_source.html#l00081">81</a> of file <a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>.</p>
-</div><h2 class="groupheader">Member Data Documentation</h2>
+<p class="definition">Definition at line <a class="el" href="fpga_2defined_8hpp_source.html#l00091">91</a> of file <a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae227813601041163d20f210ceb3590c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae227813601041163d20f210ceb3590c7">&#9670;&nbsp;</a></span>set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void autd3::driver::Phase::set </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t&#160;</td>
+          <td class="paramname"><em>cycle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fpga_2defined_8hpp_source.html#l00094">94</a> of file <a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="fpga_2defined_8hpp_source.html#l00092">phase</a>, and <a class="el" href="driver_2utils_8hpp_source.html#l00017">autd3::driver::rem_euclid()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="structautd3_1_1driver_1_1Phase_ae227813601041163d20f210ceb3590c7_cgraph.png" border="0" usemap="#structautd3_1_1driver_1_1Phase_ae227813601041163d20f210ceb3590c7_cgraph" alt=""/></div>
+<map name="structautd3_1_1driver_1_1Phase_ae227813601041163d20f210ceb3590c7_cgraph" id="structautd3_1_1driver_1_1Phase_ae227813601041163d20f210ceb3590c7_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,164,39"/>
+<area shape="rect" href="namespaceautd3_1_1driver.html#ac6416438d9e70a48fd2fd2c0d7f1c888" title=" " alt="" coords="212,5,332,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
 <a id="a111989e1667d75ea7e7e1911439957d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a111989e1667d75ea7e7e1911439957d4">&#9670;&nbsp;</a></span>phase</h2>
 
@@ -97,7 +153,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fpga_2defined_8hpp_source.html#l00082">82</a> of file <a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fpga_2defined_8hpp_source.html#l00092">92</a> of file <a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="fpga_2defined_8hpp_source.html#l00094">set()</a>.</p>
 
 </div>
 </div>

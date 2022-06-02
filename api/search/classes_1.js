@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['clamp_450',['Clamp',['../structautd3_1_1gain_1_1holo_1_1Clamp.html',1,'autd3::gain::holo']]],
-  ['controller_451',['Controller',['../classautd3_1_1Controller.html',1,'autd3']]],
-  ['cpucontrolflags_452',['CPUControlFlags',['../classautd3_1_1driver_1_1CPUControlFlags.html',1,'autd3::driver']]],
-  ['cudabackend_453',['CUDABackend',['../classautd3_1_1gain_1_1holo_1_1CUDABackend.html',1,'autd3::gain::holo']]]
+  ['backend_484',['Backend',['../classautd3_1_1gain_1_1holo_1_1Backend.html',1,'autd3::gain::holo']]],
+  ['besselbeam_485',['BesselBeam',['../classautd3_1_1gain_1_1BesselBeam.html',1,'autd3::gain']]],
+  ['blasbackend_486',['BLASBackend',['../classautd3_1_1gain_1_1holo_1_1BLASBackend.html',1,'autd3::gain::holo']]],
+  ['body_487',['Body',['../structautd3_1_1driver_1_1Body.html',1,'autd3::driver']]]
 ];

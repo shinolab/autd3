@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Migration Guide from v1.x - AUTD3 Developers Manual v2.0.3</title>
+        <title>Migration Guide from v1.x - AUTD3 Developers Manual v2.1.0</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -106,7 +106,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">AUTD3 Developers Manual v2.0.3</h1>
+                    <h1 class="menu-title">AUTD3 Developers Manual v2.1.0</h1>
 
                     <div class="right-buttons">
                         <a href="../../print.html" title="Print this book" aria-label="Print this book">
@@ -152,11 +152,8 @@
 <p>これらの関数は削除された.</p>
 <p>出力を止めたい場合は<code>stop</code>を呼ぶか<code>modulation::Static(0.0)</code>を送信する.
 また, 出力を再開したい場合は改めて所望のデータを送信すること.</p>
-<h3 id="delay-offset指定"><a class="header" href="#delay-offset指定">Delay, Offset指定</a></h3>
+<h3 id="duty-offset指定"><a class="header" href="#duty-offset指定">Duty Offset指定</a></h3>
 <p>これらの機能は削除された.</p>
-<h3 id="gainstmのgainmode"><a class="header" href="#gainstmのgainmode">GainSTMのGainMode</a></h3>
-<p>この機能は削除された.</p>
-<p>また, GainSTMの最大パターン数は1024に減少した.</p>
 <h3 id="transducertest-gain"><a class="header" href="#transducertest-gain">TransducerTest Gain</a></h3>
 <p>このGainは削除された.</p>
 <h3 id="lpf-modulation"><a class="header" href="#lpf-modulation">LPF Modulation</a></h3>
@@ -164,6 +161,8 @@
 <h3 id="arrayfire-backend"><a class="header" href="#arrayfire-backend">ArrayFire Backend</a></h3>
 <p>このBackendは削除された.</p>
 <h2 id="変更されたapi"><a class="header" href="#変更されたapi">変更されたAPI</a></h2>
+<h3 id="gainstm最大パターン長"><a class="header" href="#gainstm最大パターン長">GainSTM最大パターン長</a></h3>
+<p>GainSTMの最大パターン数は1024に減少した.</p>
 <h3 id="silent-mode"><a class="header" href="#silent-mode">Silent mode</a></h3>
 <p>Silent modeのフラグは削除された.</p>
 <p>代わりに, <code>SilentConfig</code>を<code>send</code>することより細かく静音化の調整ができるようになった.</p>

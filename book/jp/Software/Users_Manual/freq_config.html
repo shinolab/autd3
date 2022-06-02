@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Frequency Configuration - AUTD3 Developers Manual v2.0.3</title>
+        <title>Frequency Configuration - AUTD3 Developers Manual v2.1.0</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -106,7 +106,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">AUTD3 Developers Manual v2.0.3</h1>
+                    <h1 class="menu-title">AUTD3 Developers Manual v2.1.0</h1>
 
                     <div class="right-buttons">
                         <a href="../../print.html" title="Print this book" aria-label="Print this book">
@@ -143,21 +143,33 @@
 <h1 id="frequency-configuration"><a class="header" href="#frequency-configuration">Frequency Configuration</a></h1>
 <p>Version 2.0から, すべての振動子の周波数を個別に指定できる機能が追加された.</p>
 <p>従来の<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord"><span class="mord">4</span><span class="mord">0</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">k</span><span class="mord mathrm">H</span><span class="mord mathrm">z</span></span></span></span></span></span>固定のモードをLegacyモードと呼び, 周波数を可変にできるモードをNormalモードと呼ぶ.</p>
-<p>デフォルトはLegacyモードになっており, Normalモードを使用する場合は, <code>Controller</code>の型引数に<code>NormalTransducer</code>を渡せば良い.</p>
+<p>デフォルトの<code>Controller</code>はLegacyモード専用になっており, Normalモードを使用する場合は, <code>ControllerX</code>クラスを使用し, その型引数に<code>NormalTransducer</code>を渡せば良い.</p>
+<blockquote>
+<p>NOTE: <code>Controller</code>は<code>ControllerX&lt;LegacyTransducer&gt;</code>のエイリアスである.</p>
+</blockquote>
 <p>振動子の周波数は<code>Geometry</code>→<code>Device</code>→<code>Transducer</code>とアクセスし, <code>Transducer</code>の<code>set_frequency</code>, または, <code>set_cycle</code>関数で指定する.</p>
 <p>指定できる周波数は<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">1</span><span class="mord">6</span><span class="mord">3</span><span class="mord">.</span><span class="mord">8</span><span class="mord">4</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">M</span><span class="mord mathrm">H</span><span class="mord mathrm">z</span></span></span><span class="mord">/</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">8</span><span class="mord">1</span><span class="mord">9</span><span class="mord">1</span></span></span></span>となっている.
 <code>set_cycle</code>ではこの<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span>を指定する. 
 <code>set_frequency</code>の場合は最も近い<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span>が選ばれる.</p>
 <p>周波数, または, 周期を変更したあとに<code>synchronize</code>関数を一度呼び出す必要があることに注意する.</p>
-<pre><code class="language-cpp">  autd3::Controller&lt;autd3::NormalTransducer&gt; autd;
+<pre><code class="language-cpp">  autd3::ControllerX&lt;autd3::NormalTransducer&gt; autd;
 
   autd.geometry().add_device(autd3::Vector3::Zero(), autd3::Vector3::Zero());
 
   for (auto&amp; dev : autd.geometry())
     for (auto&amp; tr : dev) tr.set_frequency(70e3); // actual frequency is 163.84MHz/2341 ~ 69987
 </code></pre>
-<p>なお, Normalモードでは, <code>Gain</code>, <code>STM</code>などのインスタンス化の際に<code>Controller</code>と同様に型引数を指定する必要がある.</p>
+<p>なお, Normalモードでは, <code>Gain</code>, <code>STM</code>などのインスタンス化の際に<code>ControllerX</code>と同様に型引数を指定する必要がある.</p>
 <pre><code class="language-cpp">  autd3::gain::Focus&lt;autd3::NormalTransducer&gt; g(center);
+</code></pre>
+<h2 id="normalphaseモード"><a class="header" href="#normalphaseモード">NormalPhaseモード</a></h2>
+<p>Normalモードは振幅/位相データをそれぞれ1フレームで送信する必要があるため, 若干通信のレイテンシが大きい.
+実際には振幅データは頻繁に更新されることはないと思われるため, 位相データのみを送信する<code>NormalPhase</code>モードも用意されている.</p>
+<pre><code class="language-cpp">  autd3::ControllerX&lt;autd3::NormalPhaseTransducer&gt; autd;
+</code></pre>
+<p>このモードの場合, 振幅は予め<code>Amplitudes</code>クラスを送信することで制御する.</p>
+<pre><code class="language-cpp">  autd3::Amplitudes amp(autd.geometry(), 1.0);
+  autd.send(amp);
 </code></pre>
 <footer id="open-on-gh">Found a bug? <a href="https://github.com/shinolab/autd3/edit/master/book/src/jp/Software/Users_Manual/freq_config.md">Edit this file on GitHub.</a></footer>
                     </main>

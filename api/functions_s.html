@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">autd3
-   &#160;<span id="projectnumber">2.0.2</span>
+   &#160;<span id="projectnumber">2.1.0</span>
    </div>
   </td>
  </tr>
@@ -83,7 +83,7 @@ $(function() {
 : <a class="el" href="classautd3_1_1gain_1_1holo_1_1SDP.html#a9a136c9330e787dacc25e1c32424cac4">autd3::gain::holo::SDP&lt; T, &gt;</a>
 </li>
 <li>send()
-: <a class="el" href="classautd3_1_1Controller.html#af8a0fa690d074b0ece86d88a9a6c6248">autd3::Controller&lt; T &gt;</a>
+: <a class="el" href="classautd3_1_1ControllerX.html#af7b25245fb7ba8df733d179dff59608c">autd3::ControllerX&lt; T, &gt;</a>
 , <a class="el" href="classautd3_1_1core_1_1Link.html#acc50ac6604c408d8b2318ba543ef9c0f">autd3::core::Link</a>
 </li>
 <li>sent
@@ -91,7 +91,11 @@ $(function() {
 </li>
 <li>set()
 : <a class="el" href="classautd3_1_1driver_1_1CPUControlFlags.html#a0e14af47f397e23a74a4df47f082ab7f">autd3::driver::CPUControlFlags</a>
+, <a class="el" href="structautd3_1_1driver_1_1Duty.html#a567bb7f8909c447efd99318ac9eb25e8">autd3::driver::Duty</a>
 , <a class="el" href="classautd3_1_1driver_1_1FPGAControlFlags.html#a95f88a090afd2ce91e63a7714ecc4912">autd3::driver::FPGAControlFlags</a>
+, <a class="el" href="structautd3_1_1driver_1_1LegacyDrive.html#a00d62787b5bdf656bc2ab3006418cb4e">autd3::driver::LegacyDrive</a>
+, <a class="el" href="structautd3_1_1driver_1_1Phase.html#ae227813601041163d20f210ceb3590c7">autd3::driver::Phase</a>
+, <a class="el" href="structautd3_1_1driver_1_1PhaseHalf.html#a0682da8829d86b50ec3ecb9b7abb589b">autd3::driver::PhaseHalf</a>
 , <a class="el" href="classautd3_1_1gain_1_1holo_1_1Backend.html#a3c36ff2998810f69b608e2f99e5ab32a">autd3::gain::holo::Backend</a>
 , <a class="el" href="classautd3_1_1gain_1_1holo_1_1BLASBackend.html#ae44a69b0f64b5c6010bd6dc3a5aa2669">autd3::gain::holo::BLASBackend</a>
 , <a class="el" href="classautd3_1_1gain_1_1holo_1_1CUDABackend.html#a3aa2d6f78149a8d6ae3b98b81bc53ba6">autd3::gain::holo::CUDABackend</a>
@@ -105,6 +109,7 @@ $(function() {
 </li>
 <li>set_cycle()
 : <a class="el" href="structautd3_1_1core_1_1DynamicTransducer.html#a9343741b62b21d329a750ddfe8180347">autd3::core::DynamicTransducer</a>
+, <a class="el" href="structautd3_1_1core_1_1NormalPhaseTransducer.html#a0f1b0acb6fa5687921c7512506eedd58">autd3::core::NormalPhaseTransducer</a>
 , <a class="el" href="structautd3_1_1core_1_1NormalTransducer.html#aae22c83b62ed96f817618fa9f79ea8cd">autd3::core::NormalTransducer</a>
 </li>
 <li>set_drive()
@@ -112,6 +117,7 @@ $(function() {
 , <a class="el" href="structautd3_1_1core_1_1DynamicDriveData.html#a45c596d1014effc510da5351778c1b6b">autd3::core::DynamicDriveData&lt; T &gt;</a>
 , <a class="el" href="structautd3_1_1core_1_1LegacyDriveData.html#a30e9f3cca5fbde4764c3af8cff05b12a">autd3::core::LegacyDriveData&lt; T &gt;</a>
 , <a class="el" href="structautd3_1_1core_1_1NormalDriveData.html#aa5c888aaeb743e4d81e0c9668d2b6087">autd3::core::NormalDriveData&lt; T &gt;</a>
+, <a class="el" href="structautd3_1_1core_1_1NormalPhaseDriveData.html#a87a211856789ee0d06784790d54fb57f">autd3::core::NormalPhaseDriveData&lt; T &gt;</a>
 </li>
 <li>set_freq_div()
 : <a class="el" href="structautd3_1_1driver_1_1GainSTMBodyHead.html#aba26b7b68131352750910ca437a99141">autd3::driver::GainSTMBodyHead</a>
@@ -119,8 +125,12 @@ $(function() {
 </li>
 <li>set_frequency()
 : <a class="el" href="structautd3_1_1core_1_1DynamicTransducer.html#aff320962d2a2b7cec780532f9e2c7bbc">autd3::core::DynamicTransducer</a>
+, <a class="el" href="structautd3_1_1core_1_1NormalPhaseTransducer.html#a7a47738ea9b9a4a36ad3bfed6986ea71">autd3::core::NormalPhaseTransducer</a>
 , <a class="el" href="structautd3_1_1core_1_1NormalTransducer.html#a85503d6f666e41c3fb2255f69b3e8548">autd3::core::NormalTransducer</a>
 , <a class="el" href="structautd3_1_1core_1_1STM.html#a9814ae6716bad72fe68b4b22dfb1712e">autd3::core::STM&lt; T, &gt;</a>
+</li>
+<li>set_mode()
+: <a class="el" href="structautd3_1_1driver_1_1GainSTMBodyHead.html#ab13cbca2e6cdfc1f02a91e1dcb201337">autd3::driver::GainSTMBodyHead</a>
 </li>
 <li>set_point()
 : <a class="el" href="structautd3_1_1driver_1_1PointSTMBodyBody.html#a086df09d7771d4abdf1ca64d4a12227d">autd3::driver::PointSTMBodyBody</a>
@@ -152,17 +162,18 @@ $(function() {
 : <a class="el" href="structautd3_1_1SilencerConfig.html#ab61b27f786970dadd49d441303557b48">autd3::SilencerConfig</a>
 </li>
 <li>Sine()
-: <a class="el" href="classautd3_1_1modulation_1_1Sine.html#a91718a3dcfaa2964fbb7d7e0314acd4d">autd3::modulation::Sine</a>
+: <a class="el" href="classautd3_1_1modulation_1_1Sine.html#a1e4d80cf5a17a8bf1cad13d8000ba791">autd3::modulation::Sine</a>
 </li>
 <li>SineLegacy()
 : <a class="el" href="classautd3_1_1modulation_1_1SineLegacy.html#ac87155a723c4d409c9594ffb6d2119a5">autd3::modulation::SineLegacy</a>
 </li>
 <li>SineSquared()
-: <a class="el" href="classautd3_1_1modulation_1_1SineSquared.html#a7cfb4303e4b2f79558594efa91624c29">autd3::modulation::SineSquared</a>
+: <a class="el" href="classautd3_1_1modulation_1_1SineSquared.html#a9a524b3c5cd23b7aee8f6d7865730e7f">autd3::modulation::SineSquared</a>
 </li>
 <li>size()
 : <a class="el" href="structautd3_1_1core_1_1GainSTM_3_01DynamicTransducer_01_4.html#a2ba01e96dad48a0fc6a8e8889c865af8">autd3::core::GainSTM&lt; DynamicTransducer &gt;</a>
 , <a class="el" href="structautd3_1_1core_1_1GainSTM_3_01LegacyTransducer_01_4.html#ac832ed4a48d8c1865c82ffdf87086102">autd3::core::GainSTM&lt; LegacyTransducer &gt;</a>
+, <a class="el" href="structautd3_1_1core_1_1GainSTM_3_01NormalPhaseTransducer_01_4.html#af49b085527380e4d6705e1f92f0a7109">autd3::core::GainSTM&lt; NormalPhaseTransducer &gt;</a>
 , <a class="el" href="structautd3_1_1core_1_1GainSTM_3_01NormalTransducer_01_4.html#afcd345539ed4bf43287ca744ba7dd384">autd3::core::GainSTM&lt; NormalTransducer &gt;</a>
 , <a class="el" href="structautd3_1_1core_1_1PointSTM.html#af14532f3b75172558ae17669d00e93e8">autd3::core::PointSTM&lt; T, &gt;</a>
 , <a class="el" href="structautd3_1_1core_1_1STM.html#a1161fff35bcb57b80b1eaee9a2a7a081">autd3::core::STM&lt; T, &gt;</a>
@@ -194,7 +205,7 @@ $(function() {
 , <a class="el" href="classautd3_1_1gain_1_1holo_1_1EigenBackend.html#a305d8940a41536280d343f9d662d6867">autd3::gain::holo::EigenBackend</a>
 </li>
 <li>Square()
-: <a class="el" href="classautd3_1_1modulation_1_1Square.html#afcb5795432ad4d0c84b31892e942759f">autd3::modulation::Square</a>
+: <a class="el" href="classautd3_1_1modulation_1_1Square.html#a53366a4fe69291ff84c588337cc633a8">autd3::modulation::Square</a>
 </li>
 <li>Static()
 : <a class="el" href="classautd3_1_1modulation_1_1Static.html#ab5aeda28d11f7a3fff28bd46fccd881e">autd3::modulation::Static</a>
@@ -205,7 +216,7 @@ $(function() {
 , <a class="el" href="structautd3_1_1SilencerConfig.html#aef04be80271a090b5f17af87cc93fb46">autd3::SilencerConfig</a>
 </li>
 <li>STM()
-: <a class="el" href="structautd3_1_1core_1_1STM.html#a8bafe2391f6d3a36b7315fb592533caa">autd3::core::STM&lt; T, &gt;</a>
+: <a class="el" href="structautd3_1_1core_1_1STM.html#a09926873d049be8471f1905a4b825f32">autd3::core::STM&lt; T, &gt;</a>
 </li>
 <li>STM_BEGIN
 : <a class="el" href="classautd3_1_1driver_1_1CPUControlFlags.html#ad15956b7f095f547a235f2a515879664a7d5b9bd51fb6738a64c05dc4aac0f7d1">autd3::driver::CPUControlFlags</a>
@@ -226,13 +237,13 @@ $(function() {
 : <a class="el" href="structautd3_1_1driver_1_1STMFocus.html#aba5747dddad62c97f6de8ab6b7332d0e">autd3::driver::STMFocus</a>
 </li>
 <li>stop()
-: <a class="el" href="classautd3_1_1Controller.html#a0e3cf74d2309edbc7317ce22d67388e9">autd3::Controller&lt; T &gt;</a>
+: <a class="el" href="classautd3_1_1ControllerX.html#a742e8c8fc2dc93a4feb51ea7c041e27c">autd3::ControllerX&lt; T, &gt;</a>
 </li>
 <li>sync_header()
-: <a class="el" href="structautd3_1_1driver_1_1GlobalHeader.html#a00d6ec98f97727849dba6afde8628e22">autd3::driver::GlobalHeader</a>
+: <a class="el" href="structautd3_1_1driver_1_1GlobalHeader.html#adcf34282bccf4ee8f585262c2ab3e8eb">autd3::driver::GlobalHeader</a>
 </li>
 <li>synchronize()
-: <a class="el" href="classautd3_1_1Controller.html#aa88c8ecdd1dab9e2f154af88ba4d9434">autd3::Controller&lt; T &gt;</a>
+: <a class="el" href="classautd3_1_1ControllerX.html#ad8f5c96c7773ee9e53ef3fdb31728df6">autd3::ControllerX&lt; T, &gt;</a>
 </li>
 </ul>
 </div><!-- contents -->

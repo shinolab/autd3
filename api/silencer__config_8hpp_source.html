@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">autd3
-   &#160;<span id="projectnumber">2.0.2</span>
+   &#160;<span id="projectnumber">2.1.0</span>
    </div>
   </td>
  </tr>
@@ -75,10 +75,10 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Created Date: 11/05/2022</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Author: Shun Suzuki</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// -----</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// Last Modified: 21/05/2022</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// Last Modified: 30/05/2022</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Modified By: Shun Suzuki (suzuki@hapis.k.u-tokyo.ac.jp)</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// -----</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// Copyright (c) 2022 Hapis Lab. All rights reserved.</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// Copyright (c) 2022 Shun Suzuki. All rights reserved.</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#pragma once</span></div>
@@ -135,16 +135,16 @@ $(function() {
 <div class="ttc" id="astructautd3_1_1driver_1_1TxDatagram_html"><div class="ttname"><a href="structautd3_1_1driver_1_1TxDatagram.html">autd3::driver::TxDatagram</a></div><div class="ttdef"><b>Definition:</b> <a href="datagram_8hpp_source.html#l00023">datagram.hpp:23</a></div></div>
 <div class="ttc" id="astructautd3_1_1SilencerConfig_html_ab61b27f786970dadd49d441303557b48"><div class="ttname"><a href="structautd3_1_1SilencerConfig.html#ab61b27f786970dadd49d441303557b48">autd3::SilencerConfig::SilencerConfig</a></div><div class="ttdeci">SilencerConfig() noexcept</div><div class="ttdef"><b>Definition:</b> <a href="silencer__config_8hpp_source.html#l00024">silencer_config.hpp:24</a></div></div>
 <div class="ttc" id="astructautd3_1_1SilencerConfig_html_abe93af03c5382de1fbafaa5a00458de2"><div class="ttname"><a href="structautd3_1_1SilencerConfig.html#abe93af03c5382de1fbafaa5a00458de2">autd3::SilencerConfig::cycle</a></div><div class="ttdeci">uint16_t cycle</div><div class="ttdoc">Silencer sampling frequency division ratio.</div><div class="ttdef"><b>Definition:</b> <a href="silencer__config_8hpp_source.html#l00041">silencer_config.hpp:41</a></div></div>
-<div class="ttc" id="anamespaceautd3_1_1driver_html_a3a5a5cec213db26d8ffd6e9e106b3a7f"><div class="ttname"><a href="namespaceautd3_1_1driver.html#a3a5a5cec213db26d8ffd6e9e106b3a7f">autd3::driver::config_silencer</a></div><div class="ttdeci">void config_silencer(const uint8_t msg_id, const uint16_t cycle, const uint16_t step, TxDatagram &amp;tx)</div><div class="ttdef"><b>Definition:</b> <a href="operation_8hpp_source.html#l00080">operation.hpp:80</a></div></div>
+<div class="ttc" id="anamespaceautd3_1_1driver_html_a3a5a5cec213db26d8ffd6e9e106b3a7f"><div class="ttname"><a href="namespaceautd3_1_1driver.html#a3a5a5cec213db26d8ffd6e9e106b3a7f">autd3::driver::config_silencer</a></div><div class="ttdeci">void config_silencer(const uint8_t msg_id, const uint16_t cycle, const uint16_t step, TxDatagram &amp;tx)</div><div class="ttdef"><b>Definition:</b> <a href="operation_8hpp_source.html#l00091">operation.hpp:91</a></div></div>
 <div class="ttc" id="astructautd3_1_1SilencerConfig_html_a6ad6ce5001a9c62ccf776c8a6a0252fd"><div class="ttname"><a href="structautd3_1_1SilencerConfig.html#a6ad6ce5001a9c62ccf776c8a6a0252fd">autd3::SilencerConfig::none</a></div><div class="ttdeci">static SilencerConfig none() noexcept</div><div class="ttdoc">Create SilencerConfig to disable Silencer.</div><div class="ttdef"><b>Definition:</b> <a href="silencer__config_8hpp_source.html#l00030">silencer_config.hpp:30</a></div></div>
 <div class="ttc" id="astructautd3_1_1SilencerConfig_html_a2e41d374e091b1bff4ef615e950b35f8"><div class="ttname"><a href="structautd3_1_1SilencerConfig.html#a2e41d374e091b1bff4ef615e950b35f8">autd3::SilencerConfig::pack</a></div><div class="ttdeci">void pack(const uint8_t msg_id, driver::TxDatagram &amp;tx) override</div><div class="ttdef"><b>Definition:</b> <a href="silencer__config_8hpp_source.html#l00045">silencer_config.hpp:45</a></div></div>
 <div class="ttc" id="astructautd3_1_1SilencerConfig_html_aa7912b4b56646e2055eab039276959e9"><div class="ttname"><a href="structautd3_1_1SilencerConfig.html#aa7912b4b56646e2055eab039276959e9">autd3::SilencerConfig::init</a></div><div class="ttdeci">void init() override</div><div class="ttdef"><b>Definition:</b> <a href="silencer__config_8hpp_source.html#l00043">silencer_config.hpp:43</a></div></div>
 <div class="ttc" id="astructautd3_1_1SilencerConfig_html_a7f7df90a4121978ebf0cc984bc03480d"><div class="ttname"><a href="structautd3_1_1SilencerConfig.html#a7f7df90a4121978ebf0cc984bc03480d">autd3::SilencerConfig::SilencerConfig</a></div><div class="ttdeci">SilencerConfig(const uint16_t step, const uint16_t cycle) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="silencer__config_8hpp_source.html#l00025">silencer_config.hpp:25</a></div></div>
 <div class="ttc" id="ainterface_8hpp_html"><div class="ttname"><a href="interface_8hpp.html">interface.hpp</a></div></div>
 <div class="ttc" id="astructautd3_1_1SilencerConfig_html_aef04be80271a090b5f17af87cc93fb46"><div class="ttname"><a href="structautd3_1_1SilencerConfig.html#aef04be80271a090b5f17af87cc93fb46">autd3::SilencerConfig::step</a></div><div class="ttdeci">uint16_t step</div><div class="ttdoc">Silencer update step.</div><div class="ttdef"><b>Definition:</b> <a href="silencer__config_8hpp_source.html#l00036">silencer_config.hpp:36</a></div></div>
-<div class="ttc" id="anamespaceautd3_1_1driver_html_aefd8ee9798b2d78e8073b660d0bdeffd"><div class="ttname"><a href="namespaceautd3_1_1driver.html#aefd8ee9798b2d78e8073b660d0bdeffd">autd3::driver::null_header</a></div><div class="ttdeci">void null_header(const uint8_t msg_id, TxDatagram &amp;tx) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="operation_8hpp_source.html#l00026">operation.hpp:26</a></div></div>
+<div class="ttc" id="anamespaceautd3_1_1driver_html_aefd8ee9798b2d78e8073b660d0bdeffd"><div class="ttname"><a href="namespaceautd3_1_1driver.html#aefd8ee9798b2d78e8073b660d0bdeffd">autd3::driver::null_header</a></div><div class="ttdeci">void null_header(const uint8_t msg_id, TxDatagram &amp;tx) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="operation_8hpp_source.html#l00027">operation.hpp:27</a></div></div>
 <div class="ttc" id="astructautd3_1_1SilencerConfig_html"><div class="ttname"><a href="structautd3_1_1SilencerConfig.html">autd3::SilencerConfig</a></div><div class="ttdoc">Silencer Configuration.</div><div class="ttdef"><b>Definition:</b> <a href="silencer__config_8hpp_source.html#l00023">silencer_config.hpp:23</a></div></div>
-<div class="ttc" id="anamespaceautd3_html"><div class="ttname"><a href="namespaceautd3.html">autd3</a></div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00032">controller.hpp:32</a></div></div>
+<div class="ttc" id="anamespaceautd3_html"><div class="ttname"><a href="namespaceautd3.html">autd3</a></div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00035">controller.hpp:35</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

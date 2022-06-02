@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['modbody_511',['ModBody',['../structautd3_1_1driver_1_1ModBody.html',1,'autd3::driver']]],
-  ['modhead_512',['ModHead',['../structautd3_1_1driver_1_1ModHead.html',1,'autd3::driver']]],
-  ['modprops_513',['ModProps',['../structautd3_1_1core_1_1ModProps.html',1,'autd3::core']]],
-  ['modulation_514',['Modulation',['../classautd3_1_1core_1_1Modulation.html',1,'autd3::core']]]
+  ['legacydrive_550',['LegacyDrive',['../structautd3_1_1driver_1_1LegacyDrive.html',1,'autd3::driver']]],
+  ['legacydrivedata_551',['LegacyDriveData',['../structautd3_1_1core_1_1LegacyDriveData.html',1,'autd3::core']]],
+  ['legacytransducer_552',['LegacyTransducer',['../structautd3_1_1core_1_1LegacyTransducer.html',1,'autd3::core']]],
+  ['link_553',['Link',['../classautd3_1_1core_1_1Link.html',1,'autd3::core']]],
+  ['lm_554',['LM',['../classautd3_1_1gain_1_1holo_1_1LM.html',1,'autd3::gain::holo']]]
 ];

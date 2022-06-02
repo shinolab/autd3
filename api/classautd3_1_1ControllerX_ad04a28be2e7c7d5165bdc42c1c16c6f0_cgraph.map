@@ -1,0 +1,5 @@
+<map id="autd3::ControllerX::send" name="autd3::ControllerX::send">
+<area shape="rect" id="node1" title="Send header and body data to devices." alt="" coords="5,27,129,69"/>
+<area shape="rect" id="node2" href="$namespaceautd3_1_1driver.html#a84f57e8df76700c2e2e64deff6fa4dd0" title=" " alt="" coords="177,5,329,32"/>
+<area shape="rect" id="node3" href="$namespaceautd3_1_1driver.html#a9b24e12394df6f7774ba7783bfbdd5e2" title=" " alt="" coords="188,57,319,98"/>
+</map>

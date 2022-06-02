@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structautd3_1_1driver_1_1FirmwareInfo.html" title="Firmware information." alt="" coords="5,5,180,32"/>
+<area shape="rect" id="node1" href="$structautd3_1_1core_1_1Transducer.html" title=" " alt="" coords="5,5,277,47"/>
+<area shape="rect" id="node2" href="$structautd3_1_1core_1_1LegacyTransducer.html" title="Transduce with 40kHz frequency." alt="" coords="325,13,524,39"/>
 </map>

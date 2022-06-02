@@ -1,5 +1,5 @@
 <map id="autd3::driver::clear" name="autd3::driver::clear">
-<area shape="rect" id="node1" title=" " alt="" coords="175,46,301,73"/>
-<area shape="rect" id="node2" href="$classautd3_1_1Controller.html#acc35d6cf14d129417f29115f960092e1" title="Clear all data in devices." alt="" coords="5,5,127,47"/>
-<area shape="rect" id="node3" href="$classautd3_1_1Controller.html#a73d0ad386b02353dcfcbc3ff178daf1d" title="Close the controller." alt="" coords="5,71,127,112"/>
+<area shape="rect" id="node1" title=" " alt="" coords="177,46,304,73"/>
+<area shape="rect" id="node2" href="$classautd3_1_1ControllerX.html#a3d1adc5a1edd7cce3fd0636b763f23b3" title="Clear all data in devices." alt="" coords="5,5,129,47"/>
+<area shape="rect" id="node3" href="$classautd3_1_1ControllerX.html#a1b3992f155658c0b803f61d629eee5a6" title="Close the controller." alt="" coords="5,71,129,112"/>
 </map>

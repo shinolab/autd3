@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wav_554',['Wav',['../classautd3_1_1modulation_1_1Wav.html',1,'autd3::modulation']]]
+  ['uniform_604',['Uniform',['../structautd3_1_1gain_1_1holo_1_1Uniform.html',1,'autd3::gain::holo']]]
 ];

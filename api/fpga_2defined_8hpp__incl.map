@@ -1,6 +1,9 @@
 <map id="include/autd3/driver/fpga/defined.hpp" name="include/autd3/driver/fpga/defined.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="58,5,193,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,95,67,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="91,95,160,121"/>
-<area shape="rect" id="node4" title=" " alt="" coords="185,95,239,121"/>
+<area shape="rect" id="node1" title=" " alt="" coords="199,5,334,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,95,80,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="104,95,165,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="189,95,259,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="283,95,338,121"/>
+<area shape="rect" id="node6" href="$hardware_8hpp.html" title=" " alt="" coords="363,95,533,121"/>
+<area shape="rect" id="node7" href="$driver_2utils_8hpp.html" title=" " alt="" coords="558,95,701,121"/>
 </map>

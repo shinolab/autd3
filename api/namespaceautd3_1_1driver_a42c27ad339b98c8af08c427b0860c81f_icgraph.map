@@ -1,4 +1,5 @@
 <map id="autd3::driver::null_body" name="autd3::driver::null_body">
-<area shape="rect" id="node1" title=" " alt="" coords="196,13,348,39"/>
-<area shape="rect" id="node2" href="$structautd3_1_1core_1_1NullBody.html#af8caa7ff85976b248de0806a7d12a04c" title=" " alt="" coords="5,5,148,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="237,46,389,73"/>
+<area shape="rect" id="node2" href="$structautd3_1_1core_1_1ModDelayConfig.html#ad739351735a1693d1fafdb00cad4c258" title=" " alt="" coords="5,5,189,47"/>
+<area shape="rect" id="node3" href="$structautd3_1_1core_1_1NullBody.html#af8caa7ff85976b248de0806a7d12a04c" title=" " alt="" coords="26,71,169,112"/>
 </map>

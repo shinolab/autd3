@@ -1,8 +1,11 @@
 <map id="include/autd3/driver/cpu/header.hpp" name="include/autd3/driver/cpu/header.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,140,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="42,169,103,196"/>
-<area shape="rect" id="node3" href="$fpga_2defined_8hpp.html" title=" " alt="" coords="140,95,328,121"/>
-<area shape="rect" id="node6" href="$cpu_2defined_8hpp.html" title=" " alt="" coords="29,95,116,121"/>
-<area shape="rect" id="node4" title=" " alt="" coords="163,169,233,196"/>
-<area shape="rect" id="node5" title=" " alt="" coords="257,169,312,196"/>
+<area shape="rect" id="node1" title=" " alt="" coords="23,5,158,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,169,67,196"/>
+<area shape="rect" id="node3" href="$fpga_2defined_8hpp.html" title=" " alt="" coords="158,95,346,121"/>
+<area shape="rect" id="node9" href="$cpu_2defined_8hpp.html" title=" " alt="" coords="47,95,134,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="91,169,165,196"/>
+<area shape="rect" id="node5" title=" " alt="" coords="189,169,259,196"/>
+<area shape="rect" id="node6" title=" " alt="" coords="283,169,338,196"/>
+<area shape="rect" id="node7" href="$hardware_8hpp.html" title=" " alt="" coords="363,169,533,196"/>
+<area shape="rect" id="node8" href="$driver_2utils_8hpp.html" title=" " alt="" coords="558,169,701,196"/>
 </map>

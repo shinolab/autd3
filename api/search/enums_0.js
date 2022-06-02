@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['transpose_949',['TRANSPOSE',['../namespaceautd3_1_1gain_1_1holo.html#a32cadcae3cf6056b5842077371eceee1',1,'autd3::gain::holo']]]
+  ['mode_1017',['Mode',['../namespaceautd3_1_1driver.html#a33e8d32348a202e2607ee4164c51dc23',1,'autd3::driver']]]
 ];
