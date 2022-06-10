@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['legacydrive_550',['LegacyDrive',['../structautd3_1_1driver_1_1LegacyDrive.html',1,'autd3::driver']]],
-  ['legacydrivedata_551',['LegacyDriveData',['../structautd3_1_1core_1_1LegacyDriveData.html',1,'autd3::core']]],
-  ['legacytransducer_552',['LegacyTransducer',['../structautd3_1_1core_1_1LegacyTransducer.html',1,'autd3::core']]],
-  ['link_553',['Link',['../classautd3_1_1core_1_1Link.html',1,'autd3::core']]],
-  ['lm_554',['LM',['../classautd3_1_1gain_1_1holo_1_1LM.html',1,'autd3::gain::holo']]]
+  ['legacydrive_547',['LegacyDrive',['../structautd3_1_1driver_1_1LegacyDrive.html',1,'autd3::driver']]],
+  ['legacydrivedata_548',['LegacyDriveData',['../structautd3_1_1core_1_1LegacyDriveData.html',1,'autd3::core']]],
+  ['legacytransducer_549',['LegacyTransducer',['../structautd3_1_1core_1_1LegacyTransducer.html',1,'autd3::core']]],
+  ['link_550',['Link',['../classautd3_1_1core_1_1Link.html',1,'autd3::core']]],
+  ['lm_551',['LM',['../classautd3_1_1gain_1_1holo_1_1LM.html',1,'autd3::gain::holo']]],
+  ['lss_552',['LSS',['../classautd3_1_1gain_1_1holo_1_1LSS.html',1,'autd3::gain::holo']]]
 ];

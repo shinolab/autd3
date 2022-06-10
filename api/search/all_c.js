@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['naive_259',['Naive',['../classautd3_1_1gain_1_1holo_1_1Naive.html',1,'autd3::gain::holo::Naive&lt; T, &gt;'],['../classautd3_1_1gain_1_1holo_1_1Naive.html#a46c189430016098684b93bbc78f4d957',1,'autd3::gain::holo::Naive::Naive()']]],
+  ['naive_259',['Naive',['../namespaceautd3_1_1gain_1_1holo.html#a8874436a17e1b2a10cf8b09a993eb30d',1,'autd3::gain::holo']]],
   ['name_260',['name',['../structautd3_1_1link_1_1EtherCATAdapter.html#ae7300544aac560e4fabefc8ce7f3f668',1,'autd3::link::EtherCATAdapter']]],
   ['no_5ftrans_261',['NO_TRANS',['../namespaceautd3_1_1gain_1_1holo.html#a32cadcae3cf6056b5842077371eceee1aee0ebbf742916862c31d955eb5fcd3fb',1,'autd3::gain::holo']]],
-  ['none_262',['none',['../structautd3_1_1SilencerConfig.html#a6ad6ce5001a9c62ccf776c8a6a0252fd',1,'autd3::SilencerConfig::none()'],['../classautd3_1_1driver_1_1CPUControlFlags.html#ad15956b7f095f547a235f2a515879664a017ce990aad2af083489052ab0db887a',1,'autd3::driver::CPUControlFlags::NONE()'],['../classautd3_1_1driver_1_1FPGAControlFlags.html#a99017ed547678419c96f2af8819688eaae961820b0411fd24f7fd024b4373e975',1,'autd3::driver::FPGAControlFlags::NONE()']]],
+  ['none_262',['NONE',['../classautd3_1_1driver_1_1CPUControlFlags.html#ad15956b7f095f547a235f2a515879664a017ce990aad2af083489052ab0db887a',1,'autd3::driver::CPUControlFlags::NONE()'],['../classautd3_1_1driver_1_1FPGAControlFlags.html#a99017ed547678419c96f2af8819688eaae961820b0411fd24f7fd024b4373e975',1,'autd3::driver::FPGAControlFlags::NONE()'],['../structautd3_1_1SilencerConfig.html#a6ad6ce5001a9c62ccf776c8a6a0252fd',1,'autd3::SilencerConfig::none()']]],
   ['normal_263',['Normal',['../namespaceautd3_1_1core.html#ad596bd9c3d4205ede109082bf8b29c3ba960b44c579bc2f6818d2daaf9e4c16f0',1,'autd3::core']]],
   ['normal_5fduty_5fbody_264',['normal_duty_body',['../namespaceautd3_1_1driver.html#a197ea5799298c58f5c2860f46b1855ae',1,'autd3::driver']]],
   ['normal_5fheader_265',['normal_header',['../namespaceautd3_1_1driver.html#a6e4a40f1645deeff9c41b1ff20277242',1,'autd3::driver']]],

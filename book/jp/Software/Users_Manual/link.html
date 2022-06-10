@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Link - AUTD3 Developers Manual v2.1.0</title>
+        <title>Link - AUTD3 Developers Manual v2.2.0</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -106,7 +106,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">AUTD3 Developers Manual v2.1.0</h1>
+                    <h1 class="menu-title">AUTD3 Developers Manual v2.2.0</h1>
 
                     <div class="right-buttons">
                         <a href="../../print.html" title="Print this book" aria-label="Print this book">
@@ -187,9 +187,8 @@ TwinCAT XAE Shell上部メニューからTwinCAT→Show Realtime Ethernet Compat
 <p>大量のDeviceを使用しようとすると, 下の図のようなエラーが発生することがある.
 このときは, <code>settings.ini</code>内の<code>CycleTicks</code>との値を増やし, AUTDServerを再び実行する.
 <code>CycleTicks</code>の値はエラーが出ない中で, 可能な限り小さな値が望ましい.
-デフォルトは2であり, どの程度の値にすべきかは接続している台数に依存する.
-例えば, 9台の場合は4程度の値にしておけば動作するはずである.</p>
-<p><strong>また, この<code>CycleTicks</code>の値を変更した場合は, <code>TwinCAT</code>のコンストラクタにその値を入力すること.</strong></p>
+デフォルトは1であり, どの程度の値にすべきかは接続している台数に依存する.
+例えば, 9台の場合は2, 3程度の値にしておけば動作するはずである.</p>
 <figure>
   <img src="https://raw.githubusercontent.com/shinolab/autd3/master/book/src/fig/Users_Manual/tcerror.jpg"/>
   <figcaption>TwinCAT error when using 9 devices</figcaption>
@@ -253,7 +252,7 @@ Linux/macの場合は, 特に準備は必要ない.</p>
   for (auto&amp;&amp; [desc, name] : adapters) cout &lt;&lt; desc &lt;&lt; &quot;, &quot; &lt;&lt; name &lt;&lt; endl;
 </code></pre>
 <p>なお, SOEMも大量のDeviceを使用すると挙動が不安定になる時がある<sup class="footnote-reference"><a href="#fn_soem">2</a></sup>.
-このときは, <code>cycle_ticks</code>関数を仕様し, その値を増やす.</p>
+このときは, <code>cycle_ticks</code>関数を使用し, その値を増やす.</p>
 <pre><code class="language-cpp">  auto link = link::SOEM(ifname, autd.geometry().num_devices())
                 .cycle_ticks(4)
                 .build();

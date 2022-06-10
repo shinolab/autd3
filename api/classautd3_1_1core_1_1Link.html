@@ -81,10 +81,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a133db2500f26274178e95e206b888b3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classautd3_1_1core_1_1Link.html#a133db2500f26274178e95e206b888b3b">Link</a> () noexcept</td></tr>
-<tr class="separator:a133db2500f26274178e95e206b888b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae37c8ea9180151ab8d1583d36e382152"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classautd3_1_1core_1_1Link.html#ae37c8ea9180151ab8d1583d36e382152">Link</a> (const uint16_t <a class="el" href="classautd3_1_1core_1_1Link.html#ae72160425f8898dbc8dcf6b7fa9de3b1">cycle_ticks</a>) noexcept</td></tr>
-<tr class="separator:ae37c8ea9180151ab8d1583d36e382152"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cd217c96dba6390d740718895a7368c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classautd3_1_1core_1_1Link.html#a5cd217c96dba6390d740718895a7368c">Link</a> () noexcept=default</td></tr>
+<tr class="separator:a5cd217c96dba6390d740718895a7368c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a333f7d6eba130d9382ac5a36f53650d8"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classautd3_1_1core_1_1Link.html#a333f7d6eba130d9382ac5a36f53650d8">~Link</a> ()=default</td></tr>
 <tr class="separator:a333f7d6eba130d9382ac5a36f53650d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a731233da94beb94d4844e264f7180717"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classautd3_1_1core_1_1Link.html#a731233da94beb94d4844e264f7180717">Link</a> (const <a class="el" href="classautd3_1_1core_1_1Link.html">Link</a> &amp;v)=delete</td></tr>
@@ -107,8 +105,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abd2b5799a0b9bcdf8dafc5550703a593"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classautd3_1_1core_1_1Link.html#abd2b5799a0b9bcdf8dafc5550703a593">receive</a> (<a class="el" href="structautd3_1_1driver_1_1RxDatagram.html">driver::RxDatagram</a> &amp;rx)=0</td></tr>
 <tr class="memdesc:abd2b5799a0b9bcdf8dafc5550703a593"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data from devices.  <a href="classautd3_1_1core_1_1Link.html#abd2b5799a0b9bcdf8dafc5550703a593">More...</a><br /></td></tr>
 <tr class="separator:abd2b5799a0b9bcdf8dafc5550703a593"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae72160425f8898dbc8dcf6b7fa9de3b1"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classautd3_1_1core_1_1Link.html#ae72160425f8898dbc8dcf6b7fa9de3b1">cycle_ticks</a> () const noexcept</td></tr>
-<tr class="separator:ae72160425f8898dbc8dcf6b7fa9de3b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad969e4ec95ab91c2085b207045d15b43"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classautd3_1_1core_1_1Link.html#ad969e4ec95ab91c2085b207045d15b43">is_open</a> ()=0</td></tr>
 <tr class="separator:ad969e4ec95ab91c2085b207045d15b43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -117,8 +113,8 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="link_8hpp_source.html#l00024">24</a> of file <a class="el" href="link_8hpp_source.html">link.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a133db2500f26274178e95e206b888b3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a133db2500f26274178e95e206b888b3b">&#9670;&nbsp;</a></span>Link() <span class="overload">[1/4]</span></h2>
+<a id="a5cd217c96dba6390d740718895a7368c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cd217c96dba6390d740718895a7368c">&#9670;&nbsp;</a></span>Link() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -135,40 +131,10 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="link_8hpp_source.html#l00026">26</a> of file <a class="el" href="link_8hpp_source.html">link.hpp</a>.</p>
-
-</div>
-</div>
-<a id="ae37c8ea9180151ab8d1583d36e382152"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae37c8ea9180151ab8d1583d36e382152">&#9670;&nbsp;</a></span>Link() <span class="overload">[2/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">autd3::core::Link::Link </td>
-          <td>(</td>
-          <td class="paramtype">const uint16_t&#160;</td>
-          <td class="paramname"><em>cycle_ticks</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="link_8hpp_source.html#l00027">27</a> of file <a class="el" href="link_8hpp_source.html">link.hpp</a>.</p>
 
 </div>
 </div>
@@ -198,7 +164,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a731233da94beb94d4844e264f7180717"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a731233da94beb94d4844e264f7180717">&#9670;&nbsp;</a></span>Link() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a731233da94beb94d4844e264f7180717">&#9670;&nbsp;</a></span>Link() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -224,7 +190,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="af7c78c8cf0e0d3cb809128f9d9463b3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7c78c8cf0e0d3cb809128f9d9463b3c">&#9670;&nbsp;</a></span>Link() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af7c78c8cf0e0d3cb809128f9d9463b3c">&#9670;&nbsp;</a></span>Link() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -274,34 +240,6 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Close link. </p>
-
-</div>
-</div>
-<a id="ae72160425f8898dbc8dcf6b7fa9de3b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae72160425f8898dbc8dcf6b7fa9de3b1">&#9670;&nbsp;</a></span>cycle_ticks()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint16_t autd3::core::Link::cycle_ticks </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>EtherCAT SYNC0 cycle ticks. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="link_8hpp_source.html#l00059">59</a> of file <a class="el" href="link_8hpp_source.html">link.hpp</a>.</p>
 
 </div>
 </div>

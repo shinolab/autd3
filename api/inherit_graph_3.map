@@ -15,6 +15,6 @@
 <area shape="rect" id="node14" href="$classautd3_1_1gain_1_1holo_1_1GS.html" title="Gain to produce multiple focal points with GS method. Refer to Asier Marzo and Bruce W Drinkwater,..." alt="" coords="733,384,853,425"/>
 <area shape="rect" id="node15" href="$classautd3_1_1gain_1_1holo_1_1GSPAT.html" title="Gain to produce multiple focal points with GS&#45;PAT method (not yet been implemented with GPU)...." alt="" coords="733,449,853,491"/>
 <area shape="rect" id="node16" href="$classautd3_1_1gain_1_1holo_1_1LM.html" title="Gain to produce multiple focal points with Levenberg&#45;Marquardt method. Refer to K...." alt="" coords="733,515,853,556"/>
-<area shape="rect" id="node17" href="$classautd3_1_1gain_1_1holo_1_1Naive.html" title="Gain to produce multiple focal points with naive method." alt="" coords="733,580,853,621"/>
+<area shape="rect" id="node17" href="$classautd3_1_1gain_1_1holo_1_1LSS.html" title="Gain to produce multiple focal points with Linear Synthesis Scheme." alt="" coords="733,580,853,621"/>
 <area shape="rect" id="node18" href="$classautd3_1_1gain_1_1holo_1_1SDP.html" title="Gain to produce multiple focal points with SDP method. Refer to Inoue, Seki, Yasutoshi Makino,..." alt="" coords="733,645,853,687"/>
 </map>

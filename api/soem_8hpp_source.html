@@ -75,7 +75,7 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Created Date: 16/05/2022</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Author: Shun Suzuki</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// -----</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// Last Modified: 30/05/2022</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// Last Modified: 10/06/2022</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Modified By: Shun Suzuki (suzuki@hapis.k.u-tokyo.ac.jp)</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// -----</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// Copyright (c) 2022 Shun Suzuki. All rights reserved.</span></div>
@@ -126,7 +126,7 @@ $(function() {
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">   * Geometry::num_devices().</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">   */</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classautd3_1_1link_1_1SOEM.html#a03c189815d9e43de1595295ccb761247">   56</a></span>&#160;  <a class="code" href="classautd3_1_1link_1_1SOEM.html#a03c189815d9e43de1595295ccb761247">SOEM</a>(std::string ifname, <span class="keyword">const</span> <span class="keywordtype">size_t</span> device_num)</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      : _high_precision(false), _ifname(std::move(ifname)), _device_num(device_num), _cycle_ticks(2), _callback(nullptr) {}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      : _high_precision(false), _ifname(std::move(ifname)), _device_num(device_num), _cycle_ticks(1), _callback(nullptr) {}</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment"></span> </div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">  /**</span></div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">   * @brief Set callback function which is called when the link is lost</span></div>
@@ -176,7 +176,7 @@ $(function() {
 <div class="ttc" id="aclassautd3_1_1link_1_1SOEM_html_af0b7143d9544c08a786ca5bf49293745"><div class="ttname"><a href="classautd3_1_1link_1_1SOEM.html#af0b7143d9544c08a786ca5bf49293745">autd3::link::SOEM::operator=</a></div><div class="ttdeci">SOEM &amp; operator=(const SOEM &amp;obj)=delete</div></div>
 <div class="ttc" id="astructautd3_1_1link_1_1EtherCATAdapter_html"><div class="ttname"><a href="structautd3_1_1link_1_1EtherCATAdapter.html">autd3::link::EtherCATAdapter</a></div><div class="ttdoc">EtherCAT adapter information for SOEM.</div><div class="ttdef"><b>Definition:</b> <a href="soem_8hpp_source.html#l00027">soem.hpp:27</a></div></div>
 <div class="ttc" id="aclassautd3_1_1link_1_1SOEM_html_a03c189815d9e43de1595295ccb761247"><div class="ttname"><a href="classautd3_1_1link_1_1SOEM.html#a03c189815d9e43de1595295ccb761247">autd3::link::SOEM::SOEM</a></div><div class="ttdeci">SOEM(std::string ifname, const size_t device_num)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="soem_8hpp_source.html#l00056">soem.hpp:56</a></div></div>
-<div class="ttc" id="anamespaceautd3_1_1core_html_aeb7a471c6532b5c4888a461d378c6ae0"><div class="ttname"><a href="namespaceautd3_1_1core.html#aeb7a471c6532b5c4888a461d378c6ae0">autd3::core::LinkPtr</a></div><div class="ttdeci">std::unique_ptr&lt; Link &gt; LinkPtr</div><div class="ttdef"><b>Definition:</b> <a href="link_8hpp_source.html#l00070">link.hpp:70</a></div></div>
+<div class="ttc" id="anamespaceautd3_1_1core_html_aeb7a471c6532b5c4888a461d378c6ae0"><div class="ttname"><a href="namespaceautd3_1_1core.html#aeb7a471c6532b5c4888a461d378c6ae0">autd3::core::LinkPtr</a></div><div class="ttdeci">std::unique_ptr&lt; Link &gt; LinkPtr</div><div class="ttdef"><b>Definition:</b> <a href="link_8hpp_source.html#l00061">link.hpp:61</a></div></div>
 <div class="ttc" id="alink_8hpp_html"><div class="ttname"><a href="link_8hpp.html">link.hpp</a></div></div>
 <div class="ttc" id="astructautd3_1_1link_1_1EtherCATAdapter_html_a08d349391f523686b0d06f52e7f5b3d3"><div class="ttname"><a href="structautd3_1_1link_1_1EtherCATAdapter.html#a08d349391f523686b0d06f52e7f5b3d3">autd3::link::EtherCATAdapter::desc</a></div><div class="ttdeci">std::string desc</div><div class="ttdef"><b>Definition:</b> <a href="soem_8hpp_source.html#l00030">soem.hpp:30</a></div></div>
 <div class="ttc" id="aclassautd3_1_1link_1_1SOEM_html_a1aa285d9c8c1364c46c8060c6b5a85f5"><div class="ttname"><a href="classautd3_1_1link_1_1SOEM.html#a1aa285d9c8c1364c46c8060c6b5a85f5">autd3::link::SOEM::SOEM</a></div><div class="ttdeci">SOEM(SOEM &amp;&amp;obj)=delete</div></div>

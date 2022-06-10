@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>AUTD3 Developers Manual v2.1.0</title>
+        <title>AUTD3 Developers Manual v2.2.0</title>
         <meta name="robots" content="noindex" />
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -107,7 +107,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">AUTD3 Developers Manual v2.1.0</h1>
+                    <h1 class="menu-title">AUTD3 Developers Manual v2.2.0</h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -546,9 +546,8 @@ TwinCAT XAE Shell上部メニューからTwinCAT→Show Realtime Ethernet Compat
 <p>大量のDeviceを使用しようとすると, 下の図のようなエラーが発生することがある.
 このときは, <code>settings.ini</code>内の<code>CycleTicks</code>との値を増やし, AUTDServerを再び実行する.
 <code>CycleTicks</code>の値はエラーが出ない中で, 可能な限り小さな値が望ましい.
-デフォルトは2であり, どの程度の値にすべきかは接続している台数に依存する.
-例えば, 9台の場合は4程度の値にしておけば動作するはずである.</p>
-<p><strong>また, この<code>CycleTicks</code>の値を変更した場合は, <code>TwinCAT</code>のコンストラクタにその値を入力すること.</strong></p>
+デフォルトは1であり, どの程度の値にすべきかは接続している台数に依存する.
+例えば, 9台の場合は2, 3程度の値にしておけば動作するはずである.</p>
 <figure>
   <img src="https://raw.githubusercontent.com/shinolab/autd3/master/book/src/fig/Users_Manual/tcerror.jpg"/>
   <figcaption>TwinCAT error when using 9 devices</figcaption>
@@ -612,7 +611,7 @@ Linux/macの場合は, 特に準備は必要ない.</p>
   for (auto&amp;&amp; [desc, name] : adapters) cout &lt;&lt; desc &lt;&lt; &quot;, &quot; &lt;&lt; name &lt;&lt; endl;
 </code></pre>
 <p>なお, SOEMも大量のDeviceを使用すると挙動が不安定になる時がある<sup class="footnote-reference"><a href="#fn_soem">2</a></sup>.
-このときは, <code>cycle_ticks</code>関数を仕様し, その値を増やす.</p>
+このときは, <code>cycle_ticks</code>関数を使用し, その値を増やす.</p>
 <pre><code class="language-cpp">  auto link = link::SOEM(ifname, autd.geometry().num_devices())
                 .cycle_ticks(4)
                 .build();
@@ -1407,14 +1406,14 @@ if __name__ == '__main__':
 <h2 id="installation-2"><a class="header" href="#installation-2">Installation</a></h2>
 <p><a href="https://crates.io/crates/autd3">crate.io</a>で公開しているので, <code>Cargo.toml</code>にて以下のようにすれば良い.</p>
 <pre><code>[dependencies]
-autd3 = &quot;2.1.0&quot;
+autd3 = &quot;2.2.0&quot;
 </code></pre>
 <p>また, 各種Link, Gain等は別crateとして公開しているので必要に応じてdependenciesに追加すること.</p>
 <pre><code>[dependencies]
-autd3-link-soem = &quot;2.1.0&quot;
-autd3-link-twincat = &quot;2.1.0&quot;
-autd3-link-emulator = &quot;2.1.0&quot;
-autd3-gain-holo = &quot;2.1.0&quot;
+autd3-link-soem = &quot;2.2.0&quot;
+autd3-link-twincat = &quot;2.2.0&quot;
+autd3-link-emulator = &quot;2.2.0&quot;
+autd3-gain-holo = &quot;2.2.0&quot;
 </code></pre>
 <h2 id="usage-2"><a class="header" href="#usage-2">Usage</a></h2>
 <p>基本的には, C++版と同じになるように設計している.</p>
@@ -1457,7 +1456,7 @@ fn main() {
 
     let ifname = get_adapter();
     let config = Config {
-        cycle_ticks: 2,
+        cycle_ticks: 1,
         high_precision_timer: true,
     };
     let link = SOEM::new(&amp;ifname, geometry.num_devices() as u16, config, |msg| {
@@ -2129,31 +2128,7 @@ force fan/reads FPGA info flagを設定した後に呼び出すと, これらの
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>return</td><td>int32_t</td><td>-</td><td>if <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> and check ack flag is true, it guarantees devices have processed data. if <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>, error ocurred.</td></tr>
 </tbody></table>
-<h2 id="autdsendheader-autd3capi"><a class="header" href="#autdsendheader-autd3capi">AUTDSendHeader (autd3capi)</a></h2>
-<p>ヘッダーデータを送信する.</p>
-<p>send functionの一つ. </p>
-<p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
-<p>この関数はエラーが発生した場合に0未満の値を返す.
-エラーが生じた場合には<code>AUTDGetLastError</code>でエラーメッセージを取得できる.
-また, check ackフラグがtrue, かつ, 返り値が0より大きい場合は, データが実際のデバイスで処理されたことを保証する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
-<tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
-<tr><td>header</td><td>void*</td><td>in</td><td>pointer to header data</td></tr>
-<tr><td>return</td><td>int32_t</td><td>-</td><td>if <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> and check ack flag is true, it guarantees devices have processed data. if <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>, error ocurred.</td></tr>
-</tbody></table>
-<h2 id="autdsendbody-autd3capi"><a class="header" href="#autdsendbody-autd3capi">AUTDSendBody (autd3capi)</a></h2>
-<p>ボディーデータを送信する.</p>
-<p>send functionの一つ. </p>
-<p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
-<p>この関数はエラーが発生した場合に0未満の値を返す.
-エラーが生じた場合には<code>AUTDGetLastError</code>でエラーメッセージを取得できる.
-また, check ackフラグがtrue, かつ, 返り値が0より大きい場合は, データが実際のデバイスで処理されたことを保証する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
-<tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
-<tr><td>body</td><td>void*</td><td>in</td><td>pointer to body data</td></tr>
-<tr><td>return</td><td>int32_t</td><td>-</td><td>if <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> and check ack flag is true, it guarantees devices have processed data. if <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>, error ocurred.</td></tr>
-</tbody></table>
-<h2 id="autdsendheaderbody-autd3capi"><a class="header" href="#autdsendheaderbody-autd3capi">AUTDSendHeaderBody (autd3capi)</a></h2>
+<h2 id="autdsend-autd3capi"><a class="header" href="#autdsend-autd3capi">AUTDSend (autd3capi)</a></h2>
 <p>ヘッダーデータとボディーデータを送信する.</p>
 <p>send functionの一つ. </p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
@@ -2373,7 +2348,6 @@ force fan/reads FPGA info flagを設定した後に呼び出すと, これらの
 <tr><td>remote_ip_addr</td><td>char*</td><td>in</td><td>remote ip address</td></tr>
 <tr><td>remote_ams_net_id</td><td>char*</td><td>in</td><td>remote ams net id</td></tr>
 <tr><td>local_ams_net_id</td><td>char*</td><td>in</td><td>local ams net id</td></tr>
-<tr><td>cycle_ticks</td><td>uint16_t</td><td>in</td><td>cycle ticks</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
 <h2 id="autdgetadapterpointer-autd3capi-link-soem"><a class="header" href="#autdgetadapterpointer-autd3capi-link-soem">AUTDGetAdapterPointer (autd3capi-link-soem)</a></h2>
@@ -2416,7 +2390,6 @@ force fan/reads FPGA info flagを設定した後に呼び出すと, これらの
 <p>TwinCAT linkを作成する.</p>
 <table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>out</td><td>void**</td><td>out</td><td>pointer to pointer to TwinCAT link</td></tr>
-<tr><td>cycle_ticks</td><td>uint16_t</td><td>in</td><td>cycle ticks</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
 <h2 id="autdmodulationrawpcm-autd3capi-modulation-audio-file"><a class="header" href="#autdmodulationrawpcm-autd3capi-modulation-audio-file">AUTDModulationRawPCM (autd3capi-modulation-audio-file)</a></h2>
@@ -2504,6 +2477,7 @@ STMは自動的に切り替わったりしない, 代わりにSTM idxで何番�
 <tr><td style="text-align: left">2022/5/24</td><td style="text-align: left">Version 2.0.2 初版</td></tr>
 <tr><td style="text-align: left">2022/5/25</td><td style="text-align: left">Version 2.0.3 初版</td></tr>
 <tr><td style="text-align: left">2022/6/2</td><td style="text-align: left">Version 2.1.0 初版</td></tr>
+<tr><td style="text-align: left">2022/6/10</td><td style="text-align: left">Version 2.2.0 初版</td></tr>
 </tbody></table>
 <footer id="open-on-gh">Found a bug? <a href="https://github.com/shinolab/autd3/edit/master/book/src/jp/document_history.md">Edit this file on GitHub.</a></footer><div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="release-notes"><a class="header" href="#release-notes">Release Notes</a></h1>
@@ -2513,6 +2487,7 @@ STMは自動的に切り替わったりしない, 代わりにSTM idxで何番�
 <tr><td style="text-align: left">2022/5/24</td><td style="text-align: left">2.0.2</td></tr>
 <tr><td style="text-align: left">2022/5/25</td><td style="text-align: left">2.0.3</td></tr>
 <tr><td style="text-align: left">2022/6/2</td><td style="text-align: left">2.1.0</td></tr>
+<tr><td style="text-align: left">2022/6/10</td><td style="text-align: left">2.2.0</td></tr>
 </tbody></table>
 <footer id="open-on-gh">Found a bug? <a href="https://github.com/shinolab/autd3/edit/master/book/src/jp/release_notes.md">Edit this file on GitHub.</a></footer><div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="citation"><a class="header" href="#citation">Citation</a></h1>

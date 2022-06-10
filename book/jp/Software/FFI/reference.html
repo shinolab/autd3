@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>C API Reference - AUTD3 Developers Manual v2.1.0</title>
+        <title>C API Reference - AUTD3 Developers Manual v2.2.0</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -106,7 +106,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">AUTD3 Developers Manual v2.1.0</h1>
+                    <h1 class="menu-title">AUTD3 Developers Manual v2.2.0</h1>
 
                     <div class="right-buttons">
                         <a href="../../print.html" title="Print this book" aria-label="Print this book">
@@ -765,31 +765,7 @@ force fan/reads FPGA info flagを設定した後に呼び出すと, これらの
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>return</td><td>int32_t</td><td>-</td><td>if <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> and check ack flag is true, it guarantees devices have processed data. if <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>, error ocurred.</td></tr>
 </tbody></table>
-<h2 id="autdsendheader-autd3capi"><a class="header" href="#autdsendheader-autd3capi">AUTDSendHeader (autd3capi)</a></h2>
-<p>ヘッダーデータを送信する.</p>
-<p>send functionの一つ. </p>
-<p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
-<p>この関数はエラーが発生した場合に0未満の値を返す.
-エラーが生じた場合には<code>AUTDGetLastError</code>でエラーメッセージを取得できる.
-また, check ackフラグがtrue, かつ, 返り値が0より大きい場合は, データが実際のデバイスで処理されたことを保証する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
-<tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
-<tr><td>header</td><td>void*</td><td>in</td><td>pointer to header data</td></tr>
-<tr><td>return</td><td>int32_t</td><td>-</td><td>if <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> and check ack flag is true, it guarantees devices have processed data. if <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>, error ocurred.</td></tr>
-</tbody></table>
-<h2 id="autdsendbody-autd3capi"><a class="header" href="#autdsendbody-autd3capi">AUTDSendBody (autd3capi)</a></h2>
-<p>ボディーデータを送信する.</p>
-<p>send functionの一つ. </p>
-<p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
-<p>この関数はエラーが発生した場合に0未満の値を返す.
-エラーが生じた場合には<code>AUTDGetLastError</code>でエラーメッセージを取得できる.
-また, check ackフラグがtrue, かつ, 返り値が0より大きい場合は, データが実際のデバイスで処理されたことを保証する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
-<tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
-<tr><td>body</td><td>void*</td><td>in</td><td>pointer to body data</td></tr>
-<tr><td>return</td><td>int32_t</td><td>-</td><td>if <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> and check ack flag is true, it guarantees devices have processed data. if <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>, error ocurred.</td></tr>
-</tbody></table>
-<h2 id="autdsendheaderbody-autd3capi"><a class="header" href="#autdsendheaderbody-autd3capi">AUTDSendHeaderBody (autd3capi)</a></h2>
+<h2 id="autdsend-autd3capi"><a class="header" href="#autdsend-autd3capi">AUTDSend (autd3capi)</a></h2>
 <p>ヘッダーデータとボディーデータを送信する.</p>
 <p>send functionの一つ. </p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
@@ -1009,7 +985,6 @@ force fan/reads FPGA info flagを設定した後に呼び出すと, これらの
 <tr><td>remote_ip_addr</td><td>char*</td><td>in</td><td>remote ip address</td></tr>
 <tr><td>remote_ams_net_id</td><td>char*</td><td>in</td><td>remote ams net id</td></tr>
 <tr><td>local_ams_net_id</td><td>char*</td><td>in</td><td>local ams net id</td></tr>
-<tr><td>cycle_ticks</td><td>uint16_t</td><td>in</td><td>cycle ticks</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
 <h2 id="autdgetadapterpointer-autd3capi-link-soem"><a class="header" href="#autdgetadapterpointer-autd3capi-link-soem">AUTDGetAdapterPointer (autd3capi-link-soem)</a></h2>
@@ -1052,7 +1027,6 @@ force fan/reads FPGA info flagを設定した後に呼び出すと, これらの
 <p>TwinCAT linkを作成する.</p>
 <table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>out</td><td>void**</td><td>out</td><td>pointer to pointer to TwinCAT link</td></tr>
-<tr><td>cycle_ticks</td><td>uint16_t</td><td>in</td><td>cycle ticks</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
 <h2 id="autdmodulationrawpcm-autd3capi-modulation-audio-file"><a class="header" href="#autdmodulationrawpcm-autd3capi-modulation-audio-file">AUTDModulationRawPCM (autd3capi-modulation-audio-file)</a></h2>

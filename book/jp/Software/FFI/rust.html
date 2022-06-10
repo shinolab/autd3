@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Rust - AUTD3 Developers Manual v2.1.0</title>
+        <title>Rust - AUTD3 Developers Manual v2.2.0</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -106,7 +106,7 @@
                         </button>
                     </div>
 
-                    <h1 class="menu-title">AUTD3 Developers Manual v2.1.0</h1>
+                    <h1 class="menu-title">AUTD3 Developers Manual v2.2.0</h1>
 
                     <div class="right-buttons">
                         <a href="../../print.html" title="Print this book" aria-label="Print this book">
@@ -147,14 +147,14 @@
 <h2 id="installation"><a class="header" href="#installation">Installation</a></h2>
 <p><a href="https://crates.io/crates/autd3">crate.io</a>で公開しているので, <code>Cargo.toml</code>にて以下のようにすれば良い.</p>
 <pre><code>[dependencies]
-autd3 = &quot;2.1.0&quot;
+autd3 = &quot;2.2.0&quot;
 </code></pre>
 <p>また, 各種Link, Gain等は別crateとして公開しているので必要に応じてdependenciesに追加すること.</p>
 <pre><code>[dependencies]
-autd3-link-soem = &quot;2.1.0&quot;
-autd3-link-twincat = &quot;2.1.0&quot;
-autd3-link-emulator = &quot;2.1.0&quot;
-autd3-gain-holo = &quot;2.1.0&quot;
+autd3-link-soem = &quot;2.2.0&quot;
+autd3-link-twincat = &quot;2.2.0&quot;
+autd3-link-emulator = &quot;2.2.0&quot;
+autd3-gain-holo = &quot;2.2.0&quot;
 </code></pre>
 <h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
 <p>基本的には, C++版と同じになるように設計している.</p>
@@ -197,7 +197,7 @@ fn main() {
 
     let ifname = get_adapter();
     let config = Config {
-        cycle_ticks: 2,
+        cycle_ticks: 1,
         high_precision_timer: true,
     };
     let link = SOEM::new(&amp;ifname, geometry.num_devices() as u16, config, |msg| {

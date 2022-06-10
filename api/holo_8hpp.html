@@ -145,8 +145,8 @@ perception produced by airborne ultrasonic haptic hologram." 2015 IEEE World Hap
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gain to produce multiple focal points with <a class="el" href="classautd3_1_1gain_1_1holo_1_1EVD.html" title="Gain to produce multiple focal points with EVD method. Refer to Long, Benjamin, et al....">EVD</a> method. Refer to Long, Benjamin, et al. "Rendering volumetric haptic shapes in mid-air
 using ultrasound." ACM Transactions on Graphics (TOG) 33.6 (2014): 1-10.  <a href="classautd3_1_1gain_1_1holo_1_1EVD.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classautd3_1_1gain_1_1holo_1_1Naive.html">autd3::gain::holo::Naive&lt; T, &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gain to produce multiple focal points with naive method.  <a href="classautd3_1_1gain_1_1holo_1_1Naive.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classautd3_1_1gain_1_1holo_1_1LSS.html">autd3::gain::holo::LSS&lt; T, &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gain to produce multiple focal points with Linear Synthesis Scheme.  <a href="classautd3_1_1gain_1_1holo_1_1LSS.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classautd3_1_1gain_1_1holo_1_1GS.html">autd3::gain::holo::GS&lt; T, &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gain to produce multiple focal points with <a class="el" href="classautd3_1_1gain_1_1holo_1_1GS.html" title="Gain to produce multiple focal points with GS method. Refer to Asier Marzo and Bruce W Drinkwater,...">GS</a> method. Refer to Asier Marzo and Bruce W Drinkwater, "Holographic acoustic
@@ -183,6 +183,10 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a20e19cfdef0f5bdd08ca97b6f7d25ccf"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceautd3_1_1gain_1_1holo.html#a20e19cfdef0f5bdd08ca97b6f7d25ccf">autd3::gain::holo::AmplitudeConstraint</a> = std::variant&lt; DontCare, Normalize, Uniform, Clamp &gt;</td></tr>
 <tr class="memdesc:a20e19cfdef0f5bdd08ca97b6f7d25ccf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Amplitude constraint.  <a href="namespaceautd3_1_1gain_1_1holo.html#a20e19cfdef0f5bdd08ca97b6f7d25ccf">More...</a><br /></td></tr>
 <tr class="separator:a20e19cfdef0f5bdd08ca97b6f7d25ccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8874436a17e1b2a10cf8b09a993eb30d"><td class="memTemplParams" colspan="2">template&lt;typename T  = core::LegacyTransducer, std::enable_if_t&lt; std::is_base_of_v&lt; core::Transducer&lt; typename T::D &gt;, T &gt;, nullptr_t &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a8874436a17e1b2a10cf8b09a993eb30d"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceautd3_1_1gain_1_1holo.html#a8874436a17e1b2a10cf8b09a993eb30d">autd3::gain::holo::Naive</a> = LSS&lt; T &gt;</td></tr>
+<tr class="memdesc:a8874436a17e1b2a10cf8b09a993eb30d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias of <a class="el" href="classautd3_1_1gain_1_1holo_1_1LSS.html" title="Gain to produce multiple focal points with Linear Synthesis Scheme.">LSS</a>.  <a href="namespaceautd3_1_1gain_1_1holo.html#a8874436a17e1b2a10cf8b09a993eb30d">More...</a><br /></td></tr>
+<tr class="separator:a8874436a17e1b2a10cf8b09a993eb30d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
