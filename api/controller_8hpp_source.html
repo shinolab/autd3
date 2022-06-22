@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">autd3
-   &#160;<span id="projectnumber">2.1.0</span>
+   &#160;<span id="projectnumber">2.1.1</span>
    </div>
   </td>
  </tr>
@@ -75,7 +75,7 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Created Date: 10/05/2022</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Author: Shun Suzuki</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// -----</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// Last Modified: 10/06/2022</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// Last Modified: 22/06/2022</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Modified By: Shun Suzuki (suzuki@hapis.k.u-tokyo.ac.jp)</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// -----</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// Copyright (c) 2022 Shun Suzuki. All rights reserved.</span></div>
@@ -112,361 +112,333 @@ $(function() {
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, std::enable_if_t&lt;std::is_base_of_v&lt;core::Transducer&lt;<span class="keyword">typename</span> T::D&gt;, T&gt;, <span class="keywordtype">nullptr</span>_t&gt; = <span class="keywordtype">nullptr</span>&gt;</div>
 <div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html">   41</a></span>&#160;<span class="keyword">class </span><a class="code" href="classautd3_1_1ControllerX.html">ControllerX</a> {</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a8e7740319bb3c2533d7a95108cf1b818">   43</a></span>&#160;  <a class="code" href="classautd3_1_1ControllerX.html#a8e7740319bb3c2533d7a95108cf1b818">ControllerX</a>()</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      : <a class="code" href="classautd3_1_1ControllerX.html#a8dcfc89141c2ee38ac3a4ec52c77fcf1">force_fan</a>(false), <a class="code" href="classautd3_1_1ControllerX.html#a2ef03711a07566deb3a1749bc24eb090">reads_fpga_info</a>(false), <a class="code" href="classautd3_1_1ControllerX.html#a1be079bcd0e774b92ce4073f8a31b32f">check_ack</a>(false), _geometry(), _tx_buf(0), _rx_buf(0), _link(nullptr), _check_ack(false) {}</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">  /**</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">   * @brief Geometry of the devices</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a13363e1d9c00d8dcae6111393b6a2a69">   49</a></span>&#160;  <a class="code" href="structautd3_1_1core_1_1Geometry.html">core::Geometry&lt;T&gt;</a>&amp; <a class="code" href="classautd3_1_1ControllerX.html#a13363e1d9c00d8dcae6111393b6a2a69">geometry</a>() noexcept { <span class="keywordflow">return</span> _geometry; }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">  /**</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">   * @brief Geometry of the devices</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#ac9ee63e22fd6e4cf633794f99b95954d">   54</a></span>&#160;  [[nodiscard]] <span class="keyword">const</span> <a class="code" href="structautd3_1_1core_1_1Geometry.html">core::Geometry&lt;T&gt;</a>&amp; <a class="code" href="classautd3_1_1ControllerX.html#ac9ee63e22fd6e4cf633794f99b95954d">geometry</a>() const noexcept { <span class="keywordflow">return</span> _geometry; }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#ab0ca546ae05e1c076c3eecac68054987">   56</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classautd3_1_1ControllerX.html#ab0ca546ae05e1c076c3eecac68054987">open</a>(<a class="code" href="namespaceautd3_1_1core.html#aeb7a471c6532b5c4888a461d378c6ae0">core::LinkPtr</a> link) {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    _tx_buf = <a class="code" href="structautd3_1_1driver_1_1TxDatagram.html">driver::TxDatagram</a>(_geometry.<a class="code" href="structautd3_1_1core_1_1Geometry.html#a3991eb7d3e038be0f2a412f3f62b7750">num_devices</a>());</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    _rx_buf = <a class="code" href="structautd3_1_1driver_1_1RxDatagram.html">driver::RxDatagram</a>(_geometry.<a class="code" href="structautd3_1_1core_1_1Geometry.html#a3991eb7d3e038be0f2a412f3f62b7750">num_devices</a>());</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    _link = std::move(link);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">if</span> (_link != <span class="keyword">nullptr</span>) _link-&gt;open();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classautd3_1_1ControllerX.html#a89611677198a0a7b51cfc206a23cd467">is_open</a>();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">  /**</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">   * @brief Verify the device is properly connected</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a89611677198a0a7b51cfc206a23cd467">   68</a></span>&#160;  [[nodiscard]] <span class="keywordtype">bool</span> <a class="code" href="classautd3_1_1ControllerX.html#a89611677198a0a7b51cfc206a23cd467">is_open</a>() const noexcept { <span class="keywordflow">return</span> (_link != <span class="keyword">nullptr</span>) &amp;&amp; _link-&gt;is_open(); }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">  /**</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">   * @brief Synchronize devices</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">   * \return if this function returns true and check_ack is true, it guarantees that the devices have processed the data.</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#ad8f5c96c7773ee9e53ef3fdb31728df6">   74</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classautd3_1_1ControllerX.html#ad8f5c96c7773ee9e53ef3fdb31728df6">synchronize</a>() {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    push_ack();</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a8e7740319bb3c2533d7a95108cf1b818">   43</a></span>&#160;  <a class="code" href="classautd3_1_1ControllerX.html#a8e7740319bb3c2533d7a95108cf1b818">ControllerX</a>() : <a class="code" href="classautd3_1_1ControllerX.html#a8dcfc89141c2ee38ac3a4ec52c77fcf1">force_fan</a>(false), <a class="code" href="classautd3_1_1ControllerX.html#a2ef03711a07566deb3a1749bc24eb090">reads_fpga_info</a>(false), <a class="code" href="classautd3_1_1ControllerX.html#a2b09da34c467506a678d1965d3bb649c">check_trials</a>(0), <a class="code" href="classautd3_1_1ControllerX.html#aa0fba26d3d6cd047fe7f9eb4ab47f59d">send_interval</a>(1), _geometry(), _tx_buf(0), _rx_buf(0), _link(nullptr) {}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">  /**</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">   * @brief Geometry of the devices</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a13363e1d9c00d8dcae6111393b6a2a69">   48</a></span>&#160;  <a class="code" href="structautd3_1_1core_1_1Geometry.html">core::Geometry&lt;T&gt;</a>&amp; <a class="code" href="classautd3_1_1ControllerX.html#a13363e1d9c00d8dcae6111393b6a2a69">geometry</a>() noexcept { <span class="keywordflow">return</span> _geometry; }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">  /**</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">   * @brief Geometry of the devices</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#ac9ee63e22fd6e4cf633794f99b95954d">   53</a></span>&#160;  [[nodiscard]] <span class="keyword">const</span> <a class="code" href="structautd3_1_1core_1_1Geometry.html">core::Geometry&lt;T&gt;</a>&amp; <a class="code" href="classautd3_1_1ControllerX.html#ac9ee63e22fd6e4cf633794f99b95954d">geometry</a>() const noexcept { <span class="keywordflow">return</span> _geometry; }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#ab0ca546ae05e1c076c3eecac68054987">   55</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classautd3_1_1ControllerX.html#ab0ca546ae05e1c076c3eecac68054987">open</a>(<a class="code" href="namespaceautd3_1_1core.html#aeb7a471c6532b5c4888a461d378c6ae0">core::LinkPtr</a> link) {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    _tx_buf = <a class="code" href="structautd3_1_1driver_1_1TxDatagram.html">driver::TxDatagram</a>(_geometry.<a class="code" href="structautd3_1_1core_1_1Geometry.html#a3991eb7d3e038be0f2a412f3f62b7750">num_devices</a>());</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    _rx_buf = <a class="code" href="structautd3_1_1driver_1_1RxDatagram.html">driver::RxDatagram</a>(_geometry.<a class="code" href="structautd3_1_1core_1_1Geometry.html#a3991eb7d3e038be0f2a412f3f62b7750">num_devices</a>());</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    _link = std::move(link);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">if</span> (_link != <span class="keyword">nullptr</span>) _link-&gt;open();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classautd3_1_1ControllerX.html#a89611677198a0a7b51cfc206a23cd467">is_open</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">  /**</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">   * @brief Verify the device is properly connected</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a89611677198a0a7b51cfc206a23cd467">   67</a></span>&#160;  [[nodiscard]] <span class="keywordtype">bool</span> <a class="code" href="classautd3_1_1ControllerX.html#a89611677198a0a7b51cfc206a23cd467">is_open</a>() const noexcept { <span class="keywordflow">return</span> (_link != <span class="keyword">nullptr</span>) &amp;&amp; _link-&gt;is_open(); }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">  /**</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">   * @brief Synchronize devices</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">   * \return if this function returns true and check_trials &gt; 0, it guarantees that the devices have processed the data.</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#ad8f5c96c7773ee9e53ef3fdb31728df6">   73</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classautd3_1_1ControllerX.html#ad8f5c96c7773ee9e53ef3fdb31728df6">synchronize</a>() {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="namespaceautd3_1_1driver.html#a84f57e8df76700c2e2e64deff6fa4dd0">driver::force_fan</a>(_tx_buf, <a class="code" href="classautd3_1_1ControllerX.html#a8dcfc89141c2ee38ac3a4ec52c77fcf1">force_fan</a>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="namespaceautd3_1_1driver.html#a9b24e12394df6f7774ba7783bfbdd5e2">driver::reads_fpga_info</a>(_tx_buf, <a class="code" href="classautd3_1_1ControllerX.html#a2ef03711a07566deb3a1749bc24eb090">reads_fpga_info</a>);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="namespaceautd3_1_1driver.html#a84f57e8df76700c2e2e64deff6fa4dd0">driver::force_fan</a>(_tx_buf, <a class="code" href="classautd3_1_1ControllerX.html#a8dcfc89141c2ee38ac3a4ec52c77fcf1">force_fan</a>);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="namespaceautd3_1_1driver.html#a9b24e12394df6f7774ba7783bfbdd5e2">driver::reads_fpga_info</a>(_tx_buf, <a class="code" href="classautd3_1_1ControllerX.html#a2ef03711a07566deb3a1749bc24eb090">reads_fpga_info</a>);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> msg_id = get_id();</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    std::vector&lt;uint16_t&gt; cycles;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    std::for_each(_geometry.<a class="code" href="structautd3_1_1core_1_1Geometry.html#a47a61738d4c30038c959e65773cd5cb3">begin</a>(), _geometry.<a class="code" href="structautd3_1_1core_1_1Geometry.html#a975cc9946158f7aa589aad9a734068f5">end</a>(), [&amp;](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; dev) {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      std::transform(dev.begin(), dev.end(), std::back_inserter(cycles), [](const T&amp; tr) { return tr.cycle(); });</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    });</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="namespaceautd3_1_1driver.html#ac171e3a778924f5fbea50adb9f9e5e37">sync</a>(msg_id, cycles.data(), _tx_buf);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">if</span> (!_link-&gt;send(_tx_buf)) {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      pop_ack();</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> success = wait_msg_processed(50);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    pop_ack();</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">return</span> success;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">  /**</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">   * @brief Update flags (force fan and reads_fpga_info)</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">   * \return if this function returns true and check_ack is true, it guarantees that the devices have processed the data.</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a9a6be3124795c90809b61dd2d93c8efb">  102</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classautd3_1_1ControllerX.html#a9a6be3124795c90809b61dd2d93c8efb">update_flag</a>() {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <a class="code" href="structautd3_1_1core_1_1NullHeader.html">core::NullHeader</a> h;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="structautd3_1_1core_1_1NullBody.html">core::NullBody&lt;T&gt;</a> b;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> send(h, b);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  }</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">  /**</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">   * @brief FPGA info</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">   *  \return veetor of FPGAInfo. If failed, the vector is empty</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a687114a55d269132c4883abd242f4daa">  112</a></span>&#160;  std::vector&lt;driver::FPGAInfo&gt; <a class="code" href="classautd3_1_1ControllerX.html#a687114a55d269132c4883abd242f4daa">read_fpga_info</a>() {</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    std::vector&lt;driver::FPGAInfo&gt; fpga_info;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">if</span> (!_link-&gt;receive(_rx_buf)) <span class="keywordflow">return</span> fpga_info;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    std::transform(_rx_buf.begin(), _rx_buf.end(), std::back_inserter(fpga_info),</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                   [](<span class="keyword">const</span> <a class="code" href="structautd3_1_1driver_1_1RxMessage.html">driver::RxMessage</a>&amp; rx) { return driver::FPGAInfo(rx.ack); });</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">return</span> fpga_info;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  }</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">  /**</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment">   * @brief Clear all data in devices</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">   * \return if this function returns true and check_ack is true, it guarantees that the devices have processed the data.</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a3d1adc5a1edd7cce3fd0636b763f23b3">  124</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classautd3_1_1ControllerX.html#a3d1adc5a1edd7cce3fd0636b763f23b3">clear</a>() {</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    push_ack();</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <a class="code" href="namespaceautd3_1_1driver.html#aaf8d68e3a93eb74bafa7d21d568e0746">driver::clear</a>(_tx_buf);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">if</span> (!_link-&gt;send(_tx_buf)) {</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      pop_ack();</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> success = wait_msg_processed(200);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    pop_ack();</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">return</span> success;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  }</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment">  /**</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment">   * @brief Stop outputting</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment">   * \return if this function returns true and check_ack is true, it guarantees that the devices have processed the data.</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a1243079a8fe7d32b47fa21278fe21f03">  140</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classautd3_1_1ControllerX.html#a1243079a8fe7d32b47fa21278fe21f03">stop</a>();</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment">  /**</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">   * @brief Close the controller</span></div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">   * \return if this function returns true and check_ack is true, it guarantees that the devices have processed the data.</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a1b3992f155658c0b803f61d629eee5a6">  146</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classautd3_1_1ControllerX.html#a1b3992f155658c0b803f61d629eee5a6">close</a>() {</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordflow">if</span> (!stop()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="namespaceautd3_1_1driver.html#aaf8d68e3a93eb74bafa7d21d568e0746">clear</a>()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    _link-&gt;close();</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  }</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment">  /**</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment">   * @brief Enumerate firmware information</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment">   * \return vector of driver::FirmwareInfo. If failed, the vector is empty.</span></div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a083198262721d121a1cbd6b91f481832">  157</a></span>&#160;  [[nodiscard]] std::vector&lt;driver::FirmwareInfo&gt; <a class="code" href="classautd3_1_1ControllerX.html#a083198262721d121a1cbd6b91f481832">firmware_infos</a>() {</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    std::vector&lt;driver::FirmwareInfo&gt; firmware_infos;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> msg_id = get_id();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    std::vector&lt;uint16_t&gt; cycles;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    std::for_each(_geometry.<a class="code" href="structautd3_1_1core_1_1Geometry.html#a47a61738d4c30038c959e65773cd5cb3">begin</a>(), _geometry.<a class="code" href="structautd3_1_1core_1_1Geometry.html#a975cc9946158f7aa589aad9a734068f5">end</a>(), [&amp;](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; dev) {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      std::transform(dev.begin(), dev.end(), std::back_inserter(cycles), [](const T&amp; tr) { return tr.cycle(); });</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    });</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="namespaceautd3_1_1driver.html#ac171e3a778924f5fbea50adb9f9e5e37">sync</a>(msg_id, cycles.data(), _tx_buf);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">if</span> (!_link-&gt;send(_tx_buf)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> success = wait_msg_processed(200) != 200;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">return</span> success;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">  /**</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">   * @brief Update flags (force fan and reads_fpga_info)</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">   * \return if this function returns true and check_trials &gt; 0, it guarantees that the devices have processed the data.</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a9a6be3124795c90809b61dd2d93c8efb">   95</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classautd3_1_1ControllerX.html#a9a6be3124795c90809b61dd2d93c8efb">update_flag</a>() {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="structautd3_1_1core_1_1NullHeader.html">core::NullHeader</a> h;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="structautd3_1_1core_1_1NullBody.html">core::NullBody&lt;T&gt;</a> b;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">return</span> send(h, b);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">  /**</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">   * @brief FPGA info</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">   *  \return veetor of FPGAInfo. If failed, the vector is empty</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a687114a55d269132c4883abd242f4daa">  105</a></span>&#160;  std::vector&lt;driver::FPGAInfo&gt; <a class="code" href="classautd3_1_1ControllerX.html#a687114a55d269132c4883abd242f4daa">read_fpga_info</a>() {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    std::vector&lt;driver::FPGAInfo&gt; fpga_info;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">if</span> (!_link-&gt;receive(_rx_buf)) <span class="keywordflow">return</span> fpga_info;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    std::transform(_rx_buf.begin(), _rx_buf.end(), std::back_inserter(fpga_info),</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                   [](<span class="keyword">const</span> <a class="code" href="structautd3_1_1driver_1_1RxMessage.html">driver::RxMessage</a>&amp; rx) { return driver::FPGAInfo(rx.ack); });</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">return</span> fpga_info;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">  /**</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">   * @brief Clear all data in devices</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment">   * \return if this function returns true and check_trials &gt; 0, it guarantees that the devices have processed the data.</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a3d1adc5a1edd7cce3fd0636b763f23b3">  117</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classautd3_1_1ControllerX.html#a3d1adc5a1edd7cce3fd0636b763f23b3">clear</a>() {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <a class="code" href="namespaceautd3_1_1driver.html#aaf8d68e3a93eb74bafa7d21d568e0746">driver::clear</a>(_tx_buf);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordflow">if</span> (!_link-&gt;send(_tx_buf)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> success = wait_msg_processed(200) != 200;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">return</span> success;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">  /**</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">   * @brief Stop outputting</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">   * \return if this function returns true and check_trials &gt; 0, it guarantees that the devices have processed the data.</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a1243079a8fe7d32b47fa21278fe21f03">  128</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classautd3_1_1ControllerX.html#a1243079a8fe7d32b47fa21278fe21f03">stop</a>();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">  /**</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment">   * @brief Close the controller</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment">   * \return if this function returns true and check_trials &gt; 0, it guarantees that the devices have processed the data.</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a1b3992f155658c0b803f61d629eee5a6">  134</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classautd3_1_1ControllerX.html#a1b3992f155658c0b803f61d629eee5a6">close</a>() {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordflow">if</span> (!stop()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="namespaceautd3_1_1driver.html#aaf8d68e3a93eb74bafa7d21d568e0746">clear</a>()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    _link-&gt;close();</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment">  /**</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment">   * @brief Enumerate firmware information</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">   * \return vector of driver::FirmwareInfo. If failed, the vector is empty.</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a083198262721d121a1cbd6b91f481832">  145</a></span>&#160;  [[nodiscard]] std::vector&lt;driver::FirmwareInfo&gt; <a class="code" href="classautd3_1_1ControllerX.html#a083198262721d121a1cbd6b91f481832">firmware_infos</a>() {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    std::vector&lt;driver::FirmwareInfo&gt; firmware_infos;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> pack_ack = [&amp;]() -&gt; std::vector&lt;uint8_t&gt; {</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;      std::vector&lt;uint8_t&gt; acks;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      <span class="keywordflow">if</span> (!_link-&gt;send(_tx_buf)) <span class="keywordflow">return</span> acks;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;      <span class="keywordflow">if</span> (wait_msg_processed(200) == 200) <span class="keywordflow">return</span> acks;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;      std::transform(_rx_buf.begin(), _rx_buf.end(), std::back_inserter(acks), [](<a class="code" href="structautd3_1_1driver_1_1RxMessage.html">driver::RxMessage</a> msg) noexcept { return msg.ack; });</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;      <span class="keywordflow">return</span> acks;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    };</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <a class="code" href="namespaceautd3_1_1driver.html#aa6ef4c5e31e7ca441819039c37594363">cpu_version</a>(_tx_buf);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> cpu_versions = pack_ack();</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">if</span> (cpu_versions.empty()) <span class="keywordflow">return</span> firmware_infos;</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    push_ack();</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> pack_ack = [&amp;]() -&gt; std::vector&lt;uint8_t&gt; {</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;      std::vector&lt;uint8_t&gt; acks;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;      <span class="keywordflow">if</span> (!_link-&gt;send(_tx_buf)) <span class="keywordflow">return</span> acks;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      <span class="keywordflow">if</span> (!wait_msg_processed(50)) <span class="keywordflow">return</span> acks;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      std::transform(_rx_buf.begin(), _rx_buf.end(), std::back_inserter(acks), [](<a class="code" href="structautd3_1_1driver_1_1RxMessage.html">driver::RxMessage</a> msg) noexcept { return msg.ack; });</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      <span class="keywordflow">return</span> acks;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    };</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <a class="code" href="namespaceautd3_1_1driver.html#aa6ef4c5e31e7ca441819039c37594363">cpu_version</a>(_tx_buf);</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> cpu_versions = pack_ack();</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordflow">if</span> (cpu_versions.empty()) {</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      pop_ack();</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      <span class="keywordflow">return</span> firmware_infos;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    }</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <a class="code" href="namespaceautd3_1_1driver.html#a5362b6a6f5380e1ded4e9f31ef6b1d17">fpga_version</a>(_tx_buf);</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> fpga_versions = pack_ack();</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">if</span> (fpga_versions.empty()) {</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;      pop_ack();</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;      <span class="keywordflow">return</span> firmware_infos;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    }</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <a class="code" href="namespaceautd3_1_1driver.html#a9a78a89c2ff49bab55a41192d9bd6892">fpga_functions</a>(_tx_buf);</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code" href="namespaceautd3_1_1driver.html#a9a78a89c2ff49bab55a41192d9bd6892">fpga_functions</a> = pack_ack();</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="namespaceautd3_1_1driver.html#a9a78a89c2ff49bab55a41192d9bd6892">fpga_functions</a>.empty()) {</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;      pop_ack();</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;      <span class="keywordflow">return</span> firmware_infos;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    }</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    pop_ack();</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; _geometry.num_devices(); i++)</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;      firmware_infos.emplace_back(i, cpu_versions.at(i), fpga_versions.at(i), <a class="code" href="namespaceautd3_1_1driver.html#a9a78a89c2ff49bab55a41192d9bd6892">fpga_functions</a>.at(i));</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">return</span> firmware_infos;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  }</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="comment">  /**</span></div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="comment">   * @brief Send header data to devices</span></div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="comment">   * \return if this function returns true and check_ack is true, it guarantees that the devices have processed the data.</span></div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> H&gt;</div>
-<div class="line"><a name="l00204"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#af7b25245fb7ba8df733d179dff59608c">  204</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classautd3_1_1ControllerX.html#af7b25245fb7ba8df733d179dff59608c">send</a>(H&amp; header) -&gt; <span class="keyword">typename</span> std::enable_if_t&lt;std::is_base_of_v&lt;core::DatagramHeader, H&gt;, <span class="keywordtype">bool</span>&gt; {</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <a class="code" href="structautd3_1_1core_1_1NullBody.html">core::NullBody&lt;T&gt;</a> b;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordflow">return</span> send(header, b);</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  }</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="comment">  /**</span></div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="comment">   * @brief Send header data to devices</span></div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="comment">   * \return if this function returns true and check_ack is true, it guarantees that the devices have processed the data.</span></div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> H&gt;</div>
-<div class="line"><a name="l00214"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a6f86f0dd98fb1e45a2212eddad4803a6">  214</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classautd3_1_1ControllerX.html#a6f86f0dd98fb1e45a2212eddad4803a6">send</a>(H&amp;&amp; header) -&gt; <span class="keyword">typename</span> std::enable_if_t&lt;std::is_base_of_v&lt;core::DatagramHeader, H&gt;, <span class="keywordtype">bool</span>&gt; {</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordflow">return</span> send(header);</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  }</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="comment">  /**</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="comment">   * @brief Send body data to devices</span></div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="comment">   * \return if this function returns true and check_ack is true, it guarantees that the devices have processed the data.</span></div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> B&gt;</div>
-<div class="line"><a name="l00223"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a5f769c384c474de6bb3f04726d7e31b3">  223</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classautd3_1_1ControllerX.html#a5f769c384c474de6bb3f04726d7e31b3">send</a>(B&amp; body) -&gt; <span class="keyword">typename</span> std::enable_if_t&lt;std::is_base_of_v&lt;core::DatagramBody&lt;T&gt;, B&gt;, <span class="keywordtype">bool</span>&gt; {</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <a class="code" href="structautd3_1_1core_1_1NullHeader.html">core::NullHeader</a> h;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">return</span> send(h, body);</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  }</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="comment">  /**</span></div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="comment">   * @brief Send body data to devices</span></div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="comment">   * \return if this function returns true and check_ack is true, it guarantees that the devices have processed the data.</span></div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> B&gt;</div>
-<div class="line"><a name="l00233"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a7036d330918e6eb78f85734d16418cb8">  233</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classautd3_1_1ControllerX.html#a7036d330918e6eb78f85734d16418cb8">send</a>(B&amp;&amp; body) -&gt; <span class="keyword">typename</span> std::enable_if_t&lt;std::is_base_of_v&lt;core::DatagramBody&lt;T&gt;, B&gt;, <span class="keywordtype">bool</span>&gt; {</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordflow">return</span> send(body);</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  }</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="comment">  /**</span></div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="comment">   * @brief Send header and body data to devices</span></div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="comment">   * \return if this function returns true and check_ack is true, it guarantees that the devices have processed the data.</span></div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> H, <span class="keyword">typename</span> B&gt;</div>
-<div class="line"><a name="l00242"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#ad04a28be2e7c7d5165bdc42c1c16c6f0">  242</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classautd3_1_1ControllerX.html#ad04a28be2e7c7d5165bdc42c1c16c6f0">send</a>(H&amp; header, B&amp; body) -&gt;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;      <span class="keyword">typename</span> std::enable_if_t&lt;std::is_base_of_v&lt;core::DatagramHeader, H&gt; &amp;&amp; std::is_base_of_v&lt;core::DatagramBody&lt;T&gt;, B&gt;, <span class="keywordtype">bool</span>&gt; {</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    header.init();</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    body.init();</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <a class="code" href="namespaceautd3_1_1driver.html#a84f57e8df76700c2e2e64deff6fa4dd0">driver::force_fan</a>(_tx_buf, <a class="code" href="namespaceautd3_1_1driver.html#a84f57e8df76700c2e2e64deff6fa4dd0">force_fan</a>);</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <a class="code" href="namespaceautd3_1_1driver.html#a9b24e12394df6f7774ba7783bfbdd5e2">driver::reads_fpga_info</a>(_tx_buf, <a class="code" href="namespaceautd3_1_1driver.html#a9b24e12394df6f7774ba7783bfbdd5e2">reads_fpga_info</a>);</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;      <span class="keyword">const</span> <span class="keyword">auto</span> msg_id = get_id();</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      header.pack(msg_id, _tx_buf);</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;      body.pack(_geometry, _tx_buf);</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;      _link-&gt;send(_tx_buf);</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;      <span class="keywordflow">if</span> (!wait_msg_processed(50)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      <span class="keywordflow">if</span> (header.is_finished() &amp;&amp; body.is_finished()) <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;      <span class="keywordflow">if</span> (!check_ack) std::this_thread::sleep_for(std::chrono::microseconds(<a class="code" href="namespaceautd3_1_1driver.html#a2c65e48308ba5564be1b7082d5bac05f">driver::EC_SYNC0_CYCLE_TIME_MICRO_SEC</a>));</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    }</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  }</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="comment">  /**</span></div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="comment">   * @brief Send header and body data to devices</span></div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="comment">   * \return if this function returns true and check_ack is true, it guarantees that the devices have processed the data.</span></div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> H, <span class="keyword">typename</span> B&gt;</div>
-<div class="line"><a name="l00267"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a4510ed058c68d429ceee41032379bec9">  267</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classautd3_1_1ControllerX.html#a4510ed058c68d429ceee41032379bec9">send</a>(H&amp;&amp; header, B&amp;&amp; body) -&gt;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;      <span class="keyword">typename</span> std::enable_if_t&lt;std::is_base_of_v&lt;core::DatagramHeader, H&gt; &amp;&amp; std::is_base_of_v&lt;core::DatagramBody&lt;T&gt;, B&gt;, <span class="keywordtype">bool</span>&gt; {</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordflow">return</span> send(header, body);</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  }</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="comment">  /**</span></div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="comment">   * @brief If true, the fan will be forced to start.</span></div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00275"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a8dcfc89141c2ee38ac3a4ec52c77fcf1">  275</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classautd3_1_1ControllerX.html#a8dcfc89141c2ee38ac3a4ec52c77fcf1">force_fan</a>;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="comment">  /**</span></div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="comment">   * @brief If true, the devices return FPGA info in all frames. The FPGA info can be read by fpga_info().</span></div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00280"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a2ef03711a07566deb3a1749bc24eb090">  280</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classautd3_1_1ControllerX.html#a2ef03711a07566deb3a1749bc24eb090">reads_fpga_info</a>;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="comment">  /**</span></div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="comment">   * @brief If true, this controller check ack from devices.</span></div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00285"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a1be079bcd0e774b92ce4073f8a31b32f">  285</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classautd3_1_1ControllerX.html#a1be079bcd0e774b92ce4073f8a31b32f">check_ack</a>;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  <span class="keyword">static</span> uint8_t get_id() noexcept {</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keyword">static</span> std::atomic id_body{<a class="code" href="namespaceautd3_1_1driver.html#aa135883b65458cc9f00dcdeb242a98f9">driver::MSG_BEGIN</a>};</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keywordflow">if</span> (uint8_t expected = <a class="code" href="namespaceautd3_1_1driver.html#a948dc632b3d31104001f79abb2bf1a3f">driver::MSG_END</a>; !id_body.compare_exchange_weak(expected, <a class="code" href="namespaceautd3_1_1driver.html#aa135883b65458cc9f00dcdeb242a98f9">driver::MSG_BEGIN</a>)) id_body.fetch_add(0x01);</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keywordflow">return</span> id_body.load();</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  }</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  <span class="keywordtype">bool</span> wait_msg_processed(<span class="keyword">const</span> <span class="keywordtype">size_t</span> max_trial) {</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keywordflow">if</span> (!check_ack) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> msg_id = _tx_buf.header().msg_id;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; max_trial; i++) {</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;      <span class="keywordflow">if</span> (!_link-&gt;receive(_rx_buf)) <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;      <span class="keywordflow">if</span> (_rx_buf.is_msg_processed(msg_id)) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;      std::this_thread::sleep_for(std::chrono::microseconds(<a class="code" href="namespaceautd3_1_1driver.html#a2c65e48308ba5564be1b7082d5bac05f">driver::EC_SYNC0_CYCLE_TIME_MICRO_SEC</a>));</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    }</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;  }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <a class="code" href="namespaceautd3_1_1driver.html#a5362b6a6f5380e1ded4e9f31ef6b1d17">fpga_version</a>(_tx_buf);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> fpga_versions = pack_ack();</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordflow">if</span> (fpga_versions.empty()) <span class="keywordflow">return</span> firmware_infos;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <a class="code" href="namespaceautd3_1_1driver.html#a9a78a89c2ff49bab55a41192d9bd6892">fpga_functions</a>(_tx_buf);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code" href="namespaceautd3_1_1driver.html#a9a78a89c2ff49bab55a41192d9bd6892">fpga_functions</a> = pack_ack();</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="namespaceautd3_1_1driver.html#a9a78a89c2ff49bab55a41192d9bd6892">fpga_functions</a>.empty()) <span class="keywordflow">return</span> firmware_infos;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; _geometry.num_devices(); i++)</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;      firmware_infos.emplace_back(i, cpu_versions.at(i), fpga_versions.at(i), <a class="code" href="namespaceautd3_1_1driver.html#a9a78a89c2ff49bab55a41192d9bd6892">fpga_functions</a>.at(i));</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">return</span> firmware_infos;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="comment">  /**</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="comment">   * @brief Send header data to devices</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="comment">   * \return if this function returns true and check_trials &gt; 0, it guarantees that the devices have processed the data.</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> H&gt;</div>
+<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#af7b25245fb7ba8df733d179dff59608c">  179</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classautd3_1_1ControllerX.html#af7b25245fb7ba8df733d179dff59608c">send</a>(H&amp; header) -&gt; <span class="keyword">typename</span> std::enable_if_t&lt;std::is_base_of_v&lt;core::DatagramHeader, H&gt;, <span class="keywordtype">bool</span>&gt; {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <a class="code" href="structautd3_1_1core_1_1NullBody.html">core::NullBody&lt;T&gt;</a> b;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">return</span> send(header, b);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  }</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="comment">  /**</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="comment">   * @brief Send header data to devices</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="comment">   * \return if this function returns true and check_trials &gt; 0, it guarantees that the devices have processed the data.</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> H&gt;</div>
+<div class="line"><a name="l00189"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a6f86f0dd98fb1e45a2212eddad4803a6">  189</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classautd3_1_1ControllerX.html#a6f86f0dd98fb1e45a2212eddad4803a6">send</a>(H&amp;&amp; header) -&gt; <span class="keyword">typename</span> std::enable_if_t&lt;std::is_base_of_v&lt;core::DatagramHeader, H&gt;, <span class="keywordtype">bool</span>&gt; {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">return</span> send(header);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  }</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="comment">  /**</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="comment">   * @brief Send body data to devices</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="comment">   * \return if this function returns true and check_trials &gt; 0, it guarantees that the devices have processed the data.</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> B&gt;</div>
+<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a5f769c384c474de6bb3f04726d7e31b3">  198</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classautd3_1_1ControllerX.html#a5f769c384c474de6bb3f04726d7e31b3">send</a>(B&amp; body) -&gt; <span class="keyword">typename</span> std::enable_if_t&lt;std::is_base_of_v&lt;core::DatagramBody&lt;T&gt;, B&gt;, <span class="keywordtype">bool</span>&gt; {</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <a class="code" href="structautd3_1_1core_1_1NullHeader.html">core::NullHeader</a> h;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">return</span> send(h, body);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="comment">  /**</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="comment">   * @brief Send body data to devices</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="comment">   * \return if this function returns true and check_trials &gt; 0, it guarantees that the devices have processed the data.</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> B&gt;</div>
+<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a7036d330918e6eb78f85734d16418cb8">  208</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classautd3_1_1ControllerX.html#a7036d330918e6eb78f85734d16418cb8">send</a>(B&amp;&amp; body) -&gt; <span class="keyword">typename</span> std::enable_if_t&lt;std::is_base_of_v&lt;core::DatagramBody&lt;T&gt;, B&gt;, <span class="keywordtype">bool</span>&gt; {</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">return</span> send(body);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="comment">  /**</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="comment">   * @brief Send header and body data to devices</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="comment">   * \return if this function returns true and check_trials &gt; 0, it guarantees that the devices have processed the data.</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> H, <span class="keyword">typename</span> B&gt;</div>
+<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#ad04a28be2e7c7d5165bdc42c1c16c6f0">  217</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classautd3_1_1ControllerX.html#ad04a28be2e7c7d5165bdc42c1c16c6f0">send</a>(H&amp; header, B&amp; body) -&gt;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;      <span class="keyword">typename</span> std::enable_if_t&lt;std::is_base_of_v&lt;core::DatagramHeader, H&gt; &amp;&amp; std::is_base_of_v&lt;core::DatagramBody&lt;T&gt;, B&gt;, <span class="keywordtype">bool</span>&gt; {</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    header.init();</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    body.init();</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <a class="code" href="namespaceautd3_1_1driver.html#a84f57e8df76700c2e2e64deff6fa4dd0">driver::force_fan</a>(_tx_buf, <a class="code" href="namespaceautd3_1_1driver.html#a84f57e8df76700c2e2e64deff6fa4dd0">force_fan</a>);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <a class="code" href="namespaceautd3_1_1driver.html#a9b24e12394df6f7774ba7783bfbdd5e2">driver::reads_fpga_info</a>(_tx_buf, <a class="code" href="namespaceautd3_1_1driver.html#a9b24e12394df6f7774ba7783bfbdd5e2">reads_fpga_info</a>);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;      <span class="keyword">const</span> <span class="keyword">auto</span> msg_id = get_id();</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;      header.pack(msg_id, _tx_buf);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;      body.pack(_geometry, _tx_buf);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;      _link-&gt;send(_tx_buf);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;      <span class="keyword">const</span> <span class="keyword">auto</span> trials = wait_msg_processed(check_trials);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      <span class="keywordflow">if</span> ((check_trials != 0) &amp;&amp; (trials == check_trials)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      <span class="keywordflow">if</span> (header.is_finished() &amp;&amp; body.is_finished()) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      <span class="keywordflow">if</span> (trials == 0) std::this_thread::sleep_for(std::chrono::microseconds(send_interval * <a class="code" href="namespaceautd3_1_1driver.html#a2c65e48308ba5564be1b7082d5bac05f">driver::EC_SYNC0_CYCLE_TIME_MICRO_SEC</a>));</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="comment">  /**</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="comment">   * @brief Send header and body data to devices</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="comment">   * \return if this function returns true and check_trials &gt; 0, it guarantees that the devices have processed the data.</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> H, <span class="keyword">typename</span> B&gt;</div>
+<div class="line"><a name="l00243"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a4510ed058c68d429ceee41032379bec9">  243</a></span>&#160;  <span class="keyword">auto</span> <a class="code" href="classautd3_1_1ControllerX.html#a4510ed058c68d429ceee41032379bec9">send</a>(H&amp;&amp; header, B&amp;&amp; body) -&gt;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      <span class="keyword">typename</span> std::enable_if_t&lt;std::is_base_of_v&lt;core::DatagramHeader, H&gt; &amp;&amp; std::is_base_of_v&lt;core::DatagramBody&lt;T&gt;, B&gt;, <span class="keywordtype">bool</span>&gt; {</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordflow">return</span> send(header, body);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  }</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="comment">  /**</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="comment">   * @brief If true, the fan will be forced to start.</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a8dcfc89141c2ee38ac3a4ec52c77fcf1">  251</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classautd3_1_1ControllerX.html#a8dcfc89141c2ee38ac3a4ec52c77fcf1">force_fan</a>;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="comment">  /**</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="comment">   * @brief If true, the devices return FPGA info in all frames. The FPGA info can be read by fpga_info().</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a2ef03711a07566deb3a1749bc24eb090">  256</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classautd3_1_1ControllerX.html#a2ef03711a07566deb3a1749bc24eb090">reads_fpga_info</a>;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="comment">  /**</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="comment">   * @brief If &gt; 0, this controller check ack from devices. This value represents the maximum number of trials for the check.</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a2b09da34c467506a678d1965d3bb649c">  261</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classautd3_1_1ControllerX.html#a2b09da34c467506a678d1965d3bb649c">check_trials</a>;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="comment">  /**</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="comment">   * @brief Transmission interval between frames when sending multiple data. The interval will be send_interval *</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="comment">   * driver::EC_SYNC0_CYCLE_TIME_MICRO_SEC.</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#aa0fba26d3d6cd047fe7f9eb4ab47f59d">  267</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classautd3_1_1ControllerX.html#aa0fba26d3d6cd047fe7f9eb4ab47f59d">send_interval</a>;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  <span class="keyword">static</span> uint8_t get_id() noexcept {</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keyword">static</span> std::atomic id_body{<a class="code" href="namespaceautd3_1_1driver.html#aa135883b65458cc9f00dcdeb242a98f9">driver::MSG_BEGIN</a>};</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordflow">if</span> (uint8_t expected = <a class="code" href="namespaceautd3_1_1driver.html#a948dc632b3d31104001f79abb2bf1a3f">driver::MSG_END</a>; !id_body.compare_exchange_weak(expected, <a class="code" href="namespaceautd3_1_1driver.html#aa135883b65458cc9f00dcdeb242a98f9">driver::MSG_BEGIN</a>)) id_body.fetch_add(0x01);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordflow">return</span> id_body.load();</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  }</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  <span class="keywordtype">size_t</span> wait_msg_processed(<span class="keyword">const</span> <span class="keywordtype">size_t</span> max_trial) {</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordtype">size_t</span> i;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> msg_id = _tx_buf.header().msg_id;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; max_trial; i++) {</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;      <span class="keywordflow">if</span> (_link-&gt;receive(_rx_buf) &amp;&amp; _rx_buf.is_msg_processed(msg_id)) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;      std::this_thread::sleep_for(std::chrono::microseconds(send_interval * <a class="code" href="namespaceautd3_1_1driver.html#a2c65e48308ba5564be1b7082d5bac05f">driver::EC_SYNC0_CYCLE_TIME_MICRO_SEC</a>));</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    }</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keywordflow">return</span> i;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  }</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  core::Geometry&lt;T&gt; _geometry;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  driver::TxDatagram _tx_buf;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  driver::RxDatagram _rx_buf;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  <a class="code" href="namespaceautd3_1_1core.html#aeb7a471c6532b5c4888a461d378c6ae0">core::LinkPtr</a> _link;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;};</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a name="l00293"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#ac86adf7d8cd9a662886f21bf1a76746a">  293</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classautd3_1_1ControllerX.html">ControllerX&lt;autd3::core::LegacyTransducer&gt;::stop</a>() {</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  <a class="code" href="structautd3_1_1SilencerConfig.html">SilencerConfig</a> config;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  <a class="code" href="classautd3_1_1gain_1_1Null.html">gain::Null&lt;autd3::core::LegacyTransducer&gt;</a> g;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  <span class="keywordflow">return</span> send(config, g);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;}</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a name="l00300"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a5a5b585ef937f6a501fc06d82a5c7aa5">  300</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classautd3_1_1ControllerX.html">ControllerX&lt;autd3::core::NormalTransducer&gt;::stop</a>() {</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  <a class="code" href="structautd3_1_1SilencerConfig.html">SilencerConfig</a> config;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  <a class="code" href="classautd3_1_1gain_1_1Null.html">gain::Null&lt;autd3::core::NormalTransducer&gt;</a> g;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  <span class="keywordflow">return</span> send(config, g);</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;}</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  <span class="keywordtype">void</span> push_ack() {</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    _check_ack = check_ack;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    check_ack = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  }</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  <span class="keywordtype">void</span> pop_ack() { check_ack = _check_ack; }</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a name="l00307"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a27dddb1ff5ddbcdcefed060f48ca22e2">  307</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classautd3_1_1ControllerX.html">ControllerX&lt;autd3::core::NormalPhaseTransducer&gt;::stop</a>() {</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  <a class="code" href="structautd3_1_1SilencerConfig.html">SilencerConfig</a> config;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  <a class="code" href="structautd3_1_1core_1_1Amplitudes.html">autd3::core::Amplitudes&lt;autd3::core::NormalPhaseTransducer&gt;</a> g(_geometry, 0.0);</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;  <span class="keywordflow">return</span> send(config, g);</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;}</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160; </div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  core::Geometry&lt;T&gt; _geometry;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  driver::TxDatagram _tx_buf;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  driver::RxDatagram _rx_buf;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  <a class="code" href="namespaceautd3_1_1core.html#aeb7a471c6532b5c4888a461d378c6ae0">core::LinkPtr</a> _link;</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160; </div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;  <span class="keywordtype">bool</span> _check_ack;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;};</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
-<div class="line"><a name="l00322"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#ac86adf7d8cd9a662886f21bf1a76746a">  322</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classautd3_1_1ControllerX.html">ControllerX&lt;autd3::core::LegacyTransducer&gt;::stop</a>() {</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;  <a class="code" href="structautd3_1_1SilencerConfig.html">SilencerConfig</a> config;</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  <a class="code" href="classautd3_1_1gain_1_1Null.html">gain::Null&lt;autd3::core::LegacyTransducer&gt;</a> g;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  <span class="keywordflow">return</span> send(config, g);</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;}</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a name="l00314"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a742e8c8fc2dc93a4feb51ea7c041e27c">  314</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classautd3_1_1ControllerX.html">ControllerX&lt;autd3::core::DynamicTransducer&gt;::stop</a>() {</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  <span class="keywordflow">switch</span> (<a class="code" href="structautd3_1_1core_1_1DynamicTransducer.html#a881ac2bd16838479d14e6f661610dfdc">autd3::core::DynamicTransducer::mode</a>()) {</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="keywordflow">case</span> core::TransducerMode::NormalPhase:</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;      <span class="keywordflow">return</span> send(<a class="code" href="structautd3_1_1SilencerConfig.html">SilencerConfig</a>(), <a class="code" href="structautd3_1_1core_1_1Amplitudes.html">autd3::core::Amplitudes&lt;autd3::core::DynamicTransducer&gt;</a>(_geometry, 0.0));</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;      <span class="keywordflow">return</span> send(<a class="code" href="structautd3_1_1SilencerConfig.html">SilencerConfig</a>(), <a class="code" href="classautd3_1_1gain_1_1Null.html">gain::Null&lt;autd3::core::DynamicTransducer&gt;</a>());</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  }</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;}</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="comment"> * @brief AUTD Controller with legacy (40kHz) transducer</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00326"></a><span class="lineno"><a class="line" href="namespaceautd3.html#af580170b2ad9ff4da0afe66b233f8288">  326</a></span>&#160;<span class="keyword">using</span> <a class="code" href="classautd3_1_1ControllerX.html">Controller</a> = <a class="code" href="classautd3_1_1ControllerX.html">ControllerX&lt;core::LegacyTransducer&gt;</a>;</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160; </div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
-<div class="line"><a name="l00329"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a5a5b585ef937f6a501fc06d82a5c7aa5">  329</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classautd3_1_1ControllerX.html">ControllerX&lt;autd3::core::NormalTransducer&gt;::stop</a>() {</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  <a class="code" href="structautd3_1_1SilencerConfig.html">SilencerConfig</a> config;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;  <a class="code" href="classautd3_1_1gain_1_1Null.html">gain::Null&lt;autd3::core::NormalTransducer&gt;</a> g;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;  <span class="keywordflow">return</span> send(config, g);</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;}</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; </div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
-<div class="line"><a name="l00336"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a27dddb1ff5ddbcdcefed060f48ca22e2">  336</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classautd3_1_1ControllerX.html">ControllerX&lt;autd3::core::NormalPhaseTransducer&gt;::stop</a>() {</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;  <a class="code" href="structautd3_1_1SilencerConfig.html">SilencerConfig</a> config;</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;  <a class="code" href="structautd3_1_1core_1_1Amplitudes.html">autd3::core::Amplitudes&lt;autd3::core::NormalPhaseTransducer&gt;</a> g(_geometry, 0.0);</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;  <span class="keywordflow">return</span> send(config, g);</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;}</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160; </div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
-<div class="line"><a name="l00343"></a><span class="lineno"><a class="line" href="classautd3_1_1ControllerX.html#a742e8c8fc2dc93a4feb51ea7c041e27c">  343</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classautd3_1_1ControllerX.html">ControllerX&lt;autd3::core::DynamicTransducer&gt;::stop</a>() {</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;  <span class="keywordflow">switch</span> (<a class="code" href="structautd3_1_1core_1_1DynamicTransducer.html#a881ac2bd16838479d14e6f661610dfdc">autd3::core::DynamicTransducer::mode</a>()) {</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordflow">case</span> core::TransducerMode::NormalPhase:</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;      <span class="keywordflow">return</span> send(<a class="code" href="structautd3_1_1SilencerConfig.html">SilencerConfig</a>(), <a class="code" href="structautd3_1_1core_1_1Amplitudes.html">autd3::core::Amplitudes&lt;autd3::core::DynamicTransducer&gt;</a>(_geometry, 0.0));</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;      <span class="keywordflow">return</span> send(<a class="code" href="structautd3_1_1SilencerConfig.html">SilencerConfig</a>(), <a class="code" href="classautd3_1_1gain_1_1Null.html">gain::Null&lt;autd3::core::DynamicTransducer&gt;</a>());</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;  }</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;}</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="comment"> * @brief AUTD Controller with legacy (40kHz) transducer</span></div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00355"></a><span class="lineno"><a class="line" href="namespaceautd3.html#af580170b2ad9ff4da0afe66b233f8288">  355</a></span>&#160;<span class="keyword">using</span> <a class="code" href="classautd3_1_1ControllerX.html">Controller</a> = <a class="code" href="classautd3_1_1ControllerX.html">ControllerX&lt;core::LegacyTransducer&gt;</a>;</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160; </div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;}  <span class="comment">// namespace autd3</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;}  <span class="comment">// namespace autd3</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="astructautd3_1_1core_1_1Geometry_html"><div class="ttname"><a href="structautd3_1_1core_1_1Geometry.html">autd3::core::Geometry&lt; T &gt;</a></div></div>
-<div class="ttc" id="aclassautd3_1_1ControllerX_html_a6f86f0dd98fb1e45a2212eddad4803a6"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a6f86f0dd98fb1e45a2212eddad4803a6">autd3::ControllerX::send</a></div><div class="ttdeci">auto send(H &amp;&amp;header) -&gt; typename std::enable_if_t&lt; std::is_base_of_v&lt; core::DatagramHeader, H &gt;, bool &gt;</div><div class="ttdoc">Send header data to devices.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00214">controller.hpp:214</a></div></div>
+<div class="ttc" id="aclassautd3_1_1ControllerX_html_a6f86f0dd98fb1e45a2212eddad4803a6"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a6f86f0dd98fb1e45a2212eddad4803a6">autd3::ControllerX::send</a></div><div class="ttdeci">auto send(H &amp;&amp;header) -&gt; typename std::enable_if_t&lt; std::is_base_of_v&lt; core::DatagramHeader, H &gt;, bool &gt;</div><div class="ttdoc">Send header data to devices.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00189">controller.hpp:189</a></div></div>
 <div class="ttc" id="anamespaceautd3_1_1driver_html_a2c65e48308ba5564be1b7082d5bac05f"><div class="ttname"><a href="namespaceautd3_1_1driver.html#a2c65e48308ba5564be1b7082d5bac05f">autd3::driver::EC_SYNC0_CYCLE_TIME_MICRO_SEC</a></div><div class="ttdeci">constexpr uint32_t EC_SYNC0_CYCLE_TIME_MICRO_SEC</div><div class="ttdef"><b>Definition:</b> <a href="ec__config_8hpp_source.html#l00023">ec_config.hpp:23</a></div></div>
 <div class="ttc" id="astructautd3_1_1core_1_1Amplitudes_html"><div class="ttname"><a href="structautd3_1_1core_1_1Amplitudes.html">autd3::core::Amplitudes</a></div><div class="ttdef"><b>Definition:</b> <a href="normal__phase__transducer_8hpp_source.html#l00079">normal_phase_transducer.hpp:79</a></div></div>
-<div class="ttc" id="aclassautd3_1_1ControllerX_html_a1b3992f155658c0b803f61d629eee5a6"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a1b3992f155658c0b803f61d629eee5a6">autd3::ControllerX::close</a></div><div class="ttdeci">bool close()</div><div class="ttdoc">Close the controller.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00146">controller.hpp:146</a></div></div>
-<div class="ttc" id="aclassautd3_1_1ControllerX_html_a4510ed058c68d429ceee41032379bec9"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a4510ed058c68d429ceee41032379bec9">autd3::ControllerX::send</a></div><div class="ttdeci">auto send(H &amp;&amp;header, B &amp;&amp;body) -&gt; typename std::enable_if_t&lt; std::is_base_of_v&lt; core::DatagramHeader, H &gt; &amp;&amp;std::is_base_of_v&lt; core::DatagramBody&lt; T &gt;, B &gt;, bool &gt;</div><div class="ttdoc">Send header and body data to devices.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00267">controller.hpp:267</a></div></div>
-<div class="ttc" id="aclassautd3_1_1ControllerX_html_af7b25245fb7ba8df733d179dff59608c"><div class="ttname"><a href="classautd3_1_1ControllerX.html#af7b25245fb7ba8df733d179dff59608c">autd3::ControllerX::send</a></div><div class="ttdeci">auto send(H &amp;header) -&gt; typename std::enable_if_t&lt; std::is_base_of_v&lt; core::DatagramHeader, H &gt;, bool &gt;</div><div class="ttdoc">Send header data to devices.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00204">controller.hpp:204</a></div></div>
+<div class="ttc" id="aclassautd3_1_1ControllerX_html_aa0fba26d3d6cd047fe7f9eb4ab47f59d"><div class="ttname"><a href="classautd3_1_1ControllerX.html#aa0fba26d3d6cd047fe7f9eb4ab47f59d">autd3::ControllerX::send_interval</a></div><div class="ttdeci">size_t send_interval</div><div class="ttdoc">Transmission interval between frames when sending multiple data. The interval will be send_interval *...</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00267">controller.hpp:267</a></div></div>
+<div class="ttc" id="aclassautd3_1_1ControllerX_html_a1b3992f155658c0b803f61d629eee5a6"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a1b3992f155658c0b803f61d629eee5a6">autd3::ControllerX::close</a></div><div class="ttdeci">bool close()</div><div class="ttdoc">Close the controller.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00134">controller.hpp:134</a></div></div>
+<div class="ttc" id="aclassautd3_1_1ControllerX_html_a2b09da34c467506a678d1965d3bb649c"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a2b09da34c467506a678d1965d3bb649c">autd3::ControllerX::check_trials</a></div><div class="ttdeci">size_t check_trials</div><div class="ttdoc">If &gt; 0, this controller check ack from devices. This value represents the maximum number of trials fo...</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00261">controller.hpp:261</a></div></div>
+<div class="ttc" id="aclassautd3_1_1ControllerX_html_a4510ed058c68d429ceee41032379bec9"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a4510ed058c68d429ceee41032379bec9">autd3::ControllerX::send</a></div><div class="ttdeci">auto send(H &amp;&amp;header, B &amp;&amp;body) -&gt; typename std::enable_if_t&lt; std::is_base_of_v&lt; core::DatagramHeader, H &gt; &amp;&amp;std::is_base_of_v&lt; core::DatagramBody&lt; T &gt;, B &gt;, bool &gt;</div><div class="ttdoc">Send header and body data to devices.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00243">controller.hpp:243</a></div></div>
+<div class="ttc" id="aclassautd3_1_1ControllerX_html_af7b25245fb7ba8df733d179dff59608c"><div class="ttname"><a href="classautd3_1_1ControllerX.html#af7b25245fb7ba8df733d179dff59608c">autd3::ControllerX::send</a></div><div class="ttdeci">auto send(H &amp;header) -&gt; typename std::enable_if_t&lt; std::is_base_of_v&lt; core::DatagramHeader, H &gt;, bool &gt;</div><div class="ttdoc">Send header data to devices.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00179">controller.hpp:179</a></div></div>
 <div class="ttc" id="astructautd3_1_1driver_1_1RxDatagram_html"><div class="ttname"><a href="structautd3_1_1driver_1_1RxDatagram.html">autd3::driver::RxDatagram</a></div><div class="ttdef"><b>Definition:</b> <a href="datagram_8hpp_source.html#l00064">datagram.hpp:64</a></div></div>
 <div class="ttc" id="alegacy__transducer_8hpp_html"><div class="ttname"><a href="legacy__transducer_8hpp.html">legacy_transducer.hpp</a></div></div>
-<div class="ttc" id="aclassautd3_1_1ControllerX_html_a8dcfc89141c2ee38ac3a4ec52c77fcf1"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a8dcfc89141c2ee38ac3a4ec52c77fcf1">autd3::ControllerX::force_fan</a></div><div class="ttdeci">bool force_fan</div><div class="ttdoc">If true, the fan will be forced to start.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00275">controller.hpp:275</a></div></div>
+<div class="ttc" id="aclassautd3_1_1ControllerX_html_a8dcfc89141c2ee38ac3a4ec52c77fcf1"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a8dcfc89141c2ee38ac3a4ec52c77fcf1">autd3::ControllerX::force_fan</a></div><div class="ttdeci">bool force_fan</div><div class="ttdoc">If true, the fan will be forced to start.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00251">controller.hpp:251</a></div></div>
 <div class="ttc" id="astructautd3_1_1driver_1_1TxDatagram_html"><div class="ttname"><a href="structautd3_1_1driver_1_1TxDatagram.html">autd3::driver::TxDatagram</a></div><div class="ttdef"><b>Definition:</b> <a href="datagram_8hpp_source.html#l00023">datagram.hpp:23</a></div></div>
 <div class="ttc" id="anamespaceautd3_1_1driver_html_a5362b6a6f5380e1ded4e9f31ef6b1d17"><div class="ttname"><a href="namespaceautd3_1_1driver.html#a5362b6a6f5380e1ded4e9f31ef6b1d17">autd3::driver::fpga_version</a></div><div class="ttdeci">void fpga_version(TxDatagram &amp;tx) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="operation_8hpp_source.html#l00361">operation.hpp:361</a></div></div>
 <div class="ttc" id="anormal__phase__transducer_8hpp_html"><div class="ttname"><a href="normal__phase__transducer_8hpp.html">normal_phase_transducer.hpp</a></div></div>
 <div class="ttc" id="anamespaceautd3_1_1driver_html_aa6ef4c5e31e7ca441819039c37594363"><div class="ttname"><a href="namespaceautd3_1_1driver.html#aa6ef4c5e31e7ca441819039c37594363">autd3::driver::cpu_version</a></div><div class="ttdeci">void cpu_version(TxDatagram &amp;tx) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="operation_8hpp_source.html#l00355">operation.hpp:355</a></div></div>
-<div class="ttc" id="aclassautd3_1_1ControllerX_html_a3d1adc5a1edd7cce3fd0636b763f23b3"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a3d1adc5a1edd7cce3fd0636b763f23b3">autd3::ControllerX::clear</a></div><div class="ttdeci">bool clear()</div><div class="ttdoc">Clear all data in devices.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00124">controller.hpp:124</a></div></div>
-<div class="ttc" id="aclassautd3_1_1ControllerX_html_ab0ca546ae05e1c076c3eecac68054987"><div class="ttname"><a href="classautd3_1_1ControllerX.html#ab0ca546ae05e1c076c3eecac68054987">autd3::ControllerX::open</a></div><div class="ttdeci">bool open(core::LinkPtr link)</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00056">controller.hpp:56</a></div></div>
-<div class="ttc" id="aclassautd3_1_1ControllerX_html_ac9ee63e22fd6e4cf633794f99b95954d"><div class="ttname"><a href="classautd3_1_1ControllerX.html#ac9ee63e22fd6e4cf633794f99b95954d">autd3::ControllerX::geometry</a></div><div class="ttdeci">const core::Geometry&lt; T &gt; &amp; geometry() const noexcept</div><div class="ttdoc">Geometry of the devices.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00054">controller.hpp:54</a></div></div>
+<div class="ttc" id="aclassautd3_1_1ControllerX_html_a3d1adc5a1edd7cce3fd0636b763f23b3"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a3d1adc5a1edd7cce3fd0636b763f23b3">autd3::ControllerX::clear</a></div><div class="ttdeci">bool clear()</div><div class="ttdoc">Clear all data in devices.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00117">controller.hpp:117</a></div></div>
+<div class="ttc" id="aclassautd3_1_1ControllerX_html_ab0ca546ae05e1c076c3eecac68054987"><div class="ttname"><a href="classautd3_1_1ControllerX.html#ab0ca546ae05e1c076c3eecac68054987">autd3::ControllerX::open</a></div><div class="ttdeci">bool open(core::LinkPtr link)</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00055">controller.hpp:55</a></div></div>
+<div class="ttc" id="aclassautd3_1_1ControllerX_html_ac9ee63e22fd6e4cf633794f99b95954d"><div class="ttname"><a href="classautd3_1_1ControllerX.html#ac9ee63e22fd6e4cf633794f99b95954d">autd3::ControllerX::geometry</a></div><div class="ttdeci">const core::Geometry&lt; T &gt; &amp; geometry() const noexcept</div><div class="ttdoc">Geometry of the devices.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00053">controller.hpp:53</a></div></div>
 <div class="ttc" id="anamespaceautd3_1_1driver_html_aa135883b65458cc9f00dcdeb242a98f9"><div class="ttname"><a href="namespaceautd3_1_1driver.html#aa135883b65458cc9f00dcdeb242a98f9">autd3::driver::MSG_BEGIN</a></div><div class="ttdeci">constexpr uint8_t MSG_BEGIN</div><div class="ttdef"><b>Definition:</b> <a href="cpu_2defined_8hpp_source.html#l00021">defined.hpp:21</a></div></div>
 <div class="ttc" id="astructautd3_1_1core_1_1Geometry_html_a975cc9946158f7aa589aad9a734068f5"><div class="ttname"><a href="structautd3_1_1core_1_1Geometry.html#a975cc9946158f7aa589aad9a734068f5">autd3::core::Geometry::end</a></div><div class="ttdeci">std::vector&lt; Device&lt; T &gt; &gt;::const_iterator end() const noexcept</div><div class="ttdef"><b>Definition:</b> <a href="geometry_8hpp_source.html#l00088">geometry.hpp:88</a></div></div>
 <div class="ttc" id="anamespaceautd3_1_1driver_html_a948dc632b3d31104001f79abb2bf1a3f"><div class="ttname"><a href="namespaceautd3_1_1driver.html#a948dc632b3d31104001f79abb2bf1a3f">autd3::driver::MSG_END</a></div><div class="ttdeci">constexpr uint8_t MSG_END</div><div class="ttdef"><b>Definition:</b> <a href="cpu_2defined_8hpp_source.html#l00022">defined.hpp:22</a></div></div>
 <div class="ttc" id="adatagram_8hpp_html"><div class="ttname"><a href="datagram_8hpp.html">datagram.hpp</a></div></div>
-<div class="ttc" id="aclassautd3_1_1ControllerX_html_a083198262721d121a1cbd6b91f481832"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a083198262721d121a1cbd6b91f481832">autd3::ControllerX::firmware_infos</a></div><div class="ttdeci">std::vector&lt; driver::FirmwareInfo &gt; firmware_infos()</div><div class="ttdoc">Enumerate firmware information.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00157">controller.hpp:157</a></div></div>
+<div class="ttc" id="aclassautd3_1_1ControllerX_html_a083198262721d121a1cbd6b91f481832"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a083198262721d121a1cbd6b91f481832">autd3::ControllerX::firmware_infos</a></div><div class="ttdeci">std::vector&lt; driver::FirmwareInfo &gt; firmware_infos()</div><div class="ttdoc">Enumerate firmware information.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00145">controller.hpp:145</a></div></div>
 <div class="ttc" id="astructautd3_1_1core_1_1Geometry_html_a47a61738d4c30038c959e65773cd5cb3"><div class="ttname"><a href="structautd3_1_1core_1_1Geometry.html#a47a61738d4c30038c959e65773cd5cb3">autd3::core::Geometry::begin</a></div><div class="ttdeci">std::vector&lt; Device&lt; T &gt; &gt;::const_iterator begin() const noexcept</div><div class="ttdef"><b>Definition:</b> <a href="geometry_8hpp_source.html#l00087">geometry.hpp:87</a></div></div>
 <div class="ttc" id="astructautd3_1_1core_1_1Geometry_html_a3991eb7d3e038be0f2a412f3f62b7750"><div class="ttname"><a href="structautd3_1_1core_1_1Geometry.html#a3991eb7d3e038be0f2a412f3f62b7750">autd3::core::Geometry::num_devices</a></div><div class="ttdeci">size_t num_devices() const noexcept</div><div class="ttdoc">Number of devices.</div><div class="ttdef"><b>Definition:</b> <a href="geometry_8hpp_source.html#l00043">geometry.hpp:43</a></div></div>
-<div class="ttc" id="aclassautd3_1_1ControllerX_html_a89611677198a0a7b51cfc206a23cd467"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a89611677198a0a7b51cfc206a23cd467">autd3::ControllerX::is_open</a></div><div class="ttdeci">bool is_open() const noexcept</div><div class="ttdoc">Verify the device is properly connected.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00068">controller.hpp:68</a></div></div>
+<div class="ttc" id="aclassautd3_1_1ControllerX_html_a89611677198a0a7b51cfc206a23cd467"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a89611677198a0a7b51cfc206a23cd467">autd3::ControllerX::is_open</a></div><div class="ttdeci">bool is_open() const noexcept</div><div class="ttdoc">Verify the device is properly connected.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00067">controller.hpp:67</a></div></div>
 <div class="ttc" id="aclassautd3_1_1gain_1_1Null_html"><div class="ttname"><a href="classautd3_1_1gain_1_1Null.html">autd3::gain::Null</a></div><div class="ttdoc">Gain to produce nothing.</div><div class="ttdef"><b>Definition:</b> <a href="gain_2primitive_8hpp_source.html#l00024">primitive.hpp:24</a></div></div>
-<div class="ttc" id="aclassautd3_1_1ControllerX_html_a1be079bcd0e774b92ce4073f8a31b32f"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a1be079bcd0e774b92ce4073f8a31b32f">autd3::ControllerX::check_ack</a></div><div class="ttdeci">bool check_ack</div><div class="ttdoc">If true, this controller check ack from devices.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00285">controller.hpp:285</a></div></div>
-<div class="ttc" id="aclassautd3_1_1ControllerX_html_a687114a55d269132c4883abd242f4daa"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a687114a55d269132c4883abd242f4daa">autd3::ControllerX::read_fpga_info</a></div><div class="ttdeci">std::vector&lt; driver::FPGAInfo &gt; read_fpga_info()</div><div class="ttdoc">FPGA info.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00112">controller.hpp:112</a></div></div>
+<div class="ttc" id="aclassautd3_1_1ControllerX_html_a687114a55d269132c4883abd242f4daa"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a687114a55d269132c4883abd242f4daa">autd3::ControllerX::read_fpga_info</a></div><div class="ttdeci">std::vector&lt; driver::FPGAInfo &gt; read_fpga_info()</div><div class="ttdoc">FPGA info.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00105">controller.hpp:105</a></div></div>
 <div class="ttc" id="astructautd3_1_1driver_1_1RxMessage_html"><div class="ttname"><a href="structautd3_1_1driver_1_1RxMessage.html">autd3::driver::RxMessage</a></div><div class="ttdef"><b>Definition:</b> <a href="datagram_8hpp_source.html#l00057">datagram.hpp:57</a></div></div>
 <div class="ttc" id="anamespaceautd3_1_1core_html_aeb7a471c6532b5c4888a461d378c6ae0"><div class="ttname"><a href="namespaceautd3_1_1core.html#aeb7a471c6532b5c4888a461d378c6ae0">autd3::core::LinkPtr</a></div><div class="ttdeci">std::unique_ptr&lt; Link &gt; LinkPtr</div><div class="ttdef"><b>Definition:</b> <a href="link_8hpp_source.html#l00061">link.hpp:61</a></div></div>
 <div class="ttc" id="anamespaceautd3_1_1driver_html_a9a78a89c2ff49bab55a41192d9bd6892"><div class="ttname"><a href="namespaceautd3_1_1driver.html#a9a78a89c2ff49bab55a41192d9bd6892">autd3::driver::fpga_functions</a></div><div class="ttdeci">void fpga_functions(TxDatagram &amp;tx) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="operation_8hpp_source.html#l00367">operation.hpp:367</a></div></div>
-<div class="ttc" id="aclassautd3_1_1ControllerX_html_a7036d330918e6eb78f85734d16418cb8"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a7036d330918e6eb78f85734d16418cb8">autd3::ControllerX::send</a></div><div class="ttdeci">auto send(B &amp;&amp;body) -&gt; typename std::enable_if_t&lt; std::is_base_of_v&lt; core::DatagramBody&lt; T &gt;, B &gt;, bool &gt;</div><div class="ttdoc">Send body data to devices.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00233">controller.hpp:233</a></div></div>
+<div class="ttc" id="aclassautd3_1_1ControllerX_html_a7036d330918e6eb78f85734d16418cb8"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a7036d330918e6eb78f85734d16418cb8">autd3::ControllerX::send</a></div><div class="ttdeci">auto send(B &amp;&amp;body) -&gt; typename std::enable_if_t&lt; std::is_base_of_v&lt; core::DatagramBody&lt; T &gt;, B &gt;, bool &gt;</div><div class="ttdoc">Send body data to devices.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00208">controller.hpp:208</a></div></div>
 <div class="ttc" id="ageometry_8hpp_html"><div class="ttname"><a href="geometry_8hpp.html">geometry.hpp</a></div></div>
-<div class="ttc" id="aclassautd3_1_1ControllerX_html_ad04a28be2e7c7d5165bdc42c1c16c6f0"><div class="ttname"><a href="classautd3_1_1ControllerX.html#ad04a28be2e7c7d5165bdc42c1c16c6f0">autd3::ControllerX::send</a></div><div class="ttdeci">auto send(H &amp;header, B &amp;body) -&gt; typename std::enable_if_t&lt; std::is_base_of_v&lt; core::DatagramHeader, H &gt; &amp;&amp;std::is_base_of_v&lt; core::DatagramBody&lt; T &gt;, B &gt;, bool &gt;</div><div class="ttdoc">Send header and body data to devices.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00242">controller.hpp:242</a></div></div>
-<div class="ttc" id="aclassautd3_1_1ControllerX_html_a2ef03711a07566deb3a1749bc24eb090"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a2ef03711a07566deb3a1749bc24eb090">autd3::ControllerX::reads_fpga_info</a></div><div class="ttdeci">bool reads_fpga_info</div><div class="ttdoc">If true, the devices return FPGA info in all frames. The FPGA info can be read by fpga_info().</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00280">controller.hpp:280</a></div></div>
+<div class="ttc" id="aclassautd3_1_1ControllerX_html_ad04a28be2e7c7d5165bdc42c1c16c6f0"><div class="ttname"><a href="classautd3_1_1ControllerX.html#ad04a28be2e7c7d5165bdc42c1c16c6f0">autd3::ControllerX::send</a></div><div class="ttdeci">auto send(H &amp;header, B &amp;body) -&gt; typename std::enable_if_t&lt; std::is_base_of_v&lt; core::DatagramHeader, H &gt; &amp;&amp;std::is_base_of_v&lt; core::DatagramBody&lt; T &gt;, B &gt;, bool &gt;</div><div class="ttdoc">Send header and body data to devices.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00217">controller.hpp:217</a></div></div>
+<div class="ttc" id="aclassautd3_1_1ControllerX_html_a2ef03711a07566deb3a1749bc24eb090"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a2ef03711a07566deb3a1749bc24eb090">autd3::ControllerX::reads_fpga_info</a></div><div class="ttdeci">bool reads_fpga_info</div><div class="ttdoc">If true, the devices return FPGA info in all frames. The FPGA info can be read by fpga_info().</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00256">controller.hpp:256</a></div></div>
 <div class="ttc" id="anamespaceautd3_1_1driver_html_a84f57e8df76700c2e2e64deff6fa4dd0"><div class="ttname"><a href="namespaceautd3_1_1driver.html#a84f57e8df76700c2e2e64deff6fa4dd0">autd3::driver::force_fan</a></div><div class="ttdeci">void force_fan(TxDatagram &amp;tx, const bool value) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="operation_8hpp_source.html#l00341">operation.hpp:341</a></div></div>
 <div class="ttc" id="alink_8hpp_html"><div class="ttname"><a href="link_8hpp.html">link.hpp</a></div></div>
 <div class="ttc" id="afirmware__version_8hpp_html"><div class="ttname"><a href="firmware__version_8hpp.html">firmware_version.hpp</a></div></div>
-<div class="ttc" id="aclassautd3_1_1ControllerX_html_a13363e1d9c00d8dcae6111393b6a2a69"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a13363e1d9c00d8dcae6111393b6a2a69">autd3::ControllerX::geometry</a></div><div class="ttdeci">core::Geometry&lt; T &gt; &amp; geometry() noexcept</div><div class="ttdoc">Geometry of the devices.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00049">controller.hpp:49</a></div></div>
+<div class="ttc" id="aclassautd3_1_1ControllerX_html_a13363e1d9c00d8dcae6111393b6a2a69"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a13363e1d9c00d8dcae6111393b6a2a69">autd3::ControllerX::geometry</a></div><div class="ttdeci">core::Geometry&lt; T &gt; &amp; geometry() noexcept</div><div class="ttdoc">Geometry of the devices.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00048">controller.hpp:48</a></div></div>
 <div class="ttc" id="ainterface_8hpp_html"><div class="ttname"><a href="interface_8hpp.html">interface.hpp</a></div></div>
 <div class="ttc" id="anormal__transducer_8hpp_html"><div class="ttname"><a href="normal__transducer_8hpp.html">normal_transducer.hpp</a></div></div>
 <div class="ttc" id="asilencer__config_8hpp_html"><div class="ttname"><a href="silencer__config_8hpp.html">silencer_config.hpp</a></div></div>
@@ -474,11 +446,11 @@ $(function() {
 <div class="ttc" id="aclassautd3_1_1ControllerX_html"><div class="ttname"><a href="classautd3_1_1ControllerX.html">autd3::ControllerX</a></div><div class="ttdoc">AUTD Controller.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00041">controller.hpp:41</a></div></div>
 <div class="ttc" id="aclassautd3_1_1ControllerX_html_a1243079a8fe7d32b47fa21278fe21f03"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a1243079a8fe7d32b47fa21278fe21f03">autd3::ControllerX::stop</a></div><div class="ttdeci">bool stop()</div><div class="ttdoc">Stop outputting.</div></div>
 <div class="ttc" id="anamespaceautd3_1_1driver_html_a9b24e12394df6f7774ba7783bfbdd5e2"><div class="ttname"><a href="namespaceautd3_1_1driver.html#a9b24e12394df6f7774ba7783bfbdd5e2">autd3::driver::reads_fpga_info</a></div><div class="ttdeci">void reads_fpga_info(TxDatagram &amp;tx, const bool value) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="operation_8hpp_source.html#l00348">operation.hpp:348</a></div></div>
-<div class="ttc" id="aclassautd3_1_1ControllerX_html_a5f769c384c474de6bb3f04726d7e31b3"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a5f769c384c474de6bb3f04726d7e31b3">autd3::ControllerX::send</a></div><div class="ttdeci">auto send(B &amp;body) -&gt; typename std::enable_if_t&lt; std::is_base_of_v&lt; core::DatagramBody&lt; T &gt;, B &gt;, bool &gt;</div><div class="ttdoc">Send body data to devices.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00223">controller.hpp:223</a></div></div>
-<div class="ttc" id="aclassautd3_1_1ControllerX_html_a9a6be3124795c90809b61dd2d93c8efb"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a9a6be3124795c90809b61dd2d93c8efb">autd3::ControllerX::update_flag</a></div><div class="ttdeci">bool update_flag()</div><div class="ttdoc">Update flags (force fan and reads_fpga_info)</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00102">controller.hpp:102</a></div></div>
+<div class="ttc" id="aclassautd3_1_1ControllerX_html_a5f769c384c474de6bb3f04726d7e31b3"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a5f769c384c474de6bb3f04726d7e31b3">autd3::ControllerX::send</a></div><div class="ttdeci">auto send(B &amp;body) -&gt; typename std::enable_if_t&lt; std::is_base_of_v&lt; core::DatagramBody&lt; T &gt;, B &gt;, bool &gt;</div><div class="ttdoc">Send body data to devices.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00198">controller.hpp:198</a></div></div>
+<div class="ttc" id="aclassautd3_1_1ControllerX_html_a9a6be3124795c90809b61dd2d93c8efb"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a9a6be3124795c90809b61dd2d93c8efb">autd3::ControllerX::update_flag</a></div><div class="ttdeci">bool update_flag()</div><div class="ttdoc">Update flags (force fan and reads_fpga_info)</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00095">controller.hpp:95</a></div></div>
 <div class="ttc" id="astructautd3_1_1SilencerConfig_html"><div class="ttname"><a href="structautd3_1_1SilencerConfig.html">autd3::SilencerConfig</a></div><div class="ttdoc">Silencer Configuration.</div><div class="ttdef"><b>Definition:</b> <a href="silencer__config_8hpp_source.html#l00023">silencer_config.hpp:23</a></div></div>
 <div class="ttc" id="aec__config_8hpp_html"><div class="ttname"><a href="ec__config_8hpp.html">ec_config.hpp</a></div></div>
-<div class="ttc" id="aclassautd3_1_1ControllerX_html_ad8f5c96c7773ee9e53ef3fdb31728df6"><div class="ttname"><a href="classautd3_1_1ControllerX.html#ad8f5c96c7773ee9e53ef3fdb31728df6">autd3::ControllerX::synchronize</a></div><div class="ttdeci">bool synchronize()</div><div class="ttdoc">Synchronize devices.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00074">controller.hpp:74</a></div></div>
+<div class="ttc" id="aclassautd3_1_1ControllerX_html_ad8f5c96c7773ee9e53ef3fdb31728df6"><div class="ttname"><a href="classautd3_1_1ControllerX.html#ad8f5c96c7773ee9e53ef3fdb31728df6">autd3::ControllerX::synchronize</a></div><div class="ttdeci">bool synchronize()</div><div class="ttdoc">Synchronize devices.</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00073">controller.hpp:73</a></div></div>
 <div class="ttc" id="anamespaceautd3_1_1driver_html_aaf8d68e3a93eb74bafa7d21d568e0746"><div class="ttname"><a href="namespaceautd3_1_1driver.html#aaf8d68e3a93eb74bafa7d21d568e0746">autd3::driver::clear</a></div><div class="ttdeci">void clear(TxDatagram &amp;tx) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="operation_8hpp_source.html#l00022">operation.hpp:22</a></div></div>
 <div class="ttc" id="astructautd3_1_1core_1_1DynamicTransducer_html_a881ac2bd16838479d14e6f661610dfdc"><div class="ttname"><a href="structautd3_1_1core_1_1DynamicTransducer.html#a881ac2bd16838479d14e6f661610dfdc">autd3::core::DynamicTransducer::mode</a></div><div class="ttdeci">static TransducerMode &amp; mode()</div><div class="ttdef"><b>Definition:</b> <a href="dynamic__transducer_8hpp_source.html#l00153">dynamic_transducer.hpp:153</a></div></div>
 <div class="ttc" id="aclassautd3_1_1ControllerX_html_a8e7740319bb3c2533d7a95108cf1b818"><div class="ttname"><a href="classautd3_1_1ControllerX.html#a8e7740319bb3c2533d7a95108cf1b818">autd3::ControllerX::ControllerX</a></div><div class="ttdeci">ControllerX()</div><div class="ttdef"><b>Definition:</b> <a href="controller_8hpp_source.html#l00043">controller.hpp:43</a></div></div>

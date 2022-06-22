@@ -1,6 +1,0 @@
-<map id="autd3::gain::holo::GradientDescent&lt; T, &gt;" name="autd3::gain::holo::GradientDescent&lt; T, &gt;">
-<area shape="rect" id="node1" title="Gain to produce multiple focal points with Gauss&#45;Newton method." alt="" coords="33,273,187,315"/>
-<area shape="rect" id="node2" href="$classautd3_1_1gain_1_1holo_1_1Holo.html" title=" " alt="" coords="5,184,215,225"/>
-<area shape="rect" id="node3" href="$structautd3_1_1core_1_1Gain.html" title=" " alt="" coords="23,95,197,136"/>
-<area shape="rect" id="node4" href="$structautd3_1_1core_1_1DatagramBody.html" title=" " alt="" coords="19,5,201,47"/>
-</map>
