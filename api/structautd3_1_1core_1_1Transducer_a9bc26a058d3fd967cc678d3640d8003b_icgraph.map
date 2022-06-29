@@ -1,0 +1,5 @@
+<map id="autd3::core::Transducer::cycle" name="autd3::core::Transducer::cycle">
+<area shape="rect" id="node1" title="Frequency division ratio. The frequency will be autd3::driver::FPGA_CLK_FREQ/cycle." alt="" coords="413,35,569,76"/>
+<area shape="rect" id="node2" href="$structautd3_1_1core_1_1Transducer.html#a5efdcc26bfcbcc7e4358464fb9726d16" title="Set fFrequency division ratio. The frequency will be autd3::driver::FPGA_CLK_FREQ/cycle." alt="" coords="209,5,365,47"/>
+<area shape="rect" id="node3" href="$structautd3_1_1core_1_1Transducer.html#a41dc674d4edef173a23ec4aa51749308" title="Set fFrequency of the transducer." alt="" coords="5,35,161,76"/>
+</map>

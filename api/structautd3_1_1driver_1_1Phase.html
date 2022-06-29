@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">autd3
-   &#160;<span id="projectnumber">2.2.1</span>
+   &#160;<span id="projectnumber">2.2.2</span>
    </div>
   </td>
  </tr>
@@ -68,6 +68,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="structautd3_1_1driver_1_1Phase-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -79,8 +80,13 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae227813601041163d20f210ceb3590c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1driver_1_1Phase.html#ae227813601041163d20f210ceb3590c7">set</a> (const double p, const uint16_t cycle)</td></tr>
-<tr class="separator:ae227813601041163d20f210ceb3590c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53240a11075e45544e05631b4c76204f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1driver_1_1Phase.html#a53240a11075e45544e05631b4c76204f">set</a> (const <a class="el" href="structautd3_1_1driver_1_1Drive.html">Drive</a> d)</td></tr>
+<tr class="separator:a53240a11075e45544e05631b4c76204f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a5906de9f4d2b240327ef5d0337a02b3d"><td class="memItemLeft" align="right" valign="top">static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1driver_1_1Phase.html#a5906de9f4d2b240327ef5d0337a02b3d">to_phase</a> (const <a class="el" href="structautd3_1_1driver_1_1Drive.html">Drive</a> d)</td></tr>
+<tr class="separator:a5906de9f4d2b240327ef5d0337a02b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -89,10 +95,10 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="fpga_2defined_8hpp_source.html#l00091">91</a> of file <a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fpga_2defined_8hpp_source.html#l00100">100</a> of file <a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae227813601041163d20f210ceb3590c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae227813601041163d20f210ceb3590c7">&#9670;&nbsp;</a></span>set()</h2>
+<a id="a53240a11075e45544e05631b4c76204f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53240a11075e45544e05631b4c76204f">&#9670;&nbsp;</a></span>set()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -103,19 +109,9 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">void autd3::driver::Phase::set </td>
           <td>(</td>
-          <td class="paramtype">const double&#160;</td>
-          <td class="paramname"><em>p</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const <a class="el" href="structautd3_1_1driver_1_1Drive.html">Drive</a>&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const uint16_t&#160;</td>
-          <td class="paramname"><em>cycle</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -125,16 +121,81 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fpga_2defined_8hpp_source.html#l00094">94</a> of file <a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fpga_2defined_8hpp_source.html#l00108">108</a> of file <a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fpga_2defined_8hpp_source.html#l00092">phase</a>, and <a class="el" href="driver_2utils_8hpp_source.html#l00017">autd3::driver::rem_euclid()</a>.</p>
+<p class="reference">References <a class="el" href="fpga_2defined_8hpp_source.html#l00101">phase</a>, and <a class="el" href="fpga_2defined_8hpp_source.html#l00103">to_phase()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="operation_8hpp_source.html#l00293">autd3::driver::gain_stm_normal_phase()</a>, and <a class="el" href="operation_8hpp_source.html#l00146">autd3::driver::normal_phase_body()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="structautd3_1_1driver_1_1Phase_ae227813601041163d20f210ceb3590c7_cgraph.png" border="0" usemap="#structautd3_1_1driver_1_1Phase_ae227813601041163d20f210ceb3590c7_cgraph" alt=""/></div>
-<map name="structautd3_1_1driver_1_1Phase_ae227813601041163d20f210ceb3590c7_cgraph" id="structautd3_1_1driver_1_1Phase_ae227813601041163d20f210ceb3590c7_cgraph">
+<div class="center"><img src="structautd3_1_1driver_1_1Phase_a53240a11075e45544e05631b4c76204f_cgraph.png" border="0" usemap="#structautd3_1_1driver_1_1Phase_a53240a11075e45544e05631b4c76204f_cgraph" alt=""/></div>
+<map name="structautd3_1_1driver_1_1Phase_a53240a11075e45544e05631b4c76204f_cgraph" id="structautd3_1_1driver_1_1Phase_a53240a11075e45544e05631b4c76204f_cgraph">
 <area shape="rect" title=" " alt="" coords="5,13,164,39"/>
-<area shape="rect" href="namespaceautd3_1_1driver.html#ac6416438d9e70a48fd2fd2c0d7f1c888" title=" " alt="" coords="212,5,332,47"/>
+<area shape="rect" href="structautd3_1_1driver_1_1Phase.html#a5906de9f4d2b240327ef5d0337a02b3d" title=" " alt="" coords="212,5,347,47"/>
+<area shape="rect" href="namespaceautd3_1_1driver.html#ac6416438d9e70a48fd2fd2c0d7f1c888" title=" " alt="" coords="395,5,515,47"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="structautd3_1_1driver_1_1Phase_a53240a11075e45544e05631b4c76204f_icgraph.png" border="0" usemap="#structautd3_1_1driver_1_1Phase_a53240a11075e45544e05631b4c76204f_icgraph" alt=""/></div>
+<map name="structautd3_1_1driver_1_1Phase_a53240a11075e45544e05631b4c76204f_icgraph" id="structautd3_1_1driver_1_1Phase_a53240a11075e45544e05631b4c76204f_icgraph">
+<area shape="rect" title=" " alt="" coords="192,46,351,73"/>
+<area shape="rect" href="namespaceautd3_1_1driver.html#ad72aa5f61bd5b19067248cb7ee69f10a" title=" " alt="" coords="5,5,144,47"/>
+<area shape="rect" href="namespaceautd3_1_1driver.html#acf9ca4b2d57c6a08819131c86c32e3bf" title=" " alt="" coords="6,71,143,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5906de9f4d2b240327ef5d0337a02b3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5906de9f4d2b240327ef5d0337a02b3d">&#9670;&nbsp;</a></span>to_phase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint16_t autd3::driver::Phase::to_phase </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structautd3_1_1driver_1_1Drive.html">Drive</a>&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fpga_2defined_8hpp_source.html#l00103">103</a> of file <a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="fpga_2defined_8hpp_source.html#l00084">autd3::driver::Drive::cycle</a>, <a class="el" href="fpga_2defined_8hpp_source.html#l00082">autd3::driver::Drive::phase</a>, and <a class="el" href="driver_2utils_8hpp_source.html#l00017">autd3::driver::rem_euclid()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="fpga_2defined_8hpp_source.html#l00108">set()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="structautd3_1_1driver_1_1Phase_a5906de9f4d2b240327ef5d0337a02b3d_cgraph.png" border="0" usemap="#structautd3_1_1driver_1_1Phase_a5906de9f4d2b240327ef5d0337a02b3d_cgraph" alt=""/></div>
+<map name="structautd3_1_1driver_1_1Phase_a5906de9f4d2b240327ef5d0337a02b3d_cgraph" id="structautd3_1_1driver_1_1Phase_a5906de9f4d2b240327ef5d0337a02b3d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,140,47"/>
+<area shape="rect" href="namespaceautd3_1_1driver.html#ac6416438d9e70a48fd2fd2c0d7f1c888" title=" " alt="" coords="188,5,308,47"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="structautd3_1_1driver_1_1Phase_a5906de9f4d2b240327ef5d0337a02b3d_icgraph.png" border="0" usemap="#structautd3_1_1driver_1_1Phase_a5906de9f4d2b240327ef5d0337a02b3d_icgraph" alt=""/></div>
+<map name="structautd3_1_1driver_1_1Phase_a5906de9f4d2b240327ef5d0337a02b3d_icgraph" id="structautd3_1_1driver_1_1Phase_a5906de9f4d2b240327ef5d0337a02b3d_icgraph">
+<area shape="rect" title=" " alt="" coords="399,39,533,80"/>
+<area shape="rect" href="structautd3_1_1driver_1_1Phase.html#a53240a11075e45544e05631b4c76204f" title=" " alt="" coords="192,46,351,73"/>
+<area shape="rect" href="namespaceautd3_1_1driver.html#ad72aa5f61bd5b19067248cb7ee69f10a" title=" " alt="" coords="5,5,144,47"/>
+<area shape="rect" href="namespaceautd3_1_1driver.html#acf9ca4b2d57c6a08819131c86c32e3bf" title=" " alt="" coords="6,71,143,112"/>
 </map>
 </div>
 
@@ -153,9 +214,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fpga_2defined_8hpp_source.html#l00092">92</a> of file <a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fpga_2defined_8hpp_source.html#l00101">101</a> of file <a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fpga_2defined_8hpp_source.html#l00094">set()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fpga_2defined_8hpp_source.html#l00108">set()</a>.</p>
 
 </div>
 </div>

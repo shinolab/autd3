@@ -1,4 +1,19 @@
-<map id="autd3::core::Gain&lt; T, &gt;" name="autd3::core::Gain&lt; T, &gt;">
-<area shape="rect" id="node1" title="Gain controls the duty ratio and phase of each transducer in AUTD devices." alt="" coords="33,80,185,107"/>
-<area shape="rect" id="node2" href="$structautd3_1_1core_1_1DatagramBody.html" title=" " alt="" coords="5,5,212,32"/>
+<map id="autd3::core::Gain" name="autd3::core::Gain">
+<area shape="rect" id="node1" title="Gain controls the duty ratio and phase of each transducer in AUTD devices." alt="" coords="229,207,348,233"/>
+<area shape="rect" id="node3" href="$classautd3_1_1gain_1_1BesselBeam.html" title="Gain to produce Bessel Beam." alt="" coords="396,80,560,107"/>
+<area shape="rect" id="node4" href="$classautd3_1_1gain_1_1Focus.html" title="Gain to produce single focal point." alt="" coords="415,131,541,157"/>
+<area shape="rect" id="node5" href="$classautd3_1_1gain_1_1Grouped.html" title="Gain to group some gains." alt="" coords="409,181,547,208"/>
+<area shape="rect" id="node6" href="$classautd3_1_1gain_1_1holo_1_1Holo.html" title="Gain to produce multiple focal points." alt="" coords="405,232,551,259"/>
+<area shape="rect" id="node16" href="$classautd3_1_1gain_1_1Null.html" title="Gain to produce nothing." alt="" coords="421,283,535,309"/>
+<area shape="rect" id="node17" href="$classautd3_1_1gain_1_1PlaneWave.html" title="Gain to create plane wave." alt="" coords="400,333,556,360"/>
+<area shape="rect" id="node2" href="$structautd3_1_1core_1_1DatagramBody.html" title="DatagramBody is a data to be packed in the Body part of the driver::TxDatagram." alt="" coords="5,207,181,233"/>
+<area shape="rect" id="node7" href="$classautd3_1_1gain_1_1holo_1_1APO.html" title="Gain to produce multiple focal points with Acoustic Power Optimization method. Refer to Keisuke Haseg..." alt="" coords="608,5,756,32"/>
+<area shape="rect" id="node8" href="$classautd3_1_1gain_1_1holo_1_1EVD.html" title="Gain to produce multiple focal points with EVD method. Refer to Long, Benjamin, et al...." alt="" coords="609,56,755,83"/>
+<area shape="rect" id="node9" href="$classautd3_1_1gain_1_1holo_1_1Greedy.html" title="Gain to produce multiple focal points with Greedy algorithm. Refer to Shun suzuki,..." alt="" coords="622,107,742,149"/>
+<area shape="rect" id="node10" href="$classautd3_1_1gain_1_1holo_1_1GS.html" title="Gain to produce multiple focal points with GS method. Refer to Asier Marzo and Bruce W Drinkwater,..." alt="" coords="613,173,751,200"/>
+<area shape="rect" id="node11" href="$classautd3_1_1gain_1_1holo_1_1GSPAT.html" title="Gain to produce multiple focal points with GS&#45;PAT method (not yet been implemented with GPU)...." alt="" coords="622,225,742,266"/>
+<area shape="rect" id="node12" href="$classautd3_1_1gain_1_1holo_1_1LM.html" title="Gain to produce multiple focal points with Levenberg&#45;Marquardt method. Refer to K...." alt="" coords="613,291,751,317"/>
+<area shape="rect" id="node13" href="$classautd3_1_1gain_1_1holo_1_1LSS.html" title="Gain to produce multiple focal points with Linear Synthesis Scheme." alt="" coords="609,341,755,368"/>
+<area shape="rect" id="node14" href="$classautd3_1_1gain_1_1holo_1_1LSSGreedy.html" title="Gain to produce multiple focal points, applying greedy algorithm on linear synthesis scheme...." alt="" coords="622,393,742,434"/>
+<area shape="rect" id="node15" href="$classautd3_1_1gain_1_1holo_1_1SDP.html" title="Gain to produce multiple focal points with SDP method. Refer to Inoue, Seki, Yasutoshi Makino,..." alt="" coords="609,459,755,485"/>
 </map>

@@ -1,0 +1,25 @@
+<map id="autd3::core::DatagramBody" name="autd3::core::DatagramBody">
+<area shape="rect" id="node1" title="DatagramBody is a data to be packed in the Body part of the driver::TxDatagram." alt="" coords="5,283,181,309"/>
+<area shape="rect" id="node2" href="$classautd3_1_1core_1_1Amplitudes.html" title="Amplitude configuration for NormalPhaseMode." alt="" coords="243,181,399,208"/>
+<area shape="rect" id="node3" href="$structautd3_1_1core_1_1Gain.html" title="Gain controls the duty ratio and phase of each transducer in AUTD devices." alt="" coords="262,232,381,259"/>
+<area shape="rect" id="node19" href="$structautd3_1_1core_1_1ModDelayConfig.html" title="Gain controls the duty ratio and phase of each transducer in AUTD devices." alt="" coords="229,283,413,309"/>
+<area shape="rect" id="node20" href="$structautd3_1_1core_1_1NullBody.html" title=" " alt="" coords="250,333,393,360"/>
+<area shape="rect" id="node21" href="$structautd3_1_1core_1_1STM.html" title="STM provide hardware Spatio&#45;Temporal Modulation or Lateral Modulation function." alt="" coords="262,384,381,411"/>
+<area shape="rect" id="node4" href="$classautd3_1_1gain_1_1BesselBeam.html" title="Gain to produce Bessel Beam." alt="" coords="461,80,625,107"/>
+<area shape="rect" id="node5" href="$classautd3_1_1gain_1_1Focus.html" title="Gain to produce single focal point." alt="" coords="480,131,607,157"/>
+<area shape="rect" id="node6" href="$classautd3_1_1gain_1_1Grouped.html" title="Gain to group some gains." alt="" coords="474,181,613,208"/>
+<area shape="rect" id="node7" href="$classautd3_1_1gain_1_1holo_1_1Holo.html" title="Gain to produce multiple focal points." alt="" coords="470,232,617,259"/>
+<area shape="rect" id="node17" href="$classautd3_1_1gain_1_1Null.html" title="Gain to produce nothing." alt="" coords="487,283,600,309"/>
+<area shape="rect" id="node18" href="$classautd3_1_1gain_1_1PlaneWave.html" title="Gain to create plane wave." alt="" coords="465,333,621,360"/>
+<area shape="rect" id="node8" href="$classautd3_1_1gain_1_1holo_1_1APO.html" title="Gain to produce multiple focal points with Acoustic Power Optimization method. Refer to Keisuke Haseg..." alt="" coords="673,5,821,32"/>
+<area shape="rect" id="node9" href="$classautd3_1_1gain_1_1holo_1_1EVD.html" title="Gain to produce multiple focal points with EVD method. Refer to Long, Benjamin, et al...." alt="" coords="674,56,821,83"/>
+<area shape="rect" id="node10" href="$classautd3_1_1gain_1_1holo_1_1Greedy.html" title="Gain to produce multiple focal points with Greedy algorithm. Refer to Shun suzuki,..." alt="" coords="687,107,807,149"/>
+<area shape="rect" id="node11" href="$classautd3_1_1gain_1_1holo_1_1GS.html" title="Gain to produce multiple focal points with GS method. Refer to Asier Marzo and Bruce W Drinkwater,..." alt="" coords="678,173,817,200"/>
+<area shape="rect" id="node12" href="$classautd3_1_1gain_1_1holo_1_1GSPAT.html" title="Gain to produce multiple focal points with GS&#45;PAT method (not yet been implemented with GPU)...." alt="" coords="687,225,807,266"/>
+<area shape="rect" id="node13" href="$classautd3_1_1gain_1_1holo_1_1LM.html" title="Gain to produce multiple focal points with Levenberg&#45;Marquardt method. Refer to K...." alt="" coords="678,291,817,317"/>
+<area shape="rect" id="node14" href="$classautd3_1_1gain_1_1holo_1_1LSS.html" title="Gain to produce multiple focal points with Linear Synthesis Scheme." alt="" coords="674,341,821,368"/>
+<area shape="rect" id="node15" href="$classautd3_1_1gain_1_1holo_1_1LSSGreedy.html" title="Gain to produce multiple focal points, applying greedy algorithm on linear synthesis scheme...." alt="" coords="687,393,807,434"/>
+<area shape="rect" id="node16" href="$classautd3_1_1gain_1_1holo_1_1SDP.html" title="Gain to produce multiple focal points with SDP method. Refer to Inoue, Seki, Yasutoshi Makino,..." alt="" coords="674,459,821,485"/>
+<area shape="rect" id="node22" href="$structautd3_1_1core_1_1GainSTM.html" title="GainSTM provides a function to display Gain sequentially and periodically." alt="" coords="470,384,617,411"/>
+<area shape="rect" id="node23" href="$structautd3_1_1core_1_1PointSTM.html" title="PointSTM provides a function to display the focus sequentially and periodically." alt="" coords="469,435,618,461"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="autd3::core::Geometry::Device::center" name="autd3::core::Geometry::Device::center">
+<area shape="rect" id="node1" title="Center position of this device." alt="" coords="5,71,152,112"/>
+<area shape="rect" id="node2" href="$structautd3_1_1core_1_1Geometry_1_1Device.html#aa3c3fef447f864673b071c59341b2d46" title=" " alt="" coords="205,5,351,47"/>
+<area shape="rect" id="node3" href="$structautd3_1_1core_1_1Geometry_1_1Device.html#a3c973317fa928c2c9126bd0357a1f032" title=" " alt="" coords="205,71,351,112"/>
+<area shape="rect" id="node4" href="$structautd3_1_1core_1_1Transducer.html#ab00753d226a1d1d21566ce6c290a39a4" title="Position of the transducer." alt="" coords="200,136,356,177"/>
+</map>

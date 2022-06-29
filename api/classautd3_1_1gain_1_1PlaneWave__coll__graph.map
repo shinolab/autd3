@@ -1,5 +1,5 @@
-<map id="autd3::gain::PlaneWave&lt; T, &gt;" name="autd3::gain::PlaneWave&lt; T, &gt;">
-<area shape="rect" id="node1" title="Gain to create plane wave." alt="" coords="19,184,175,225"/>
-<area shape="rect" id="node2" href="$structautd3_1_1core_1_1Gain.html" title=" " alt="" coords="9,95,184,136"/>
-<area shape="rect" id="node3" href="$structautd3_1_1core_1_1DatagramBody.html" title=" " alt="" coords="5,5,188,47"/>
+<map id="autd3::gain::PlaneWave" name="autd3::gain::PlaneWave">
+<area shape="rect" id="node1" title="Gain to create plane wave." alt="" coords="15,155,171,181"/>
+<area shape="rect" id="node2" href="$structautd3_1_1core_1_1Gain.html" title="Gain controls the duty ratio and phase of each transducer in AUTD devices." alt="" coords="34,80,153,107"/>
+<area shape="rect" id="node3" href="$structautd3_1_1core_1_1DatagramBody.html" title="DatagramBody is a data to be packed in the Body part of the driver::TxDatagram." alt="" coords="5,5,181,32"/>
 </map>

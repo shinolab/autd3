@@ -1,0 +1,5 @@
+<map id="autd3::core::GainSTM" name="autd3::core::GainSTM">
+<area shape="rect" id="node1" title="GainSTM provides a function to display Gain sequentially and periodically." alt="" coords="20,155,167,181"/>
+<area shape="rect" id="node2" href="$structautd3_1_1core_1_1STM.html" title="STM provide hardware Spatio&#45;Temporal Modulation or Lateral Modulation function." alt="" coords="34,80,153,107"/>
+<area shape="rect" id="node3" href="$structautd3_1_1core_1_1DatagramBody.html" title="DatagramBody is a data to be packed in the Body part of the driver::TxDatagram." alt="" coords="5,5,181,32"/>
+</map>

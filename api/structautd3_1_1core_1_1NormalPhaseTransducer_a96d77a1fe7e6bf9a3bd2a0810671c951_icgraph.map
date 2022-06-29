@@ -1,5 +1,0 @@
-<map id="autd3::core::NormalPhaseTransducer::frequency" name="autd3::core::NormalPhaseTransducer::frequency">
-<area shape="rect" id="node1" title=" " alt="" coords="224,39,395,80"/>
-<area shape="rect" id="node2" href="$structautd3_1_1core_1_1NormalPhaseTransducer.html#a2cb00a117c01adfeb860966b995e9182" title="Wavelength of the ultrasound emitted from the transducer." alt="" coords="5,5,176,47"/>
-<area shape="rect" id="node3" href="$structautd3_1_1core_1_1NormalPhaseTransducer.html#ada9ac6fffbc67ef27f14eb375acad916" title="Wavenumber of the ultrasound emitted from the transducer." alt="" coords="5,71,176,112"/>
-</map>

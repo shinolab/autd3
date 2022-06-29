@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>autd3: autd3::core::Gain&lt; T, &gt; Struct Template Reference</title>
+<title>autd3: autd3::core::Gain Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">autd3
-   &#160;<span id="projectnumber">2.2.1</span>
+   &#160;<span id="projectnumber">2.2.2</span>
    </div>
   </td>
  </tr>
@@ -70,7 +70,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="structautd3_1_1core_1_1Gain-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">autd3::core::Gain&lt; T, &gt; Struct Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">autd3::core::Gain Struct Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -79,95 +79,103 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="gain_8hpp_source.html">gain.hpp</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for autd3::core::Gain&lt; T, &gt;:</div>
+Inheritance diagram for autd3::core::Gain:</div>
 <div class="dyncontent">
-<div class="center"><img src="structautd3_1_1core_1_1Gain__inherit__graph.png" border="0" usemap="#autd3_1_1core_1_1Gain_3_01T_00_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="autd3_1_1core_1_1Gain_3_01T_00_01_4_inherit__map" id="autd3_1_1core_1_1Gain_3_01T_00_01_4_inherit__map">
-<area shape="rect" title="Gain controls the duty ratio and phase of each transducer in AUTD devices." alt="" coords="33,80,185,107"/>
-<area shape="rect" href="structautd3_1_1core_1_1DatagramBody.html" title=" " alt="" coords="5,5,212,32"/>
+<div class="center"><img src="structautd3_1_1core_1_1Gain__inherit__graph.png" border="0" usemap="#autd3_1_1core_1_1Gain_inherit__map" alt="Inheritance graph"/></div>
+<map name="autd3_1_1core_1_1Gain_inherit__map" id="autd3_1_1core_1_1Gain_inherit__map">
+<area shape="rect" title="Gain controls the duty ratio and phase of each transducer in AUTD devices." alt="" coords="229,207,348,233"/>
+<area shape="rect" href="classautd3_1_1gain_1_1BesselBeam.html" title="Gain to produce Bessel Beam." alt="" coords="396,80,560,107"/>
+<area shape="rect" href="classautd3_1_1gain_1_1Focus.html" title="Gain to produce single focal point." alt="" coords="415,131,541,157"/>
+<area shape="rect" href="classautd3_1_1gain_1_1Grouped.html" title="Gain to group some gains." alt="" coords="409,181,547,208"/>
+<area shape="rect" href="classautd3_1_1gain_1_1holo_1_1Holo.html" title="Gain to produce multiple focal points." alt="" coords="405,232,551,259"/>
+<area shape="rect" href="classautd3_1_1gain_1_1Null.html" title="Gain to produce nothing." alt="" coords="421,283,535,309"/>
+<area shape="rect" href="classautd3_1_1gain_1_1PlaneWave.html" title="Gain to create plane wave." alt="" coords="400,333,556,360"/>
+<area shape="rect" href="structautd3_1_1core_1_1DatagramBody.html" title="DatagramBody is a data to be packed in the Body part of the driver::TxDatagram." alt="" coords="5,207,181,233"/>
+<area shape="rect" href="classautd3_1_1gain_1_1holo_1_1APO.html" title="Gain to produce multiple focal points with Acoustic Power Optimization method. Refer to Keisuke Haseg..." alt="" coords="608,5,756,32"/>
+<area shape="rect" href="classautd3_1_1gain_1_1holo_1_1EVD.html" title="Gain to produce multiple focal points with EVD method. Refer to Long, Benjamin, et al...." alt="" coords="609,56,755,83"/>
+<area shape="rect" href="classautd3_1_1gain_1_1holo_1_1Greedy.html" title="Gain to produce multiple focal points with Greedy algorithm. Refer to Shun suzuki,..." alt="" coords="622,107,742,149"/>
+<area shape="rect" href="classautd3_1_1gain_1_1holo_1_1GS.html" title="Gain to produce multiple focal points with GS method. Refer to Asier Marzo and Bruce W Drinkwater,..." alt="" coords="613,173,751,200"/>
+<area shape="rect" href="classautd3_1_1gain_1_1holo_1_1GSPAT.html" title="Gain to produce multiple focal points with GS&#45;PAT method (not yet been implemented with GPU)...." alt="" coords="622,225,742,266"/>
+<area shape="rect" href="classautd3_1_1gain_1_1holo_1_1LM.html" title="Gain to produce multiple focal points with Levenberg&#45;Marquardt method. Refer to K...." alt="" coords="613,291,751,317"/>
+<area shape="rect" href="classautd3_1_1gain_1_1holo_1_1LSS.html" title="Gain to produce multiple focal points with Linear Synthesis Scheme." alt="" coords="609,341,755,368"/>
+<area shape="rect" href="classautd3_1_1gain_1_1holo_1_1LSSGreedy.html" title="Gain to produce multiple focal points, applying greedy algorithm on linear synthesis scheme...." alt="" coords="622,393,742,434"/>
+<area shape="rect" href="classautd3_1_1gain_1_1holo_1_1SDP.html" title="Gain to produce multiple focal points with SDP method. Refer to Inoue, Seki, Yasutoshi Makino,..." alt="" coords="609,459,755,485"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
-Collaboration diagram for autd3::core::Gain&lt; T, &gt;:</div>
+Collaboration diagram for autd3::core::Gain:</div>
 <div class="dyncontent">
-<div class="center"><img src="structautd3_1_1core_1_1Gain__coll__graph.png" border="0" usemap="#autd3_1_1core_1_1Gain_3_01T_00_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="autd3_1_1core_1_1Gain_3_01T_00_01_4_coll__map" id="autd3_1_1core_1_1Gain_3_01T_00_01_4_coll__map">
-<area shape="rect" title="Gain controls the duty ratio and phase of each transducer in AUTD devices." alt="" coords="33,80,185,107"/>
-<area shape="rect" href="structautd3_1_1core_1_1DatagramBody.html" title=" " alt="" coords="5,5,212,32"/>
+<div class="center"><img src="structautd3_1_1core_1_1Gain__coll__graph.png" border="0" usemap="#autd3_1_1core_1_1Gain_coll__map" alt="Collaboration graph"/></div>
+<map name="autd3_1_1core_1_1Gain_coll__map" id="autd3_1_1core_1_1Gain_coll__map">
+<area shape="rect" title="Gain controls the duty ratio and phase of each transducer in AUTD devices." alt="" coords="34,80,153,107"/>
+<area shape="rect" href="structautd3_1_1core_1_1DatagramBody.html" title="DatagramBody is a data to be packed in the Body part of the driver::TxDatagram." alt="" coords="5,5,181,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aff0a775815aa8e4a750f1f059b5410ae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Gain.html#aff0a775815aa8e4a750f1f059b5410ae">Gain</a> ()</td></tr>
-<tr class="separator:aff0a775815aa8e4a750f1f059b5410ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ddc8e42d894271b924bf1a8ac6c1de6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Gain.html#a5ddc8e42d894271b924bf1a8ac6c1de6">~Gain</a> () override=default</td></tr>
-<tr class="separator:a5ddc8e42d894271b924bf1a8ac6c1de6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a486a8bea1cd8f962bec8da70a56519d4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Gain.html#a486a8bea1cd8f962bec8da70a56519d4">Gain</a> (const <a class="el" href="structautd3_1_1core_1_1Gain.html">Gain</a> &amp;v)=default</td></tr>
-<tr class="separator:a486a8bea1cd8f962bec8da70a56519d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a890aa0c8dd94362f686ef728181e4044"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structautd3_1_1core_1_1Gain.html">Gain</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Gain.html#a890aa0c8dd94362f686ef728181e4044">operator=</a> (const <a class="el" href="structautd3_1_1core_1_1Gain.html">Gain</a> &amp;obj)=default</td></tr>
-<tr class="separator:a890aa0c8dd94362f686ef728181e4044"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cf7d67e2d397267078a298f2369b38e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Gain.html#a2cf7d67e2d397267078a298f2369b38e">Gain</a> (<a class="el" href="structautd3_1_1core_1_1Gain.html">Gain</a> &amp;&amp;obj)=default</td></tr>
-<tr class="separator:a2cf7d67e2d397267078a298f2369b38e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf46f80f0d2b11978f4f5bc393ad149d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structautd3_1_1core_1_1Gain.html">Gain</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Gain.html#aaf46f80f0d2b11978f4f5bc393ad149d">operator=</a> (<a class="el" href="structautd3_1_1core_1_1Gain.html">Gain</a> &amp;&amp;obj)=default</td></tr>
-<tr class="separator:aaf46f80f0d2b11978f4f5bc393ad149d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a556627ae9b6c1139163d46feae67daac"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Gain.html#a556627ae9b6c1139163d46feae67daac">calc</a> (const <a class="el" href="structautd3_1_1core_1_1Geometry.html">Geometry</a>&lt; T &gt; &amp;geometry)=0</td></tr>
-<tr class="memdesc:a556627ae9b6c1139163d46feae67daac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate duty ratio and phase of each transducer.  <a href="structautd3_1_1core_1_1Gain.html#a556627ae9b6c1139163d46feae67daac">More...</a><br /></td></tr>
-<tr class="separator:a556627ae9b6c1139163d46feae67daac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad759be20c49b1f7ae078af2fe5d128b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Gain.html#aad759be20c49b1f7ae078af2fe5d128b">build</a> (const <a class="el" href="structautd3_1_1core_1_1Geometry.html">Geometry</a>&lt; T &gt; &amp;geometry)</td></tr>
-<tr class="memdesc:aad759be20c49b1f7ae078af2fe5d128b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize data and call <a class="el" href="structautd3_1_1core_1_1Gain.html#a556627ae9b6c1139163d46feae67daac" title="Calculate duty ratio and phase of each transducer.">calc()</a>.  <a href="structautd3_1_1core_1_1Gain.html#aad759be20c49b1f7ae078af2fe5d128b">More...</a><br /></td></tr>
-<tr class="separator:aad759be20c49b1f7ae078af2fe5d128b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b1aca236cc79ab01a2d17b0ce039402"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Gain.html#a5b1aca236cc79ab01a2d17b0ce039402">rebuild</a> (const <a class="el" href="structautd3_1_1core_1_1Geometry.html">Geometry</a>&lt; T &gt; &amp;geometry)</td></tr>
-<tr class="memdesc:a5b1aca236cc79ab01a2d17b0ce039402"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-calculate duty ratio and phase of each transducer.  <a href="structautd3_1_1core_1_1Gain.html#a5b1aca236cc79ab01a2d17b0ce039402">More...</a><br /></td></tr>
-<tr class="separator:a5b1aca236cc79ab01a2d17b0ce039402"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a645b786292b71ceb570b50628c4ff790"><td class="memItemLeft" align="right" valign="top">T::D &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Gain.html#a645b786292b71ceb570b50628c4ff790">drives</a> ()</td></tr>
-<tr class="memdesc:a645b786292b71ceb570b50628c4ff790"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter function for the data of duty ratio and phase of each transducers.  <a href="structautd3_1_1core_1_1Gain.html#a645b786292b71ceb570b50628c4ff790">More...</a><br /></td></tr>
-<tr class="separator:a645b786292b71ceb570b50628c4ff790"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf54490b6bc52f27e1a6a0f4aabac139"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Gain.html#acf54490b6bc52f27e1a6a0f4aabac139">built</a> ()</td></tr>
-<tr class="separator:acf54490b6bc52f27e1a6a0f4aabac139"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a124b921b84486ba524553c1f44be3bf2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Gain.html#a124b921b84486ba524553c1f44be3bf2">init</a> () override</td></tr>
-<tr class="separator:a124b921b84486ba524553c1f44be3bf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c59b40f2ac114117e33ee2ac56d8585"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Gain.html#a9c59b40f2ac114117e33ee2ac56d8585">pack</a> (const <a class="el" href="structautd3_1_1core_1_1Geometry.html">Geometry</a>&lt; T &gt; &amp;geometry, <a class="el" href="structautd3_1_1driver_1_1TxDatagram.html">driver::TxDatagram</a> &amp;tx) override</td></tr>
-<tr class="separator:a9c59b40f2ac114117e33ee2ac56d8585"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a378d9566fd8fbc2410cf4ff9a55773cc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Gain.html#a378d9566fd8fbc2410cf4ff9a55773cc">is_finished</a> () const noexcept override</td></tr>
-<tr class="separator:a378d9566fd8fbc2410cf4ff9a55773cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_structautd3_1_1core_1_1DatagramBody"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structautd3_1_1core_1_1DatagramBody')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="structautd3_1_1core_1_1DatagramBody.html">autd3::core::DatagramBody&lt; T &gt;</a></td></tr>
-<tr class="memitem:adc71077ba9488a3ce7485abf8f672a0f inherit pub_methods_structautd3_1_1core_1_1DatagramBody"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1DatagramBody.html#adc71077ba9488a3ce7485abf8f672a0f">DatagramBody</a> ()=default</td></tr>
-<tr class="separator:adc71077ba9488a3ce7485abf8f672a0f inherit pub_methods_structautd3_1_1core_1_1DatagramBody"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a970102c4d597d1b35dd2e8eb8c916c9a inherit pub_methods_structautd3_1_1core_1_1DatagramBody"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1DatagramBody.html#a970102c4d597d1b35dd2e8eb8c916c9a">DatagramBody</a> (const <a class="el" href="structautd3_1_1core_1_1DatagramBody.html">DatagramBody</a> &amp;v)=default</td></tr>
-<tr class="separator:a970102c4d597d1b35dd2e8eb8c916c9a inherit pub_methods_structautd3_1_1core_1_1DatagramBody"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7bd282eb86429ced73fd2db8eca6e6d inherit pub_methods_structautd3_1_1core_1_1DatagramBody"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1DatagramBody.html#ae7bd282eb86429ced73fd2db8eca6e6d">DatagramBody</a> (<a class="el" href="structautd3_1_1core_1_1DatagramBody.html">DatagramBody</a> &amp;&amp;obj)=default</td></tr>
-<tr class="separator:ae7bd282eb86429ced73fd2db8eca6e6d inherit pub_methods_structautd3_1_1core_1_1DatagramBody"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca351cedfdb5ff60a40b8a1491e0f035 inherit pub_methods_structautd3_1_1core_1_1DatagramBody"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1DatagramBody.html#aca351cedfdb5ff60a40b8a1491e0f035">~DatagramBody</a> ()=default</td></tr>
-<tr class="separator:aca351cedfdb5ff60a40b8a1491e0f035 inherit pub_methods_structautd3_1_1core_1_1DatagramBody"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8949d7b22caff7b1b9d39d50e816676 inherit pub_methods_structautd3_1_1core_1_1DatagramBody"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structautd3_1_1core_1_1DatagramBody.html">DatagramBody</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1DatagramBody.html#aa8949d7b22caff7b1b9d39d50e816676">operator=</a> (const <a class="el" href="structautd3_1_1core_1_1DatagramBody.html">DatagramBody</a> &amp;obj)=default</td></tr>
-<tr class="separator:aa8949d7b22caff7b1b9d39d50e816676 inherit pub_methods_structautd3_1_1core_1_1DatagramBody"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a105da96d3b956895da2da2dcb231f992 inherit pub_methods_structautd3_1_1core_1_1DatagramBody"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structautd3_1_1core_1_1DatagramBody.html">DatagramBody</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1DatagramBody.html#a105da96d3b956895da2da2dcb231f992">operator=</a> (<a class="el" href="structautd3_1_1core_1_1DatagramBody.html">DatagramBody</a> &amp;&amp;obj)=default</td></tr>
-<tr class="separator:a105da96d3b956895da2da2dcb231f992 inherit pub_methods_structautd3_1_1core_1_1DatagramBody"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae003ece872359a65252a8555c3960383 inherit pub_methods_structautd3_1_1core_1_1DatagramBody"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1DatagramBody.html#ae003ece872359a65252a8555c3960383">is_finished</a> () const=0</td></tr>
-<tr class="separator:ae003ece872359a65252a8555c3960383 inherit pub_methods_structautd3_1_1core_1_1DatagramBody"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b7e8eb19722b5769f7fb72bf66267ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Gain.html#a1b7e8eb19722b5769f7fb72bf66267ab">Gain</a> ()</td></tr>
+<tr class="separator:a1b7e8eb19722b5769f7fb72bf66267ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a076f37b15f9ea9e9ceec62979c298179"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Gain.html#a076f37b15f9ea9e9ceec62979c298179">~Gain</a> () override=default</td></tr>
+<tr class="separator:a076f37b15f9ea9e9ceec62979c298179"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5beaf97212d15b8edd0527cb78a1678"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Gain.html#ac5beaf97212d15b8edd0527cb78a1678">Gain</a> (const <a class="el" href="structautd3_1_1core_1_1Gain.html">Gain</a> &amp;v)=default</td></tr>
+<tr class="separator:ac5beaf97212d15b8edd0527cb78a1678"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dbef1df104c9cbc73f5eb65a952747c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structautd3_1_1core_1_1Gain.html">Gain</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Gain.html#a1dbef1df104c9cbc73f5eb65a952747c">operator=</a> (const <a class="el" href="structautd3_1_1core_1_1Gain.html">Gain</a> &amp;obj)=default</td></tr>
+<tr class="separator:a1dbef1df104c9cbc73f5eb65a952747c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fa4c9b5ce9f8052e6f20048553d13bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Gain.html#a7fa4c9b5ce9f8052e6f20048553d13bf">Gain</a> (<a class="el" href="structautd3_1_1core_1_1Gain.html">Gain</a> &amp;&amp;obj)=default</td></tr>
+<tr class="separator:a7fa4c9b5ce9f8052e6f20048553d13bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2829600068fc2406ea27b0b10ed734a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structautd3_1_1core_1_1Gain.html">Gain</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Gain.html#a2829600068fc2406ea27b0b10ed734a9">operator=</a> (<a class="el" href="structautd3_1_1core_1_1Gain.html">Gain</a> &amp;&amp;obj)=default</td></tr>
+<tr class="separator:a2829600068fc2406ea27b0b10ed734a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66dd5b6daec16d14b8b892c9312ac2b3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Gain.html#a66dd5b6daec16d14b8b892c9312ac2b3">calc</a> (const <a class="el" href="structautd3_1_1core_1_1Geometry.html">Geometry</a> &amp;geometry)=0</td></tr>
+<tr class="memdesc:a66dd5b6daec16d14b8b892c9312ac2b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate duty ratio and phase of each transducer.  <a href="structautd3_1_1core_1_1Gain.html#a66dd5b6daec16d14b8b892c9312ac2b3">More...</a><br /></td></tr>
+<tr class="separator:a66dd5b6daec16d14b8b892c9312ac2b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98a1d0477327b3676bed6cd3ab9573f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Gain.html#a98a1d0477327b3676bed6cd3ab9573f7">build</a> (const <a class="el" href="structautd3_1_1core_1_1Geometry.html">Geometry</a> &amp;geometry)</td></tr>
+<tr class="memdesc:a98a1d0477327b3676bed6cd3ab9573f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize data and call <a class="el" href="structautd3_1_1core_1_1Gain.html#a66dd5b6daec16d14b8b892c9312ac2b3" title="Calculate duty ratio and phase of each transducer.">calc()</a>.  <a href="structautd3_1_1core_1_1Gain.html#a98a1d0477327b3676bed6cd3ab9573f7">More...</a><br /></td></tr>
+<tr class="separator:a98a1d0477327b3676bed6cd3ab9573f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed02941723388f7a808332ac80a2bdd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Gain.html#aed02941723388f7a808332ac80a2bdd6">rebuild</a> (const <a class="el" href="structautd3_1_1core_1_1Geometry.html">Geometry</a> &amp;geometry)</td></tr>
+<tr class="memdesc:aed02941723388f7a808332ac80a2bdd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-calculate duty ratio and phase of each transducer.  <a href="structautd3_1_1core_1_1Gain.html#aed02941723388f7a808332ac80a2bdd6">More...</a><br /></td></tr>
+<tr class="separator:aed02941723388f7a808332ac80a2bdd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86116831eff2434b52c768b7a5696f79"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="structautd3_1_1driver_1_1Drive.html">driver::Drive</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Gain.html#a86116831eff2434b52c768b7a5696f79">drives</a> () const</td></tr>
+<tr class="memdesc:a86116831eff2434b52c768b7a5696f79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter function for the data of duty ratio and phase of each transducers.  <a href="structautd3_1_1core_1_1Gain.html#a86116831eff2434b52c768b7a5696f79">More...</a><br /></td></tr>
+<tr class="separator:a86116831eff2434b52c768b7a5696f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b434ff08d382059ffee5af6f15c100e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Gain.html#a7b434ff08d382059ffee5af6f15c100e">built</a> () const</td></tr>
+<tr class="separator:a7b434ff08d382059ffee5af6f15c100e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7805107b5113c2051ecb9406a7f4457e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Gain.html#a7805107b5113c2051ecb9406a7f4457e">init</a> () override</td></tr>
+<tr class="separator:a7805107b5113c2051ecb9406a7f4457e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa68095a6f945049cbb6e54a257c45b80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Gain.html#aa68095a6f945049cbb6e54a257c45b80">pack</a> (const <a class="el" href="structautd3_1_1core_1_1Geometry.html">Geometry</a> &amp;geometry, <a class="el" href="structautd3_1_1driver_1_1TxDatagram.html">driver::TxDatagram</a> &amp;tx) override</td></tr>
+<tr class="separator:aa68095a6f945049cbb6e54a257c45b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04da20b08deebee048ec3d92c80d1f56"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1Gain.html#a04da20b08deebee048ec3d92c80d1f56">is_finished</a> () const noexcept override</td></tr>
+<tr class="separator:a04da20b08deebee048ec3d92c80d1f56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_structautd3_1_1core_1_1DatagramBody"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structautd3_1_1core_1_1DatagramBody')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="structautd3_1_1core_1_1DatagramBody.html">autd3::core::DatagramBody</a></td></tr>
+<tr class="memitem:a05e8f1f14b5a7684b8497415872150fb inherit pub_methods_structautd3_1_1core_1_1DatagramBody"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1DatagramBody.html#a05e8f1f14b5a7684b8497415872150fb">DatagramBody</a> ()=default</td></tr>
+<tr class="separator:a05e8f1f14b5a7684b8497415872150fb inherit pub_methods_structautd3_1_1core_1_1DatagramBody"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a826b1dc6434edf57cec090dd735bdf7e inherit pub_methods_structautd3_1_1core_1_1DatagramBody"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1DatagramBody.html#a826b1dc6434edf57cec090dd735bdf7e">~DatagramBody</a> ()=default</td></tr>
+<tr class="separator:a826b1dc6434edf57cec090dd735bdf7e inherit pub_methods_structautd3_1_1core_1_1DatagramBody"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24e9f91418f996ce4f218556994024b6 inherit pub_methods_structautd3_1_1core_1_1DatagramBody"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1DatagramBody.html#a24e9f91418f996ce4f218556994024b6">DatagramBody</a> (const <a class="el" href="structautd3_1_1core_1_1DatagramBody.html">DatagramBody</a> &amp;v)=default</td></tr>
+<tr class="separator:a24e9f91418f996ce4f218556994024b6 inherit pub_methods_structautd3_1_1core_1_1DatagramBody"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac450bfb77508a06cf1687dbc294263b7 inherit pub_methods_structautd3_1_1core_1_1DatagramBody"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structautd3_1_1core_1_1DatagramBody.html">DatagramBody</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1DatagramBody.html#ac450bfb77508a06cf1687dbc294263b7">operator=</a> (const <a class="el" href="structautd3_1_1core_1_1DatagramBody.html">DatagramBody</a> &amp;obj)=default</td></tr>
+<tr class="separator:ac450bfb77508a06cf1687dbc294263b7 inherit pub_methods_structautd3_1_1core_1_1DatagramBody"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3990ba706ae43f46c2115b4b6c0cc238 inherit pub_methods_structautd3_1_1core_1_1DatagramBody"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1DatagramBody.html#a3990ba706ae43f46c2115b4b6c0cc238">DatagramBody</a> (<a class="el" href="structautd3_1_1core_1_1DatagramBody.html">DatagramBody</a> &amp;&amp;obj)=default</td></tr>
+<tr class="separator:a3990ba706ae43f46c2115b4b6c0cc238 inherit pub_methods_structautd3_1_1core_1_1DatagramBody"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecc634f9603a1e29fd636cea573c6ff2 inherit pub_methods_structautd3_1_1core_1_1DatagramBody"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structautd3_1_1core_1_1DatagramBody.html">DatagramBody</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1core_1_1DatagramBody.html#aecc634f9603a1e29fd636cea573c6ff2">operator=</a> (<a class="el" href="structautd3_1_1core_1_1DatagramBody.html">DatagramBody</a> &amp;&amp;obj)=default</td></tr>
+<tr class="separator:aecc634f9603a1e29fd636cea573c6ff2 inherit pub_methods_structautd3_1_1core_1_1DatagramBody"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T, std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&lt; typename T::D &gt;, T &gt;, nullptr_t &gt; = nullptr&gt;<br />
-struct autd3::core::Gain&lt; T, &gt;</h3>
+<div class="textblock"><p><a class="el" href="structautd3_1_1core_1_1Gain.html" title="Gain controls the duty ratio and phase of each transducer in AUTD devices.">Gain</a> controls the duty ratio and phase of each transducer in AUTD devices. </p>
 
-<p><a class="el" href="structautd3_1_1core_1_1Gain.html" title="Gain controls the duty ratio and phase of each transducer in AUTD devices.">Gain</a> controls the duty ratio and phase of each transducer in AUTD devices. </p>
-
-<p class="definition">Definition at line <a class="el" href="gain_8hpp_source.html#l00044">44</a> of file <a class="el" href="gain_8hpp_source.html">gain.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gain_8hpp_source.html#l00025">25</a> of file <a class="el" href="gain_8hpp_source.html">gain.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aff0a775815aa8e4a750f1f059b5410ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff0a775815aa8e4a750f1f059b5410ae">&#9670;&nbsp;</a></span>Gain() <span class="overload">[1/3]</span></h2>
+<a id="a1b7e8eb19722b5769f7fb72bf66267ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b7e8eb19722b5769f7fb72bf66267ab">&#9670;&nbsp;</a></span>Gain() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&lt; typename T::D &gt;, T &gt;, nullptr_t &gt;  = nullptr&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structautd3_1_1core_1_1Gain.html">autd3::core::Gain</a>&lt; T, &gt;::<a class="el" href="structautd3_1_1core_1_1Gain.html">Gain</a> </td>
+          <td class="memname">autd3::core::Gain::Gain </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -180,23 +188,21 @@ template&lt;typename T , std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&l
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gain_8hpp_source.html#l00045">45</a> of file <a class="el" href="gain_8hpp_source.html">gain.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gain_8hpp_source.html#l00026">26</a> of file <a class="el" href="gain_8hpp_source.html">gain.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a5ddc8e42d894271b924bf1a8ac6c1de6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ddc8e42d894271b924bf1a8ac6c1de6">&#9670;&nbsp;</a></span>~Gain()</h2>
+<a id="a076f37b15f9ea9e9ceec62979c298179"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a076f37b15f9ea9e9ceec62979c298179">&#9670;&nbsp;</a></span>~Gain()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&lt; typename T::D &gt;, T &gt;, nullptr_t &gt;  = nullptr&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structautd3_1_1core_1_1Gain.html">autd3::core::Gain</a>&lt; T, &gt;::~<a class="el" href="structautd3_1_1core_1_1Gain.html">Gain</a> </td>
+          <td class="memname">autd3::core::Gain::~Gain </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -211,21 +217,19 @@ template&lt;typename T , std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&l
 
 </div>
 </div>
-<a id="a486a8bea1cd8f962bec8da70a56519d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a486a8bea1cd8f962bec8da70a56519d4">&#9670;&nbsp;</a></span>Gain() <span class="overload">[2/3]</span></h2>
+<a id="ac5beaf97212d15b8edd0527cb78a1678"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5beaf97212d15b8edd0527cb78a1678">&#9670;&nbsp;</a></span>Gain() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&lt; typename T::D &gt;, T &gt;, nullptr_t &gt;  = nullptr&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structautd3_1_1core_1_1Gain.html">autd3::core::Gain</a>&lt; T, &gt;::<a class="el" href="structautd3_1_1core_1_1Gain.html">Gain</a> </td>
+          <td class="memname">autd3::core::Gain::Gain </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structautd3_1_1core_1_1Gain.html">Gain</a>&lt; T, &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structautd3_1_1core_1_1Gain.html">Gain</a> &amp;&#160;</td>
           <td class="paramname"><em>v</em></td><td>)</td>
           <td></td>
         </tr>
@@ -239,21 +243,19 @@ template&lt;typename T , std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&l
 
 </div>
 </div>
-<a id="a2cf7d67e2d397267078a298f2369b38e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2cf7d67e2d397267078a298f2369b38e">&#9670;&nbsp;</a></span>Gain() <span class="overload">[3/3]</span></h2>
+<a id="a7fa4c9b5ce9f8052e6f20048553d13bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fa4c9b5ce9f8052e6f20048553d13bf">&#9670;&nbsp;</a></span>Gain() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&lt; typename T::D &gt;, T &gt;, nullptr_t &gt;  = nullptr&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structautd3_1_1core_1_1Gain.html">autd3::core::Gain</a>&lt; T, &gt;::<a class="el" href="structautd3_1_1core_1_1Gain.html">Gain</a> </td>
+          <td class="memname">autd3::core::Gain::Gain </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structautd3_1_1core_1_1Gain.html">Gain</a>&lt; T, &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="structautd3_1_1core_1_1Gain.html">Gain</a> &amp;&amp;&#160;</td>
           <td class="paramname"><em>obj</em></td><td>)</td>
           <td></td>
         </tr>
@@ -268,21 +270,19 @@ template&lt;typename T , std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&l
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aad759be20c49b1f7ae078af2fe5d128b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad759be20c49b1f7ae078af2fe5d128b">&#9670;&nbsp;</a></span>build()</h2>
+<a id="a98a1d0477327b3676bed6cd3ab9573f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98a1d0477327b3676bed6cd3ab9573f7">&#9670;&nbsp;</a></span>build()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&lt; typename T::D &gt;, T &gt;, nullptr_t &gt;  = nullptr&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="structautd3_1_1core_1_1Gain.html">autd3::core::Gain</a>&lt; T, &gt;::build </td>
+          <td class="memname">void autd3::core::Gain::build </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structautd3_1_1core_1_1Geometry.html">Geometry</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structautd3_1_1core_1_1Geometry.html">Geometry</a> &amp;&#160;</td>
           <td class="paramname"><em>geometry</em></td><td>)</td>
           <td></td>
         </tr>
@@ -294,7 +294,7 @@ template&lt;typename T , std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&l
 </table>
 </div><div class="memdoc">
 
-<p>Initialize data and call <a class="el" href="structautd3_1_1core_1_1Gain.html#a556627ae9b6c1139163d46feae67daac" title="Calculate duty ratio and phase of each transducer.">calc()</a>. </p>
+<p>Initialize data and call <a class="el" href="structautd3_1_1core_1_1Gain.html#a66dd5b6daec16d14b8b892c9312ac2b3" title="Calculate duty ratio and phase of each transducer.">calc()</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">geometry</td><td><a class="el" href="structautd3_1_1core_1_1Geometry.html" title="Geometry of all devices.">Geometry</a> </td></tr>
@@ -302,38 +302,36 @@ template&lt;typename T , std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&l
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gain_8hpp_source.html#l00062">62</a> of file <a class="el" href="gain_8hpp_source.html">gain.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gain_8hpp_source.html#l00043">43</a> of file <a class="el" href="gain_8hpp_source.html">gain.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="gain_8hpp_source.html#l00090">autd3::core::Gain&lt; core::LegacyTransducer &gt;::pack()</a>, and <a class="el" href="gain_8hpp_source.html#l00073">autd3::core::Gain&lt; core::LegacyTransducer &gt;::rebuild()</a>.</p>
+<p class="reference">References <a class="el" href="geometry_8hpp_source.html#l00152">autd3::core::Geometry::begin()</a>, and <a class="el" href="geometry_8hpp_source.html#l00153">autd3::core::Geometry::end()</a>.</p>
 <div class="dynheader">
-Here is the caller graph for this function:</div>
+Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="structautd3_1_1core_1_1Gain_aad759be20c49b1f7ae078af2fe5d128b_icgraph.png" border="0" usemap="#structautd3_1_1core_1_1Gain_aad759be20c49b1f7ae078af2fe5d128b_icgraph" alt=""/></div>
-<map name="structautd3_1_1core_1_1Gain_aad759be20c49b1f7ae078af2fe5d128b_icgraph" id="structautd3_1_1core_1_1Gain_aad759be20c49b1f7ae078af2fe5d128b_icgraph">
-<area shape="rect" title="Initialize data and call calc()." alt="" coords="216,53,340,94"/>
-<area shape="rect" href="structautd3_1_1core_1_1Gain.html#a9c59b40f2ac114117e33ee2ac56d8585" title=" " alt="" coords="5,5,168,61"/>
-<area shape="rect" href="structautd3_1_1core_1_1Gain.html#a5b1aca236cc79ab01a2d17b0ce039402" title="Re&#45;calculate duty ratio and phase of each transducer." alt="" coords="5,85,168,141"/>
+<div class="center"><img src="structautd3_1_1core_1_1Gain_a98a1d0477327b3676bed6cd3ab9573f7_cgraph.png" border="0" usemap="#structautd3_1_1core_1_1Gain_a98a1d0477327b3676bed6cd3ab9573f7_cgraph" alt=""/></div>
+<map name="structautd3_1_1core_1_1Gain_a98a1d0477327b3676bed6cd3ab9573f7_cgraph" id="structautd3_1_1core_1_1Gain_a98a1d0477327b3676bed6cd3ab9573f7_cgraph">
+<area shape="rect" title="Initialize data and call calc()." alt="" coords="5,35,129,76"/>
+<area shape="rect" href="structautd3_1_1core_1_1Geometry.html#a49b9243cf89533d4a53431460a95336f" title=" " alt="" coords="191,5,338,47"/>
+<area shape="rect" href="structautd3_1_1core_1_1Geometry.html#a18b4dcfdbc4c5366302aa819fe9c661f" title=" " alt="" coords="177,71,352,98"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="acf54490b6bc52f27e1a6a0f4aabac139"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf54490b6bc52f27e1a6a0f4aabac139">&#9670;&nbsp;</a></span>built()</h2>
+<a id="a7b434ff08d382059ffee5af6f15c100e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b434ff08d382059ffee5af6f15c100e">&#9670;&nbsp;</a></span>built()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&lt; typename T::D &gt;, T &gt;, nullptr_t &gt;  = nullptr&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="structautd3_1_1core_1_1Gain.html">autd3::core::Gain</a>&lt; T, &gt;::built </td>
+          <td class="memname">bool autd3::core::Gain::built </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -343,25 +341,23 @@ template&lt;typename T , std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&l
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gain_8hpp_source.html#l00083">83</a> of file <a class="el" href="gain_8hpp_source.html">gain.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gain_8hpp_source.html#l00069">69</a> of file <a class="el" href="gain_8hpp_source.html">gain.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a556627ae9b6c1139163d46feae67daac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a556627ae9b6c1139163d46feae67daac">&#9670;&nbsp;</a></span>calc()</h2>
+<a id="a66dd5b6daec16d14b8b892c9312ac2b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66dd5b6daec16d14b8b892c9312ac2b3">&#9670;&nbsp;</a></span>calc()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&lt; typename T::D &gt;, T &gt;, nullptr_t &gt;  = nullptr&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void <a class="el" href="structautd3_1_1core_1_1Gain.html">autd3::core::Gain</a>&lt; T, &gt;::calc </td>
+          <td class="memname">virtual void autd3::core::Gain::calc </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structautd3_1_1core_1_1Geometry.html">Geometry</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structautd3_1_1core_1_1Geometry.html">Geometry</a> &amp;&#160;</td>
           <td class="paramname"><em>geometry</em></td><td>)</td>
           <td></td>
         </tr>
@@ -381,35 +377,24 @@ template&lt;typename T , std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&l
   </dd>
 </dl>
 
-<p class="reference">Referenced by <a class="el" href="gain_8hpp_source.html#l00062">autd3::core::Gain&lt; core::LegacyTransducer &gt;::build()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="structautd3_1_1core_1_1Gain_a556627ae9b6c1139163d46feae67daac_icgraph.png" border="0" usemap="#structautd3_1_1core_1_1Gain_a556627ae9b6c1139163d46feae67daac_icgraph" alt=""/></div>
-<map name="structautd3_1_1core_1_1Gain_a556627ae9b6c1139163d46feae67daac_icgraph" id="structautd3_1_1core_1_1Gain_a556627ae9b6c1139163d46feae67daac_icgraph">
-<area shape="rect" title="Calculate duty ratio and phase of each transducer." alt="" coords="216,20,364,47"/>
-<area shape="rect" href="structautd3_1_1core_1_1Gain.html#aad759be20c49b1f7ae078af2fe5d128b" title="Initialize data and call calc()." alt="" coords="5,5,168,61"/>
-</map>
-</div>
+<p>Implemented in <a class="el" href="classautd3_1_1gain_1_1holo_1_1APO.html#aabffa0ab70af2a8452fa78cbb5b8d367">autd3::gain::holo::APO</a>, <a class="el" href="classautd3_1_1gain_1_1holo_1_1LSSGreedy.html#a58d1a7b0e88275a5dc5308677b35931b">autd3::gain::holo::LSSGreedy</a>, <a class="el" href="classautd3_1_1gain_1_1holo_1_1Greedy.html#ab0b72433c99a6f35161a384629ef37b6">autd3::gain::holo::Greedy</a>, <a class="el" href="classautd3_1_1gain_1_1holo_1_1LM.html#ae01865fcf5b617647774291725cbf748">autd3::gain::holo::LM</a>, <a class="el" href="classautd3_1_1gain_1_1holo_1_1GSPAT.html#ad8a9cb7401c254ca244afd9d423a42ac">autd3::gain::holo::GSPAT</a>, <a class="el" href="classautd3_1_1gain_1_1Grouped.html#afc09c63f5100d262ef9c6ba37d7afc1f">autd3::gain::Grouped</a>, <a class="el" href="classautd3_1_1gain_1_1holo_1_1GS.html#a0352588683ee2dd3b03338ced5d50d24">autd3::gain::holo::GS</a>, <a class="el" href="classautd3_1_1gain_1_1holo_1_1LSS.html#ab9d61c15f7e68b522415ccd226760ced">autd3::gain::holo::LSS</a>, <a class="el" href="classautd3_1_1gain_1_1PlaneWave.html#a59ebf5b7bdf39d46d522e0671c9be414">autd3::gain::PlaneWave</a>, <a class="el" href="classautd3_1_1gain_1_1holo_1_1EVD.html#aba9af90f057bbf40e642d323d7aa3cad">autd3::gain::holo::EVD</a>, <a class="el" href="classautd3_1_1gain_1_1holo_1_1SDP.html#ac028ae1478f842cd7d6758c17b79948d">autd3::gain::holo::SDP</a>, <a class="el" href="classautd3_1_1gain_1_1BesselBeam.html#aa93517d5a878cccda73632ecad3c2114">autd3::gain::BesselBeam</a>, <a class="el" href="classautd3_1_1gain_1_1Focus.html#aaab24d52a97f1375619ea709c00dbf86">autd3::gain::Focus</a>, and <a class="el" href="classautd3_1_1gain_1_1Null.html#a0113261da556397adb762346e168fb83">autd3::gain::Null</a>.</p>
 
 </div>
 </div>
-<a id="a645b786292b71ceb570b50628c4ff790"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a645b786292b71ceb570b50628c4ff790">&#9670;&nbsp;</a></span>drives()</h2>
+<a id="a86116831eff2434b52c768b7a5696f79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86116831eff2434b52c768b7a5696f79">&#9670;&nbsp;</a></span>drives()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&lt; typename T::D &gt;, T &gt;, nullptr_t &gt;  = nullptr&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">T::D&amp; <a class="el" href="structautd3_1_1core_1_1Gain.html">autd3::core::Gain</a>&lt; T, &gt;::drives </td>
+          <td class="memname">const std::vector&lt;<a class="el" href="structautd3_1_1driver_1_1Drive.html">driver::Drive</a>&gt;&amp; autd3::core::Gain::drives </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -421,23 +406,21 @@ template&lt;typename T , std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&l
 
 <p>Getter function for the data of duty ratio and phase of each transducers. </p>
 
-<p class="definition">Definition at line <a class="el" href="gain_8hpp_source.html#l00081">81</a> of file <a class="el" href="gain_8hpp_source.html">gain.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gain_8hpp_source.html#l00067">67</a> of file <a class="el" href="gain_8hpp_source.html">gain.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a124b921b84486ba524553c1f44be3bf2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a124b921b84486ba524553c1f44be3bf2">&#9670;&nbsp;</a></span>init()</h2>
+<a id="a7805107b5113c2051ecb9406a7f4457e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7805107b5113c2051ecb9406a7f4457e">&#9670;&nbsp;</a></span>init()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&lt; typename T::D &gt;, T &gt;, nullptr_t &gt;  = nullptr&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="structautd3_1_1core_1_1Gain.html">autd3::core::Gain</a>&lt; T, &gt;::init </td>
+          <td class="memname">void autd3::core::Gain::init </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -450,36 +433,23 @@ template&lt;typename T , std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&l
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="structautd3_1_1core_1_1DatagramBody.html#a5feb78891a83265c2381269e5cc79904">autd3::core::DatagramBody&lt; T &gt;</a>.</p>
+<p>Implements <a class="el" href="structautd3_1_1core_1_1DatagramBody.html#a90bd075de5b04d2628b340f1dd49908b">autd3::core::DatagramBody</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="gain_8hpp_source.html#l00085">85</a> of file <a class="el" href="gain_8hpp_source.html">gain.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="gain_2primitive_8hpp_source.html#l00172">autd3::gain::Grouped&lt; T, &gt;::Grouped()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="structautd3_1_1core_1_1Gain_a124b921b84486ba524553c1f44be3bf2_icgraph.png" border="0" usemap="#structautd3_1_1core_1_1Gain_a124b921b84486ba524553c1f44be3bf2_icgraph" alt=""/></div>
-<map name="structautd3_1_1core_1_1Gain_a124b921b84486ba524553c1f44be3bf2_icgraph" id="structautd3_1_1core_1_1Gain_a124b921b84486ba524553c1f44be3bf2_icgraph">
-<area shape="rect" title=" " alt="" coords="192,13,333,39"/>
-<area shape="rect" href="classautd3_1_1gain_1_1Grouped.html#a8cf766f7179ce904a5d52a9f11a31196" title=" " alt="" coords="5,5,144,47"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="gain_8hpp_source.html#l00071">71</a> of file <a class="el" href="gain_8hpp_source.html">gain.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a378d9566fd8fbc2410cf4ff9a55773cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a378d9566fd8fbc2410cf4ff9a55773cc">&#9670;&nbsp;</a></span>is_finished()</h2>
+<a id="a04da20b08deebee048ec3d92c80d1f56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04da20b08deebee048ec3d92c80d1f56">&#9670;&nbsp;</a></span>is_finished()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&lt; typename T::D &gt;, T &gt;, nullptr_t &gt;  = nullptr&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="structautd3_1_1core_1_1Gain.html">autd3::core::Gain</a>&lt; T, &gt;::is_finished </td>
+          <td class="memname">bool autd3::core::Gain::is_finished </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -487,41 +457,30 @@ template&lt;typename T , std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&l
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gain_8hpp_source.html#l00097">97</a> of file <a class="el" href="gain_8hpp_source.html">gain.hpp</a>.</p>
+<p>Implements <a class="el" href="structautd3_1_1core_1_1DatagramBody.html#a70b432cc3a0a319ff2f6b6e645ba5b46">autd3::core::DatagramBody</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="gain_8hpp_source.html#l00090">autd3::core::Gain&lt; core::LegacyTransducer &gt;::pack()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="structautd3_1_1core_1_1Gain_a378d9566fd8fbc2410cf4ff9a55773cc_icgraph.png" border="0" usemap="#structautd3_1_1core_1_1Gain_a378d9566fd8fbc2410cf4ff9a55773cc_icgraph" alt=""/></div>
-<map name="structautd3_1_1core_1_1Gain_a378d9566fd8fbc2410cf4ff9a55773cc_icgraph" id="structautd3_1_1core_1_1Gain_a378d9566fd8fbc2410cf4ff9a55773cc_icgraph">
-<area shape="rect" title=" " alt="" coords="216,13,340,54"/>
-<area shape="rect" href="structautd3_1_1core_1_1Gain.html#a9c59b40f2ac114117e33ee2ac56d8585" title=" " alt="" coords="5,5,168,61"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="gain_8hpp_source.html#l00083">83</a> of file <a class="el" href="gain_8hpp_source.html">gain.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a890aa0c8dd94362f686ef728181e4044"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a890aa0c8dd94362f686ef728181e4044">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a1dbef1df104c9cbc73f5eb65a952747c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dbef1df104c9cbc73f5eb65a952747c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&lt; typename T::D &gt;, T &gt;, nullptr_t &gt;  = nullptr&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structautd3_1_1core_1_1Gain.html">Gain</a>&amp; <a class="el" href="structautd3_1_1core_1_1Gain.html">autd3::core::Gain</a>&lt; T, &gt;::operator= </td>
+          <td class="memname"><a class="el" href="structautd3_1_1core_1_1Gain.html">Gain</a>&amp; autd3::core::Gain::operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structautd3_1_1core_1_1Gain.html">Gain</a>&lt; T, &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structautd3_1_1core_1_1Gain.html">Gain</a> &amp;&#160;</td>
           <td class="paramname"><em>obj</em></td><td>)</td>
           <td></td>
         </tr>
@@ -535,21 +494,19 @@ template&lt;typename T , std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&l
 
 </div>
 </div>
-<a id="aaf46f80f0d2b11978f4f5bc393ad149d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf46f80f0d2b11978f4f5bc393ad149d">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a2829600068fc2406ea27b0b10ed734a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2829600068fc2406ea27b0b10ed734a9">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&lt; typename T::D &gt;, T &gt;, nullptr_t &gt;  = nullptr&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structautd3_1_1core_1_1Gain.html">Gain</a>&amp; <a class="el" href="structautd3_1_1core_1_1Gain.html">autd3::core::Gain</a>&lt; T, &gt;::operator= </td>
+          <td class="memname"><a class="el" href="structautd3_1_1core_1_1Gain.html">Gain</a>&amp; autd3::core::Gain::operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structautd3_1_1core_1_1Gain.html">Gain</a>&lt; T, &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="structautd3_1_1core_1_1Gain.html">Gain</a> &amp;&amp;&#160;</td>
           <td class="paramname"><em>obj</em></td><td>)</td>
           <td></td>
         </tr>
@@ -563,21 +520,19 @@ template&lt;typename T , std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&l
 
 </div>
 </div>
-<a id="a9c59b40f2ac114117e33ee2ac56d8585"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c59b40f2ac114117e33ee2ac56d8585">&#9670;&nbsp;</a></span>pack()</h2>
+<a id="aa68095a6f945049cbb6e54a257c45b80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa68095a6f945049cbb6e54a257c45b80">&#9670;&nbsp;</a></span>pack()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&lt; typename T::D &gt;, T &gt;, nullptr_t &gt;  = nullptr&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="structautd3_1_1core_1_1Gain.html">autd3::core::Gain</a>&lt; T, &gt;::pack </td>
+          <td class="memname">void autd3::core::Gain::pack </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structautd3_1_1core_1_1Geometry.html">Geometry</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structautd3_1_1core_1_1Geometry.html">Geometry</a> &amp;&#160;</td>
           <td class="paramname"><em>geometry</em>, </td>
         </tr>
         <tr>
@@ -599,27 +554,36 @@ template&lt;typename T , std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&l
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="structautd3_1_1core_1_1DatagramBody.html#afd8bc986b7960a633f50172e91fd8f27">autd3::core::DatagramBody&lt; T &gt;</a>.</p>
+<p>Implements <a class="el" href="structautd3_1_1core_1_1DatagramBody.html#aa7280bb22160e30b88c2cda87d9bcc7e">autd3::core::DatagramBody</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="gain_8hpp_source.html#l00090">90</a> of file <a class="el" href="gain_8hpp_source.html">gain.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gain_8hpp_source.html#l00076">76</a> of file <a class="el" href="gain_8hpp_source.html">gain.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="geometry_8hpp_source.html#l00160">autd3::core::Geometry::mode()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="structautd3_1_1core_1_1Gain_aa68095a6f945049cbb6e54a257c45b80_cgraph.png" border="0" usemap="#structautd3_1_1core_1_1Gain_aa68095a6f945049cbb6e54a257c45b80_cgraph" alt=""/></div>
+<map name="structautd3_1_1core_1_1Gain_aa68095a6f945049cbb6e54a257c45b80_cgraph" id="structautd3_1_1core_1_1Gain_aa68095a6f945049cbb6e54a257c45b80_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,157,39"/>
+<area shape="rect" href="structautd3_1_1core_1_1Geometry.html#a3ef6904eee8a50310ff029554f14d4a2" title=" " alt="" coords="205,5,352,47"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="a5b1aca236cc79ab01a2d17b0ce039402"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b1aca236cc79ab01a2d17b0ce039402">&#9670;&nbsp;</a></span>rebuild()</h2>
+<a id="aed02941723388f7a808332ac80a2bdd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed02941723388f7a808332ac80a2bdd6">&#9670;&nbsp;</a></span>rebuild()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&lt; typename T::D &gt;, T &gt;, nullptr_t &gt;  = nullptr&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="structautd3_1_1core_1_1Gain.html">autd3::core::Gain</a>&lt; T, &gt;::rebuild </td>
+          <td class="memname">void autd3::core::Gain::rebuild </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structautd3_1_1core_1_1Geometry.html">Geometry</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structautd3_1_1core_1_1Geometry.html">Geometry</a> &amp;&#160;</td>
           <td class="paramname"><em>geometry</em></td><td>)</td>
           <td></td>
         </tr>
@@ -639,7 +603,7 @@ template&lt;typename T , std::enable_if_t&lt; std::is_base_of_v&lt; Transducer&l
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gain_8hpp_source.html#l00073">73</a> of file <a class="el" href="gain_8hpp_source.html">gain.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gain_8hpp_source.html#l00059">59</a> of file <a class="el" href="gain_8hpp_source.html">gain.hpp</a>.</p>
 
 </div>
 </div>

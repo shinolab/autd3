@@ -1,0 +1,4 @@
+<map id="autd3::core::Amplitudes" name="autd3::core::Amplitudes">
+<area shape="rect" id="node1" title="Amplitude configuration for NormalPhaseMode." alt="" coords="15,80,171,107"/>
+<area shape="rect" id="node2" href="$structautd3_1_1core_1_1DatagramBody.html" title="DatagramBody is a data to be packed in the Body part of the driver::TxDatagram." alt="" coords="5,5,181,32"/>
+</map>

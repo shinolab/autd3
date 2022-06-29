@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['normal_5fphase_5ftransducer_2ehpp_629',['normal_phase_transducer.hpp',['../normal__phase__transducer_8hpp.html',1,'']]],
-  ['normal_5ftransducer_2ehpp_630',['normal_transducer.hpp',['../normal__transducer_8hpp.html',1,'']]]
+  ['operation_2ehpp_533',['operation.hpp',['../operation_8hpp.html',1,'']]]
 ];

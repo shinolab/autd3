@@ -1,4 +1,4 @@
-<map id="autd3::core::ModDelayConfig&lt; T, &gt;" name="autd3::core::ModDelayConfig&lt; T, &gt;">
-<area shape="rect" id="node1" title="Gain controls the duty ratio and phase of each transducer in AUTD devices." alt="" coords="23,95,207,136"/>
-<area shape="rect" id="node2" href="$structautd3_1_1core_1_1DatagramBody.html" title=" " alt="" coords="5,5,225,47"/>
+<map id="autd3::core::ModDelayConfig" name="autd3::core::ModDelayConfig">
+<area shape="rect" id="node1" title="Gain controls the duty ratio and phase of each transducer in AUTD devices." alt="" coords="5,80,189,107"/>
+<area shape="rect" id="node2" href="$structautd3_1_1core_1_1DatagramBody.html" title="DatagramBody is a data to be packed in the Body part of the driver::TxDatagram." alt="" coords="9,5,185,32"/>
 </map>

@@ -1,0 +1,4 @@
+<map id="autd3::core::Geometry::Device::center" name="autd3::core::Geometry::Device::center">
+<area shape="rect" id="node1" title="Center position of this device." alt="" coords="200,5,347,47"/>
+<area shape="rect" id="node2" href="$structautd3_1_1core_1_1Geometry.html#af40a646aca8d22070069c8fd72733b88" title="Center position of all connected devices." alt="" coords="5,5,152,47"/>
+</map>

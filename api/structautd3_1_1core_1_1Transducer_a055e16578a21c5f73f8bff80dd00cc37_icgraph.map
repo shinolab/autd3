@@ -1,0 +1,6 @@
+<map id="autd3::core::Transducer::frequency" name="autd3::core::Transducer::frequency">
+<area shape="rect" id="node1" title="Frequency of the transducer." alt="" coords="413,39,569,80"/>
+<area shape="rect" id="node2" href="$structautd3_1_1core_1_1Transducer.html#a1ef4a73a625b62bc9940fc698af0c00a" title="Wavelength of the ultrasound emitted from the transducer." alt="" coords="209,5,365,47"/>
+<area shape="rect" id="node4" href="$structautd3_1_1core_1_1Transducer.html#a4a49d5794ac149bfd2aab4cb51676a6d" title="Wavenumber of the ultrasound emitted from the transducer." alt="" coords="209,71,365,112"/>
+<area shape="rect" id="node3" href="$structautd3_1_1core_1_1Transducer.html#a8de9823d099b4534b9c57b9d849dc0a7" title=" " alt="" coords="5,5,161,47"/>
+</map>

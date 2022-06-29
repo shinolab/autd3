@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['naive_998',['Naive',['../namespaceautd3_1_1gain_1_1holo.html#a8874436a17e1b2a10cf8b09a993eb30d',1,'autd3::gain::holo']]]
+  ['quaternion_885',['Quaternion',['../namespaceautd3_1_1core.html#a7c61f934cd1defac26fe81cc47aedc86',1,'autd3::core']]]
 ];

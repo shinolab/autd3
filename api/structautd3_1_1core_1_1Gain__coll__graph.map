@@ -1,4 +1,4 @@
-<map id="autd3::core::Gain&lt; T, &gt;" name="autd3::core::Gain&lt; T, &gt;">
-<area shape="rect" id="node1" title="Gain controls the duty ratio and phase of each transducer in AUTD devices." alt="" coords="33,80,185,107"/>
-<area shape="rect" id="node2" href="$structautd3_1_1core_1_1DatagramBody.html" title=" " alt="" coords="5,5,212,32"/>
+<map id="autd3::core::Gain" name="autd3::core::Gain">
+<area shape="rect" id="node1" title="Gain controls the duty ratio and phase of each transducer in AUTD devices." alt="" coords="34,80,153,107"/>
+<area shape="rect" id="node2" href="$structautd3_1_1core_1_1DatagramBody.html" title="DatagramBody is a data to be packed in the Body part of the driver::TxDatagram." alt="" coords="5,5,181,32"/>
 </map>

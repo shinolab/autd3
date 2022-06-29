@@ -1,0 +1,5 @@
+<map id="autd3::core::Gain::build" name="autd3::core::Gain::build">
+<area shape="rect" id="node1" title="Initialize data and call calc()." alt="" coords="5,35,129,76"/>
+<area shape="rect" id="node2" href="$structautd3_1_1core_1_1Geometry.html#a49b9243cf89533d4a53431460a95336f" title=" " alt="" coords="191,5,338,47"/>
+<area shape="rect" id="node3" href="$structautd3_1_1core_1_1Geometry.html#a18b4dcfdbc4c5366302aa819fe9c661f" title=" " alt="" coords="177,71,352,98"/>
+</map>

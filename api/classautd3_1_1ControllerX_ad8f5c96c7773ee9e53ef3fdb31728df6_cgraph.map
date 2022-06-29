@@ -1,7 +1,0 @@
-<map id="autd3::ControllerX::synchronize" name="autd3::ControllerX::synchronize">
-<area shape="rect" id="node1" title="Synchronize devices." alt="" coords="5,89,129,131"/>
-<area shape="rect" id="node2" href="$structautd3_1_1core_1_1Geometry.html#a47a61738d4c30038c959e65773cd5cb3" title=" " alt="" coords="191,5,338,47"/>
-<area shape="rect" id="node3" href="$structautd3_1_1core_1_1Geometry.html#a975cc9946158f7aa589aad9a734068f5" title=" " alt="" coords="177,71,352,98"/>
-<area shape="rect" id="node4" href="$namespaceautd3_1_1driver.html#a84f57e8df76700c2e2e64deff6fa4dd0" title=" " alt="" coords="189,122,341,149"/>
-<area shape="rect" id="node5" href="$namespaceautd3_1_1driver.html#a9b24e12394df6f7774ba7783bfbdd5e2" title=" " alt="" coords="199,173,330,215"/>
-</map>

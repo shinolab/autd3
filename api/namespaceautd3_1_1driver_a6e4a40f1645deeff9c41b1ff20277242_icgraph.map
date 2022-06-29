@@ -1,8 +1,4 @@
 <map id="autd3::driver::normal_header" name="autd3::driver::normal_header">
-<area shape="rect" id="node1" title=" " alt="" coords="260,150,397,191"/>
-<area shape="rect" id="node2" href="$structautd3_1_1core_1_1Amplitudes_3_01NormalPhaseTransducer_01_4.html#ad7f80c32c6b61944632eb92a2d4ea044" title=" " alt="" coords="20,5,197,61"/>
-<area shape="rect" id="node3" href="$structautd3_1_1core_1_1Amplitudes_3_01DynamicTransducer_01_4.html#a3af20044334a7838fd15997cb1f2bc60" title=" " alt="" coords="12,85,205,126"/>
-<area shape="rect" id="node4" href="$structautd3_1_1core_1_1NormalPhaseTransducer.html#a1307c36aa54543a9237d2a1b7787ecf3" title=" " alt="" coords="23,150,194,191"/>
-<area shape="rect" id="node5" href="$structautd3_1_1core_1_1NormalTransducer.html#a9b1a0ef2095f8beedd642f6f102c8acf" title=" " alt="" coords="9,215,208,257"/>
-<area shape="rect" id="node6" href="$structautd3_1_1core_1_1DynamicTransducer.html#a9bd37b0af7a612370242b97fab22df97" title=" " alt="" coords="5,281,212,322"/>
+<area shape="rect" id="node1" title=" " alt="" coords="209,5,347,47"/>
+<area shape="rect" id="node2" href="$classautd3_1_1core_1_1Amplitudes.html#a63e6667ad90e8917f37d92afcf6f63de" title=" " alt="" coords="5,5,161,47"/>
 </map>

@@ -1,0 +1,13 @@
+<map id="autd3::core::Geometry::begin" name="autd3::core::Geometry::begin">
+<area shape="rect" id="node1" title=" " alt="" coords="237,287,384,328"/>
+<area shape="rect" id="node2" href="$structautd3_1_1core_1_1Gain.html#a98a1d0477327b3676bed6cd3ab9573f7" title="Initialize data and call calc()." alt="" coords="35,5,159,47"/>
+<area shape="rect" id="node3" href="$classautd3_1_1gain_1_1Null.html#a0113261da556397adb762346e168fb83" title="Calculate duty ratio and phase of each transducer." alt="" coords="26,71,169,98"/>
+<area shape="rect" id="node4" href="$classautd3_1_1gain_1_1Focus.html#aaab24d52a97f1375619ea709c00dbf86" title="Calculate duty ratio and phase of each transducer." alt="" coords="34,123,161,164"/>
+<area shape="rect" id="node5" href="$classautd3_1_1gain_1_1BesselBeam.html#aa93517d5a878cccda73632ecad3c2114" title="Calculate duty ratio and phase of each transducer." alt="" coords="15,188,179,229"/>
+<area shape="rect" id="node6" href="$classautd3_1_1gain_1_1PlaneWave.html#a59ebf5b7bdf39d46d522e0671c9be414" title="Calculate duty ratio and phase of each transducer." alt="" coords="19,253,175,295"/>
+<area shape="rect" id="node7" href="$structautd3_1_1core_1_1Geometry.html#af40a646aca8d22070069c8fd72733b88" title="Center position of all connected devices." alt="" coords="24,319,171,360"/>
+<area shape="rect" id="node8" href="$classautd3_1_1core_1_1Amplitudes.html#a63e6667ad90e8917f37d92afcf6f63de" title=" " alt="" coords="19,384,175,425"/>
+<area shape="rect" id="node9" href="$structautd3_1_1core_1_1ModDelayConfig.html#a2755ac902096bc2a1f1de6dd8ad054a9" title=" " alt="" coords="5,449,189,491"/>
+<area shape="rect" id="node10" href="$structautd3_1_1core_1_1PointSTM.html#a0f9292be30340570d98b86db1b3f848a" title=" " alt="" coords="23,515,172,556"/>
+<area shape="rect" id="node11" href="$classautd3_1_1Controller.html#adb9fc0122aa0e4a3f4fb2cc3dca21c93" title="Synchronize devices." alt="" coords="37,580,158,621"/>
+</map>

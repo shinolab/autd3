@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">autd3
-   &#160;<span id="projectnumber">2.2.1</span>
+   &#160;<span id="projectnumber">2.2.2</span>
    </div>
   </td>
  </tr>
@@ -68,6 +68,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="structautd3_1_1driver_1_1Duty-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -79,8 +80,13 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a567bb7f8909c447efd99318ac9eb25e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1driver_1_1Duty.html#a567bb7f8909c447efd99318ac9eb25e8">set</a> (const double amp, const uint16_t cycle)</td></tr>
-<tr class="separator:a567bb7f8909c447efd99318ac9eb25e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bfaaa48dbb646d84fe0212404ee20ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1driver_1_1Duty.html#a1bfaaa48dbb646d84fe0212404ee20ae">set</a> (const <a class="el" href="structautd3_1_1driver_1_1Drive.html">Drive</a> d)</td></tr>
+<tr class="separator:a1bfaaa48dbb646d84fe0212404ee20ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a22e83546cfae5b39a35202b515945a74"><td class="memItemLeft" align="right" valign="top">static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1driver_1_1Duty.html#a22e83546cfae5b39a35202b515945a74">to_duty</a> (const <a class="el" href="structautd3_1_1driver_1_1Drive.html">Drive</a> d)</td></tr>
+<tr class="separator:a22e83546cfae5b39a35202b515945a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -89,10 +95,10 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="fpga_2defined_8hpp_source.html#l00100">100</a> of file <a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fpga_2defined_8hpp_source.html#l00111">111</a> of file <a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a567bb7f8909c447efd99318ac9eb25e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a567bb7f8909c447efd99318ac9eb25e8">&#9670;&nbsp;</a></span>set()</h2>
+<a id="a1bfaaa48dbb646d84fe0212404ee20ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bfaaa48dbb646d84fe0212404ee20ae">&#9670;&nbsp;</a></span>set()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -103,19 +109,9 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">void autd3::driver::Duty::set </td>
           <td>(</td>
-          <td class="paramtype">const double&#160;</td>
-          <td class="paramname"><em>amp</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const <a class="el" href="structautd3_1_1driver_1_1Drive.html">Drive</a>&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const uint16_t&#160;</td>
-          <td class="paramname"><em>cycle</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -125,9 +121,73 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fpga_2defined_8hpp_source.html#l00103">103</a> of file <a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fpga_2defined_8hpp_source.html#l00118">118</a> of file <a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fpga_2defined_8hpp_source.html#l00101">duty</a>, and <a class="el" href="hardware_8hpp_source.html#l00016">autd3::driver::pi</a>.</p>
+<p class="reference">References <a class="el" href="fpga_2defined_8hpp_source.html#l00112">duty</a>, and <a class="el" href="fpga_2defined_8hpp_source.html#l00114">to_duty()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="operation_8hpp_source.html#l00326">autd3::driver::gain_stm_normal_duty()</a>, and <a class="el" href="operation_8hpp_source.html#l00135">autd3::driver::normal_duty_body()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="structautd3_1_1driver_1_1Duty_a1bfaaa48dbb646d84fe0212404ee20ae_cgraph.png" border="0" usemap="#structautd3_1_1driver_1_1Duty_a1bfaaa48dbb646d84fe0212404ee20ae_cgraph" alt=""/></div>
+<map name="structautd3_1_1driver_1_1Duty_a1bfaaa48dbb646d84fe0212404ee20ae_cgraph" id="structautd3_1_1driver_1_1Duty_a1bfaaa48dbb646d84fe0212404ee20ae_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,153,39"/>
+<area shape="rect" href="structautd3_1_1driver_1_1Duty.html#a22e83546cfae5b39a35202b515945a74" title=" " alt="" coords="201,5,325,47"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="structautd3_1_1driver_1_1Duty_a1bfaaa48dbb646d84fe0212404ee20ae_icgraph.png" border="0" usemap="#structautd3_1_1driver_1_1Duty_a1bfaaa48dbb646d84fe0212404ee20ae_icgraph" alt=""/></div>
+<map name="structautd3_1_1driver_1_1Duty_a1bfaaa48dbb646d84fe0212404ee20ae_icgraph" id="structautd3_1_1driver_1_1Duty_a1bfaaa48dbb646d84fe0212404ee20ae_icgraph">
+<area shape="rect" title=" " alt="" coords="191,46,339,73"/>
+<area shape="rect" href="namespaceautd3_1_1driver.html#ae66d1a641d1bac90ce82fcbea7138ed0" title=" " alt="" coords="10,5,138,47"/>
+<area shape="rect" href="namespaceautd3_1_1driver.html#abafa5e82e68857edd0a57b5a91651c20" title=" " alt="" coords="5,71,143,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a22e83546cfae5b39a35202b515945a74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22e83546cfae5b39a35202b515945a74">&#9670;&nbsp;</a></span>to_duty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint16_t autd3::driver::Duty::to_duty </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structautd3_1_1driver_1_1Drive.html">Drive</a>&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fpga_2defined_8hpp_source.html#l00114">114</a> of file <a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="fpga_2defined_8hpp_source.html#l00083">autd3::driver::Drive::amp</a>, <a class="el" href="fpga_2defined_8hpp_source.html#l00084">autd3::driver::Drive::cycle</a>, and <a class="el" href="hardware_8hpp_source.html#l00016">autd3::driver::pi</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="fpga_2defined_8hpp_source.html#l00118">set()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="structautd3_1_1driver_1_1Duty_a22e83546cfae5b39a35202b515945a74_icgraph.png" border="0" usemap="#structautd3_1_1driver_1_1Duty_a22e83546cfae5b39a35202b515945a74_icgraph" alt=""/></div>
+<map name="structautd3_1_1driver_1_1Duty_a22e83546cfae5b39a35202b515945a74_icgraph" id="structautd3_1_1driver_1_1Duty_a22e83546cfae5b39a35202b515945a74_icgraph">
+<area shape="rect" title=" " alt="" coords="387,39,511,80"/>
+<area shape="rect" href="structautd3_1_1driver_1_1Duty.html#a1bfaaa48dbb646d84fe0212404ee20ae" title=" " alt="" coords="191,46,339,73"/>
+<area shape="rect" href="namespaceautd3_1_1driver.html#ae66d1a641d1bac90ce82fcbea7138ed0" title=" " alt="" coords="10,5,138,47"/>
+<area shape="rect" href="namespaceautd3_1_1driver.html#abafa5e82e68857edd0a57b5a91651c20" title=" " alt="" coords="5,71,143,112"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -144,9 +204,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fpga_2defined_8hpp_source.html#l00101">101</a> of file <a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fpga_2defined_8hpp_source.html#l00112">112</a> of file <a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fpga_2defined_8hpp_source.html#l00103">set()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fpga_2defined_8hpp_source.html#l00118">set()</a>.</p>
 
 </div>
 </div>

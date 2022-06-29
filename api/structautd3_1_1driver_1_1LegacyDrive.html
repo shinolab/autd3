@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">autd3
-   &#160;<span id="projectnumber">2.2.1</span>
+   &#160;<span id="projectnumber">2.2.2</span>
    </div>
   </td>
  </tr>
@@ -68,6 +68,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="structautd3_1_1driver_1_1LegacyDrive-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -79,8 +80,15 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a00d62787b5bdf656bc2ab3006418cb4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1driver_1_1LegacyDrive.html#a00d62787b5bdf656bc2ab3006418cb4e">set</a> (const double amp, const double p)</td></tr>
-<tr class="separator:a00d62787b5bdf656bc2ab3006418cb4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae41ef2d4580e281e768fdc55b0dd0a51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1driver_1_1LegacyDrive.html#ae41ef2d4580e281e768fdc55b0dd0a51">set</a> (const <a class="el" href="structautd3_1_1driver_1_1Drive.html">Drive</a> d)</td></tr>
+<tr class="separator:ae41ef2d4580e281e768fdc55b0dd0a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ade55ed57d0dba344a569da782b47e9d1"><td class="memItemLeft" align="right" valign="top">static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1driver_1_1LegacyDrive.html#ade55ed57d0dba344a569da782b47e9d1">to_phase</a> (const <a class="el" href="structautd3_1_1driver_1_1Drive.html">Drive</a> d)</td></tr>
+<tr class="separator:ade55ed57d0dba344a569da782b47e9d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a296595b907622dbfcfc263eef85d3dd9"><td class="memItemLeft" align="right" valign="top">static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structautd3_1_1driver_1_1LegacyDrive.html#a296595b907622dbfcfc263eef85d3dd9">to_duty</a> (const <a class="el" href="structautd3_1_1driver_1_1Drive.html">Drive</a> d)</td></tr>
+<tr class="separator:a296595b907622dbfcfc263eef85d3dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -91,10 +99,10 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="fpga_2defined_8hpp_source.html#l00081">81</a> of file <a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fpga_2defined_8hpp_source.html#l00087">87</a> of file <a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a00d62787b5bdf656bc2ab3006418cb4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00d62787b5bdf656bc2ab3006418cb4e">&#9670;&nbsp;</a></span>set()</h2>
+<a id="ae41ef2d4580e281e768fdc55b0dd0a51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae41ef2d4580e281e768fdc55b0dd0a51">&#9670;&nbsp;</a></span>set()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -105,19 +113,9 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">void autd3::driver::LegacyDrive::set </td>
           <td>(</td>
-          <td class="paramtype">const double&#160;</td>
-          <td class="paramname"><em>amp</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const <a class="el" href="structautd3_1_1driver_1_1Drive.html">Drive</a>&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const double&#160;</td>
-          <td class="paramname"><em>p</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -127,9 +125,119 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fpga_2defined_8hpp_source.html#l00085">85</a> of file <a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fpga_2defined_8hpp_source.html#l00094">94</a> of file <a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="fpga_2defined_8hpp_source.html#l00083">duty</a>, <a class="el" href="fpga_2defined_8hpp_source.html#l00082">phase</a>, and <a class="el" href="hardware_8hpp_source.html#l00016">autd3::driver::pi</a>.</p>
+<p class="reference">References <a class="el" href="fpga_2defined_8hpp_source.html#l00089">duty</a>, <a class="el" href="fpga_2defined_8hpp_source.html#l00088">phase</a>, <a class="el" href="fpga_2defined_8hpp_source.html#l00092">to_duty()</a>, and <a class="el" href="fpga_2defined_8hpp_source.html#l00091">to_phase()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="operation_8hpp_source.html#l00220">autd3::driver::gain_stm_legacy_body()</a>, and <a class="el" href="operation_8hpp_source.html#l00116">autd3::driver::normal_legacy_body()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="structautd3_1_1driver_1_1LegacyDrive_ae41ef2d4580e281e768fdc55b0dd0a51_cgraph.png" border="0" usemap="#structautd3_1_1driver_1_1LegacyDrive_ae41ef2d4580e281e768fdc55b0dd0a51_cgraph" alt=""/></div>
+<map name="structautd3_1_1driver_1_1LegacyDrive_ae41ef2d4580e281e768fdc55b0dd0a51_cgraph" id="structautd3_1_1driver_1_1LegacyDrive_ae41ef2d4580e281e768fdc55b0dd0a51_cgraph">
+<area shape="rect" title=" " alt="" coords="5,46,200,73"/>
+<area shape="rect" href="structautd3_1_1driver_1_1LegacyDrive.html#a296595b907622dbfcfc263eef85d3dd9" title=" " alt="" coords="248,5,419,47"/>
+<area shape="rect" href="structautd3_1_1driver_1_1LegacyDrive.html#ade55ed57d0dba344a569da782b47e9d1" title=" " alt="" coords="248,71,419,112"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="structautd3_1_1driver_1_1LegacyDrive_ae41ef2d4580e281e768fdc55b0dd0a51_icgraph.png" border="0" usemap="#structautd3_1_1driver_1_1LegacyDrive_ae41ef2d4580e281e768fdc55b0dd0a51_icgraph" alt=""/></div>
+<map name="structautd3_1_1driver_1_1LegacyDrive_ae41ef2d4580e281e768fdc55b0dd0a51_icgraph" id="structautd3_1_1driver_1_1LegacyDrive_ae41ef2d4580e281e768fdc55b0dd0a51_icgraph">
+<area shape="rect" title=" " alt="" coords="191,46,385,73"/>
+<area shape="rect" href="namespaceautd3_1_1driver.html#a30fac37da25ddd05b3c36002c869ad68" title=" " alt="" coords="9,5,139,47"/>
+<area shape="rect" href="namespaceautd3_1_1driver.html#a82c9f2be0967379fbbb15c77fc0cd966" title=" " alt="" coords="5,71,143,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a296595b907622dbfcfc263eef85d3dd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a296595b907622dbfcfc263eef85d3dd9">&#9670;&nbsp;</a></span>to_duty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint8_t autd3::driver::LegacyDrive::to_duty </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structautd3_1_1driver_1_1Drive.html">Drive</a>&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fpga_2defined_8hpp_source.html#l00092">92</a> of file <a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="fpga_2defined_8hpp_source.html#l00083">autd3::driver::Drive::amp</a>, and <a class="el" href="hardware_8hpp_source.html#l00016">autd3::driver::pi</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="fpga_2defined_8hpp_source.html#l00094">set()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="structautd3_1_1driver_1_1LegacyDrive_a296595b907622dbfcfc263eef85d3dd9_icgraph.png" border="0" usemap="#structautd3_1_1driver_1_1LegacyDrive_a296595b907622dbfcfc263eef85d3dd9_icgraph" alt=""/></div>
+<map name="structautd3_1_1driver_1_1LegacyDrive_a296595b907622dbfcfc263eef85d3dd9_icgraph" id="structautd3_1_1driver_1_1LegacyDrive_a296595b907622dbfcfc263eef85d3dd9_icgraph">
+<area shape="rect" title=" " alt="" coords="433,39,604,80"/>
+<area shape="rect" href="structautd3_1_1driver_1_1LegacyDrive.html#ae41ef2d4580e281e768fdc55b0dd0a51" title=" " alt="" coords="191,46,385,73"/>
+<area shape="rect" href="namespaceautd3_1_1driver.html#a30fac37da25ddd05b3c36002c869ad68" title=" " alt="" coords="9,5,139,47"/>
+<area shape="rect" href="namespaceautd3_1_1driver.html#a82c9f2be0967379fbbb15c77fc0cd966" title=" " alt="" coords="5,71,143,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ade55ed57d0dba344a569da782b47e9d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade55ed57d0dba344a569da782b47e9d1">&#9670;&nbsp;</a></span>to_phase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint8_t autd3::driver::LegacyDrive::to_phase </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structautd3_1_1driver_1_1Drive.html">Drive</a>&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fpga_2defined_8hpp_source.html#l00091">91</a> of file <a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="fpga_2defined_8hpp_source.html#l00082">autd3::driver::Drive::phase</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="fpga_2defined_8hpp_source.html#l00094">set()</a>, <a class="el" href="body_8hpp_source.html#l00112">autd3::driver::LegacyPhaseFull::set()</a>, and <a class="el" href="body_8hpp_source.html#l00129">autd3::driver::LegacyPhaseHalf::set()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="structautd3_1_1driver_1_1LegacyDrive_ade55ed57d0dba344a569da782b47e9d1_icgraph.png" border="0" usemap="#structautd3_1_1driver_1_1LegacyDrive_ade55ed57d0dba344a569da782b47e9d1_icgraph" alt=""/></div>
+<map name="structautd3_1_1driver_1_1LegacyDrive_ade55ed57d0dba344a569da782b47e9d1_icgraph" id="structautd3_1_1driver_1_1LegacyDrive_ade55ed57d0dba344a569da782b47e9d1_icgraph">
+<area shape="rect" title=" " alt="" coords="433,96,604,137"/>
+<area shape="rect" href="structautd3_1_1driver_1_1LegacyDrive.html#ae41ef2d4580e281e768fdc55b0dd0a51" title=" " alt="" coords="191,45,385,71"/>
+<area shape="rect" href="structautd3_1_1driver_1_1LegacyPhaseFull.html#a420dc2aa6f4b2ed7c255a440dc6a9ccd" title=" " alt="" coords="199,96,377,137"/>
+<area shape="rect" href="structautd3_1_1driver_1_1LegacyPhaseHalf.html#a940d110a00ed71745a1a39b51a9abfa4" title=" " alt="" coords="199,161,377,203"/>
+<area shape="rect" href="namespaceautd3_1_1driver.html#a30fac37da25ddd05b3c36002c869ad68" title=" " alt="" coords="9,5,139,47"/>
+<area shape="rect" href="namespaceautd3_1_1driver.html#a82c9f2be0967379fbbb15c77fc0cd966" title=" " alt="" coords="5,71,143,112"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -146,9 +254,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fpga_2defined_8hpp_source.html#l00083">83</a> of file <a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fpga_2defined_8hpp_source.html#l00089">89</a> of file <a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fpga_2defined_8hpp_source.html#l00085">set()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fpga_2defined_8hpp_source.html#l00094">set()</a>.</p>
 
 </div>
 </div>
@@ -164,9 +272,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fpga_2defined_8hpp_source.html#l00082">82</a> of file <a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fpga_2defined_8hpp_source.html#l00088">88</a> of file <a class="el" href="fpga_2defined_8hpp_source.html">defined.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fpga_2defined_8hpp_source.html#l00085">set()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fpga_2defined_8hpp_source.html#l00094">set()</a>.</p>
 
 </div>
 </div>

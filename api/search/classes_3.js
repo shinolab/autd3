@@ -1,25 +1,10 @@
 var searchData=
 [
-  ['datagrambody_487',['DatagramBody',['../structautd3_1_1core_1_1DatagramBody.html',1,'autd3::core']]],
-  ['datagrambody_3c_20autd3_3a_3acore_3a_3alegacytransducer_20_3e_488',['DatagramBody&lt; autd3::core::LegacyTransducer &gt;',['../structautd3_1_1core_1_1DatagramBody.html',1,'autd3::core']]],
-  ['datagrambody_3c_20core_3a_3alegacytransducer_20_3e_489',['DatagramBody&lt; core::LegacyTransducer &gt;',['../structautd3_1_1core_1_1DatagramBody.html',1,'autd3::core']]],
-  ['datagrambody_3c_20dynamictransducer_20_3e_490',['DatagramBody&lt; DynamicTransducer &gt;',['../structautd3_1_1core_1_1DatagramBody.html',1,'autd3::core']]],
-  ['datagrambody_3c_20legacytransducer_20_3e_491',['DatagramBody&lt; LegacyTransducer &gt;',['../structautd3_1_1core_1_1DatagramBody.html',1,'autd3::core']]],
-  ['datagrambody_3c_20normalphasetransducer_20_3e_492',['DatagramBody&lt; NormalPhaseTransducer &gt;',['../structautd3_1_1core_1_1DatagramBody.html',1,'autd3::core']]],
-  ['datagrambody_3c_20normaltransducer_20_3e_493',['DatagramBody&lt; NormalTransducer &gt;',['../structautd3_1_1core_1_1DatagramBody.html',1,'autd3::core']]],
-  ['datagrambody_3c_20t_20_3e_494',['DatagramBody&lt; T &gt;',['../structautd3_1_1core_1_1DatagramBody.html',1,'autd3::core']]],
-  ['datagramheader_495',['DatagramHeader',['../structautd3_1_1core_1_1DatagramHeader.html',1,'autd3::core']]],
-  ['device_496',['Device',['../structautd3_1_1core_1_1Device.html',1,'autd3::core']]],
-  ['device_3c_20autd3_3a_3acore_3a_3adynamictransducer_20_3e_497',['Device&lt; autd3::core::DynamicTransducer &gt;',['../structautd3_1_1core_1_1Device.html',1,'autd3::core']]],
-  ['device_3c_20autd3_3a_3acore_3a_3alegacytransducer_20_3e_498',['Device&lt; autd3::core::LegacyTransducer &gt;',['../structautd3_1_1core_1_1Device.html',1,'autd3::core']]],
-  ['device_3c_20autd3_3a_3acore_3a_3anormalphasetransducer_20_3e_499',['Device&lt; autd3::core::NormalPhaseTransducer &gt;',['../structautd3_1_1core_1_1Device.html',1,'autd3::core']]],
-  ['device_3c_20autd3_3a_3acore_3a_3anormaltransducer_20_3e_500',['Device&lt; autd3::core::NormalTransducer &gt;',['../structautd3_1_1core_1_1Device.html',1,'autd3::core']]],
-  ['device_3c_20core_3a_3alegacytransducer_20_3e_501',['Device&lt; core::LegacyTransducer &gt;',['../structautd3_1_1core_1_1Device.html',1,'autd3::core']]],
-  ['device_3c_20legacytransducer_20_3e_502',['Device&lt; LegacyTransducer &gt;',['../structautd3_1_1core_1_1Device.html',1,'autd3::core']]],
-  ['directivity_503',['Directivity',['../classautd3_1_1core_1_1Directivity.html',1,'autd3::core']]],
-  ['dontcare_504',['DontCare',['../structautd3_1_1gain_1_1holo_1_1DontCare.html',1,'autd3::gain::holo']]],
-  ['drivedata_505',['DriveData',['../structautd3_1_1core_1_1DriveData.html',1,'autd3::core']]],
-  ['duty_506',['Duty',['../structautd3_1_1driver_1_1Duty.html',1,'autd3::driver']]],
-  ['dynamicdrivedata_507',['DynamicDriveData',['../structautd3_1_1core_1_1DynamicDriveData.html',1,'autd3::core']]],
-  ['dynamictransducer_508',['DynamicTransducer',['../structautd3_1_1core_1_1DynamicTransducer.html',1,'autd3::core']]]
+  ['datagrambody_431',['DatagramBody',['../structautd3_1_1core_1_1DatagramBody.html',1,'autd3::core']]],
+  ['datagramheader_432',['DatagramHeader',['../structautd3_1_1core_1_1DatagramHeader.html',1,'autd3::core']]],
+  ['device_433',['Device',['../structautd3_1_1core_1_1Geometry_1_1Device.html',1,'autd3::core::Geometry']]],
+  ['directivity_434',['Directivity',['../classautd3_1_1core_1_1Directivity.html',1,'autd3::core']]],
+  ['dontcare_435',['DontCare',['../structautd3_1_1gain_1_1holo_1_1DontCare.html',1,'autd3::gain::holo']]],
+  ['drive_436',['Drive',['../structautd3_1_1driver_1_1Drive.html',1,'autd3::driver']]],
+  ['duty_437',['Duty',['../structautd3_1_1driver_1_1Duty.html',1,'autd3::driver']]]
 ];

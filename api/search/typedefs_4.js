@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['linkptr_994',['LinkPtr',['../namespaceautd3_1_1core.html#aeb7a471c6532b5c4888a461d378c6ae0',1,'autd3::core']]]
+  ['matrix4x4_881',['Matrix4X4',['../namespaceautd3_1_1core.html#ac3a605001cbb56333df71ee15dc0b45f',1,'autd3::core']]],
+  ['matrixxc_882',['MatrixXc',['../namespaceautd3_1_1gain_1_1holo.html#aa2d147a9066007094e41a33c3951b97c',1,'autd3::gain::holo']]],
+  ['matrixxd_883',['MatrixXd',['../namespaceautd3_1_1gain_1_1holo.html#a1bf7708f2d72eee5c09c1aa648140642',1,'autd3::gain::holo']]]
 ];

@@ -1,4 +1,6 @@
-<map id="autd3::core::STM&lt; T, &gt;" name="autd3::core::STM&lt; T, &gt;">
-<area shape="rect" id="node1" title="STM provide hardware Spatio&#45;Temporal Modulation or Lateral Modulation function." alt="" coords="17,95,170,121"/>
-<area shape="rect" id="node2" href="$structautd3_1_1core_1_1DatagramBody.html" title=" " alt="" coords="5,5,181,47"/>
+<map id="autd3::core::STM" name="autd3::core::STM">
+<area shape="rect" id="node1" title="STM provide hardware Spatio&#45;Temporal Modulation or Lateral Modulation function." alt="" coords="105,80,223,107"/>
+<area shape="rect" id="node3" href="$structautd3_1_1core_1_1GainSTM.html" title="GainSTM provides a function to display Gain sequentially and periodically." alt="" coords="5,155,152,181"/>
+<area shape="rect" id="node4" href="$structautd3_1_1core_1_1PointSTM.html" title="PointSTM provides a function to display the focus sequentially and periodically." alt="" coords="176,155,325,181"/>
+<area shape="rect" id="node2" href="$structautd3_1_1core_1_1DatagramBody.html" title="DatagramBody is a data to be packed in the Body part of the driver::TxDatagram." alt="" coords="76,5,252,32"/>
 </map>

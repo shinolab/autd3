@@ -1,6 +1,6 @@
-<map id="autd3::gain::holo::SDP&lt; T, &gt;" name="autd3::gain::holo::SDP&lt; T, &gt;">
-<area shape="rect" id="node1" title="Gain to produce multiple focal points with SDP method. Refer to Inoue, Seki, Yasutoshi Makino,..." alt="" coords="50,273,170,315"/>
-<area shape="rect" id="node2" href="$classautd3_1_1gain_1_1holo_1_1Holo.html" title=" " alt="" coords="5,184,215,225"/>
-<area shape="rect" id="node3" href="$structautd3_1_1core_1_1Gain.html" title=" " alt="" coords="23,95,197,136"/>
-<area shape="rect" id="node4" href="$structautd3_1_1core_1_1DatagramBody.html" title=" " alt="" coords="19,5,201,47"/>
+<map id="autd3::gain::holo::SDP" name="autd3::gain::holo::SDP">
+<area shape="rect" id="node1" title="Gain to produce multiple focal points with SDP method. Refer to Inoue, Seki, Yasutoshi Makino,..." alt="" coords="20,229,167,256"/>
+<area shape="rect" id="node2" href="$classautd3_1_1gain_1_1holo_1_1Holo.html" title="Gain to produce multiple focal points." alt="" coords="20,155,167,181"/>
+<area shape="rect" id="node3" href="$structautd3_1_1core_1_1Gain.html" title="Gain controls the duty ratio and phase of each transducer in AUTD devices." alt="" coords="34,80,153,107"/>
+<area shape="rect" id="node4" href="$structautd3_1_1core_1_1DatagramBody.html" title="DatagramBody is a data to be packed in the Body part of the driver::TxDatagram." alt="" coords="5,5,181,32"/>
 </map>

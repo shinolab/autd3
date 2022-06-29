@@ -1,0 +1,6 @@
+<map id="autd3::core::Geometry::num_transducers" name="autd3::core::Geometry::num_transducers">
+<area shape="rect" id="node1" title="Number of transducers." alt="" coords="209,71,356,112"/>
+<area shape="rect" id="node2" href="$classautd3_1_1gain_1_1Grouped.html#afc09c63f5100d262ef9c6ba37d7afc1f" title="Calculate duty ratio and phase of each transducer." alt="" coords="14,5,153,47"/>
+<area shape="rect" id="node3" href="$classautd3_1_1gain_1_1Grouped.html#a9025393b374c44192e0a0d4f52767e5c" title=" " alt="" coords="14,71,153,112"/>
+<area shape="rect" id="node4" href="$classautd3_1_1core_1_1Amplitudes.html#a63e6667ad90e8917f37d92afcf6f63de" title=" " alt="" coords="5,136,161,177"/>
+</map>

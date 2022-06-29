@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['uniform_845',['Uniform',['../structautd3_1_1gain_1_1holo_1_1Uniform.html#a0d9c2f6b0f083030e11869183ec6357b',1,'autd3::gain::holo::Uniform']]],
-  ['update_5fflag_846',['update_flag',['../classautd3_1_1ControllerX.html#a9a6be3124795c90809b61dd2d93c8efb',1,'autd3::ControllerX']]]
+  ['uniform_745',['Uniform',['../structautd3_1_1gain_1_1holo_1_1Uniform.html#a0d9c2f6b0f083030e11869183ec6357b',1,'autd3::gain::holo::Uniform']]],
+  ['update_5fflag_746',['update_flag',['../classautd3_1_1Controller.html#a0556e88ab2b0137c4810abd509ccd148',1,'autd3::Controller']]]
 ];
