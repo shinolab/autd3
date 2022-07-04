@@ -170,7 +170,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Modulation created from wav file. </p>
 
-<p class="definition">Definition at line <a class="el" href="audio__file_8hpp_source.html#l00052">52</a> of file <a class="el" href="audio__file_8hpp_source.html">audio_file.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="audio__file_8hpp_source.html#l00049">49</a> of file <a class="el" href="audio__file_8hpp_source.html">audio_file.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5f0e30afbfc71e5743c156763e140af5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5f0e30afbfc71e5743c156763e140af5">&#9670;&nbsp;</a></span>Wav() <span class="overload">[1/3]</span></h2>
@@ -212,7 +212,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>The sampling frequency of AUTD is shown in autd::MOD_SAMPLING_FREQ, and it is not possible to modulate beyond the Nyquist frequency. No modulation beyond the Nyquist frequency can be produced. If samplingFreq is less than the Nyquist frequency, the data will be up-sampled. The maximum modulation buffer size is shown in autd::MOD_BUF_SIZE. Only the data up to MOD_BUF_SIZE/MOD_SAMPLING_FREQ seconds can be output. </p>
+<p>The sampling frequency in AUTD device will be <a class="el" href="namespaceautd3_1_1driver.html#a4510cb94970b0c31d6cac112bcb959ce">autd3::driver::FPGA_CLK_FREQ</a> / mod_sampling_freq_div. </p>
 
 </div>
 </div>

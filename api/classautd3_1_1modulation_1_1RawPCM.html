@@ -219,7 +219,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>The sampling frequency of AUTD is shown in autd::MOD_SAMPLING_FREQ, and it is not possible to modulate beyond the Nyquist frequency. No modulation beyond the Nyquist frequency can be produced. If samplingFreq is less than the Nyquist frequency, the data will be up-sampled. The maximum modulation buffer size is shown in autd::MOD_BUF_SIZE. Only the data up to MOD_BUF_SIZE/MOD_SAMPLING_FREQ seconds can be output. </p>
+<p>The sampling frequency in AUTD device will be <a class="el" href="namespaceautd3_1_1driver.html#a4510cb94970b0c31d6cac112bcb959ce">autd3::driver::FPGA_CLK_FREQ</a> / mod_sampling_freq_div. </p>
 
 </div>
 </div>

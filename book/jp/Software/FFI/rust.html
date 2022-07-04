@@ -234,8 +234,7 @@ fn main() {
 </code></pre></pre>
 <p>注意点として, Rust版の<code>send</code>関数は引数を一つしか取らない. 
 ヘッダーとボディーデータを同時に送りたいときは<code>send</code>を続けて呼び出し, そうでない場合は, <code>flush</code>を呼ぶこと.</p>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>    autd.send(&amp;mut m).flush().unwrap();
 <span class="boring">}

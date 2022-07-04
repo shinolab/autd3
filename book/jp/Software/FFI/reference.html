@@ -150,31 +150,34 @@
 <p>引数にはエラーメッセージへのポインタを渡す. このポインタにエラーメッセージがコピーされる. ただし, 引数がnullptrの場合はコピーは行われない.
 この関数は, null終端込みのエラーメッセージのサイズを返す.</p>
 <p>エラーメッセージの長さは可変なので十分に大きな領域を確保しておくか, errorにnullptrを渡し必要なサイズを取得して再び呼び出すこと.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>error</td><td>char*</td><td>out</td><td>pointer to error message</td></tr>
 <tr><td>return</td><td>int32_t</td><td>-</td><td>length of error message including null terminator</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdcreatecontroller-autd3capi"><a class="header" href="#autdcreatecontroller-autd3capi">AUTDCreateController (autd3capi)</a></h2>
 <p>Controllerを作成する.</p>
 <p>作成した<code>Controller</code>は最後に<code>AUTDFreeController</code>で開放する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>out</td><td>void**</td><td>out</td><td>pointer to pointer to Controller</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdopencontroller-autd3capi"><a class="header" href="#autdopencontroller-autd3capi">AUTDOpenController (autd3capi)</a></h2>
 <p>Controllerをopenする.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う. linkは各々のlinkの生成関数で作成したものを使う.</p>
 <p>この関数は失敗した場合にfalseを返す. falseの場合には<code>AUTDGetLastError</code>でエラーメッセージを取得できる.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>link</td><td>void*</td><td>in</td><td>pointer to Link</td></tr>
 <tr><td>return</td><td>bool</td><td>-</td><td>true if success</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdadddevice-autd3capi"><a class="header" href="#autdadddevice-autd3capi">AUTDAddDevice (autd3capi)</a></h2>
 <p>ControllerにDeviceを追加する.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う. x, y, zは位置で, rz1, ry, rz2はZYZのオイラー角である.</p>
 <p>この関数は追加されたDeviceのIdを返す.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>x</td><td>double</td><td>in</td><td>x coordinate of position in millimeter</td></tr>
 <tr><td>y</td><td>double</td><td>in</td><td>y coordinate of position in millimeter</td></tr>
@@ -184,12 +187,13 @@
 <tr><td>rz2</td><td>double</td><td>in</td><td>third angle of ZYZ euler angle in radian</td></tr>
 <tr><td>return</td><td>int32_t</td><td>-</td><td>Device Id</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdadddevicequaternion-autd3capi"><a class="header" href="#autdadddevicequaternion-autd3capi">AUTDAddDeviceQuaternion (autd3capi)</a></h2>
 <p>ControllerにDeviceを追加する.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う. x, y, zは位置で, qw, qx, qy,
 qzは回転を表すクオータニオンである.</p>
 <p>この関数は追加されたDeviceのIdを返す.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>x</td><td>double</td><td>in</td><td>x coordinate of position in millimeter</td></tr>
 <tr><td>y</td><td>double</td><td>in</td><td>y coordinate of position in millimeter</td></tr>
@@ -200,237 +204,265 @@ qzは回転を表すクオータニオンである.</p>
 <tr><td>qz</td><td>double</td><td>in</td><td>z parameter of quaternion of rotation</td></tr>
 <tr><td>return</td><td>int32_t</td><td>-</td><td>Device Id</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdclose-autd3capi"><a class="header" href="#autdclose-autd3capi">AUTDClose (autd3capi)</a></h2>
 <p>Controllerをcloseする.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
 <p>この関数はエラーが発生した場合に0未満の値を返す. エラーが生じた場合には<code>AUTDGetLastError</code>でエラーメッセージを取得できる. また,
 check ackフラグがtrue, かつ, 返り値が0より大きい場合は, データが実際のデバイスで処理されたことを保証する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>return</td><td>int32_t</td><td>-</td><td>if <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> and check ack flag is true, it guarantees devices have processed data. if <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>, error ocurred.</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdclear-autd3capi"><a class="header" href="#autdclear-autd3capi">AUTDClear (autd3capi)</a></h2>
 <p>デバイス内の状態をclearする.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
 <p>この関数はエラーが発生した場合に0未満の値を返す. エラーが生じた場合には<code>AUTDGetLastError</code>でエラーメッセージを取得できる. また,
 check ackフラグがtrue, かつ, 返り値が0より大きい場合は, データが実際のデバイスで処理されたことを保証する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>return</td><td>int32_t</td><td>-</td><td>if <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> and check ack flag is true, it guarantees devices have processed data. if <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>, error ocurred.</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdsynchronize-autd3capi"><a class="header" href="#autdsynchronize-autd3capi">AUTDSynchronize (autd3capi)</a></h2>
 <p>デバイスを同期する.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
 <p>この関数はエラーが発生した場合に0未満の値を返す. エラーが生じた場合には<code>AUTDGetLastError</code>でエラーメッセージを取得できる. また,
 check ackフラグがtrue, かつ, 返り値が0より大きい場合は, データが実際のデバイスで処理されたことを保証する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>return</td><td>int32_t</td><td>-</td><td>if <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> and check ack flag is true, it guarantees devices have processed data. if <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>, error ocurred.</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdcreatesilencer-autd3capi"><a class="header" href="#autdcreatesilencer-autd3capi">AUTDCreateSilencer (autd3capi)</a></h2>
 <p>SilencerConfigを作成する.</p>
 <p>作成したSilencerConfigは最後に<code>AUTDDeleteSilencer</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>out</td><td>void**</td><td>out</td><td>pointer to pointer to SilencerConfig</td></tr>
 <tr><td>step</td><td>uint16_t</td><td>in</td><td>silencer update step</td></tr>
 <tr><td>cycle</td><td>uint16_t</td><td>in</td><td>silencer update cycle</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autddeletesilencer-autd3capi"><a class="header" href="#autddeletesilencer-autd3capi">AUTDDeleteSilencer (autd3capi)</a></h2>
 <p>SilencerConfigを削除する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>config</td><td>void*</td><td>in</td><td>pointer to SilencerConfig</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdfreecontroller-autd3capi"><a class="header" href="#autdfreecontroller-autd3capi">AUTDFreeController (autd3capi)</a></h2>
 <p>Controllerを削除する.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
 <p>これいこうhandleは使用できない.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdisopen-autd3capi"><a class="header" href="#autdisopen-autd3capi">AUTDIsOpen (autd3capi)</a></h2>
 <p>ControllerがOpenされているかどうかを返す.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>return</td><td>bool</td><td>-</td><td>true if controller is open</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgetforcefan-autd3capi"><a class="header" href="#autdgetforcefan-autd3capi">AUTDGetForceFan (autd3capi)</a></h2>
 <p>Force fan flagを返す.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>return</td><td>bool</td><td>-</td><td>Force fan flag</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgetreadsfpgainfo-autd3capi"><a class="header" href="#autdgetreadsfpgainfo-autd3capi">AUTDGetReadsFPGAInfo (autd3capi)</a></h2>
 <p>Reads FPGA info flagを返す.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>return</td><td>bool</td><td>-</td><td>Reads FPGA info flag</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgetchecktrials-autd3capi"><a class="header" href="#autdgetchecktrials-autd3capi">AUTDGetCheckTrials (autd3capi)</a></h2>
 <p>Check trialsを返す.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>return</td><td>int32_t</td><td>-</td><td>Check trials</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgetsendinterval-autd3capi"><a class="header" href="#autdgetsendinterval-autd3capi">AUTDGetSendInterval (autd3capi)</a></h2>
 <p>Send intervalを返す.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>return</td><td>int32_t</td><td>-</td><td>Send interval</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdsetreadsfpgainfo-autd3capi"><a class="header" href="#autdsetreadsfpgainfo-autd3capi">AUTDSetReadsFPGAInfo (autd3capi)</a></h2>
 <p>Reads FPGA info flagを設定する.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
 <p>デバイスに実際に反映されるのはsend functionsのどれかを呼び出し後である.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>reads_fpga_info</td><td>bool</td><td>in</td><td>read FPGA info flag</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdsetchecktrials-autd3capi"><a class="header" href="#autdsetchecktrials-autd3capi">AUTDSetCheckTrials (autd3capi)</a></h2>
 <p>Check trialsを設定する.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>trials</td><td>int32_t</td><td>in</td><td>check trials</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdsetsendinterval-autd3capi"><a class="header" href="#autdsetsendinterval-autd3capi">AUTDSetSendInterval (autd3capi)</a></h2>
 <p>Send intervalを設定する.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>interval</td><td>int32_t</td><td>in</td><td>Send interval</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdsetforcefan-autd3capi"><a class="header" href="#autdsetforcefan-autd3capi">AUTDSetForceFan (autd3capi)</a></h2>
 <p>Force fan flagを設定する.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
 <p>デバイスに実際に反映されるのはsend functionsのどれかを呼び出し後である.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>force</td><td>bool</td><td>in</td><td>force fan flag</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgetsoundspeed-autd3capi"><a class="header" href="#autdgetsoundspeed-autd3capi">AUTDGetSoundSpeed (autd3capi)</a></h2>
 <p>音速を返す.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>return</td><td>double</td><td>-</td><td>Speed of sound in m/s</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdsetsoundspeed-autd3capi"><a class="header" href="#autdsetsoundspeed-autd3capi">AUTDSetSoundSpeed (autd3capi)</a></h2>
 <p>音速を設定する.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>sound_speed</td><td>double</td><td>in</td><td>Speed of sound in m/s</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgettransfrequency-autd3capi"><a class="header" href="#autdgettransfrequency-autd3capi">AUTDGetTransFrequency (autd3capi)</a></h2>
 <p>指定した振動子の周波数を取得する.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う. 振動子の指定はデバイスのインデックスとローカルの振動子インデックスでおこなう.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>device_idx</td><td>int32_t</td><td>in</td><td>device index</td></tr>
 <tr><td>local_trans_idx</td><td>int32_t</td><td>in</td><td>local transducer index</td></tr>
 <tr><td>return</td><td>double</td><td>-</td><td>frequency of the transducer</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdsettransfrequency-autd3capi"><a class="header" href="#autdsettransfrequency-autd3capi">AUTDSetTransFrequency (autd3capi)</a></h2>
 <p>指定した振動子の周波数を設定する.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う. 振動子の指定はデバイスのインデックスとローカルの振動子インデックスでおこなう.</p>
 <p>Legacyモードにおいては, この関数は何もしない.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>device_idx</td><td>int32_t</td><td>in</td><td>device index</td></tr>
 <tr><td>local_trans_idx</td><td>int32_t</td><td>in</td><td>local transducer index</td></tr>
 <tr><td>frequency</td><td>double</td><td>in</td><td>frequency of the transducer</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgettranscycle-autd3capi"><a class="header" href="#autdgettranscycle-autd3capi">AUTDGetTransCycle (autd3capi)</a></h2>
 <p>指定した振動子の周期を取得する.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う. 振動子の指定はデバイスのインデックスとローカルの振動子インデックスでおこなう.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>device_idx</td><td>int32_t</td><td>in</td><td>device index</td></tr>
 <tr><td>local_trans_idx</td><td>int32_t</td><td>in</td><td>local transducer index</td></tr>
 <tr><td>return</td><td>uint16_t</td><td>-</td><td>cycle of the transducer</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdsettranscycle-autd3capi"><a class="header" href="#autdsettranscycle-autd3capi">AUTDSetTransCycle (autd3capi)</a></h2>
 <p>指定した振動子の周期を設定する.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う. 振動子の指定はデバイスのインデックスとローカルの振動子インデックスでおこなう.</p>
 <p>Legacyモードにおいては, この関数は何もしない.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>device_idx</td><td>int32_t</td><td>in</td><td>device index</td></tr>
 <tr><td>local_trans_idx</td><td>int32_t</td><td>in</td><td>local transducer index</td></tr>
 <tr><td>cycle</td><td>uint16_t</td><td>in</td><td>cycle of the transducer</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgetwavelength-autd3capi"><a class="header" href="#autdgetwavelength-autd3capi">AUTDGetWavelength (autd3capi)</a></h2>
 <p>指定した振動子の波長を取得する.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う. 振動子の指定はデバイスのインデックスとローカルの振動子インデックスでおこなう.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>device_idx</td><td>int32_t</td><td>in</td><td>device index</td></tr>
 <tr><td>local_trans_idx</td><td>int32_t</td><td>in</td><td>local transducer index</td></tr>
 <tr><td>sound_speed</td><td>double</td><td>in</td><td>Speed of sound in m/s</td></tr>
 <tr><td>return</td><td>double</td><td>-</td><td>wavelength of ultrasound emitted from the transducer</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgetattenuation-autd3capi"><a class="header" href="#autdgetattenuation-autd3capi">AUTDGetAttenuation (autd3capi)</a></h2>
 <p>減衰係数を返す.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>return</td><td>double</td><td>-</td><td>attenuation coefficient in Np/mm</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdsetattenuation-autd3capi"><a class="header" href="#autdsetattenuation-autd3capi">AUTDSetAttenuation (autd3capi)</a></h2>
 <p>減衰係数を設定する.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>attenuation</td><td>double</td><td>in</td><td>attenuation coefficient in Np/mm</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgetfpgainfo-autd3capi"><a class="header" href="#autdgetfpgainfo-autd3capi">AUTDGetFPGAInfo (autd3capi)</a></h2>
 <p>FPGAの情報を取得する.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う. outポインタが指す領域は, 接続しているデバイスと同じ長さである必要がある.</p>
 <p>なお, FPGAの情報は下位1bitが温度センサがアサートされているかどうかを表し, 他のbitは全て0である.</p>
 <p>この関数を呼び出す前に<code>AUTDSetReadsFPGAInfo</code>でread FPGA info flagをOnにしておく必要がある.</p>
 <p>この関数は失敗した場合にfalseを返す. falseの場合には<code>AUTDGetLastError</code>でエラーメッセージを取得できる.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>out</td><td>uint8_t*</td><td>in</td><td>FPGA information list</td></tr>
 <tr><td>return</td><td>bool</td><td>-</td><td>true if success</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdupdateflags-autd3capi"><a class="header" href="#autdupdateflags-autd3capi">AUTDUpdateFlags (autd3capi)</a></h2>
 <p>Control flagを更新する.</p>
 <p>send functionの一つ. force fan/reads FPGA info flagを設定した後に呼び出すと, これらの変更が実際に反映される.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
 <p>この関数はエラーが発生した場合に0未満の値を返す. エラーが生じた場合には<code>AUTDGetLastError</code>でエラーメッセージを取得できる. また,
 check ackフラグがtrue, かつ, 返り値が0より大きい場合は, データが実際のデバイスで処理されたことを保証する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>return</td><td>int32_t</td><td>-</td><td>if <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> and check ack flag is true, it guarantees devices have processed data. if <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>, error ocurred.</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdnumdevices-autd3capi"><a class="header" href="#autdnumdevices-autd3capi">AUTDNumDevices (autd3capi)</a></h2>
 <p>接続されているDeviceの数を取得する.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>return</td><td>int32_t</td><td>-</td><td>number of devices</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdtransposition-autd3capi"><a class="header" href="#autdtransposition-autd3capi">AUTDTransPosition (autd3capi)</a></h2>
 <p>指定した振動子の位置を取得する.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う. 振動子の指定はデバイスのインデックスとローカルの振動子インデックスでおこなう.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>device_idx</td><td>int32_t</td><td>in</td><td>device index</td></tr>
 <tr><td>local_trans_idx</td><td>int32_t</td><td>in</td><td>local transducer index</td></tr>
@@ -439,10 +471,11 @@ check ackフラグがtrue, かつ, 返り値が0より大きい場合は, デー
 <tr><td>z</td><td>double*</td><td>out</td><td>z coordinate of transducer position</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdtransxdirection-autd3capi"><a class="header" href="#autdtransxdirection-autd3capi">AUTDTransXDirection (autd3capi)</a></h2>
 <p>指定した振動子のx軸方向を取得する.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う. 振動子の指定はデバイスのインデックスとローカルの振動子インデックスでおこなう.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>device_idx</td><td>int32_t</td><td>in</td><td>device index</td></tr>
 <tr><td>local_trans_idx</td><td>int32_t</td><td>in</td><td>local transducer index</td></tr>
@@ -451,10 +484,11 @@ check ackフラグがtrue, かつ, 返り値が0より大きい場合は, デー
 <tr><td>z</td><td>double*</td><td>out</td><td>z coordinate of x-direction</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdtransydirection-autd3capi"><a class="header" href="#autdtransydirection-autd3capi">AUTDTransYDirection (autd3capi)</a></h2>
 <p>指定した振動子のy軸方向を取得する.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う. 振動子の指定はデバイスのインデックスとローカルの振動子インデックスでおこなう.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>device_idx</td><td>int32_t</td><td>in</td><td>device index</td></tr>
 <tr><td>local_trans_idx</td><td>int32_t</td><td>in</td><td>local transducer index</td></tr>
@@ -463,10 +497,11 @@ check ackフラグがtrue, かつ, 返り値が0より大きい場合は, デー
 <tr><td>z</td><td>double*</td><td>out</td><td>z coordinate of y-direction</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdtranszdirection-autd3capi"><a class="header" href="#autdtranszdirection-autd3capi">AUTDTransZDirection (autd3capi)</a></h2>
 <p>指定した振動子のz軸方向を取得する.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う. 振動子の指定はデバイスのインデックスとローカルの振動子インデックスでおこなう.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>device_idx</td><td>int32_t</td><td>in</td><td>device index</td></tr>
 <tr><td>local_trans_idx</td><td>int32_t</td><td>in</td><td>local transducer index</td></tr>
@@ -475,62 +510,69 @@ check ackフラグがtrue, かつ, 返り値が0より大きい場合は, デー
 <tr><td>z</td><td>double*</td><td>out</td><td>z coordinate of z-direction</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgetfirmwareinfolistpointer-autd3capi"><a class="header" href="#autdgetfirmwareinfolistpointer-autd3capi">AUTDGetFirmwareInfoListPointer (autd3capi)</a></h2>
 <p>Firmware information listへのポインタを取得する.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
 <p>この関数で作成したlistは最後に<code>AUTDFreeFirmwareInfoListPointer</code>で開放する必要がある.</p>
 <p>実際のFirmware informationは<code>AUTDGetFirmwareInfo</code>で取得する.</p>
 <p>この関数はエラーが発生した場合に0未満の値を返す. エラーが生じた場合には<code>AUTDGetLastError</code>でエラーメッセージを取得できる</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>out</td><td>void**</td><td>out</td><td>pointer to pointer to Firmware information list</td></tr>
 <tr><td>return</td><td>int32_t</td><td>-</td><td>if <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> some error occurred, else size of Firmware information list</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgetfirmwareinfo-autd3capi"><a class="header" href="#autdgetfirmwareinfo-autd3capi">AUTDGetFirmwareInfo (autd3capi)</a></h2>
 <p>Firmware informationを取得する.</p>
 <p><code>p_firm_info_list</code>は<code>AUTDGetFirmwareInfoListPointer</code>で作成したものを使う.</p>
 <p><code>info</code>は長さ256のバッファを渡せば十分である.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>p_firm_info_list</td><td>void*</td><td>in</td><td>pointer to Firmware information list</td></tr>
 <tr><td>index</td><td>int32_t</td><td>in</td><td>device index</td></tr>
 <tr><td>info</td><td>char*</td><td>out</td><td>pointer to firmware information string</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdfreefirmwareinfolistpointer-autd3capi"><a class="header" href="#autdfreefirmwareinfolistpointer-autd3capi">AUTDFreeFirmwareInfoListPointer (autd3capi)</a></h2>
 <p><code>AUTDGetFirmwareInfoListPointer</code>で取得したFirmware information listを開放する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>p_firm_info_list</td><td>void*</td><td>in</td><td>pointer to Firmware information list</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgainnull-autd3capi"><a class="header" href="#autdgainnull-autd3capi">AUTDGainNull (autd3capi)</a></h2>
 <p>Null gainを作成する.</p>
 <p>作成したGainは最後に<code>AUTDDeleteGain</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>gain</td><td>void**</td><td>out</td><td>pointer to pointer to Null gain</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgaingrouped-autd3capi"><a class="header" href="#autdgaingrouped-autd3capi">AUTDGainGrouped (autd3capi)</a></h2>
 <p>Grouped gainを作成する.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
 <p>作成したGainは最後に<code>AUTDDeleteGain</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>gain</td><td>void**</td><td>out</td><td>pointer to pointer to Grouped gain</td></tr>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgaingroupedadd-autd3capi"><a class="header" href="#autdgaingroupedadd-autd3capi">AUTDGainGroupedAdd (autd3capi)</a></h2>
 <p>Grouped gainにGainを登録する.</p>
 <p><code>grouped_gain</code>は<code>AUTDGainGrouped</code>で作成したものを使う.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>grouped_gain</td><td>void*</td><td>in</td><td>pointer to Grouped gain</td></tr>
 <tr><td>device_id</td><td>int32_t</td><td>in</td><td>Device Id</td></tr>
 <tr><td>gain</td><td>void*</td><td>in</td><td>pointer to gain</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgainfocus-autd3capi"><a class="header" href="#autdgainfocus-autd3capi">AUTDGainFocus (autd3capi)</a></h2>
 <p>Focus gainを作成する.</p>
 <p>作成したGainは最後に<code>AUTDDeleteGain</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>gain</td><td>void**</td><td>out</td><td>pointer to Focus gain</td></tr>
 <tr><td>x</td><td>double</td><td>in</td><td>x coordinate of focal point</td></tr>
 <tr><td>y</td><td>double</td><td>in</td><td>y coordinate of focal point</td></tr>
@@ -538,10 +580,11 @@ check ackフラグがtrue, かつ, 返り値が0より大きい場合は, デー
 <tr><td>amp</td><td>double</td><td>in</td><td>amplitude of focus</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgainbesselbeam-autd3capi"><a class="header" href="#autdgainbesselbeam-autd3capi">AUTDGainBesselBeam (autd3capi)</a></h2>
 <p>Bessel beam gainを作成する.</p>
 <p>作成したGainは最後に<code>AUTDDeleteGain</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>gain</td><td>void**</td><td>out</td><td>pointer to Bessel beam gain</td></tr>
 <tr><td>x</td><td>double</td><td>in</td><td>x coordinate of apex</td></tr>
 <tr><td>y</td><td>double</td><td>in</td><td>y coordinate of apex</td></tr>
@@ -553,10 +596,11 @@ check ackフラグがtrue, かつ, 返り値が0より大きい場合は, デー
 <tr><td>amp</td><td>double</td><td>in</td><td>amplitude of beam</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgainplanewave-autd3capi"><a class="header" href="#autdgainplanewave-autd3capi">AUTDGainPlaneWave (autd3capi)</a></h2>
 <p>Plane wave gainを作成する.</p>
 <p>作成したGainは最後に<code>AUTDDeleteGain</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>gain</td><td>void**</td><td>out</td><td>pointer to Plane wave gain</td></tr>
 <tr><td>n_x</td><td>double</td><td>in</td><td>x coordinate of wave direction</td></tr>
 <tr><td>n_y</td><td>double</td><td>in</td><td>y coordinate of wave direction</td></tr>
@@ -564,64 +608,71 @@ check ackフラグがtrue, かつ, 返り値が0より大きい場合は, デー
 <tr><td>amp</td><td>double</td><td>in</td><td>amplitude of wave</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgaincustom-autd3capi"><a class="header" href="#autdgaincustom-autd3capi">AUTDGainCustom (autd3capi)</a></h2>
 <p>Custom gainを作成する.</p>
 <p>Custom gainは位相と振幅を直接指定するGainである.</p>
 <p>作成したGainは最後に<code>AUTDDeleteGain</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>gain</td><td>void**</td><td>out</td><td>pointer to Focus gain</td></tr>
 <tr><td>amp</td><td>double*</td><td>in</td><td>pointer to amplitude</td></tr>
 <tr><td>phase</td><td>double*</td><td>in</td><td>pointer to phase</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autddeletegain-autd3capi"><a class="header" href="#autddeletegain-autd3capi">AUTDDeleteGain (autd3capi)</a></h2>
 <p>作成したGainを削除する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>gain</td><td>void*</td><td>in</td><td>pointer to gain</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdmodulationstatic-autd3capi"><a class="header" href="#autdmodulationstatic-autd3capi">AUTDModulationStatic (autd3capi)</a></h2>
 <p>Static modulationを作成する.</p>
 <p>作成したModulationは最後に<code>AUTDDeleteModulation</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>mod</td><td>void**</td><td>out</td><td>pointer to pointer to Static modulation</td></tr>
 <tr><td>amp</td><td>double</td><td>in</td><td>amplitude of modulation</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdmodulationsine-autd3capi"><a class="header" href="#autdmodulationsine-autd3capi">AUTDModulationSine (autd3capi)</a></h2>
 <p>Sine modulationを作成する.</p>
 <p>作成したModulationは最後に<code>AUTDDeleteModulation</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>mod</td><td>void**</td><td>out</td><td>pointer to pointer to Sine modulation</td></tr>
 <tr><td>freq</td><td>int32_t</td><td>in</td><td>frequency of sine modulation</td></tr>
 <tr><td>amp</td><td>double</td><td>in</td><td>amplitude of sine modulation</td></tr>
 <tr><td>offset</td><td>double</td><td>in</td><td>offset of sine modulation</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdmodulationsinesquared-autd3capi"><a class="header" href="#autdmodulationsinesquared-autd3capi">AUTDModulationSineSquared (autd3capi)</a></h2>
 <p>SineSquared modulationを作成する.</p>
 <p>作成したModulationは最後に<code>AUTDDeleteModulation</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>mod</td><td>void**</td><td>out</td><td>pointer to pointer to SineSquared modulation</td></tr>
 <tr><td>freq</td><td>int32_t</td><td>in</td><td>frequency of sine modulation</td></tr>
 <tr><td>amp</td><td>double</td><td>in</td><td>amplitude of sine modulation</td></tr>
 <tr><td>offset</td><td>double</td><td>in</td><td>offset of sine modulation</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdmodulationsinelegacy-autd3capi"><a class="header" href="#autdmodulationsinelegacy-autd3capi">AUTDModulationSineLegacy (autd3capi)</a></h2>
 <p>SineLegacy modulationを作成する.</p>
 <p>作成したModulationは最後に<code>AUTDDeleteModulation</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>mod</td><td>void**</td><td>out</td><td>pointer to pointer to SineLegacy modulation</td></tr>
 <tr><td>freq</td><td>double</td><td>in</td><td>frequency of sine modulation</td></tr>
 <tr><td>amp</td><td>double</td><td>in</td><td>amplitude of sine modulation</td></tr>
 <tr><td>offset</td><td>double</td><td>in</td><td>offset of sine modulation</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdmodulationsquare-autd3capi"><a class="header" href="#autdmodulationsquare-autd3capi">AUTDModulationSquare (autd3capi)</a></h2>
 <p>Square modulationを作成する.</p>
 <p>作成したModulationは最後に<code>AUTDDeleteModulation</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>mod</td><td>void**</td><td>out</td><td>pointer to pointer to Square modulation</td></tr>
 <tr><td>freq</td><td>int32_t</td><td>in</td><td>frequency of square modulation</td></tr>
 <tr><td>low</td><td>double</td><td>in</td><td>amplitude at low level of square modulation</td></tr>
@@ -629,61 +680,69 @@ check ackフラグがtrue, かつ, 返り値が0より大きい場合は, デー
 <tr><td>duty</td><td>double</td><td>in</td><td>duty ratio of square modulation</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdmodulationcustom-autd3capi"><a class="header" href="#autdmodulationcustom-autd3capi">AUTDModulationCustom (autd3capi)</a></h2>
 <p>Custom modulationを作成する.</p>
 <p>Custom modulationは振幅を直接指定するModulationである.</p>
 <p>作成したModulationは最後に<code>AUTDDeleteModulation</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>mod</td><td>void**</td><td>out</td><td>pointer to pointer to Custom modulation</td></tr>
 <tr><td>buffer</td><td>uint8_t*</td><td>in</td><td>pointer to modulation data</td></tr>
 <tr><td>size</td><td>uint64_t</td><td>in</td><td>size of buffer</td></tr>
 <tr><td>freq_div</td><td>uint32_t</td><td>in</td><td>modulation sampling frequency division</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdmodulationsamplingfrequencydivision-autd3capi"><a class="header" href="#autdmodulationsamplingfrequencydivision-autd3capi">AUTDModulationSamplingFrequencyDivision (autd3capi)</a></h2>
 <p>Modulation sampling frequency divisionを返す.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>mod</td><td>void*</td><td>in</td><td>pointer to modulation</td></tr>
 <tr><td>return</td><td>uint32_t</td><td>-</td><td>modulation sampling frequency division</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdmodulationsetsamplingfrequencydivision-autd3capi"><a class="header" href="#autdmodulationsetsamplingfrequencydivision-autd3capi">AUTDModulationSetSamplingFrequencyDivision (autd3capi)</a></h2>
 <p>Modulation sampling frequency divisionを設定する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>mod</td><td>void*</td><td>in</td><td>pointer to modulation</td></tr>
 <tr><td>freq_div</td><td>uint32_t</td><td>in</td><td>modulation sampling frequency division</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdmodulationsamplingfrequency-autd3capi"><a class="header" href="#autdmodulationsamplingfrequency-autd3capi">AUTDModulationSamplingFrequency (autd3capi)</a></h2>
 <p>Sampling frequencyを返す.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>mod</td><td>void*</td><td>in</td><td>pointer to modulation</td></tr>
 <tr><td>return</td><td>double</td><td>-</td><td>modulation sampling frequency</td></tr>
 </tbody></table>
+</div>
 <h2 id="autddeletemodulation-autd3capi"><a class="header" href="#autddeletemodulation-autd3capi">AUTDDeleteModulation (autd3capi)</a></h2>
 <p>Modulationを削除する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>mod</td><td>void*</td><td>in</td><td>pointer to modulation</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdpointstm-autd3capi"><a class="header" href="#autdpointstm-autd3capi">AUTDPointSTM (autd3capi)</a></h2>
 <p>Point STMを作成する.</p>
 <p>作成したSTMは最後に<code>AUTDDeleteSTM</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>out</td><td>void**</td><td>out</td><td>pointer to pointer to Point STM</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgainstm-autd3capi"><a class="header" href="#autdgainstm-autd3capi">AUTDGainSTM (autd3capi)</a></h2>
 <p>Gain STMを作成する.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
 <p>作成したSTMは最後に<code>AUTDDeleteSTM</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>out</td><td>void**</td><td>out</td><td>pointer to pointer to Gain STM</td></tr>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdpointstmadd-autd3capi"><a class="header" href="#autdpointstmadd-autd3capi">AUTDPointSTMAdd (autd3capi)</a></h2>
 <p>Point STMに焦点を追加する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>stm</td><td>void*</td><td>in</td><td>pointer to Point STM</td></tr>
 <tr><td>x</td><td>double</td><td>in</td><td>x coordinate of focal point</td></tr>
 <tr><td>y</td><td>double</td><td>in</td><td>y coordinate of focal point</td></tr>
@@ -691,146 +750,166 @@ check ackフラグがtrue, かつ, 返り値が0より大きい場合は, デー
 <tr><td>shift</td><td>uint8_t</td><td>in</td><td>duty shift</td></tr>
 <tr><td>return</td><td>bool</td><td>-</td><td>true if success</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgainstmadd-autd3capi"><a class="header" href="#autdgainstmadd-autd3capi">AUTDGainSTMAdd (autd3capi)</a></h2>
 <p>Gain STMにgainを追加する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>stm</td><td>void*</td><td>in</td><td>pointer to Point STM</td></tr>
 <tr><td>gain</td><td>void*</td><td>in</td><td>pointer to Gain</td></tr>
 <tr><td>return</td><td>bool</td><td>-</td><td>true if success</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdsetgainstmmode-autd3capi"><a class="header" href="#autdsetgainstmmode-autd3capi">AUTDSetGainSTMMode (autd3capi)</a></h2>
 <p>GainSTMのmodeを設定する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>stm</td><td>void*</td><td>in</td><td>pointer to STM</td></tr>
 <tr><td>mode</td><td>uint16_t</td><td>in</td><td>GainSTM mode (0x0001 = PhaseDutyFull, 0x0002 = PhaseFull, 0x0004 = PhaseHalf)</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgetgainstmmode-autd3capi"><a class="header" href="#autdgetgainstmmode-autd3capi">AUTDGetGainSTMMode (autd3capi)</a></h2>
 <p>GainSTMのmodeを取得する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>stm</td><td>void*</td><td>in</td><td>pointer to STM</td></tr>
 <tr><td>return</td><td>uint16_t</td><td>-</td><td>GainSTM mode</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdstmsetfrequency-autd3capi"><a class="header" href="#autdstmsetfrequency-autd3capi">AUTDSTMSetFrequency (autd3capi)</a></h2>
 <p>STMのfrequencyを設定する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>stm</td><td>void*</td><td>in</td><td>pointer to STM</td></tr>
 <tr><td>freq</td><td>double</td><td>in</td><td>frequency of STM</td></tr>
 <tr><td>return</td><td>double</td><td>-</td><td>actual frequency</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdstmfrequency-autd3capi"><a class="header" href="#autdstmfrequency-autd3capi">AUTDSTMFrequency (autd3capi)</a></h2>
 <p>STMのfrequencyを取得する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>stm</td><td>void*</td><td>in</td><td>pointer to STM</td></tr>
 <tr><td>return</td><td>double</td><td>-</td><td>frequency of STM</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdstmsamplingfrequency-autd3capi"><a class="header" href="#autdstmsamplingfrequency-autd3capi">AUTDSTMSamplingFrequency (autd3capi)</a></h2>
 <p>STMのsampling frequencyを取得する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>stm</td><td>void*</td><td>in</td><td>pointer to STM</td></tr>
 <tr><td>return</td><td>double</td><td>-</td><td>sampling frequency of STM</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdstmsamplingfrequencydivision-autd3capi"><a class="header" href="#autdstmsamplingfrequencydivision-autd3capi">AUTDSTMSamplingFrequencyDivision (autd3capi)</a></h2>
 <p>STMのsampling frequency divisionを取得する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>stm</td><td>void*</td><td>in</td><td>pointer to STM</td></tr>
 <tr><td>return</td><td>uint32_t</td><td>in</td><td>STM sampling frequency division</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdstmsetsamplingfrequencydivision-autd3capi"><a class="header" href="#autdstmsetsamplingfrequencydivision-autd3capi">AUTDSTMSetSamplingFrequencyDivision (autd3capi)</a></h2>
 <p>STMのsampling frequency divisionを設定する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>stm</td><td>void*</td><td>in</td><td>pointer to STM</td></tr>
 <tr><td>freq_div</td><td>uint32_t</td><td>in</td><td>STM sampling frequency division</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autddeletestm-autd3capi"><a class="header" href="#autddeletestm-autd3capi">AUTDDeleteSTM (autd3capi)</a></h2>
 <p>STMを削除する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>stm</td><td>void*</td><td>in</td><td>pointer to STM</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdstop-autd3capi"><a class="header" href="#autdstop-autd3capi">AUTDStop (autd3capi)</a></h2>
 <p>AUTDの出力を停止する.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
 <p>この関数はエラーが発生した場合に0未満の値を返す. エラーが生じた場合には<code>AUTDGetLastError</code>でエラーメッセージを取得できる. また,
 check ackフラグがtrue, かつ, 返り値が0より大きい場合は, データが実際のデバイスで処理されたことを保証する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>return</td><td>int32_t</td><td>-</td><td>if <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> and check ack flag is true, it guarantees devices have processed data. if <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>, error ocurred.</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdsend-autd3capi"><a class="header" href="#autdsend-autd3capi">AUTDSend (autd3capi)</a></h2>
 <p>ヘッダーデータとボディーデータを送信する.</p>
 <p>send functionの一つ.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う.</p>
 <p>この関数はエラーが発生した場合に0未満の値を返す. エラーが生じた場合には<code>AUTDGetLastError</code>でエラーメッセージを取得できる. また,
 check ackフラグがtrue, かつ, 返り値が0より大きい場合は, データが実際のデバイスで処理されたことを保証する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>header</td><td>void*</td><td>in</td><td>pointer to header data</td></tr>
 <tr><td>body</td><td>void*</td><td>in</td><td>pointer to body data</td></tr>
 <tr><td>return</td><td>int32_t</td><td>-</td><td>if <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> and check ack flag is true, it guarantees devices have processed data. if <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>, error ocurred.</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdsetmoddelay-autd3capi"><a class="header" href="#autdsetmoddelay-autd3capi">AUTDSetModDelay (autd3capi)</a></h2>
 <p>指定した振動子のModulation Delayを設定する.</p>
 <p>handleは<code>AUTDCreateController</code>で作成したものを使う. 振動子の指定はデバイスのインデックスとローカルの振動子インデックスでおこなう.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>device_idx</td><td>int32_t</td><td>in</td><td>device index</td></tr>
 <tr><td>local_trans_idx</td><td>int32_t</td><td>in</td><td>local transducer index</td></tr>
 <tr><td>delay</td><td>uint16_t</td><td>in</td><td>modulation delay of the transducer</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdcreatemoddelayconfig-autd3capi"><a class="header" href="#autdcreatemoddelayconfig-autd3capi">AUTDCreateModDelayConfig (autd3capi)</a></h2>
 <p>ModDelayConfigを作成する.</p>
 <p>作成したSilencerConfigは最後に<code>AUTDDeleteModDelayConfig</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>out</td><td>void**</td><td>out</td><td>pointer to pointer to ModDelayConfig</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autddeletemoddelayconfig-autd3capi"><a class="header" href="#autddeletemoddelayconfig-autd3capi">AUTDDeleteModDelayConfig (autd3capi)</a></h2>
 <p>ModDelayConfigを削除する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>config</td><td>void*</td><td>in</td><td>pointer to ModDelayConfig</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdcreateamplitudes-autd3capi"><a class="header" href="#autdcreateamplitudes-autd3capi">AUTDCreateAmplitudes (autd3capi)</a></h2>
 <p>Amplitudesを作成する.</p>
 <p>作成したSilencerConfigは最後に<code>AUTDDeleteAmplitudes</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>out</td><td>void**</td><td>out</td><td>pointer to pointer to Amplitudes</td></tr>
 <tr><td>amp</td><td>double</td><td>in</td><td>amplitudes</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autddeleteamplitudes-autd3capi"><a class="header" href="#autddeleteamplitudes-autd3capi">AUTDDeleteAmplitudes (autd3capi)</a></h2>
 <p>Amplitudesを削除する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>amplitudes</td><td>void*</td><td>in</td><td>pointer to Amplitudes</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdsetmode-autd3capi"><a class="header" href="#autdsetmode-autd3capi">AUTDSetMode (autd3capi)</a></h2>
 <p>Legacy/Normalモードの設定を行う.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>handle</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>mode</td><td>uint8_t</td><td>in</td><td>mode (0: Legacy mode, 1: Normal mode, 2: Normal Phase mode)</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdeigenbackend-autd3capi-gain-holo"><a class="header" href="#autdeigenbackend-autd3capi-gain-holo">AUTDEigenBackend (autd3capi-gain-holo)</a></h2>
 <p>Eigen Backendを作成する.</p>
 <p>作成したBackendは最後に<code>AUTDDeleteBackend</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>out</td><td>void**</td><td>out</td><td>pointer to pointer to Eigen backend</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autddeletebackend-autd3capi-gain-holo"><a class="header" href="#autddeletebackend-autd3capi-gain-holo">AUTDDeleteBackend (autd3capi-gain-holo)</a></h2>
 <p>Backendを作成する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>backend</td><td>void*</td><td>in</td><td>pointer to backend</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgainholosdp-autd3capi-gain-holo"><a class="header" href="#autdgainholosdp-autd3capi-gain-holo">AUTDGainHoloSDP (autd3capi-gain-holo)</a></h2>
 <p>SDP holo gainを作成する.</p>
 <p>作成したGainは最後に<code>AUTDDeleteGain</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>gain</td><td>void**</td><td>out</td><td>pointer to pointer to SDP gain</td></tr>
 <tr><td>backend</td><td>void*</td><td>in</td><td>pointer to backend</td></tr>
 <tr><td>alpha</td><td>double</td><td>in</td><td>parameter</td></tr>
@@ -838,45 +917,50 @@ check ackフラグがtrue, かつ, 返り値が0より大きい場合は, デー
 <tr><td>repeat</td><td>uint64_t</td><td>in</td><td>parameter</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgainholoevd-autd3capi-gain-holo"><a class="header" href="#autdgainholoevd-autd3capi-gain-holo">AUTDGainHoloEVD (autd3capi-gain-holo)</a></h2>
 <p>EVD holo gainを作成する.</p>
 <p>作成したGainは最後に<code>AUTDDeleteGain</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>gain</td><td>void**</td><td>out</td><td>pointer to pointer to EVD gain</td></tr>
 <tr><td>backend</td><td>void*</td><td>in</td><td>pointer to backend</td></tr>
 <tr><td>gamma</td><td>double</td><td>in</td><td>parameter</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgainholonaive-autd3capi-gain-holo"><a class="header" href="#autdgainholonaive-autd3capi-gain-holo">AUTDGainHoloNaive (autd3capi-gain-holo)</a></h2>
 <p>Naive holo gainを作成する.</p>
 <p>作成したGainは最後に<code>AUTDDeleteGain</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>gain</td><td>void**</td><td>out</td><td>pointer to pointer to Naive gain</td></tr>
 <tr><td>backend</td><td>void*</td><td>in</td><td>pointer to backend</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgainhologs-autd3capi-gain-holo"><a class="header" href="#autdgainhologs-autd3capi-gain-holo">AUTDGainHoloGS (autd3capi-gain-holo)</a></h2>
 <p>GS holo gainを作成する.</p>
 <p>作成したGainは最後に<code>AUTDDeleteGain</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>gain</td><td>void**</td><td>out</td><td>pointer to pointer to GS gain</td></tr>
 <tr><td>backend</td><td>void*</td><td>in</td><td>pointer to backend</td></tr>
 <tr><td>repeat</td><td>uint64_t</td><td>in</td><td>parameter</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgainhologspat-autd3capi-gain-holo"><a class="header" href="#autdgainhologspat-autd3capi-gain-holo">AUTDGainHoloGSPAT (autd3capi-gain-holo)</a></h2>
 <p>GSPAT holo gainを作成する.</p>
 <p>作成したGainは最後に<code>AUTDDeleteGain</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>gain</td><td>void**</td><td>out</td><td>pointer to pointer to GSPAT gain</td></tr>
 <tr><td>backend</td><td>void*</td><td>in</td><td>pointer to backend</td></tr>
 <tr><td>repeat</td><td>uint64_t</td><td>in</td><td>parameter</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgainhololm-autd3capi-gain-holo"><a class="header" href="#autdgainhololm-autd3capi-gain-holo">AUTDGainHoloLM (autd3capi-gain-holo)</a></h2>
 <p>LM holo gainを作成する.</p>
 <p>作成したGainは最後に<code>AUTDDeleteGain</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>gain</td><td>void**</td><td>out</td><td>pointer to pointer to LM gain</td></tr>
 <tr><td>backend</td><td>void*</td><td>in</td><td>pointer to backend</td></tr>
 <tr><td>eps_1</td><td>double</td><td>in</td><td>parameter</td></tr>
@@ -887,28 +971,31 @@ check ackフラグがtrue, かつ, 返り値が0より大きい場合は, デー
 <tr><td>initial_size</td><td>int32_t</td><td>in</td><td>size of initial</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgainhologreedy-autd3capi-gain-holo"><a class="header" href="#autdgainhologreedy-autd3capi-gain-holo">AUTDGainHoloGreedy (autd3capi-gain-holo)</a></h2>
 <p>Greedy holo gainを作成する.</p>
 <p>作成したGainは最後に<code>AUTDDeleteGain</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>gain</td><td>void**</td><td>out</td><td>pointer to pointer to Greedy gain</td></tr>
 <tr><td>backend</td><td>void*</td><td>in</td><td>pointer to backend</td></tr>
 <tr><td>phase_div</td><td>int32_t</td><td>in</td><td>parameter</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgainhololssgreedy-autd3capi-gain-holo"><a class="header" href="#autdgainhololssgreedy-autd3capi-gain-holo">AUTDGainHoloLSSGreedy (autd3capi-gain-holo)</a></h2>
 <p>LSSGreedy holo gainを作成する.</p>
 <p>作成したGainは最後に<code>AUTDDeleteGain</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>gain</td><td>void**</td><td>out</td><td>pointer to pointer to LSSGreedy gain</td></tr>
 <tr><td>backend</td><td>void*</td><td>in</td><td>pointer to backend</td></tr>
 <tr><td>phase_div</td><td>int32_t</td><td>in</td><td>parameter</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgainholoapo-autd3capi-gain-holo"><a class="header" href="#autdgainholoapo-autd3capi-gain-holo">AUTDGainHoloAPO (autd3capi-gain-holo)</a></h2>
 <p>APO holo gainを作成する.</p>
 <p>作成したGainは最後に<code>AUTDDeleteGain</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>gain</td><td>void**</td><td>out</td><td>pointer to pointer to APO gain</td></tr>
 <tr><td>backend</td><td>void*</td><td>in</td><td>pointer to backend</td></tr>
 <tr><td>eps</td><td>double</td><td>in</td><td>parameter</td></tr>
@@ -917,9 +1004,10 @@ check ackフラグがtrue, かつ, 返り値が0より大きい場合は, デー
 <tr><td>line_search_max</td><td>int32_t</td><td>in</td><td>parameter</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgainholoadd-autd3capi-gain-holo"><a class="header" href="#autdgainholoadd-autd3capi-gain-holo">AUTDGainHoloAdd (autd3capi-gain-holo)</a></h2>
 <p>Holo gainに焦点を追加する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>gain</td><td>void*</td><td>in</td><td>pointer to holo gain</td></tr>
 <tr><td>x</td><td>double</td><td>in</td><td>x coordinate of the focus</td></tr>
 <tr><td>y</td><td>double</td><td>in</td><td>y coordinate of the focus</td></tr>
@@ -927,73 +1015,82 @@ check ackフラグがtrue, かつ, 返り値が0より大きい場合は, デー
 <tr><td>amp</td><td>double</td><td>in</td><td>amplitude of the focus</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdsetconstraint-autd3capi-gain-holo"><a class="header" href="#autdsetconstraint-autd3capi-gain-holo">AUTDSetConstraint (autd3capi-gain-holo)</a></h2>
 <p>Holo gainのAmplitudeConstraintを設定する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>gain</td><td>void*</td><td>in</td><td>pointer to holo gain</td></tr>
 <tr><td>type</td><td>int32_t</td><td>in</td><td>AmplitudeConstraint (0: DontCare, 1: Normalize, 2: Uniform, 3: Clamp)</td></tr>
 <tr><td>param</td><td>void*</td><td>in</td><td>pointer to additional parameter</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdblasbackend-autd3capi-backend-blas"><a class="header" href="#autdblasbackend-autd3capi-backend-blas">AUTDBLASBackend (autd3capi-backend-blas)</a></h2>
 <p>BLAS Backendを作成する.</p>
 <p>作成したBackendは最後に<code>AUTDDeleteBackend</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>out</td><td>void**</td><td>out</td><td>pointer to pointer to BLAS backend</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdcudabackend-autd3capi-backend-cuda"><a class="header" href="#autdcudabackend-autd3capi-backend-cuda">AUTDCUDABackend (autd3capi-backend-cuda)</a></h2>
 <p>CUDA Backendを作成する.</p>
 <p>作成したBackendは最後に<code>AUTDDeleteBackend</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>out</td><td>void**</td><td>out</td><td>pointer to pointer to CUDA backend</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdlinkemulator-autd3capi-link-emulator"><a class="header" href="#autdlinkemulator-autd3capi-link-emulator">AUTDLinkEmulator (autd3capi-link-emulator)</a></h2>
 <p>Emulator linkを作成する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>out</td><td>void**</td><td>out</td><td>pointer to pointer to Emulator link</td></tr>
 <tr><td>port</td><td>uint16_t</td><td>in</td><td>port number</td></tr>
 <tr><td>cnt</td><td>void*</td><td>in</td><td>pointer to Controller</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdlinkremotetwincat-autd3capi-link-remote-twincat"><a class="header" href="#autdlinkremotetwincat-autd3capi-link-remote-twincat">AUTDLinkRemoteTwinCAT (autd3capi-link-remote-twincat)</a></h2>
 <p>RemoteTwinCAT linkを作成する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>out</td><td>void**</td><td>out</td><td>pointer to pointer to RemoteTwinCAT link</td></tr>
 <tr><td>remote_ip_addr</td><td>char*</td><td>in</td><td>remote ip address</td></tr>
 <tr><td>remote_ams_net_id</td><td>char*</td><td>in</td><td>remote ams net id</td></tr>
 <tr><td>local_ams_net_id</td><td>char*</td><td>in</td><td>local ams net id</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgetadapterpointer-autd3capi-link-soem"><a class="header" href="#autdgetadapterpointer-autd3capi-link-soem">AUTDGetAdapterPointer (autd3capi-link-soem)</a></h2>
 <p>Adapter listへのポインタを取得する.</p>
 <p>この関数で作成したlistは最後に<code>AUTDFreeAdapterPointer</code>で開放する必要がある.</p>
 <p>実際のAdapterの情報は<code>AUTDGetAdapter</code>で取得する.</p>
 <p>この関数はAdapter listのサイズを返す.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>out</td><td>void**</td><td>out</td><td>pointer to pointer to adapter list</td></tr>
 <tr><td>return</td><td>int32_t</td><td>-</td><td>size of adapter list</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdgetadapter-autd3capi-link-soem"><a class="header" href="#autdgetadapter-autd3capi-link-soem">AUTDGetAdapter (autd3capi-link-soem)</a></h2>
 <p>アダプターの名前と説明を取得する.</p>
 <p><code>p_adapter</code>は<code>AUTDGetAdapterPointer</code>で作成したものを使う.</p>
 <p><code>desc</code>, <code>name</code>はそれぞれ長さ128のバッファを渡せば十分である.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>p_adapter</td><td>void*</td><td>in</td><td>pointer to adapter list</td></tr>
 <tr><td>index</td><td>int32_t</td><td>in</td><td>index</td></tr>
 <tr><td>desc</td><td>char*</td><td>out</td><td>pointer to adapter description</td></tr>
 <tr><td>name</td><td>char*</td><td>out</td><td>pointer to adapter name</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdfreeadapterpointer-autd3capi-link-soem"><a class="header" href="#autdfreeadapterpointer-autd3capi-link-soem">AUTDFreeAdapterPointer (autd3capi-link-soem)</a></h2>
 <p>Adapter listへのポインタを削除する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>p_adapter</td><td>void*</td><td>in</td><td>pointer to adapter list</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>size of adapter list</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdlinksoem-autd3capi-link-soem"><a class="header" href="#autdlinksoem-autd3capi-link-soem">AUTDLinkSOEM (autd3capi-link-soem)</a></h2>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>out</td><td>void**</td><td>out</td><td>pointer to pointer to TwinCAT link</td></tr>
 <tr><td>ifname</td><td>char*</td><td>in</td><td>interface name</td></tr>
 <tr><td>device_num</td><td>int32_t</td><td>in</td><td>number of devices</td></tr>
@@ -1002,32 +1099,35 @@ check ackフラグがtrue, かつ, 返り値が0より大きい場合は, デー
 <tr><td>high_precision</td><td>bool</td><td>in</td><td>high precision mode</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdlinktwincat-autd3capi-link-twincat"><a class="header" href="#autdlinktwincat-autd3capi-link-twincat">AUTDLinkTwinCAT (autd3capi-link-twincat)</a></h2>
 <p>TwinCAT linkを作成する.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>out</td><td>void**</td><td>out</td><td>pointer to pointer to TwinCAT link</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdmodulationrawpcm-autd3capi-modulation-audio-file"><a class="header" href="#autdmodulationrawpcm-autd3capi-modulation-audio-file">AUTDModulationRawPCM (autd3capi-modulation-audio-file)</a></h2>
 <p>RawPCM modulationを作成する.</p>
 <p>作成したModulationは最後に<code>AUTDDeleteModulation</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>mod</td><td>void**</td><td>out</td><td>pointer to pointer to Sine modulation</td></tr>
 <tr><td>filename</td><td>char*</td><td>in</td><td>path to pcm file</td></tr>
 <tr><td>sampling_freq</td><td>double</td><td>in</td><td>pcm sampling frequency</td></tr>
 <tr><td>mod_sampling_freq_div</td><td>uint32_t</td><td>in</td><td>modulation sampling frequency division</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
+</div>
 <h2 id="autdmodulationwav-autd3capi-modulation-audio-file"><a class="header" href="#autdmodulationwav-autd3capi-modulation-audio-file">AUTDModulationWav (autd3capi-modulation-audio-file)</a></h2>
 <p>Wav modulationを作成する.</p>
 <p>作成したModulationは最後に<code>AUTDDeleteModulation</code>で削除する必要がある.</p>
-<table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Argument name / return</th><th>type</th><th>in/out</th><th>description</th></tr></thead><tbody>
 <tr><td>mod</td><td>void**</td><td>out</td><td>pointer to pointer to Sine modulation</td></tr>
 <tr><td>filename</td><td>char*</td><td>in</td><td>path to pcm file</td></tr>
 <tr><td>mod_sampling_freq_div</td><td>uint32_t</td><td>in</td><td>modulation sampling frequency division</td></tr>
 <tr><td>return</td><td>void</td><td>-</td><td>-</td></tr>
 </tbody></table>
-<footer id="open-on-gh">Found a bug? <a href="https://github.com/shinolab/autd3/edit/master/book/src/jp/Software/FFI/reference.md">Edit this file on GitHub.</a></footer>
+</div><footer id="open-on-gh">Found a bug? <a href="https://github.com/shinolab/autd3/edit/master/book/src/jp/Software/FFI/reference.md">Edit this file on GitHub.</a></footer>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
