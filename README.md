@@ -25,8 +25,8 @@ This cross-platform library supports Windows, macOS, and Linux (including Single
 
 ## Document
 
-* [日本語/Japanese](https://shinolab.github.io/autd3-doc/book/jp)
-* [English](https://shinolab.github.io/autd3-doc/book/en)
+* [日本語/Japanese](https://shinolab.github.io/autd3-doc/jp)
+* [English](https://shinolab.github.io/autd3-doc/en)
 
 ## Repositories
 
