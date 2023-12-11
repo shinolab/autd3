@@ -34,6 +34,10 @@ The autd3 projects are divided into separate repositories.
 
 - Software
   - [Rust](https://github.com/shinolab/autd3-rs)
+    - Extra
+      - [autd3-backend-cuda](https://github.com/shinolab/autd3-backend-cuda)
+      - [autd3-backend-arrayfire](https://github.com/shinolab/autd3-backend-arrayfire)
+      - [autd3-link-visualizer](https://github.com/shinolab/autd3-link-visualizer)
   - [C API](https://github.com/shinolab/autd3-capi)
   - [C++](https://github.com/shinolab/autd3-cpp)
   - [AUTD3Sharp/autd3-unity](https://github.com/shinolab/AUTD3Sharp)
