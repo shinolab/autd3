@@ -51,4 +51,4 @@ The autd3 projects are divided into separate repositories.
 
 # Author
 
-Shun Suzuki, 2023
+Shun Suzuki, 2023-2024
