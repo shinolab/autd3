@@ -11,6 +11,11 @@ AUTD3: Airborne Ultrasound Tactile Display 3
 [![PyPI version](https://img.shields.io/pypi/v/pyautd3)](https://pypi.org/project/pyautd3/)
 
 </div>
+<div align="center">
+
+[![release](https://img.shields.io/github/v/release/shinolab/autd3-firmware?label=firmware)](https://github.com/shinolab/autd3-firmware/releases/latest)
+
+</div>
 
 <p align="center">
 Airborne Ultrasound Tactile Display (AUTD) is a midair haptic device that can remotely produce tactile sensation on a human skin surface without wearing devices.
@@ -26,7 +31,7 @@ This cross-platform library supports Windows, macOS, and Linux (including Single
 
 ## Repositories
 
-The autd3 projects are divided into separate repositories.
+The autd3 project consists of the following repositories.
 
 - Software
   - [Rust](https://github.com/shinolab/autd3-rs)
