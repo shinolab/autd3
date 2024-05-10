@@ -13,6 +13,13 @@ AUTD3: Airborne Ultrasound Tactile Display 3
 </div>
 <div align="center">
 
+[![release](https://img.shields.io/github/v/release/shinolab/autd3-server?label=AUTD3%20Server)](https://github.com/shinolab/autd3-server/releases/latest)
+
+</div>
+
+</div>
+<div align="center">
+
 [![release](https://img.shields.io/github/v/release/shinolab/autd3-firmware?label=firmware)](https://github.com/shinolab/autd3-firmware/releases/latest)
 
 </div>
