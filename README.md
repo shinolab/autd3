@@ -40,19 +40,21 @@ This cross-platform library supports Windows, macOS, and Linux (including Single
 
 The autd3 project consists of the following repositories.
 
-- Software
+- Software libraries
   - [Rust](https://github.com/shinolab/autd3-rs)
     - Extra
       - [autd3-backend-cuda](https://github.com/shinolab/autd3-backend-cuda)
       - [autd3-backend-arrayfire](https://github.com/shinolab/autd3-backend-arrayfire)
       - [autd3-link-visualizer](https://github.com/shinolab/autd3-link-visualizer)
+    - [C API](https://github.com/shinolab/autd3-capi)
   - [C++](https://github.com/shinolab/autd3-cpp)
   - [C#/Unity](https://github.com/shinolab/AUTD3Sharp)
   - [Python](https://github.com/shinolab/pyautd3)
   - [Dart/Flutter](https://github.com/shinolab/autd3-dart) (only supports lightweight mode)
-  - [C API](https://github.com/shinolab/autd3-capi)
+- Applications
+  - [AUTD Server](https://github.com/shinolab/autd3-server)
+  - [AUTD3 app](https://github.com/shinolab/autd3-app) - a simple flutter app for smartphone
 - [firmware](https://github.com/shinolab/autd3-firmware)
-- [AUTD Server](https://github.com/shinolab/autd3-server)
 - [Document](https://github.com/shinolab/autd3-doc)
 
 ## Citing
