@@ -15,6 +15,7 @@ AUTD3: Airborne Ultrasound Tactile Display 3
 <div align="center">
 
 [![release](https://img.shields.io/github/v/release/shinolab/autd3-server?label=AUTD3%20Server)](https://github.com/shinolab/autd3-server/releases/latest)
+[![AUTD3 app](https://img.shields.io/github/v/tag/shinolab/autd3-app?label=app)](https://github.com/shinolab/autd3-app)
 
 </div>
 
@@ -55,7 +56,7 @@ The autd3 project consists of the following repositories.
 - Applications
   - [AUTD Server](https://github.com/shinolab/autd3-server)
   - [AUTD3 app](https://github.com/shinolab/autd3-app) - a simple flutter app for smartphone
-- [firmware](https://github.com/shinolab/autd3-firmware)
+- [Firmware](https://github.com/shinolab/autd3-firmware)
 - [Document](https://github.com/shinolab/autd3-doc)
 
 ## Citing
