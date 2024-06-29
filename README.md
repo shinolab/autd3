@@ -9,6 +9,7 @@ AUTD3: Airborne Ultrasound Tactile Display 3
 [![NuGet stable version](https://img.shields.io/nuget/v/autd3sharp)](https://nuget.org/packages/AUTD3Sharp)
 [![autd3-unity](https://img.shields.io/npm/v/com.shinolab.autd3?label=autd3-unity)](https://www.npmjs.com/package/com.shinolab.autd3)
 [![PyPI version](https://img.shields.io/pypi/v/pyautd3)](https://pypi.org/project/pyautd3/)
+[![Dart/Flutter](https://img.shields.io/github/v/tag/shinolab/autd3-dart?label=Dart%2FFlutter)](https://github.com/shinolab/autd3-dart)
 
 </div>
 <div align="center">
