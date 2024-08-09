@@ -48,6 +48,7 @@ The autd3 project consists of the following repositories.
       - [autd3-backend-cuda](https://github.com/shinolab/autd3-backend-cuda)
       - [autd3-backend-arrayfire](https://github.com/shinolab/autd3-backend-arrayfire)
       - [autd3-link-visualizer](https://github.com/shinolab/autd3-link-visualizer)
+      - [autd3-link-ethercrab](https://github.com/shinolab/autd3-link-ethercrab)
     - [C API](https://github.com/shinolab/autd3-capi)
   - [C++](https://github.com/shinolab/autd3-cpp)
   - [C#/Unity](https://github.com/shinolab/AUTD3Sharp)
