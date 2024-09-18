@@ -47,7 +47,8 @@ The autd3 project consists of the following repositories.
     - Extra
       - [autd3-backend-cuda](https://github.com/shinolab/autd3-backend-cuda)
       - [autd3-backend-arrayfire](https://github.com/shinolab/autd3-backend-arrayfire)
-      - [autd3-link-visualizer](https://github.com/shinolab/autd3-link-visualizer)
+      - [autd3-link-emulator](https://github.com/shinolab/autd3-link-emulator)
+      - ~~[autd3-link-visualizer](https://github.com/shinolab/autd3-link-visualizer)~~ (Deprecated)
       - [autd3-link-ethercrab](https://github.com/shinolab/autd3-link-ethercrab)
     - [C API](https://github.com/shinolab/autd3-capi)
   - [C++](https://github.com/shinolab/autd3-cpp)
@@ -55,7 +56,7 @@ The autd3 project consists of the following repositories.
   - [Python](https://github.com/shinolab/pyautd3)
   - [Dart/Flutter](https://github.com/shinolab/autd3-dart) (only supports lightweight mode)
 - Applications
-  - [AUTD Server](https://github.com/shinolab/autd3-server)
+  - [AUTD3 Server](https://github.com/shinolab/autd3-server)
   - [AUTD3 app](https://github.com/shinolab/autd3-app) - a simple flutter app for smartphone
 - [Firmware](https://github.com/shinolab/autd3-firmware)
 - [Document](https://github.com/shinolab/autd3-doc)
