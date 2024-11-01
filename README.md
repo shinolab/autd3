@@ -43,7 +43,7 @@ This cross-platform library supports Windows, macOS, and Linux (including Single
 The autd3 project consists of the following repositories.
 
 - Software libraries
-  - [Rust](https://github.com/shinolab/autd3-rs)
+  - Rust: [autd3](https://github.com/shinolab/autd3-rs)
     - Extra
       - [autd3-emulator](https://github.com/shinolab/autd3-emulator)
       - [autd3-link-soem](https://github.com/shinolab/autd3-link-soem)
@@ -51,13 +51,13 @@ The autd3 project consists of the following repositories.
       - [autd3-backend-cuda](https://github.com/shinolab/autd3-backend-cuda)
       - [autd3-backend-arrayfire](https://github.com/shinolab/autd3-backend-arrayfire)
     - [C API](https://github.com/shinolab/autd3-capi)
-  - [C++](https://github.com/shinolab/autd3-cpp)
+  - C++: [autd3-cpp](https://github.com/shinolab/autd3-cpp)
     - [autd3-cpp-link-soem](https://github.com/shinolab/autd3-cpp-link-soem)
-  - [AUTD3Sharp](https://github.com/shinolab/AUTD3Sharp)
+  - C#/Unity: [AUTD3Sharp](https://github.com/shinolab/AUTD3Sharp)
     - [AUTD3Sharp.Link.SOEM](https://github.com/shinolab/AUTD3Sharp.Link.SOEM)
-  - [pyautd3](https://github.com/shinolab/pyautd3)
+  - Python: [pyautd3](https://github.com/shinolab/pyautd3)
     - [pyautd3_link_soem](https://github.com/shinolab/pyautd3-link-soem)
-  - [Dart/Flutter](https://github.com/shinolab/autd3-dart) (only supports lightweight mode)
+  - Dart/Flutter: [autd3-dart](https://github.com/shinolab/autd3-dart) (only supports lightweight mode)
 - Applications
   - [AUTD3 Server](https://github.com/shinolab/autd3-server)
   - [AUTD3 app](https://github.com/shinolab/autd3-app) - a simple flutter app for smartphone
