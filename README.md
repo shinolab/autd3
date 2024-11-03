@@ -57,7 +57,7 @@ The autd3 project consists of the following repositories.
   - C#/Unity: [AUTD3Sharp](https://github.com/shinolab/AUTD3Sharp)
     - [AUTD3Sharp.Link.SOEM](https://github.com/shinolab/AUTD3Sharp.Link.SOEM)
   - Python: [pyautd3](https://github.com/shinolab/pyautd3)
-    - [pyautd3_link_soem](https://github.com/shinolab/pyautd3-link-soem)
+    - [pyautd3_link_soem](https://github.com/shinolab/pyautd3_link_soem)
   - Dart/Flutter: [autd3-dart](https://github.com/shinolab/autd3-dart) (only supports lightweight mode)
 - Applications
   - [AUTD3 Server](https://github.com/shinolab/autd3-server)
