@@ -43,23 +43,28 @@ This cross-platform library supports Windows, macOS, and Linux (including Single
 The autd3 project consists of the following repositories.
 
 - Software libraries
-  - Rust: [autd3](https://github.com/shinolab/autd3-rs)
+  - Rust
+    - [autd3](https://github.com/shinolab/autd3-rs)
     - Extra
       - [autd3-emulator](https://github.com/shinolab/autd3-emulator)
       - [autd3-link-soem](https://github.com/shinolab/autd3-link-soem)
       - [autd3-link-ethercrab](https://github.com/shinolab/autd3-link-ethercrab) (experimental)
       - [autd3-backend-cuda](https://github.com/shinolab/autd3-backend-cuda)
       - [autd3-backend-arrayfire](https://github.com/shinolab/autd3-backend-arrayfire)
-    - C API: [autd3-capi](https://github.com/shinolab/autd3-capi)
-      - [autd3-capi-emulator](https://github.com/shinolab/autd3-capi-emulator)
+    - C API
+      - [autd3-capi](https://github.com/shinolab/autd3-capi)
       - [autd3-capi-link-soem](https://github.com/shinolab/autd3-capi-link-soem)
-  - C++: [autd3-cpp](https://github.com/shinolab/autd3-cpp)
+  - C++
+    - [autd3-cpp](https://github.com/shinolab/autd3-cpp)
     - [autd3-cpp-link-soem](https://github.com/shinolab/autd3-cpp-link-soem)
-  - C#/Unity: [AUTD3Sharp](https://github.com/shinolab/AUTD3Sharp)
+  - C#/Unity
+    - [AUTD3Sharp](https://github.com/shinolab/AUTD3Sharp)
     - [AUTD3Sharp.Link.SOEM](https://github.com/shinolab/AUTD3Sharp.Link.SOEM)
-  - Python: [pyautd3](https://github.com/shinolab/pyautd3)
+  - Python
+    - [pyautd3](https://github.com/shinolab/pyautd3)
     - [pyautd3_link_soem](https://github.com/shinolab/pyautd3_link_soem)
-  - Dart/Flutter: [autd3-dart](https://github.com/shinolab/autd3-dart) (only supports lightweight mode)
+  - Dart/Flutter
+    - [autd3-dart](https://github.com/shinolab/autd3-dart) (only supports lightweight mode)
 - Applications
   - [AUTD3 Server](https://github.com/shinolab/autd3-server)
   - [AUTD3 app](https://github.com/shinolab/autd3-app) - a simple flutter app for smartphone
