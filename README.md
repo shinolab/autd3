@@ -53,6 +53,7 @@ The autd3 project consists of the following repositories.
       - [autd3-backend-arrayfire](https://github.com/shinolab/autd3-backend-arrayfire)
     - C API
       - [autd3-capi](https://github.com/shinolab/autd3-capi)
+      - [autd3-capi-emulator](https://github.com/shinolab/autd3-capi-emulator)
       - [autd3-capi-link-soem](https://github.com/shinolab/autd3-capi-link-soem)
   - C++
     - [autd3-cpp](https://github.com/shinolab/autd3-cpp)
