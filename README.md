@@ -81,4 +81,4 @@ The autd3 project consists of the following repositories.
 
 # Author
 
-Shun Suzuki, 2023-2024
+Shun Suzuki, 2023-2025
