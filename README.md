@@ -63,6 +63,7 @@ The autd3 project consists of the following repositories.
     - [AUTD3Sharp.Link.SOEM](https://github.com/shinolab/AUTD3Sharp.Link.SOEM)
   - Python
     - [pyautd3](https://github.com/shinolab/pyautd3)
+    - [pyautd3_emulator](https://github.com/shinolab/pyautd3_emulator)
     - [pyautd3_link_soem](https://github.com/shinolab/pyautd3_link_soem)
   - Dart/Flutter
     - [autd3-dart](https://github.com/shinolab/autd3-dart) (only supports lightweight mode)
