@@ -69,6 +69,9 @@ The autd3 project consists of the following repositories.
     - [autd3-dart](https://github.com/shinolab/autd3-dart) (only supports lightweight mode)
 - Applications
   - [AUTD3 Server](https://github.com/shinolab/autd3-server)
+    - [autd3-simulator](https://github.com/shinolab/autd3-simulator)
+    - [SOEMAUTDServer](https://github.com/shinolab/SOEMAUTDServer)
+    - [TwinCATAUTDServer](https://github.com/shinolab/TwinCATAUTDServer)
   - [AUTD3 app](https://github.com/shinolab/autd3-app) - a simple flutter app for smartphone
 - [Firmware](https://github.com/shinolab/autd3-firmware)
 - [Document](https://github.com/shinolab/autd3-doc)
