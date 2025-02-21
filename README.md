@@ -4,7 +4,6 @@ AUTD3: Airborne Ultrasound Tactile Display 3
 
 <div align="center">
 
-[![Crate.io version](https://img.shields.io/crates/v/autd3)](https://crates.io/crates/autd3)
 [![C++](https://img.shields.io/github/v/release/shinolab/autd3-cpp?label=C%2B%2B)](https://github.com/shinolab/autd3-cpp/releases/latest)
 [![NuGet stable version](https://img.shields.io/nuget/vpre/autd3sharp)](https://nuget.org/packages/AUTD3Sharp)
 [![autd3-unity](https://img.shields.io/github/v/tag/shinolab/AUTD3Sharp?include_prereleases&filter=upm%2F*&label=autd3-unity)](https://github.com/shinolab/AUTD3Sharp/tree/upm/latest)
@@ -44,13 +43,13 @@ The autd3 project consists of the following repositories.
 
 - Software libraries
   - Rust
-    - [autd3](https://github.com/shinolab/autd3-rs)
+    - [![autd3](https://img.shields.io/crates/v/autd3?label=autd3)](https://github.com/shinolab/autd3-rs)
     - Extra
-      - [autd3-emulator](https://github.com/shinolab/autd3-emulator)
-      - [autd3-link-soem](https://github.com/shinolab/autd3-link-soem)
+      - [![autd3-emulator](https://img.shields.io/crates/v/autd3-emulator?label=autd3-emulator)](https://github.com/shinolab/autd3-emulator)
+      - [![autd3-link-soem](https://img.shields.io/crates/v/autd3-link-soem?label=autd3-link-soem)](https://github.com/shinolab/autd3-link-soem)
+      - [![autd3-backend-cuda](https://img.shields.io/crates/v/autd3-backend-cuda?label=autd3-backend-cuda)](https://github.com/shinolab/autd3-backend-cuda)
+      - [![autd3-backend-arrayfire](https://img.shields.io/crates/v/autd3-backend-arrayfire?label=autd3-backend-arrayfire)](https://github.com/shinolab/autd3-backend-arrayfire)
       - [autd3-link-ethercrab](https://github.com/shinolab/autd3-link-ethercrab) (experimental)
-      - [autd3-backend-cuda](https://github.com/shinolab/autd3-backend-cuda)
-      - [autd3-backend-arrayfire](https://github.com/shinolab/autd3-backend-arrayfire)
     - C API
       - [autd3-capi](https://github.com/shinolab/autd3-capi)
       - [autd3-capi-emulator](https://github.com/shinolab/autd3-capi-emulator)
