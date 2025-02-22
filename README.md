@@ -11,19 +11,6 @@ AUTD3: Airborne Ultrasound Tactile Display 3
 [![Dart/Flutter](https://img.shields.io/github/v/tag/shinolab/autd3-dart?label=Dart%2FFlutter)](https://github.com/shinolab/autd3-dart)
 
 </div>
-<div align="center">
-
-[![release](https://img.shields.io/github/v/release/shinolab/autd3-server?label=AUTD3%20Server)](https://github.com/shinolab/autd3-server/releases/latest)
-[![AUTD3 app](https://img.shields.io/github/v/tag/shinolab/autd3-app?label=app)](https://github.com/shinolab/autd3-app)
-
-</div>
-
-</div>
-<div align="center">
-
-[![release](https://img.shields.io/github/v/release/shinolab/autd3-firmware?label=firmware)](https://github.com/shinolab/autd3-firmware/releases/latest)
-
-</div>
 
 <p align="center">
 Airborne Ultrasound Tactile Display (AUTD) is a midair haptic device that can remotely produce tactile sensation on a human skin surface without wearing devices.
@@ -71,8 +58,8 @@ The autd3 project consists of the following repositories.
     - [![autd3-simulator](https://img.shields.io/github/v/release/shinolab/autd3-simulator?label=autd3-simulator)](https://github.com/shinolab/autd3-simulator)  
     - [![SOEMAUTDServer](https://img.shields.io/github/v/release/shinolab/SOEMAUTDServer?label=SOEMAUTDServer)](https://github.com/shinolab/SOEMAUTDServer)  
     - [![TwinCATAUTDServer](https://img.shields.io/github/v/release/shinolab/TwinCATAUTDServer?label=TwinCATAUTDServer)](https://github.com/shinolab/TwinCATAUTDServer)  
-  - [AUTD3 app](https://github.com/shinolab/autd3-app) - a simple flutter app for smartphone
-- [Firmware](https://github.com/shinolab/autd3-firmware)
+  - [![AUTD3 app](https://img.shields.io/github/v/tag/shinolab/autd3-app?label=app)](https://github.com/shinolab/autd3-app) - a simple flutter app for smartphone
+- [![firmware](https://img.shields.io/github/v/release/shinolab/autd3-firmware?label=firmware)](https://github.com/shinolab/autd3-firmware/releases/latest)
 - [Document](https://github.com/shinolab/autd3-doc)
 
 ## Citing
