@@ -2,15 +2,6 @@
 AUTD3: Airborne Ultrasound Tactile Display 3
 </h1>
 
-<div align="center">
-
-[![NuGet stable version](https://img.shields.io/nuget/vpre/autd3sharp)](https://nuget.org/packages/AUTD3Sharp)
-[![autd3-unity](https://img.shields.io/github/v/tag/shinolab/AUTD3Sharp?include_prereleases&filter=upm%2F*&label=autd3-unity)](https://github.com/shinolab/AUTD3Sharp/tree/upm/latest)
-[![PyPI version](https://img.shields.io/pypi/v/pyautd3)](https://pypi.org/project/pyautd3/)
-[![Dart/Flutter](https://img.shields.io/github/v/tag/shinolab/autd3-dart?label=Dart%2FFlutter)](https://github.com/shinolab/autd3-dart)
-
-</div>
-
 <p align="center">
 Airborne Ultrasound Tactile Display (AUTD) is a midair haptic device that can remotely produce tactile sensation on a human skin surface without wearing devices.
 Please see <a href="https://hapislab.org/en/airborne-ultrasound-tactile-display">our laboratory homepage</a> for more details on AUTD.
@@ -43,16 +34,15 @@ The autd3 project consists of the following repositories.
   - C++
     - [![autd3-cpp](https://img.shields.io/github/v/release/shinolab/autd3-cpp?label=autd3-cpp)](https://github.com/shinolab/autd3-cpp)
     - [![autd3-cpp-link-soem](https://img.shields.io/github/v/release/shinolab/autd3-cpp?label=autd3-cpp-link-soem)](https://github.com/shinolab/autd3-cpp-link-soem)
-    - [autd3-cpp-link-soem](https://github.com/shinolab/autd3-cpp-link-soem)
   - C#/Unity
-    - [AUTD3Sharp](https://github.com/shinolab/AUTD3Sharp)
-    - [AUTD3Sharp.Link.SOEM](https://github.com/shinolab/AUTD3Sharp.Link.SOEM)
+    - [![AUTD3Sharp](https://img.shields.io/nuget/vpre/AUTD3Sharp?label=AUTD3Sharp)](https://github.com/shinolab/AUTD3Sharp)
+    - [![AUTD3Sharp.Link.SOEM](https://img.shields.io/nuget/vpre/AUTD3Sharp.Link.SOEM?label=AUTD3Sharp.Link.SOEM)](https://github.com/shinolab/AUTD3Sharp.Link.SOEM)
   - Python
-    - [pyautd3](https://github.com/shinolab/pyautd3)
-    - [pyautd3_emulator](https://github.com/shinolab/pyautd3_emulator)
-    - [pyautd3_link_soem](https://github.com/shinolab/pyautd3_link_soem)
+    - [![pyautd3](https://img.shields.io/pypi/v/pyautd3?label=pyautd3)](https://github.com/shinolab/pyautd3/)
+    - [![pyautd3_emulator](https://img.shields.io/pypi/v/pyautd3_emulator?label=pyautd3_emulator)](https://github.com/shinolab/pyautd3_emulator/)
+    - [![pyautd3_link_soem](https://img.shields.io/pypi/v/pyautd3_link_soem?label=pyautd3_link_soem)](https://github.com/shinolab/pyautd3_link_soem/)
   - Dart/Flutter
-    - [autd3-dart](https://github.com/shinolab/autd3-dart) (only supports lightweight mode)
+    - [![autd3-dart](https://img.shields.io/github/v/tag/shinolab/autd3-dart?label=autd3-dart)](https://github.com/shinolab/autd3-dart) (only supports lightweight mode)
 - Applications
   - [![autd3-server](https://img.shields.io/github/v/release/shinolab/autd3-server?label=AUTD3%20Server)](https://github.com/shinolab/autd3-server)  
     - [![autd3-simulator](https://img.shields.io/github/v/release/shinolab/autd3-simulator?label=autd3-simulator)](https://github.com/shinolab/autd3-simulator)  
