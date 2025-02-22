@@ -4,7 +4,6 @@ AUTD3: Airborne Ultrasound Tactile Display 3
 
 <div align="center">
 
-[![C++](https://img.shields.io/github/v/release/shinolab/autd3-cpp?label=C%2B%2B)](https://github.com/shinolab/autd3-cpp/releases/latest)
 [![NuGet stable version](https://img.shields.io/nuget/vpre/autd3sharp)](https://nuget.org/packages/AUTD3Sharp)
 [![autd3-unity](https://img.shields.io/github/v/tag/shinolab/AUTD3Sharp?include_prereleases&filter=upm%2F*&label=autd3-unity)](https://github.com/shinolab/AUTD3Sharp/tree/upm/latest)
 [![PyPI version](https://img.shields.io/pypi/v/pyautd3)](https://pypi.org/project/pyautd3/)
@@ -38,11 +37,12 @@ The autd3 project consists of the following repositories.
       - [![autd3-backend-arrayfire](https://img.shields.io/crates/v/autd3-backend-arrayfire?label=autd3-backend-arrayfire)](https://github.com/shinolab/autd3-backend-arrayfire)
       - [autd3-link-ethercrab](https://github.com/shinolab/autd3-link-ethercrab) (experimental)
     - C API
-      - [autd3-capi](https://github.com/shinolab/autd3-capi)
-      - [autd3-capi-emulator](https://github.com/shinolab/autd3-capi-emulator)
-      - [autd3-capi-link-soem](https://github.com/shinolab/autd3-capi-link-soem)
+      - [![autd3-capi](https://img.shields.io/github/v/release/shinolab/autd3-capi?label=autd3-capi)](https://github.com/shinolab/autd3-capi)
+      - [![autd3-capi-emulator](https://img.shields.io/github/v/release/shinolab/autd3-capi-emulator?label=autd3-capi-emulator)](https://github.com/shinolab/autd3-capi-emulator)
+      - [![autd3-capi-link-soem](https://img.shields.io/github/v/release/shinolab/autd3-capi-link-soem?label=autd3-capi-link-soem)](https://github.com/shinolab/autd3-capi-link-soem)
   - C++
-    - [autd3-cpp](https://github.com/shinolab/autd3-cpp)
+    - [![autd3-cpp](https://img.shields.io/github/v/release/shinolab/autd3-cpp?label=autd3-cpp)](https://github.com/shinolab/autd3-cpp)
+    - [![autd3-cpp-link-soem](https://img.shields.io/github/v/release/shinolab/autd3-cpp?label=autd3-cpp-link-soem)](https://github.com/shinolab/autd3-cpp-link-soem)
     - [autd3-cpp-link-soem](https://github.com/shinolab/autd3-cpp-link-soem)
   - C#/Unity
     - [AUTD3Sharp](https://github.com/shinolab/AUTD3Sharp)
@@ -54,12 +54,12 @@ The autd3 project consists of the following repositories.
   - Dart/Flutter
     - [autd3-dart](https://github.com/shinolab/autd3-dart) (only supports lightweight mode)
 - Applications
-  - [![autd3-simulator](https://img.shields.io/github/v/release/shinolab/autd3-server?label=AUTD3%20Server)](https://github.com/shinolab/autd3-server)  
+  - [![autd3-server](https://img.shields.io/github/v/release/shinolab/autd3-server?label=AUTD3%20Server)](https://github.com/shinolab/autd3-server)  
     - [![autd3-simulator](https://img.shields.io/github/v/release/shinolab/autd3-simulator?label=autd3-simulator)](https://github.com/shinolab/autd3-simulator)  
     - [![SOEMAUTDServer](https://img.shields.io/github/v/release/shinolab/SOEMAUTDServer?label=SOEMAUTDServer)](https://github.com/shinolab/SOEMAUTDServer)  
     - [![TwinCATAUTDServer](https://img.shields.io/github/v/release/shinolab/TwinCATAUTDServer?label=TwinCATAUTDServer)](https://github.com/shinolab/TwinCATAUTDServer)  
   - [![AUTD3 app](https://img.shields.io/github/v/tag/shinolab/autd3-app?label=app)](https://github.com/shinolab/autd3-app) - a simple flutter app for smartphone
-- [![firmware](https://img.shields.io/github/v/release/shinolab/autd3-firmware?label=firmware)](https://github.com/shinolab/autd3-firmware/releases/latest)
+- [![firmware](https://img.shields.io/github/v/release/shinolab/autd3-firmware?label=firmware)](https://github.com/shinolab/autd3-firmware)
 - [Document](https://github.com/shinolab/autd3-doc)
 
 ## Citing
