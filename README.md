@@ -49,8 +49,8 @@ The autd3 project consists of the following repositories.
     - [![SOEMAUTDServer](https://img.shields.io/github/v/release/shinolab/SOEMAUTDServer?label=SOEMAUTDServer)](https://github.com/shinolab/SOEMAUTDServer)  
     - [![TwinCATAUTDServer](https://img.shields.io/github/v/release/shinolab/TwinCATAUTDServer?label=TwinCATAUTDServer)](https://github.com/shinolab/TwinCATAUTDServer)  
   - [![AUTD3 app](https://img.shields.io/github/v/tag/shinolab/autd3-app?label=app)](https://github.com/shinolab/autd3-app) - a simple flutter app for smartphone
-- [![firmware](https://img.shields.io/github/v/release/shinolab/autd3-firmware?label=firmware)](https://github.com/shinolab/autd3-firmware)
-- [Document](https://github.com/shinolab/autd3-doc)
+- [![autd3-firmware](https://img.shields.io/github/v/release/shinolab/autd3-firmware?label=firmware)](https://github.com/shinolab/autd3-firmware)
+- [![autd3-doc](https://img.shields.io/github/v/tag/shinolab/autd3-doc?label=autd3-doc)](https://github.com/shinolab/autd3-doc)
 
 ## Citing
 
