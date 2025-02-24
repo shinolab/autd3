@@ -33,7 +33,7 @@ The autd3 project consists of the following repositories.
       - [![autd3-capi-link-soem](https://img.shields.io/github/v/release/shinolab/autd3-capi-link-soem?label=autd3-capi-link-soem)](https://github.com/shinolab/autd3-capi-link-soem)
   - C++
     - [![autd3-cpp](https://img.shields.io/github/v/release/shinolab/autd3-cpp?label=autd3-cpp)](https://github.com/shinolab/autd3-cpp)
-    - [![autd3-cpp-link-soem](https://img.shields.io/github/v/release/shinolab/autd3-cpp?label=autd3-cpp-link-soem)](https://github.com/shinolab/autd3-cpp-link-soem)
+    - [![autd3-cpp-link-soem](https://img.shields.io/github/v/release/shinolab/autd3-cpp-link-soem?label=autd3-cpp-link-soem)](https://github.com/shinolab/autd3-cpp-link-soem)
   - C#/Unity
     - [![AUTD3Sharp](https://img.shields.io/nuget/vpre/AUTD3Sharp?label=AUTD3Sharp)](https://github.com/shinolab/AUTD3Sharp)
     - [![AUTD3Sharp.Link.SOEM](https://img.shields.io/nuget/vpre/AUTD3Sharp.Link.SOEM?label=AUTD3Sharp.Link.SOEM)](https://github.com/shinolab/AUTD3Sharp.Link.SOEM)
