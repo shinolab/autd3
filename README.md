@@ -41,14 +41,11 @@ The autd3 project consists of the following repositories.
     - [![pyautd3](https://img.shields.io/pypi/v/pyautd3?label=pyautd3)](https://github.com/shinolab/pyautd3/)
     - [![pyautd3_emulator](https://img.shields.io/pypi/v/pyautd3_emulator?label=pyautd3_emulator)](https://github.com/shinolab/pyautd3_emulator/)
     - [![pyautd3_link_soem](https://img.shields.io/pypi/v/pyautd3_link_soem?label=pyautd3_link_soem)](https://github.com/shinolab/pyautd3_link_soem/)
-  - Dart/Flutter
-    - [![autd3-dart](https://img.shields.io/github/v/tag/shinolab/autd3-dart?label=autd3-dart)](https://github.com/shinolab/autd3-dart) (only supports lightweight mode)
 - Applications
   - [![autd3-server](https://img.shields.io/github/v/release/shinolab/autd3-server?label=AUTD3%20Server)](https://github.com/shinolab/autd3-server)  
     - [![autd3-simulator](https://img.shields.io/github/v/release/shinolab/autd3-simulator?label=autd3-simulator)](https://github.com/shinolab/autd3-simulator)  
     - [![SOEMAUTDServer](https://img.shields.io/github/v/release/shinolab/SOEMAUTDServer?label=SOEMAUTDServer)](https://github.com/shinolab/SOEMAUTDServer)  
     - [![TwinCATAUTDServer](https://img.shields.io/github/v/release/shinolab/TwinCATAUTDServer?label=TwinCATAUTDServer)](https://github.com/shinolab/TwinCATAUTDServer)  
-  - [![AUTD3 app](https://img.shields.io/github/v/tag/shinolab/autd3-app?label=app)](https://github.com/shinolab/autd3-app) - a simple flutter app for smartphone
 - [![autd3-firmware](https://img.shields.io/github/v/release/shinolab/autd3-firmware?label=firmware)](https://github.com/shinolab/autd3-firmware)
 - [![autd3-doc](https://img.shields.io/github/v/tag/shinolab/autd3-doc?label=autd3-doc)](https://github.com/shinolab/autd3-doc)
 
