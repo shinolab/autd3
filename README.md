@@ -24,8 +24,6 @@ The autd3 project consists of the following repositories.
     - Extra
       - [![autd3-emulator](https://img.shields.io/crates/v/autd3-emulator?label=autd3-emulator)](https://github.com/shinolab/autd3-emulator)
       - [![autd3-link-soem](https://img.shields.io/crates/v/autd3-link-soem?label=autd3-link-soem)](https://github.com/shinolab/autd3-link-soem)
-      - [![autd3-backend-cuda](https://img.shields.io/crates/v/autd3-backend-cuda?label=autd3-backend-cuda)](https://github.com/shinolab/autd3-backend-cuda)
-      - [![autd3-backend-arrayfire](https://img.shields.io/crates/v/autd3-backend-arrayfire?label=autd3-backend-arrayfire)](https://github.com/shinolab/autd3-backend-arrayfire)
       - [autd3-link-ethercrab](https://github.com/shinolab/autd3-link-ethercrab) (experimental)
     - C API
       - [![autd3-capi](https://img.shields.io/github/v/release/shinolab/autd3-capi?label=autd3-capi)](https://github.com/shinolab/autd3-capi)
