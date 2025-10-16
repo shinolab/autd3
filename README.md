@@ -35,6 +35,8 @@ The autd3 project consists of the following repositories.
     - [![AUTD3Sharp](https://img.shields.io/nuget/vpre/AUTD3Sharp?label=AUTD3Sharp)](https://github.com/shinolab/AUTD3Sharp)
   - Python
     - [![pyautd3](https://img.shields.io/pypi/v/pyautd3?label=pyautd3)](https://github.com/shinolab/pyautd3/)
+    - [![pyautd3_link_ethercrab](https://img.shields.io/pypi/v/pyautd3_link_ethercrab?label=pyautd3_link_ethercrab)](https://github.com/shinolab/pyautd3_link_ethercrab/)
+    - [![pyautd3_link_remote_twincat](https://img.shields.io/pypi/v/pyautd3_link_remote_twincat?label=pyautd3_link_remote_twincat)](https://github.com/shinolab/pyautd3_link_remote_twincat/)
     - [![pyautd3_emulator](https://img.shields.io/pypi/v/pyautd3_emulator?label=pyautd3_emulator)](https://github.com/shinolab/pyautd3_emulator/)
 - Applications
   - [![autd3-server](https://img.shields.io/github/v/release/shinolab/autd3-server?label=AUTD3%20Server)](https://github.com/shinolab/autd3-server)  
