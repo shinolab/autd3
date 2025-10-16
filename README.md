@@ -26,7 +26,8 @@ The autd3 project consists of the following repositories.
       - [![autd3-link-soem](https://img.shields.io/crates/v/autd3-link-soem?label=autd3-link-soem)](https://github.com/shinolab/autd3-link-soem) (licensed under GPLv3)
     - C API
       - [![autd3-capi](https://img.shields.io/github/v/release/shinolab/autd3-capi?label=autd3-capi)](https://github.com/shinolab/autd3-capi)
-      - [![autd3-capi-link-ethercrab](https://img.shields.io/github/v/release/shinolab/autd3-capi-link-ethercrab?label=autd3-capi-link-ethercrab)](https://github.com/s5suzuki/autd3-capi-link-ethercrab)
+      - [![autd3-capi-link-ethercrab](https://img.shields.io/github/v/release/shinolab/autd3-capi-link-ethercrab?label=autd3-capi-link-ethercrab)](https://github.com/shinolab/autd3-capi-link-ethercrab)
+      - [![autd3-capi-link-remote-twincat](https://img.shields.io/github/v/release/shinolab/autd3-capi-link-remote-twincat?label=autd3-capi-link-remote-twincat)](https://github.com/shinolab/autd3-capi-link-remote-twincat)
       - [![autd3-capi-emulator](https://img.shields.io/github/v/release/shinolab/autd3-capi-emulator?label=autd3-capi-emulator)](https://github.com/shinolab/autd3-capi-emulator)
   - C++
     - [![autd3-cpp](https://img.shields.io/github/v/release/shinolab/autd3-cpp?label=autd3-cpp)](https://github.com/shinolab/autd3-cpp)
