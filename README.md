@@ -35,6 +35,8 @@ The autd3 project consists of the following repositories.
     - [![autd3-cpp-link-remote-twincat](https://img.shields.io/github/v/release/shinolab/autd3-cpp-link-remote-twincat?label=autd3-cpp-link-remote-twincat)](https://github.com/shinolab/autd3-cpp-link-remote-twincat)
   - C#/Unity
     - [![AUTD3Sharp](https://img.shields.io/nuget/vpre/AUTD3Sharp?label=AUTD3Sharp)](https://github.com/shinolab/AUTD3Sharp)
+    - [![AUTD3Sharp.Link.EtherCrab](https://img.shields.io/nuget/vpre/AUTD3Sharp.Link.EtherCrab?label=AUTD3Sharp.Link.EtherCrab)](https://github.com/shinolab/AUTD3Sharp.Link.EtherCrab)
+    - [![AUTD3Sharp.Link.RemoteTwinCAT](https://img.shields.io/nuget/vpre/AUTD3Sharp.Link.RemoteTwinCAT?label=AUTD3Sharp.Link.RemoteTwinCAT)](https://github.com/shinolab/AUTD3Sharp.Link.RemoteTwinCAT)
   - Python
     - [![pyautd3](https://img.shields.io/pypi/v/pyautd3?label=pyautd3)](https://github.com/shinolab/pyautd3/)
     - [![pyautd3_link_ethercrab](https://img.shields.io/pypi/v/pyautd3_link_ethercrab?label=pyautd3_link_ethercrab)](https://github.com/shinolab/pyautd3_link_ethercrab/)
