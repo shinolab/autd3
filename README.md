@@ -31,6 +31,8 @@ The autd3 project consists of the following repositories.
       - [![autd3-capi-emulator](https://img.shields.io/github/v/release/shinolab/autd3-capi-emulator?label=autd3-capi-emulator)](https://github.com/shinolab/autd3-capi-emulator)
   - C++
     - [![autd3-cpp](https://img.shields.io/github/v/release/shinolab/autd3-cpp?label=autd3-cpp)](https://github.com/shinolab/autd3-cpp)
+    - [![autd3-cpp-link-ethercrab](https://img.shields.io/github/v/release/shinolab/autd3-cpp-link-ethercrab?label=autd3-cpp-link-ethercrab)](https://github.com/shinolab/autd3-cpp-link-ethercrab)
+    - [![autd3-cpp-link-remote-twincat](https://img.shields.io/github/v/release/shinolab/autd3-cpp-link-remote-twincat?label=autd3-cpp-link-remote-twincat)](https://github.com/shinolab/autd3-cpp-link-remote-twincat)
   - C#/Unity
     - [![AUTD3Sharp](https://img.shields.io/nuget/vpre/AUTD3Sharp?label=AUTD3Sharp)](https://github.com/shinolab/AUTD3Sharp)
   - Python
