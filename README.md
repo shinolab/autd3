@@ -1,3 +1,10 @@
+> [!WARNING]
+> **Active development has moved to [autd3-sdk](https://github.com/shinolab/autd3-sdk).**
+> The new SDK is a complete rewrite and is **not compatible** with this autd3 series.
+>
+> The information below describes the legacy autd3 series and is kept for existing users; it may be outdated.
+
+
 <h1 align="center">
 AUTD3: Airborne Ultrasound Tactile Display 3
 </h1>
